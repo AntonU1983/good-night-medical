@@ -1,0 +1,6 @@
+#slide-5 {
+  height: 440px;
+  background: url(../images/bg/slide-3.jpg) no-repeat center top;
+  background-size: cover;
+  position: relative;
+}

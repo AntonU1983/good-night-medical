@@ -1,0 +1,6 @@
+#slide-1 {
+  height: 100%;
+  background: url(../images/bg/slide-1.jpg) no-repeat center top;
+  background-size: cover;
+  position: relative;
+}
