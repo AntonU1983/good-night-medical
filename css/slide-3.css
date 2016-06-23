@@ -2,5 +2,46 @@
   height: 322px;
   background: url(../images/bg/slide-2.jpg) no-repeat center top;
   background-size: cover;
-  position: relative;
-}
+  position: relative;}
+
+.process {
+  width: 960px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);}
+
+.process-step-two,
+.process-step-three {
+  margin: 0 0 0 30px;}
+
+.process-title {
+  text-align: center;
+  font-family: 'Rubik';
+  font-size: 40px;
+  color: #fff;
+  margin: 0 0 30px 0;
+  text-shadow: 0 0 15px rgba(0, 0, 0, .2);}
+
+.process-step-img {
+  margin: 13px 0;}
+
+.process-step-text {
+  margin: 0 0 0 10px;
+  height: 90px;}
+
+.process-step-title {
+  margin: 0 0 4px 0;
+  font-family: 'Rubik';
+  font-size: 18px;
+  text-shadow: 1 1 2px rgba(0, 0, 0, .2);}
+
+.process-step-description {
+  width: 226px;
+  font-family: 'Rubik';
+  font-size: 14px;
+  text-align: left;
+  text-shadow: 1 1 2px rgba(0, 0, 0, .2);}
