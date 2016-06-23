@@ -21,6 +21,8 @@ input::selection,
 span::selection {
   background: #babcc5}
 
+input {outline: none;}
+
 .text-light {font-weight: 300;}
 .text-medium {font-weight: 500;}
 .text-bold {font-weight: 700;}

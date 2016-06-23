@@ -1,6 +1,6 @@
 #slide-3 {
   height: 322px;
-  background: url(../images/bg/slide-2.jpg) no-repeat center top;
+  background: url(../images/bg/slide-2.png) no-repeat center top;
   background-size: cover;
   position: relative;}
 
@@ -27,10 +27,10 @@
   text-shadow: 0 0 15px rgba(0, 0, 0, .2);}
 
 .process-step-img {
-  margin: 13px 0;}
+  margin: 11px 0;}
 
 .process-step-text {
-  margin: 0 0 0 10px;
+  margin: 0 0 0 8px;
   height: 90px;}
 
 .process-step-title {
