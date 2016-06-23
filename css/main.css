@@ -74,12 +74,10 @@ span::selection {
   background-size: cover;}
 
 .top-cut {
-  top: 0;
-  background: url(../images/svg/top.svg) no-repeat center top;}
+  top: 0;}
 
 .bot-cut {
-  bottom: 0;
-  background: url(../images/svg/bot.svg) no-repeat center bottom;}
+  bottom: 0;}
 
 @media (max-width: 1023px) {.container {width: 760px;}}
 @media (min-width: 1024px) {.container {width: 960px;}}
