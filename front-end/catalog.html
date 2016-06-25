@@ -55,12 +55,12 @@
 
 <div id="mainbody" ng-controller="CatalogCtrl">
   <div class="sidebar pull-left" ng-style="returnHeight();">
-    <form>
+    <form name="form" id="form" novalidate>
 
       <div class="form-price">
-        <div class="form-price-title">Price</div>
+        <div class="form-price-title">{{minCost}}</div>
         <div id="slider"></div>
-        <input class="hide" type="text" name="minCost" id="minCost" value="0">
+        <input class="hide" type="text" name="minCost" id="minCost" value="0" ng-model="minCost">
         <input class="hide" type="text" name="maxCost" id="maxCost" value="0">
         <div class="form-price-desc">
           <div class="pull-left" id="minCostDiv"></div>
@@ -73,70 +73,42 @@
       <div class="form-buttons" ng-init="filterOne = 0">
         <input class="form-left-btn pull-left"
                type="submit"
-               value="filter 1"
+               value="cpap"
                ng-click="filterOne = 0"
                ng-class="returnClassBtnFilterOne(0);">
         <input class="form-right-btn pull-left"
                type="submit"
-               value="filter 2"
+               value="bipap"
                ng-click="filterOne = 1"
                ng-class="returnClassBtnFilterOne(1);">
-      </div>
-
-      <div class="form-buttons" ng-init="filterTwo = 0">
-        <input class="form-left-btn pull-left"
-               type="submit"
-               value="filter 1"
-               ng-click="filterTwo = 0"
-               ng-class="returnClassBtnFilterTwo(0);">
-        <input class="form-right-btn pull-left"
-               type="submit"
-               value="filter 2"
-               ng-click="filterTwo = 1"
-               ng-class="returnClassBtnFilterTwo(1);">
       </div>
 
       <hr class="form-hr">
 
       <div class="form-switch">
-        <span>Some filter one</span>
+        <span>Philips</span>
         <label class="form-switch-label">
-          <input type="checkbox">
+          <input type="checkbox" ng-model="companyOne">
           <div class="form-swtich-elem"></div>
         </label>
       </div>
 
       <div class="form-switch">
-        <span>Some filter two</span>
+        <span>ResMed</span>
         <label class="form-switch-label">
-          <input type="checkbox">
+          <input type="checkbox" ng-model="companyTwo">
           <div class="form-swtich-elem"></div>
         </label>
       </div>
 
       <div class="form-switch">
-        <span>Some filter three</span>
+        <span>Fisher &amp; Paykel</span>
         <label class="form-switch-label">
-          <input type="checkbox">
+          <input type="checkbox" ng-model="companyThree">
           <div class="form-swtich-elem"></div>
         </label>
       </div>
 
-      <div class="form-switch">
-        <span>Some filter four</span>
-        <label class="form-switch-label">
-          <input type="checkbox">
-          <div class="form-swtich-elem"></div>
-        </label>
-      </div>
-
-      <div class="form-switch">
-        <span>Some filter five</span>
-        <label class="form-switch-label">
-          <input type="checkbox">
-          <div class="form-swtich-elem"></div>
-        </label>
-      </div>
     </form>
   </div>
   <div class="content pull-left">
@@ -146,7 +118,9 @@
            ng-model="search.name">
     <div class="content-elements">
 
-      <div class="pull-left" ng-repeat="model in models | filter:search">
+      <div class="pull-left"
+           ng-repeat="model in models | filter:search"
+           ng-if="returnHideModel(companyOne, companyTwo, companyThree, model.company);">
         <div class="content-elements-img"><img ng-src="{{model.photo}}" alt=""></div>
         <span class="content-elements-model">{{model.name}}</span>
         <div class="content-elements-reviews">
