@@ -23,12 +23,21 @@ catalogApp.controller('CatalogCtrl', function($scope){
     else  {return 'form-btn-inactive'}
   }
 
-  $scope.returnHideModel = function(companyOne, companyTwo, companyThree, company) {
-    if (!companyOne && !companyTwo && !companyThree) {return true;}
-    else if (companyOne && (company === 'Philips')) {return true;}
-    else if (companyTwo && (company === 'ResMed')) {return true;}
-    else if (companyThree && (company === 'Fisher & Paykel')) {return true;}
-    else {return false;}
+  $scope.returnHideModel = function(companyOne, companyTwo, companyThree, company, originality) {
+    if (!($scope.filterOne)) {
+      if (!companyOne && !companyTwo && !companyThree) {return true;}
+      else if (companyOne && (company == 'Philips')) {return true;}
+      else if (companyTwo && (company == 'ResMed')) {return true;}
+      else if (companyThree && (company == 'Fisher & Paykel')) {return true;}
+      else {return false;}
+    }
+    else if ($scope.filterOne && (originality == 'true')) {
+      if (!companyOne && !companyTwo && !companyThree) {return true;}
+      else if (companyOne && (company == 'Philips')) {return true;}
+      else if (companyTwo && (company == 'ResMed')) {return true;}
+      else if (companyThree && (company == 'Fisher & Paykel')) {return true;}
+      else {return false;}
+    }
   }
 
 })
@@ -37,6 +46,7 @@ var cpapMachine = [{
     company: 'ResMed',
     name: 'ResMed S10 AirSense Auto/Pro',
     type: 'cpap',
+    originality: 'true',
     photo: 'images/cpap-machines/resmed-s10-airsense-auto-pro.jpg',
     userOne: 'images/avatars/user-1.jpg',
     userTwo: 'images/avatars/user-2.jpg',
@@ -47,6 +57,7 @@ var cpapMachine = [{
     company: 'Philips',
     name: 'Philips Respironics DreamStation Auto/Pro',
     type: 'cpap',
+    originality: 'false',
     photo: 'images/cpap-machines/philips-respironics-dreamstation-auto-pro.jpg',
     userOne: 'images/avatars/user-4.jpg',
     userTwo: 'images/avatars/user-5.jpg',
@@ -57,6 +68,7 @@ var cpapMachine = [{
     company: 'Fisher & Paykel',
     name: 'Fisher & Paykel ICON Premo/Auto',
     type: 'cpap',
+    originality: 'true',
     photo: 'images/cpap-machines/fisher-and-paykel-icon-premo-auto.jpg',
     userOne: 'images/avatars/user-7.jpg',
     userTwo: 'images/avatars/user-8.jpg',
@@ -67,6 +79,7 @@ var cpapMachine = [{
     company: 'ResMed',
     name: 'ResMed S10 AirSense Auto',
     type: 'cpap',
+    originality: 'false',
     photo: 'images/cpap-machines/resmed-s10-airsense-auto.jpg',
     userOne: 'images/avatars/user-1.jpg',
     userTwo: 'images/avatars/user-3.jpg',
@@ -77,6 +90,7 @@ var cpapMachine = [{
     company: 'Philips',
     name: 'Philips Respironics RemStar System One Auto',
     type: 'cpap',
+    originality: 'false',
     photo: 'images/cpap-machines/philips-respironics-remstar-system-one-auto.jpg',
     userOne: 'images/avatars/user-2.jpg',
     userTwo: 'images/avatars/user-3.jpg',
@@ -87,6 +101,7 @@ var cpapMachine = [{
     company: 'Fisher & Paykel',
     name: 'Fisher & Paykel ICON Auto',
     type: 'cpap',
+    originality: 'true',
     photo: 'images/cpap-machines/fisher-and-paykel-icon-auto.jpg',
     userOne: 'images/avatars/user-8.jpg',
     userTwo: 'images/avatars/user-5.jpg',
@@ -97,6 +112,7 @@ var cpapMachine = [{
     company: 'ResMed',
     name: 'ResMed S9 Auto/CPAP',
     type: 'cpap',
+    originality: 'false',
     photo: 'images/cpap-machines/resmed-s9-auto-cpap.jpg',
     userOne: 'images/avatars/user-1.jpg',
     userTwo: 'images/avatars/user-4.jpg',
@@ -107,6 +123,7 @@ var cpapMachine = [{
     company: 'Philips',
     name: 'Philips Respironics System One Auto',
     type: 'cpap',
+    originality: 'false',
     photo: 'images/cpap-machines/philipsr-respironics-system-one-auto.jpg',
     userOne: 'images/avatars/user-8.jpg',
     userTwo: 'images/avatars/user-1.jpg',
@@ -117,6 +134,7 @@ var cpapMachine = [{
     company: 'Philips',
     name: 'Philips Respironics DreamStation BiPAP',
     type: 'bipap',
+    originality: 'true',
     photo: 'images/cpap-machines/philips-respironics-dreamstation-bipap.jpg',
     userOne: 'images/avatars/user-8.jpg',
     userTwo: 'images/avatars/user-4.jpg',

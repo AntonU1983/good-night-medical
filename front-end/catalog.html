@@ -73,12 +73,12 @@
       <div class="form-buttons" ng-init="filterOne = 0">
         <input class="form-left-btn pull-left"
                type="submit"
-               value="cpap"
+               value="all"
                ng-click="filterOne = 0"
                ng-class="returnClassBtnFilterOne(0);">
         <input class="form-right-btn pull-left"
                type="submit"
-               value="bipap"
+               value="new"
                ng-click="filterOne = 1"
                ng-class="returnClassBtnFilterOne(1);">
       </div>
@@ -120,7 +120,7 @@
 
       <div class="pull-left"
            ng-repeat="model in models | filter:search"
-           ng-if="returnHideModel(companyOne, companyTwo, companyThree, model.company);">
+           ng-if="returnHideModel(companyOne, companyTwo, companyThree, model.company, model.originality);">
         <div class="content-elements-img"><img ng-src="{{model.photo}}" alt=""></div>
         <span class="content-elements-model">{{model.name}}</span>
         <div class="content-elements-reviews">
