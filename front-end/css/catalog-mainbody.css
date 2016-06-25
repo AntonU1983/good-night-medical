@@ -56,43 +56,12 @@ body {
   border-color: #fff;
   outline: none;}
 
-#slider,
-.ui-slider,
-.ui-slider .ui-slider-handle,
-.ui-slider.ui-state-disabled .ui-slider-handle,
-.ui-slider.ui-state-disabled .ui-slider-range,
-.ui-slider-horizontal .ui-slider-handle,
-.ui-slider-horizontal .ui-slider-range,
-.ui-slider-horizontal .ui-slider-range-min,
-.ui-slider-horizontal .ui-slider-range-max {
-  -webkit-transition: all .0s linear;
-  -moz-transition: all .0s linear;
-  -o-transition: all .0s linear;
-  transition: all .0s linear;}
 
-#slider {
-  width: 160px;
-  height: 4px;
-  margin: 0 0 10px 0;
-  border: 0;
-  border-radius: 0;}
 
-.ui-slider .ui-slider-handle {
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-  border: 0;
-  border-radius: 999px;
-  outline: none;
-  background-color: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, .2);}
 
-.ui-slider-horizontal .ui-slider-handle {
-  top: -.4em;
-  margin: 0 -.5em;}
 
-.ui-slider-horizontal .ui-slider-range {
-  background-color: #fe7847;}
+
+
 
 .form-price-desc {
   height: 20px;}

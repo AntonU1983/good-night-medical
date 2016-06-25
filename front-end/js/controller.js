@@ -1,5 +1,5 @@
 var landingApp = angular.module('landingApp', []);
-var catalogApp = angular.module('catalogApp', []);
+var catalogApp = angular.module('catalogApp', ['rzModule']);
 
 
 landingApp.controller('HomeCtrl', function($scope) {
@@ -12,6 +12,16 @@ catalogApp.controller('CatalogCtrl', function($scope){
 
   $scope.models = cpapMachine;
 
+  $scope.slider = {
+    minValue: 0,
+    maxValue: 75,
+    options: {
+        floor: 0,
+        ceil: 75,
+        step: 1
+    }
+  };
+
   // Вычисляем высоту боковой панели
   // Минус отступы и header
   // Получаем красивую боковую панель
@@ -23,20 +33,24 @@ catalogApp.controller('CatalogCtrl', function($scope){
     else  {return 'form-btn-inactive'}
   }
 
-  $scope.returnHideModel = function(companyOne, companyTwo, companyThree, company, originality) {
+  $scope.returnHideModel = function(companyOne, companyTwo, companyThree, company, originality, cost, minCost, maxCost) {
     if (!($scope.filterOne)) {
-      if (!companyOne && !companyTwo && !companyThree) {return true;}
-      else if (companyOne && (company == 'Philips')) {return true;}
-      else if (companyTwo && (company == 'ResMed')) {return true;}
-      else if (companyThree && (company == 'Fisher & Paykel')) {return true;}
-      else {return false;}
+      if ((minCost <= cost) & ( cost <= maxCost)) {
+        if (!companyOne && !companyTwo && !companyThree) {return true;}
+        else if (companyOne && (company == 'Philips')) {return true;}
+        else if (companyTwo && (company == 'ResMed')) {return true;}
+        else if (companyThree && (company == 'Fisher & Paykel')) {return true;}
+        else {return false;}
+      }
     }
     else if ($scope.filterOne && (originality == 'true')) {
-      if (!companyOne && !companyTwo && !companyThree) {return true;}
-      else if (companyOne && (company == 'Philips')) {return true;}
-      else if (companyTwo && (company == 'ResMed')) {return true;}
-      else if (companyThree && (company == 'Fisher & Paykel')) {return true;}
-      else {return false;}
+      if ((minCost <= cost) & ( cost <= maxCost)) {
+        if (!companyOne && !companyTwo && !companyThree) {return true;}
+        else if (companyOne && (company == 'Philips')) {return true;}
+        else if (companyTwo && (company == 'ResMed')) {return true;}
+        else if (companyThree && (company == 'Fisher & Paykel')) {return true;}
+        else {return false;}
+      }
     }
   }
 
