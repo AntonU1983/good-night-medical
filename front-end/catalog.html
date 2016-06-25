@@ -56,6 +56,7 @@
 <div id="mainbody" ng-controller="CatalogCtrl">
   <div class="sidebar pull-left" ng-style="returnHeight();">
     <form>
+
       <div class="form-price">
         <div class="form-price-title">Price</div>
         <div id="slider"></div>
@@ -142,115 +143,19 @@
     <input class="content-search"
            type="text"
            placeholder="model, etc."
-           ng-model="searchModel">
+           ng-model="search.name">
     <div class="content-elements">
 
-      <div class="pull-left">
-        <div class="content-elements-img"><img src="images/cpap-machines/resmed-s10-airsense-auto-pro.jpg" alt=""></div>
-        <span class="content-elements-model">ResMed S10 AirSense Auto/Pro</span>
+      <div class="pull-left" ng-repeat="model in models | filter:search">
+        <div class="content-elements-img"><img ng-src="{{model.photo}}" alt=""></div>
+        <span class="content-elements-model">{{model.name}}</span>
         <div class="content-elements-reviews">
-          <img class="content-elements-reviews-ava-1" src="images/avatars/user-1.jpg" alt="">
-          <img class="content-elements-reviews-ava-2" src="images/avatars/user-2.jpg" alt="">
-          <img class="content-elements-reviews-ava-3" src="images/avatars/user-3.jpg" alt="">
-          <span>+31 reviews</span>
+          <img class="content-elements-reviews-ava-1" ng-src="{{model.userOne}}" alt="">
+          <img class="content-elements-reviews-ava-2" ng-src="{{model.userTwo}}" alt="">
+          <img class="content-elements-reviews-ava-3" ng-src="{{model.userThree}}" alt="">
+          <span>+{{model.reviews}} reviews</span>
         </div>
-        <span class="content-elements-price">$65 / month</span>
-      </div>
-
-      <div class="pull-left">
-        <div class="content-elements-img"><img src="images/cpap-machines/philips-respironics-dreamstation-auto-pro.jpg" alt=""></div>
-        <span class="content-elements-model">Phillips Respironics DreamStation Auto/Pro</span>
-        <div class="content-elements-reviews">
-          <img class="content-elements-reviews-ava-1" src="images/avatars/user-4.jpg" alt="">
-          <img class="content-elements-reviews-ava-2" src="images/avatars/user-5.jpg" alt="">
-          <img class="content-elements-reviews-ava-3" src="images/avatars/user-6.jpg" alt="">
-          <span>+4 reviews</span>
-        </div>
-        <span class="content-elements-price">$65 / month</span>
-      </div>
-
-      <div class="pull-left">
-        <div class="content-elements-img"><img src="images/cpap-machines/fisher-and-paykel-icon-premo-auto.jpg" alt=""></div>
-        <span class="content-elements-model">Fisher & Paykel ICON Premo/Auto</span>
-        <div class="content-elements-reviews">
-          <img class="content-elements-reviews-ava-1" src="images/avatars/user-7.jpg" alt="">
-          <img class="content-elements-reviews-ava-2" src="images/avatars/user-8.jpg" alt="">
-          <img class="content-elements-reviews-ava-3" src="images/avatars/user-6.jpg" alt="">
-          <span>+25 reviews</span>
-        </div>
-        <span class="content-elements-price">$49 / month</span>
-      </div>
-
-      <div class="pull-left">
-        <div class="content-elements-img"><img src="images/cpap-machines/resmed-s10-airsense-auto.jpg" alt=""></div>
-        <span class="content-elements-model">ResMed S10 AirSense Auto</span>
-        <div class="content-elements-reviews">
-          <img class="content-elements-reviews-ava-1" src="images/avatars/user-1.jpg" alt="">
-          <img class="content-elements-reviews-ava-2" src="images/avatars/user-3.jpg" alt="">
-          <img class="content-elements-reviews-ava-3" src="images/avatars/user-5.jpg" alt="">
-          <span>+19 reviews</span>
-        </div>
-        <span class="content-elements-price">$45 / month</span>
-      </div>
-
-      <div class="pull-left">
-        <div class="content-elements-img"><img src="images/cpap-machines/philips-respironics-remstar-system-one-auto.jpg" alt=""></div>
-        <span class="content-elements-model">Phillips Respironics RemStar System One Auto</span>
-        <div class="content-elements-reviews">
-          <img class="content-elements-reviews-ava-1" src="images/avatars/user-2.jpg" alt="">
-          <img class="content-elements-reviews-ava-2" src="images/avatars/user-3.jpg" alt="">
-          <img class="content-elements-reviews-ava-3" src="images/avatars/user-4.jpg" alt="">
-          <span>+17 reviews</span>
-        </div>
-        <span class="content-elements-price">$45 / month</span>
-      </div>
-
-      <div class="pull-left">
-        <div class="content-elements-img"><img src="images/cpap-machines/fisher-and-paykel-icon-auto.jpg" alt=""></div>
-        <span class="content-elements-model">Fisher &amp; Paykel ICON Auto</span>
-        <div class="content-elements-reviews">
-          <img class="content-elements-reviews-ava-1" src="images/avatars/user-8.jpg" alt="">
-          <img class="content-elements-reviews-ava-2" src="images/avatars/user-5.jpg" alt="">
-          <img class="content-elements-reviews-ava-3" src="images/avatars/user-3.jpg" alt="">
-          <span>+4 reviews</span>
-        </div>
-        <span class="content-elements-price">$29 / month</span>
-      </div>
-
-      <div class="pull-left">
-        <div class="content-elements-img"><img src="images/cpap-machines/resmed-s9-auto-cpap.jpg" alt=""></div>
-        <span class="content-elements-model">Resmed S9 Auto/CPAP</span>
-        <div class="content-elements-reviews">
-          <img class="content-elements-reviews-ava-1" src="images/avatars/user-1.jpg" alt="">
-          <img class="content-elements-reviews-ava-2" src="images/avatars/user-4.jpg" alt="">
-          <img class="content-elements-reviews-ava-3" src="images/avatars/user-7.jpg" alt="">
-          <span>+1 reviews</span>
-        </div>
-        <span class="content-elements-price">$29 / month</span>
-      </div>
-
-      <div class="pull-left">
-        <div class="content-elements-img"><img src="images/cpap-machines/philipsr-respironics-system-one-auto.jpg" alt=""></div>
-        <span class="content-elements-model">Phillips Respironics System One Auto</span>
-        <div class="content-elements-reviews">
-          <img class="content-elements-reviews-ava-1" src="images/avatars/user-8.jpg" alt="">
-          <img class="content-elements-reviews-ava-2" src="images/avatars/user-1.jpg" alt="">
-          <img class="content-elements-reviews-ava-3" src="images/avatars/user-5.jpg" alt="">
-          <span>+5 reviews</span>
-        </div>
-        <span class="content-elements-price">$29 / month</span>
-      </div>
-
-      <div class="pull-left">
-        <div class="content-elements-img"><img src="images/cpap-machines/philips-respironics-dreamstation-bipap.jpg" alt=""></div>
-        <span class="content-elements-model">Phillips Respironics DreamStation BiPAP</span>
-        <div class="content-elements-reviews">
-          <img class="content-elements-reviews-ava-1" src="images/avatars/user-8.jpg" alt="">
-          <img class="content-elements-reviews-ava-2" src="images/avatars/user-4.jpg" alt="">
-          <img class="content-elements-reviews-ava-3" src="images/avatars/user-2.jpg" alt="">
-          <span>+12 reviews</span>
-        </div>
-        <span class="content-elements-price">$75 / month</span>
+        <span class="content-elements-price">${{model.cost}} / month</span>
       </div>
 
     </div>
