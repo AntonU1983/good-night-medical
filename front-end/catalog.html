@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="catalogApp" ng-cloak>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Good Night Medical</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700&subset=latin,cyrillic' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Rubik:400,400italic,500,700&subset=latin,cyrillic' rel='stylesheet'>
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="css/jquery/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/catalog-header.css">
+  <link rel="stylesheet" href="css/catalog-mainbody.css">
+  <script src="js/jquery/jquery.min.js"></script>
+  <script src="js/jquery/jquery-ui.min.js"></script>
+  <script src="js/angular/angular.min.js"></script>
+  <script src="js/angular/angular-animate.min.js"></script>
+  <script src="js/angular/truncate.min.js"></script>
+  <script src="js/controller.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+<div id="header">
+  <div class="header">
+    <div class="header-logotype"><img src="images/logotype.png" alt=""></div>
+    <div class="header-nav-bar">
+      <a href="index.html#home" target="_blank">home</a>
+      <div class="header-separate"></div>
+      <a href="index.html#reasons" target="_blank">reasons</a>
+      <div class="header-separate"></div>
+      <a href="index.html#process" target="_blank">process</a>
+      <div class="header-separate"></div>
+      <a href="index.html#benefits" target="_blank">benefits</a>
+      <div class="header-separate"></div>
+      <a href="index.html#rent" target="_blank">rent</a>
+      <div class="header-separate"></div>
+      <a href="index.html#accredition" target="_blank">accredition</a>
+    </div>
+    <div class="header-login">
+      <a href="#">sign in</a>
+      <div class="header-separate"></div>
+      <a href="#">sign up</a>
+    </div>
+  </div>
+</div>
+
+<div id="mainbody" ng-controller="CatalogCtrl">
+  <div class="sidebar pull-left" ng-style="returnHeight();">
+    <form>
+      <div class="form-price">
+        <div class="form-price-title">Price</div>
+        <div id="slider"></div>
+        <input class="hide" type="text" name="minCost" id="minCost" value="0">
+        <input class="hide" type="text" name="maxCost" id="maxCost" value="0">
+        <div class="form-price-desc">
+          <div class="pull-left" id="minCostDiv"></div>
+          <div class="pull-right" id="maxCostDiv"></div>
+        </div>
+      </div>
+
+      <hr class="form-hr">
+
+      <div class="form-buttons" ng-init="filterOne = 0">
+        <input class="form-left-btn pull-left"
+               type="submit"
+               value="filter 1"
+               ng-click="filterOne = 0"
+               ng-class="returnClassBtnFilterOne(0);">
+        <input class="form-right-btn pull-left"
+               type="submit"
+               value="filter 2"
+               ng-click="filterOne = 1"
+               ng-class="returnClassBtnFilterOne(1);">
+      </div>
+
+      <div class="form-buttons" ng-init="filterTwo = 0">
+        <input class="form-left-btn pull-left"
+               type="submit"
+               value="filter 1"
+               ng-click="filterTwo = 0"
+               ng-class="returnClassBtnFilterTwo(0);">
+        <input class="form-right-btn pull-left"
+               type="submit"
+               value="filter 2"
+               ng-click="filterTwo = 1"
+               ng-class="returnClassBtnFilterTwo(1);">
+      </div>
+
+      <hr class="form-hr">
+
+      <div class="form-switch">
+        <span>Some filter one</span>
+        <label class="form-switch-label">
+          <input type="checkbox">
+          <div class="form-swtich-elem"></div>
+        </label>
+      </div>
+
+      <div class="form-switch">
+        <span>Some filter two</span>
+        <label class="form-switch-label">
+          <input type="checkbox">
+          <div class="form-swtich-elem"></div>
+        </label>
+      </div>
+
+      <div class="form-switch">
+        <span>Some filter three</span>
+        <label class="form-switch-label">
+          <input type="checkbox">
+          <div class="form-swtich-elem"></div>
+        </label>
+      </div>
+
+      <div class="form-switch">
+        <span>Some filter four</span>
+        <label class="form-switch-label">
+          <input type="checkbox">
+          <div class="form-swtich-elem"></div>
+        </label>
+      </div>
+
+      <div class="form-switch">
+        <span>Some filter five</span>
+        <label class="form-switch-label">
+          <input type="checkbox">
+          <div class="form-swtich-elem"></div>
+        </label>
+      </div>
+    </form>
+  </div>
+  <div class="content pull-left">
+    <input class="content-search"
+           type="text"
+           placeholder="model, etc."
+           ng-model="searchModel">
+    <div class="content-elements">
+
+      <div class="pull-left">
+        <div class="content-elements-img"><img src="images/cpap-machines/resmed-s10-airsense-auto-pro.jpg" alt=""></div>
+        <span class="content-elements-model">ResMed S10 AirSense Auto/Pro</span>
+        <div class="content-elements-reviews">
+          <img class="content-elements-reviews-ava-1" src="images/avatars/user-1.jpg" alt="">
+          <img class="content-elements-reviews-ava-2" src="images/avatars/user-2.jpg" alt="">
+          <img class="content-elements-reviews-ava-3" src="images/avatars/user-3.jpg" alt="">
+          <span>+31 reviews</span>
+        </div>
+        <span class="content-elements-price">$65 / month</span>
+      </div>
+
+      <div class="pull-left">
+        <div class="content-elements-img"><img src="images/cpap-machines/philips-respironics-dreamstation-auto-pro.jpg" alt=""></div>
+        <span class="content-elements-model">Phillips Respironics DreamStation Auto/Pro</span>
+        <div class="content-elements-reviews">
+          <img class="content-elements-reviews-ava-1" src="images/avatars/user-4.jpg" alt="">
+          <img class="content-elements-reviews-ava-2" src="images/avatars/user-5.jpg" alt="">
+          <img class="content-elements-reviews-ava-3" src="images/avatars/user-6.jpg" alt="">
+          <span>+4 reviews</span>
+        </div>
+        <span class="content-elements-price">$65 / month</span>
+      </div>
+
+      <div class="pull-left">
+        <div class="content-elements-img"><img src="images/cpap-machines/fisher-and-paykel-icon-premo-auto.jpg" alt=""></div>
+        <span class="content-elements-model">Fisher & Paykel ICON Premo/Auto</span>
+        <div class="content-elements-reviews">
+          <img class="content-elements-reviews-ava-1" src="images/avatars/user-7.jpg" alt="">
+          <img class="content-elements-reviews-ava-2" src="images/avatars/user-8.jpg" alt="">
+          <img class="content-elements-reviews-ava-3" src="images/avatars/user-6.jpg" alt="">
+          <span>+25 reviews</span>
+        </div>
+        <span class="content-elements-price">$49 / month</span>
+      </div>
+
+      <div class="pull-left">
+        <div class="content-elements-img"><img src="images/cpap-machines/resmed-s10-airsense-auto.jpg" alt=""></div>
+        <span class="content-elements-model">ResMed S10 AirSense Auto</span>
+        <div class="content-elements-reviews">
+          <img class="content-elements-reviews-ava-1" src="images/avatars/user-1.jpg" alt="">
+          <img class="content-elements-reviews-ava-2" src="images/avatars/user-3.jpg" alt="">
+          <img class="content-elements-reviews-ava-3" src="images/avatars/user-5.jpg" alt="">
+          <span>+19 reviews</span>
+        </div>
+        <span class="content-elements-price">$45 / month</span>
+      </div>
+
+      <div class="pull-left">
+        <div class="content-elements-img"><img src="images/cpap-machines/philips-respironics-remstar-system-one-auto.jpg" alt=""></div>
+        <span class="content-elements-model">Phillips Respironics RemStar System One Auto</span>
+        <div class="content-elements-reviews">
+          <img class="content-elements-reviews-ava-1" src="images/avatars/user-2.jpg" alt="">
+          <img class="content-elements-reviews-ava-2" src="images/avatars/user-3.jpg" alt="">
+          <img class="content-elements-reviews-ava-3" src="images/avatars/user-4.jpg" alt="">
+          <span>+17 reviews</span>
+        </div>
+        <span class="content-elements-price">$45 / month</span>
+      </div>
+
+      <div class="pull-left">
+        <div class="content-elements-img"><img src="images/cpap-machines/fisher-and-paykel-icon-auto.jpg" alt=""></div>
+        <span class="content-elements-model">Fisher &amp; Paykel ICON Auto</span>
+        <div class="content-elements-reviews">
+          <img class="content-elements-reviews-ava-1" src="images/avatars/user-8.jpg" alt="">
+          <img class="content-elements-reviews-ava-2" src="images/avatars/user-5.jpg" alt="">
+          <img class="content-elements-reviews-ava-3" src="images/avatars/user-3.jpg" alt="">
+          <span>+4 reviews</span>
+        </div>
+        <span class="content-elements-price">$29 / month</span>
+      </div>
+
+      <div class="pull-left">
+        <div class="content-elements-img"><img src="images/cpap-machines/resmed-s9-auto-cpap.jpg" alt=""></div>
+        <span class="content-elements-model">Resmed S9 Auto/CPAP</span>
+        <div class="content-elements-reviews">
+          <img class="content-elements-reviews-ava-1" src="images/avatars/user-1.jpg" alt="">
+          <img class="content-elements-reviews-ava-2" src="images/avatars/user-4.jpg" alt="">
+          <img class="content-elements-reviews-ava-3" src="images/avatars/user-7.jpg" alt="">
+          <span>+1 reviews</span>
+        </div>
+        <span class="content-elements-price">$29 / month</span>
+      </div>
+
+      <div class="pull-left">
+        <div class="content-elements-img"><img src="images/cpap-machines/philipsr-respironics-system-one-auto.jpg" alt=""></div>
+        <span class="content-elements-model">Phillips Respironics System One Auto</span>
+        <div class="content-elements-reviews">
+          <img class="content-elements-reviews-ava-1" src="images/avatars/user-8.jpg" alt="">
+          <img class="content-elements-reviews-ava-2" src="images/avatars/user-1.jpg" alt="">
+          <img class="content-elements-reviews-ava-3" src="images/avatars/user-5.jpg" alt="">
+          <span>+5 reviews</span>
+        </div>
+        <span class="content-elements-price">$29 / month</span>
+      </div>
+
+      <div class="pull-left">
+        <div class="content-elements-img"><img src="images/cpap-machines/philips-respironics-dreamstation-bipap.jpg" alt=""></div>
+        <span class="content-elements-model">Phillips Respironics DreamStation BiPAP</span>
+        <div class="content-elements-reviews">
+          <img class="content-elements-reviews-ava-1" src="images/avatars/user-8.jpg" alt="">
+          <img class="content-elements-reviews-ava-2" src="images/avatars/user-4.jpg" alt="">
+          <img class="content-elements-reviews-ava-3" src="images/avatars/user-2.jpg" alt="">
+          <span>+12 reviews</span>
+        </div>
+        <span class="content-elements-price">$75 / month</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

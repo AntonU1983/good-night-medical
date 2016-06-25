@@ -1,44 +1,48 @@
 #benefits {
+  position: relative;
   height: 400px;
-  background: #F0F0F2;
-  position: relative;}
+  background: #F0F0F2;}
 
 .benefits {
-  width: 960px;
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
+  width: 960px;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);}
 
 .benefits > div {
-  height: 240px;
-  width: 288px;}
+  width: 288px;
+  height: 240px;}
 
-.benefits-one {background: url(../images/other/knight-1.jpg) no-repeat center center;}
-.benefits-two {background: url(../images/other/knight-2.jpg) no-repeat center center;}
-.benefits-three {background: url(../images/other/knight-3.jpg) no-repeat center center;}
+.benefits-one {
+  background: url(../images/other/knight-1.jpg) no-repeat center center;}
+.benefits-two {
+  background: url(../images/other/knight-2.jpg) no-repeat center center;}
+.benefits-three {
+  background: url(../images/other/knight-3.jpg) no-repeat center center;}
 
 .benefits-two,
-.benefits-three {margin: 0 0 0 48px;}
+.benefits-three {
+  margin: 0 0 0 48px;}
 
 .benefits-one :first-child,
 .benefits-two :first-child,
 .benefits-three :first-child {
   font-family: 'Roboto';
-  color: #FE7847;
   font-size: 20px;
   font-weight: 500;
-  text-transform: uppercase;
+  margin: 60px 0 15px 0;
   text-align: center;
-  margin: 60px 0 15px 0;}
+  text-transform: uppercase;
+  color: #FE7847;}
 
 .benefits-one :last-child,
 .benefits-two :last-child,
 .benefits-three :last-child {
   font-family: 'Roboto';
-  color: #222831;
   font-size: 14px;
-  text-align: center;}
+  text-align: center;
+  color: #222831;}

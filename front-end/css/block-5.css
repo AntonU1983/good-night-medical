@@ -1,15 +1,15 @@
 #rent {
+  position: relative;
   height: 440px;
   background: url(../images/bg/bg-5.jpg) no-repeat center top;
-  background-size: cover;
-  position: relative;}
+  background-size: cover;}
 
 .rent {
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 240px;
   width: 740px;
+  height: 240px;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
@@ -22,93 +22,98 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, .2);}
 
 .rent-info {
+  position: relative;
   width: 480px;
   height: 240px;
-  padding: 20px 0;
-  position: relative;}
+  padding: 20px 0;}
 
 .rent-title {
   font-family: 'Roboto';
-  font-weight: 500;
-  color: #eee;
   font-size: 16px;
-  text-align: left;
+  font-weight: 500;
   margin: 0 0 20px 0;
+  text-align: left;
+  color: #eee;
   text-shadow: 0 1px 3px rgba(0, 0, 0, .15);}
 
 .rent-desc {
   font-family: 'Roboto';
-  color: #eee;
   font-size: 14px;
   text-align: justify;
+  color: #eee;
   text-shadow: 0 1px 3px rgba(0, 0, 0, .15);}
 
 .rent-price {
   font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 500;
   position: absolute;
   top: 17px;
   right: 0;
-  font-weight: 500;
-  color: #FE7847;
-  font-size: 18px;
   text-align: right;
+  color: #FE7847;
   text-shadow: 0 1px 3px rgba(0, 0, 0, .15);}
 
 .rent-reviews {
   position: absolute;
-  left: 0;
-  bottom: 20px;}
+  bottom: 20px;
+  left: 0;}
 
 .rent-reviews > img {
+  position: absolute;
+  bottom: 0;
   width: 46px;
   height: 46px;
   border: 2px;
   border-style: solid;
   border-color: #fff;
-  border-radius: 999px;
-  position: absolute;
-  bottom: 0;}
+  border-radius: 999px;}
 
-.rent-reviews-ava-1 {left: 0;}
-.rent-reviews-ava-2 {left: 23px;}
-.rent-reviews-ava-3 {left: 46px;}
+.rent-reviews-ava-1 {
+  left: 0;}
+.rent-reviews-ava-2 {
+  left: 23px;}
+.rent-reviews-ava-3 {
+  left: 46px;}
 
 .rent-reviews > span {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 46px;
   position: absolute;
   bottom: 0;
   left: 112px;
   width: 100px;
-  line-height: 46px;
-  font-family: 'Roboto';
-  font-size: 14px;
-  font-weight: 500;
   color: #FE7847;}
 
 .rent-buttons {
   position: absolute;
-  bottom: 20px;
   right: 0;
+  bottom: 20px;
   text-shadow: 0 1px 3px rgba(0, 0, 0, .15);}
 
 .rent-btn-rent,
 .rent-btn-catalog {
-  display: inline-block;
-  border: 3px;
-  border-style: solid;
-  border-radius: 5px;
-  border-color: #FE7847;
-  text-align: center;
-  vertical-align: middle;
-  color: #fff;
-  height: 40px;
   font-family: 'Roboto';
   font-size: 15px;
   font-weight: 500;
   line-height: 35px;
-  margin: 0 0 0 20px;}
+  display: inline-block;
+  height: 40px;
+  margin: 0 0 0 20px;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+  border: 3px;
+  border-style: solid;
+  border-color: #FE7847;
+  border-radius: 5px;}
 
-.rent-btn-rent {width: 75px;}
-.rent-btn-catalog {width: 96px;}
+.rent-btn-rent {
+  width: 75px;}
+.rent-btn-catalog {
+  width: 96px;}
 
 .rent-btn-rent:hover,
 .rent-btn-catalog:hover {
