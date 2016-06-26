@@ -41,7 +41,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="GoodNightMedical\IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GenericBackend.Core\GenericBackend.Core.csproj">
+      <Project>{65DC52F2-95B3-44C8-8FC3-18FE04D9345C}</Project>
+      <Name>GenericBackend.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GenericBackend.DataModels\GenericBackend.DataModels.csproj">
+      <Project>{0EC52F2A-2E47-4DC5-A1F4-F66C924AA7B7}</Project>
+      <Name>GenericBackend.DataModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GenericBackend.Repository\GenericBackend.Repository.csproj">
+      <Project>{7FD7B97D-640C-4BF1-B6DA-61C68988E59F}</Project>
+      <Name>GenericBackend.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

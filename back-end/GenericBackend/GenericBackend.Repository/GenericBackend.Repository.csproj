@@ -52,6 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GoodNightMedical\MachineOrderRepository.cs" />
+    <Compile Include="GoodNightMedical\MachineRepository.cs" />
+    <Compile Include="GoodNightMedical\RentOptionRepository.cs" />
     <Compile Include="IMongoRepository.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="MongoRepository.cs" />
@@ -64,6 +67,10 @@
     <ProjectReference Include="..\GenericBackend.Core\GenericBackend.Core.csproj">
       <Project>{65DC52F2-95B3-44C8-8FC3-18FE04D9345C}</Project>
       <Name>GenericBackend.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GenericBackend.DataModels\GenericBackend.DataModels.csproj">
+      <Project>{0EC52F2A-2E47-4DC5-A1F4-F66C924AA7B7}</Project>
+      <Name>GenericBackend.DataModels</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
