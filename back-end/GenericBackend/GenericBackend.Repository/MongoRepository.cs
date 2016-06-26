@@ -1,21 +1,16 @@
-﻿using System;
+﻿using GenericBackend.Core;
+using GenericBackend.Core.Utils;
+using MongoDB.Bson;
+using MongoDB.Driver;
+using MongoDB.Driver.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GenericBackend.Core;
-using GenericBackend.Core.Utils;
+using System.Linq.Expressions;
+
+
 namespace GenericBackend.Repository
 {
-    using MongoDB.Bson;
-    using MongoDB.Driver;
-
-    using MongoDB.Driver.Linq;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Linq.Expressions;
-
     /// <summary>
     /// Deals with entities in MongoDb.
     /// </summary>
@@ -23,7 +18,6 @@ namespace GenericBackend.Repository
     /// <typeparam name="TKey">The type used for the entity's Id.</typeparam>
     public class MongoRepository<T, TKey> : IMongoRepository<T, TKey>
         where TKey: IComparable
-
         where T : IMongoEntity<TKey>
         
     {

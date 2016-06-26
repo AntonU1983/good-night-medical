@@ -47,6 +47,15 @@
     <Compile Include="GoodNightMedical\RentOption.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GenericBackend.Core\GenericBackend.Core.csproj">
+      <Project>{65DC52F2-95B3-44C8-8FC3-18FE04D9345C}</Project>
+      <Name>GenericBackend.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

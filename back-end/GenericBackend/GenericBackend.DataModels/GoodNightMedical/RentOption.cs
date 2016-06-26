@@ -1,9 +1,9 @@
-﻿namespace GenericBackend.DataModels.GoodNightMedical
+﻿using GenericBackend.Core;
+
+namespace GenericBackend.DataModels.GoodNightMedical
 {
-    public class RentOption
+    public class RentOption : MongoEntityBase
     {
-        public Machine Machine { get; set; }
-        public int MachineId { get; set; }
         public string Name { get; set; }
         public decimal PricePerMonth { get; set; }
     }
