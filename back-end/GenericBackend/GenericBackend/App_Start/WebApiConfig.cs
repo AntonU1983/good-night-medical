@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
 
 namespace GenericBackend
 {
@@ -10,6 +7,7 @@ namespace GenericBackend
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            config.SuppressDefaultHostAuthentication();
 
             // Web API routes
             config.MapHttpAttributeRoutes();
