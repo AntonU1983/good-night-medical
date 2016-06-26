@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
+﻿using System;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace GenericBackend.Core
 {
@@ -12,6 +13,7 @@ namespace GenericBackend.Core
     }
 
     public interface IMongoEntity<TKey> : IEntity<TKey>
+        where TKey: IComparable
     {
         /// <summary>
         /// Gets or sets the Id of the Entity.

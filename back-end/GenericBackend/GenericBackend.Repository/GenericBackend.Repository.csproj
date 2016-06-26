@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="IMongoRepository.cs" />
     <Compile Include="IRepository.cs" />
+    <Compile Include="MongoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

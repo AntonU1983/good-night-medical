@@ -11,7 +11,9 @@ namespace GenericBackend.Repository
     /// <typeparam name="T">The type contained in the repository.</typeparam>
     /// <typeparam name="TKey">The type used for the entity's Id.</typeparam>
     public interface IMongoRepository<T, TKey> : IRepository<T, TKey>, IQueryable<T>
+        where TKey : IComparable 
         where T : IMongoEntity<TKey>
+        
     {
         /// <summary>
         /// Gets the Mongo collection (to perform advanced operations).
