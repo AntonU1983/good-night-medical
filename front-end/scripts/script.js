@@ -14,37 +14,27 @@ $(document).ready(function() {
   });
 });
 
-// Логика взаимодействия слайдера в боковой панели страницы Catalog
-// div с #slider создает слайдер с двумя ползунками
-// Два input (#minCost и #maxCost) хранят в себе данные ползунков для AngularJS
-// Два div (#minCostDiv и #maxCostDiv) хранят в себе данные ползунков для вывода пользователю
-jQuery(document).ready(function() {
-  jQuery("#slider").slider({
-    min: 0,
-    max: 75,
-    values: [0, 75],
-    range: true,
-    create: function(event, ui) {
-      // Вносим данные когда создался slider
-      jQuery("input#minCost").val(jQuery("#slider").slider("values", 0));
-      jQuery("div#minCostDiv").text("$"+jQuery("#slider").slider("values", 0));
-      jQuery("input#maxCost").val(jQuery("#slider").slider("values", 1));
-      jQuery("div#maxCostDiv").text("$"+jQuery("#slider").slider("values", 1));
-    },
-    slide: function(event, ui) {
-      // Изменяем данные когда пользователь двигает ползунок
-      jQuery("input#minCost").val(jQuery("#slider").slider("values", 0));
-      jQuery("div#minCostDiv").text("$"+jQuery("#slider").slider("values", 0));
-      jQuery("input#maxCost").val(jQuery("#slider").slider("values", 1));
-      jQuery("div#maxCostDiv").text("$"+jQuery("#slider").slider("values", 1));
-    },
-    stop: function(event, ui) {
-      // Изменяем данные когда пользователь перестал двигать ползнуок
-      jQuery("input#minCost").val(jQuery("#slider").slider("values", 0));
-      jQuery("div#minCostDiv").text("$"+jQuery("#slider").slider("values", 0));
-      jQuery("input#maxCost").val(jQuery("#slider").slider("values", 1));
-      jQuery("div#maxCostDiv").text("$"+jQuery("#slider").slider("values", 1));
-    }
+// Функция вызова логику (php) для отправки данных
+function sent(elem) {
+  var form = $(elem);
+  var alertCheck = false;
+  var data = form.serialize();
+
+  $.ajax({
+    data: data,
+    url: '/php/post.php', // Заменить на C#
+    type: 'post',
+    dataType: 'text',
+    success: function(result) {alertCheck = result;}
   });
-});
+
+  if (!alertCheck) {
+    alert('Сообщение отправлено!');
+    console.log('Сообщение отправлено!');
+  }
+  else {
+    alert('Сообщение не было отправлено, попробуйте позже');
+    console.log('Сообщение не было отправлено, попробуйте позже');
+  }
+};
 
