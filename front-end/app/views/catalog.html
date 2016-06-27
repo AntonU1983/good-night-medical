@@ -8,21 +8,11 @@
   <title>Good Night Medical</title>
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700&subset=latin,cyrillic' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Rubik:400,400italic,500,700&subset=latin,cyrillic' rel='stylesheet'>
-  <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
-  <link rel="stylesheet" href="css/jquery/jquery-ui.min.css">
-  <link rel="stylesheet" href="css/angular/rzslider.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/catalog-header.css">
-  <link rel="stylesheet" href="css/catalog-mainbody.css">
-  <script src="js/jquery/jquery.min.js"></script>
-  <script src="js/jquery/jquery-ui.min.js"></script>
-  <script src="js/angular/angular.min.js"></script>
-  <script src="js/angular/angular-animate.min.js"></script>
-  <script src="js/angular/truncate.min.js"></script>
-  <script src="js/angular/rzslider.min.js"></script>
-  <script src="js/controller.js"></script>
-  <script src="js/bootstrap/bootstrap.min.js"></script>
-  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="../../content/css/lib/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../content/css/lib/angular/slider.css">
+  <link rel="stylesheet" href="../../content/css/main.css">
+  <link rel="stylesheet" href="../../content/css/catalog/header.css">
+  <link rel="stylesheet" href="../../content/css/catalog/mainbody.css">
   <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -33,21 +23,21 @@
 
 <div id="header">
   <div class="header">
-    <div class="header-logotype"><img src="images/logotype.png" alt=""></div>
+    <div class="header-logotype"><img src="../../content/images/logotype.png" alt=""></div>
     <div class="header-nav-bar">
-      <a href="index.html#home" target="_blank">home</a>
+      <a href="../../index.html#home" target="_blank">home</a>
       <div class="header-separate"></div>
-      <a href="index.html#reasons" target="_blank">reasons</a>
+      <a href="../../index.html#reasons" target="_blank">reasons</a>
       <div class="header-separate"></div>
-      <a href="index.html#process" target="_blank">process</a>
+      <a href="../../index.html#process" target="_blank">process</a>
       <div class="header-separate"></div>
-      <a href="index.html#benefits" target="_blank">benefits</a>
+      <a href="../../index.html#benefits" target="_blank">benefits</a>
       <div class="header-separate"></div>
-      <a href="index.html#rent" target="_blank">rent</a>
+      <a href="../../index.html#rent" target="_blank">rent</a>
       <div class="header-separate"></div>
-      <a href="index.html#accredition" target="_blank">accredition</a>
+      <a href="../../index.html#accredition" target="_blank">accredition</a>
     </div>
-    <div class="header-login">
+    <div class="header-login hide">
       <a href="#">sign in</a>
       <div class="header-separate"></div>
       <a href="#">sign up</a>
@@ -55,7 +45,7 @@
   </div>
 </div>
 
-<div id="mainbody" ng-controller="CatalogCtrl">
+<div id="mainbody" ng-controller="MainBodyCtrl">
   <div class="sidebar pull-left" ng-style="returnHeight();">
     <form name="form" id="form" novalidate>
 
@@ -70,9 +60,9 @@
         </div>
       </div>
 
-      <hr class="form-hr">
+      <hr class="form-hr hide">
 
-      <div class="form-buttons" ng-init="filterOne = 0">
+      <div class="form-buttons hide" ng-init="filterOne = 0">
         <input class="form-left-btn pull-left"
                type="submit"
                value="all"
@@ -125,7 +115,7 @@
            ng-if="returnHideModel(companyOne, companyTwo, companyThree, model.company, model.originality, model.cost, slider.minValue, slider.maxValue);">
         <div class="content-elements-img"><img ng-src="{{model.photo}}" alt=""></div>
         <span class="content-elements-model">{{model.name}}</span>
-        <div class="content-elements-reviews">
+        <div class="content-elements-reviews hide">
           <img class="content-elements-reviews-ava-1" ng-src="{{model.userOne}}" alt="">
           <img class="content-elements-reviews-ava-2" ng-src="{{model.userTwo}}" alt="">
           <img class="content-elements-reviews-ava-3" ng-src="{{model.userThree}}" alt="">
@@ -137,6 +127,16 @@
     </div>
   </div>
 </div>
+
+<script src="../../scripts/lib/jquery/jquery.min.js"></script>
+<script src="../../scripts/lib/angular/angular.min.js"></script>
+<script src="../../scripts/lib/angular/angular-animate.min.js"></script>
+<script src="../../scripts/lib/angular/ellipsis.min.js"></script>
+<script src="../../scripts/lib/angular/slider.min.js"></script>
+<script src="../app.js"></script>
+<script src="../controllers/catalog/mainbody.js"></script>
+<script src="../../scripts/lib/bootstrap/bootstrap.min.js"></script>
+<script src="../../scripts/script.js"></script>
 
 </body>
 </html>

@@ -1,7 +1,7 @@
 #rent {
   position: relative;
   height: 440px;
-  background: url(../images/bg/bg-5.jpg) no-repeat center top;
+  background: url(../../images/bg/bg-5.jpg) no-repeat center top;
   background-size: cover;}
 
 .rent {
@@ -69,12 +69,9 @@
   border-color: #fff;
   border-radius: 999px;}
 
-.rent-reviews-ava-1 {
-  left: 0;}
-.rent-reviews-ava-2 {
-  left: 23px;}
-.rent-reviews-ava-3 {
-  left: 46px;}
+.rent-reviews-ava-1 {left: 0;}
+.rent-reviews-ava-2 {left: 23px;}
+.rent-reviews-ava-3 {left: 46px;}
 
 .rent-reviews > span {
   font-family: 'Roboto';
@@ -110,10 +107,8 @@
   border-color: #FE7847;
   border-radius: 5px;}
 
-.rent-btn-rent {
-  width: 75px;}
-.rent-btn-catalog {
-  width: 96px;}
+.rent-btn-rent {width: 75px;}
+.rent-btn-catalog {width: 96px;}
 
 .rent-btn-rent:hover,
 .rent-btn-catalog:hover {

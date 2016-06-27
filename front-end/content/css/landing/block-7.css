@@ -1,5 +1,4 @@
-#copyright {
-  background: #393E46;}
+#copyright {background: #393E46;}
 
 .copyright {
   position: relative;
@@ -83,20 +82,12 @@
   border-color: #FE7847;
   background-color: #FE7847;}
 
-.copyright-form input:focus::-webkit-input-placeholder {
-  color: transparent}
-.copyright-form input:focus::-moz-placeholder {
-  color: transparent}
-.copyright-form input:focus:-moz-placeholder {
-  color: transparent}
-.copyright-form input:focus:-ms-input-placeholder {
-  color: transparent}
+.copyright-form input:focus::-webkit-input-placeholder {color: transparent}
+.copyright-form input:focus::-moz-placeholder {color: transparent}
+.copyright-form input:focus:-moz-placeholder {color: transparent}
+.copyright-form input:focus:-ms-input-placeholder {color: transparent}
 
-.copyright-form input::-webkit-input-placeholder {
-  color: #393E46;}
-.copyright-form input::-moz-placeholder {
-  color: #393E46;}
-.copyright-form input:-moz-placeholder {
-  color: #393E46;}
-.copyright-form input:-ms-input-placeholder {
-  color: #393E46;}
+.copyright-form input::-webkit-input-placeholder {color: #393E46;}
+.copyright-form input::-moz-placeholder {color: #393E46;}
+.copyright-form input:-moz-placeholder {color: #393E46;}
+.copyright-form input:-ms-input-placeholder {color: #393E46;}
