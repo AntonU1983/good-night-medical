@@ -12,6 +12,9 @@ namespace GenericBackend.DataModels.GoodNightMedical
     {
         public string Name { get; set; }
         public string ImageUrl { get; set; }
-        public ICollection<RentOption> RentOptions { get; set; }
+        public decimal PricePerMonth { get; set; }
+        public bool Refurbished { get; set; }
+
+        //public RentOption RentOption { get; set; }
     }
 }

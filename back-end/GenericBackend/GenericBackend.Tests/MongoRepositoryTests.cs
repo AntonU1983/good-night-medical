@@ -27,12 +27,13 @@ namespace GenericBackend.Tests
             {
                 Name = machineName ,
                 ImageUrl = "http://www.goodnightmedical.com/images/cpap-machine-photos/Fisher-Paykel-Icon1.jpg",
+                PricePerMonth = 100m
             };
-            var rentOptions = new List<RentOption>();
-            rentOptions.Add(new RentOption() { Name = "Rent 1", PricePerMonth = 100m});
+            /*var rentOptions = new List<RentOption>();
+            rentOptions.Add(new RentOption() { Name = "Rent 1", PricePerMonth = 100m });
             rentOptions.Add(new RentOption() { Name = "Rent 2", PricePerMonth = 200m });
             rentOptions.Add(new RentOption() { Name = "Rent 3", PricePerMonth = 300m });
-            machine.RentOptions = rentOptions;
+            machine.RentOptions = rentOptions;*/
             repo.Add(machine);
             
             Assert.That(repo.Any(x => x.Name == machineName));
