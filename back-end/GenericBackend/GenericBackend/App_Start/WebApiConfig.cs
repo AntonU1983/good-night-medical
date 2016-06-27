@@ -1,4 +1,7 @@
-﻿using System.Web.Http;
+﻿using System.Linq;
+using System.Net.Http.Formatting;
+using System.Web.Http;
+using Newtonsoft.Json.Serialization;
 
 namespace GenericBackend
 {
@@ -6,6 +9,12 @@ namespace GenericBackend
     {
         public static void Register(HttpConfiguration config)
         {
+
+
+            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver =
+                new CamelCasePropertyNamesContractResolver();
+            config.Formatters.JsonFormatter.UseDataContractJsonSerializer = false;
+
             // Web API configuration and services
             config.SuppressDefaultHostAuthentication();
 
@@ -17,6 +26,9 @@ namespace GenericBackend
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+
+           
         }
     }
 }
