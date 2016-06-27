@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="catalogApp" ng-cloak>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Good Night Medical</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700&subset=latin,cyrillic' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Rubik:400,400italic,500,700&subset=latin,cyrillic' rel='stylesheet'>
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="css/jquery/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/angular/rzslider.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/catalog-header.css">
+  <link rel="stylesheet" href="css/catalog-mainbody.css">
+  <script src="js/jquery/jquery.min.js"></script>
+  <script src="js/jquery/jquery-ui.min.js"></script>
+  <script src="js/angular/angular.min.js"></script>
+  <script src="js/angular/angular-animate.min.js"></script>
+  <script src="js/angular/truncate.min.js"></script>
+  <script src="js/angular/rzslider.min.js"></script>
+  <script src="js/controller.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+<div id="header">
+  <div class="header">
+    <div class="header-logotype"><img src="images/logotype.png" alt=""></div>
+    <div class="header-nav-bar">
+      <a href="index.html#home" target="_blank">home</a>
+      <div class="header-separate"></div>
+      <a href="index.html#reasons" target="_blank">reasons</a>
+      <div class="header-separate"></div>
+      <a href="index.html#process" target="_blank">process</a>
+      <div class="header-separate"></div>
+      <a href="index.html#benefits" target="_blank">benefits</a>
+      <div class="header-separate"></div>
+      <a href="index.html#rent" target="_blank">rent</a>
+      <div class="header-separate"></div>
+      <a href="index.html#accredition" target="_blank">accredition</a>
+    </div>
+    <div class="header-login">
+      <a href="#">sign in</a>
+      <div class="header-separate"></div>
+      <a href="#">sign up</a>
+    </div>
+  </div>
+</div>
+
+<div id="mainbody" ng-controller="CatalogCtrl">
+  <div class="sidebar pull-left" ng-style="returnHeight();">
+    <form name="form" id="form" novalidate>
+
+      <div class="form-price">
+        <div class="form-price-title">Price</div>
+        <rzslider rz-slider-model="slider.minValue"
+                  rz-slider-high="slider.maxValue"
+                  rz-slider-options="slider.options"></rzslider>
+        <div class="form-price-desc">
+          <div class="pull-left" id="minCostDiv">&#36;{{slider.minValue}}</div>
+          <div class="pull-right" id="maxCostDiv">&#36;{{slider.maxValue}}</div>
+        </div>
+      </div>
+
+      <hr class="form-hr">
+
+      <div class="form-buttons" ng-init="filterOne = 0">
+        <input class="form-left-btn pull-left"
+               type="submit"
+               value="all"
+               ng-click="filterOne = 0"
+               ng-class="returnClassBtnFilterOne(0);">
+        <input class="form-right-btn pull-left"
+               type="submit"
+               value="new"
+               ng-click="filterOne = 1"
+               ng-class="returnClassBtnFilterOne(1);">
+      </div>
+
+      <hr class="form-hr">
+
+      <div class="form-switch">
+        <span>Philips</span>
+        <label class="form-switch-label">
+          <input type="checkbox" ng-model="companyOne">
+          <div class="form-swtich-elem"></div>
+        </label>
+      </div>
+
+      <div class="form-switch">
+        <span>ResMed</span>
+        <label class="form-switch-label">
+          <input type="checkbox" ng-model="companyTwo">
+          <div class="form-swtich-elem"></div>
+        </label>
+      </div>
+
+      <div class="form-switch">
+        <span>Fisher &amp; Paykel</span>
+        <label class="form-switch-label">
+          <input type="checkbox" ng-model="companyThree">
+          <div class="form-swtich-elem"></div>
+        </label>
+      </div>
+
+    </form>
+  </div>
+  <div class="content pull-left">
+    <input class="content-search"
+           type="text"
+           placeholder="model, etc."
+           ng-model="search.name">
+    <div class="content-elements">
+
+      <div class="pull-left"
+           ng-repeat="model in models | filter:search"
+           ng-if="returnHideModel(companyOne, companyTwo, companyThree, model.company, model.originality, model.cost, slider.minValue, slider.maxValue);">
+        <div class="content-elements-img"><img ng-src="{{model.photo}}" alt=""></div>
+        <span class="content-elements-model">{{model.name}}</span>
+        <div class="content-elements-reviews">
+          <img class="content-elements-reviews-ava-1" ng-src="{{model.userOne}}" alt="">
+          <img class="content-elements-reviews-ava-2" ng-src="{{model.userTwo}}" alt="">
+          <img class="content-elements-reviews-ava-3" ng-src="{{model.userThree}}" alt="">
+          <span>+{{model.reviews}} reviews</span>
+        </div>
+        <span class="content-elements-price">${{model.cost}} / month</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
