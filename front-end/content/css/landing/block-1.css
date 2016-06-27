@@ -1,6 +1,6 @@
 #home {
   position: relative;
-  background: url(../images/bg/bg-1.jpg) no-repeat center top;
+  background: url(../../images/bg/bg-1.jpg) no-repeat center top;
   background-size: cover;}
 
 .header {
@@ -124,23 +124,15 @@
   border-color: #60B0FF;
   background-color: #60B0FF;}
 
-.mind-form input:focus::-webkit-input-placeholder {
-  color: transparent}
-.mind-form input:focus::-moz-placeholder {
-  color: transparent}
-.mind-form input:focus:-moz-placeholder {
-  color: transparent}
-.mind-form input:focus:-ms-input-placeholder {
-  color: transparent}
+.mind-form input:focus::-webkit-input-placeholder {color: transparent}
+.mind-form input:focus::-moz-placeholder {color: transparent}
+.mind-form input:focus:-moz-placeholder {color: transparent}
+.mind-form input:focus:-ms-input-placeholder {color: transparent}
 
-.mind-form input::-webkit-input-placeholder {
-  color: #ccc;}
-.mind-form input::-moz-placeholder {
-  color: #ccc;}
-.mind-form input:-moz-placeholder {
-  color: #ccc;}
-.mind-form input:-ms-input-placeholder {
-  color: #ccc;}
+.mind-form input::-webkit-input-placeholder {color: #ccc;}
+.mind-form input::-moz-placeholder {color: #ccc;}
+.mind-form input:-moz-placeholder {color: #ccc;}
+.mind-form input:-ms-input-placeholder {color: #ccc;}
 
 .mind-form-desc {
   font-family: 'Rubik';
