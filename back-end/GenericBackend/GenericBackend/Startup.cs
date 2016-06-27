@@ -1,5 +1,6 @@
 ﻿using System.Web.Http;
 using Microsoft.Owin;
+using Microsoft.Owin.Cors;
 using Owin;
 
 [assembly: OwinStartup(typeof(GenericBackend.Startup))]
@@ -11,7 +12,7 @@ namespace GenericBackend
 		{
 			var configuration = new HttpConfiguration();
 
-            //app.UseCors(CorsOptions.AllowAll);
+            app.UseCors(CorsOptions.AllowAll);
             WebApiConfig.Register(configuration);
             app.UseWebApi(configuration);
             ConfigurateAutofac(configuration, app);
