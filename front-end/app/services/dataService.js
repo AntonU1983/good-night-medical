@@ -7,7 +7,7 @@
     function dataService($http) {
 
         // Change with appropriate url
-        var urlBase = "http://localhost:51925/api/machines";
+        var urlBase = "http://goodnight-medical-demo.azurewebsites.net/api/Machines";
 
         var service = {
             getMachines: getMachines
