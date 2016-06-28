@@ -56,13 +56,6 @@ body {
   border-color: #fff;
   outline: none;}
 
-
-
-
-
-
-
-
 .form-price-desc {
   height: 20px;}
 
@@ -136,7 +129,7 @@ body {
 .form-switch-label input {
   display: none;}
 
-.form-swtich-elem {
+.form-switch-elem {
   position: absolute;
   top: 0;
   right: 0;
@@ -150,7 +143,7 @@ body {
   border-radius: 999px;
   background-color: #ccc;}
 
-.form-swtich-elem:before {
+.form-switch-elem:before {
   position: absolute;
   bottom: 2px;
   left: 2px;
@@ -164,10 +157,10 @@ body {
   border-radius: 999px;
   background-color: #fff;}
 
-input:checked + .form-swtich-elem {
+input:checked + .form-switch-elem {
   background-color: #fe7847;}
 
-input:checked + .form-swtich-elem:before {
+input:checked + .form-switch-elem:before {
   -webkit-transform: translateX(12px);
   -moz-transform: translateX(12px);
   -ms-transform: translateX(12px);
