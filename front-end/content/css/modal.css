@@ -1,4 +1,10 @@
 #darkness {
+  -webkit-transition: display .3s ease-in-out;
+  -moz-transition: display .3s ease-in-out;
+  -o-transition: display .3s ease-in-out;
+  transition: display .3s ease-in-out;}
+
+#darkness {
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -104,31 +110,37 @@
   left: 30px;
   cursor: pointer;}
 
-#modal input[type='submit'] {
-  right: 30px;}
+#modal input[type='submit'] {right: 30px;}
 
 #modal > form > .btn-close:hover,
 #modal input[type='submit']:hover {
   border-color: #60B0FF;
   background-color: #60B0FF;}
 
-
 .switchs {
-  margin: 0 auto;
-}
+  height: 20px;
+  margin: 0 auto;}
+
+.sws-one {width: 245px;}
+.sws-two {width: 170px;}
 
 .switchs .switch {
   position: relative;
   height: 20px;
   margin: 0 0 10px;}
 
-.switchs .sw-one {
-  width: 50px;}
+.switchs .sw-one   {width: 50px;}
+.switchs .sw-two   {width: 43px;}
+.switchs .sw-three {width: 70px;}
+.switchs .sw-four  {width: 65px;}
+.switchs .sw-five  {width: 60px;}
+
 .switchs .sw-two {
   width: 43px;
-  margin: 0 20px;}
-.switchs .sw-three {
-  width: 70px;}
+  margin: 0 40px;}
+.switchs .sw-four {
+  width: 65px;
+  margin: 0 40px 0 0;}
 
 .switchs .switch span {
   font-size: 14px;
@@ -147,8 +159,11 @@
 .switchs .switch .label-one {left: 28px;}
 .switchs .switch .label-two {left: 23px;}
 .switchs .switch .label-three {left: 50px;}
+.switchs .switch .label-four {left: 45px;}
+.switchs .switch .label-five {left: 40px;}
 
-.switchs .switch .label input {display: none;}
+.switchs .switch .label input {
+  display: none;}
 
 .switchs .switch .label .elem {
   position: absolute;
@@ -160,69 +175,37 @@
   border-radius: 999px;
   background-color: #222831;}
 
-.switchs .switch .label .elem:before {
-  position: absolute;
-  bottom: 3px;
-  left: 3px;
-  width: 14px;
-  height: 14px;
-  content: '';
+.switchs .switch .label .elem:before,
+.switchs .switch .label input:checked + .elem:before,
+.switchs .switch .label input:checked + .elem {
   -webkit-transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  border: 7px;
+  transition: all .3s ease-in-out;}
+
+.switchs .switch .label .elem:before {
+  position: absolute;
+  bottom: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  content: '';
+  border: 6px;
   border-style: solid;
   border-color: #fff;
+  border-color: #222831;
   border-radius: 999px;
-  background-color: #222831;}
+  background-color: #fff;}
 
 .switchs .switch .label input:checked + .elem:before {
   bottom: 2px;
   left: 2px;
   width: 16px;
   height: 16px;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
   border: 2px;
   border-style: solid;
   border-color: #fff;
   border-radius: 999px;
   background-color: #60B0FF;}
 
-.switchs .switch .label input:checked + .elem {
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  background-color: #5397DB;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.switchs .switch .label input:checked + .elem {background-color: #5397DB;}

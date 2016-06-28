@@ -43,6 +43,19 @@ a:focus {text-decoration: none;}
 .show {display: block !important;}
 .invisible {visibility: hidden;}
 
+.hide-me {
+  -webkit-transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -o-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+  opacity: 0;}
+.show-me {
+  -webkit-transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -o-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+  opacity: 1;}
+
 .block-center {
   display: block;
   margin: 0 auto;

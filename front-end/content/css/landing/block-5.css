@@ -92,6 +92,7 @@
 
 .rent-btn-rent,
 .rent-btn-catalog {
+  cursor: pointer;
   font-family: 'Roboto';
   font-size: 15px;
   font-weight: 500;

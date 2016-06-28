@@ -25,6 +25,76 @@
 </head>
 <body ng-controller="HomeCtrl">
 
+<div id="darkness" ng-hide="hiddenModal">
+  <div id="modal">
+    <div class="status ">Enter your data</div>
+    <form>
+      <input type="text" name="name" placeholder="Full Name" autocomplete="off" required>
+      <input type="text" name="email" placeholder="Email" autocomplete="off" required>
+      <input type="text" name="phone" placeholder="Phone Number" autocomplete="off" required>
+
+      <hr>
+
+      <span>Do you have a doctors prescription?</span>
+
+      <div class="switchs sws-one">
+        <div class="switch sw-one pull-left">
+          <span>Yes</span>
+          <label class="label label-one">
+            <input type="radio" name="docPrescription">
+            <div class="elem"></div>
+          </label>
+        </div>
+
+        <div class="switch sw-two pull-left">
+          <span>No</span>
+          <label class="label label-two">
+            <input type="radio" name="docPrescription">
+            <div class="elem"></div>
+          </label>
+        </div>
+
+        <div class="switch sw-three pull-left">
+          <span>Unsure</span>
+          <label class="label label-three">
+            <input type="radio" name="docPrescription">
+            <div class="elem"></div>
+          </label>
+        </div>
+      </div>
+
+      <hr>
+
+      <span>Preferred method of contact</span>
+
+      <div class="switchs sws-two">
+        <div class="switch sw-four pull-left">
+          <span>Phone</span>
+          <label class="label label-four">
+            <input type="radio" name="methodOfContact">
+            <div class="elem"></div>
+          </label>
+        </div>
+
+        <div class="switch sw-five pull-left">
+          <span>Email</span>
+          <label class="label label-five">
+            <input type="radio" name="methodOfContact">
+            <div class="elem"></div>
+          </label>
+        </div>
+      </div>
+
+      <hr>
+
+      <textarea name="" placeholder="Comments"></textarea>
+
+      <div class="btn-close" ng-click="hiddenModal = !hiddenModal">Close</div>
+      <input type="submit" value="Send">
+    </form>
+  </div>
+</div>
+
 <div id="home" name="home" ng-style="returnHeight();">
   <div class="header">
     <div class="header-logotype"><img src="content/images/logotype.png" alt=""></div>
@@ -51,6 +121,7 @@
   <div class="mind">
     <div class="mind-title">Think You or Your Spouse has Sleep Apnea?</div>
     <div class="mind-desc">Enter your contact information below and receive details on our convenient home sleep testing.<br>It’s simple, easy, and sent directly to your door!</div>
+
     <form class="mind-form" name="formOne" action="javascript:void(0);" method="post" onsubmit='sent(this)'>
       <input name="name" type="text" autocomplete="off" placeholder="full name" required
              ng-model="name"
@@ -172,7 +243,7 @@
       <div class="rent-desc">The SoClean CPAP Cleaner will change the way you look at your CPAP. It automatically kills 99.9% of germs without using water, chemicals or having to disassemble your equipment. This cleaner only requires a one­time simple setup, and the SoClean CPAP Cleaner allows you to go out and enjoy your day while it does the work for you. Breathe Cleaner.</div>
       <div class="rent-price">$45 / month</div>
       <div class="rent-buttons">
-        <a class="rent-btn-rent" href="app/views/catalog.html">Rent</a>
+        <div class="rent-btn-rent" ng-click="hiddenModal = !hiddenModal">Rent</div>
         <a class="rent-btn-catalog" href="app/views/catalog.html">Catalog</a>
       </div>
     </div>

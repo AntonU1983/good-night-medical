@@ -1,5 +1,7 @@
 landingApp.controller('HomeCtrl', function($scope) {
 
+  $scope.hiddenModal = true;
+
   $scope.returnHeight = function() {
     return { height: window.innerHeight + 40 + 'px' };
   }
