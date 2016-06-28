@@ -28,13 +28,13 @@ function sent(elem) {
     success: function(result) {alertCheck = result;}
   });
 
-  if (!alertCheck) {
-    alert('Сообщение отправлено!');
-    console.log('Сообщение отправлено!');
+  if (alertCheck) {
+    alert('Massage sent');
+    console.log('Massage sent');
   }
   else {
-    alert('Сообщение не было отправлено, попробуйте позже');
-    console.log('Сообщение не было отправлено, попробуйте позже');
+    alert('Message not sent');
+    console.log('Message not sent');
   }
 };
 

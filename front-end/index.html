@@ -22,8 +22,9 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
+<body ng-controller="HomeCtrl">
 
-<div id="home" name="home" ng-controller="HomeCtrl" ng-style="returnHeight();">
+<div id="home" name="home" ng-style="returnHeight();">
   <div class="header">
     <div class="header-logotype"><img src="content/images/logotype.png" alt=""></div>
     <div class="header-nav-bar">
@@ -49,11 +50,20 @@
   <div class="mind">
     <div class="mind-title">Think You or Your Spouse has Sleep Apnea?</div>
     <div class="mind-desc">Enter your contact information below and receive details on our convenient home sleep testing.<br>It’s simple, easy, and sent directly to your door!</div>
-    <form class="mind-form" name="form" action="javascript:void(0);" method="post" onsubmit='sent(this)'>
-      <input name="name" type="text" autocomplete="off" placeholder="full name">
-      <input name="email" type="text" autocomplete="off" placeholder="email">
-      <input name="phone" type="text" autocomplete="off" placeholder="phone">
-      <input name="submit" type="submit" value="Contact me!">
+    <form class="mind-form" name="formOne" action="javascript:void(0);" method="post" onsubmit='sent(this)'>
+      <input name="name" type="text" autocomplete="off" placeholder="full name" required
+             ng-model="name"
+             ng-style="returnStyleOne(formOne.name.$invalid, formOne.name.$dirty);">
+      <input name="email" type="text" autocomplete="off" placeholder="email" required
+             ng-model="email"
+             ng-style="returnStyleOne(formOne.email.$invalid, formOne.email.$dirty);"
+             ng-pattern="/^[_a-z0-9A-Z]+(\.[_a-z0-9A-Z]+)*@[a-z0-9A-Z-]+(\.[a-z0-9A-Z-]+)*(\.[a-zA-Z]{2,10})$/">
+      <input name="phone" type="text" autocomplete="off" placeholder="phone" required
+             ng-model="phone"
+             ng-style="returnStyleOne(formOne.phone.$invalid, formOne.phone.$dirty);">
+      <input name="submit" type="submit" value="Contact me!"
+             ng-model="submit"
+             ng-disabled="returnDisabled(formOne.name.$valid, formOne.email.$valid, formOne.phone.$valid);">
     </form>
     <div class="mind-form-desc"><a href="">Click here</a> to learn more about home sleep testing</div>
   </div>
@@ -212,11 +222,20 @@
         <a href="https://www.pinterest.com/goodnightmed/" target="_blank">Pinterest­</a>
       </div>
     </div>
-    <form class="copyright-form" name="form" action="javascript:void(0);" method="post" onsubmit='sent(this)'>
-      <input name="name" type="text" autocomplete="off" placeholder="full name">
-      <input name="email" type="text" autocomplete="off" placeholder="email">
-      <input name="phone" type="text" autocomplete="off" placeholder="phone">
-      <input name="submit" type="submit" value="Contact me!">
+    <form class="copyright-form" name="formTwo" action="javascript:void(0);" method="post" onsubmit='sent(this)' novalidate>
+      <input name="name" type="text" autocomplete="off" placeholder="full name" required
+             ng-model="name"
+             ng-style="returnStyleTwo(formTwo.name.$invalid, formTwo.name.$dirty);">
+      <input name="email" type="text" autocomplete="off" placeholder="email" required
+             ng-model="email"
+             ng-style="returnStyleTwo(formTwo.email.$invalid, formTwo.email.$dirty);"
+             ng-pattern="/^[_a-z0-9A-Z]+(\.[_a-z0-9A-Z]+)*@[a-z0-9A-Z-]+(\.[a-z0-9A-Z-]+)*(\.[a-zA-Z]{2,10})$/">
+      <input name="phone" type="text" autocomplete="off" placeholder="phone" required
+             ng-model="phone"
+             ng-style="returnStyleTwo(formTwo.phone.$invalid, formTwo.phone.$dirty);">
+      <input name="submit" type="submit" value="Contact me!"
+             ng-model="submit"
+             ng-disabled="returnDisabled(formTwo.name.$valid, formTwo.email.$valid, formTwo.phone.$valid);">
     </form>
   </div>
 </div>
