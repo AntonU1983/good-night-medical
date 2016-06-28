@@ -210,10 +210,10 @@ input:checked + .form-switch-elem:before {
   transition: all .0s ease-in-out;}
 
 .content-elements > div:hover .content-elements-rent {
-  -webkit-transition: opacity .3s ease-in-out;
-  -moz-transition: opacity .3s ease-in-out;
-  -o-transition: opacity .3s ease-in-out;
-  transition: opacity .3s ease-in-out;
+  -webkit-transition: opacity .7s ease-in-out;
+  -moz-transition: opacity .7s ease-in-out;
+  -o-transition: opacity .7s ease-in-out;
+  transition: opacity .7s ease-in-out;
   opacity: 1;}
 
 .content-elements-rent {
@@ -231,7 +231,7 @@ input:checked + .form-switch-elem:before {
   text-transform: uppercase;
   opacity: 0;
   border-radius: 3px 3px 0 0;
-  background-color: rgba(0,0,0,0.5);}
+  background-color: rgba(0,0,0,0.8);}
 
 .content-elements >:nth-child(3n) {
   margin: 0 0 10px 0;}
