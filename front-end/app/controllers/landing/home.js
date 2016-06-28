@@ -19,6 +19,7 @@ landingApp.controller('HomeCtrl', function($scope) {
       return { 'border-color': 'rgba(229, 57, 53, 1)' };
     }
   }
+
   $scope.checkFieldsOne = function(name, email, phone) {
     if (name && email && phone) {$scope.fieldsValidOne = false;}
     else                        {$scope.fieldsValidOne = true;}
