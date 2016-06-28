@@ -12,8 +12,8 @@
 .copyright-info {
   position: relative;
   display: inline-block;
-  height: 176px;
   margin: 0 40px 0 0;
+  padding: 0 0 40px 0;
   vertical-align: top;}
 
 .copyright-info-title {
@@ -29,7 +29,7 @@
   font-family: 'Roboto';
   font-size: 12px;
   font-weight: 500;
-  width: 500px;
+  width: 480px;
   text-align: justify;
   opacity: 0.75;
   color: #eee;}
