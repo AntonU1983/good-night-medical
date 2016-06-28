@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../../content/css/lib/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="../../content/css/lib/angular/slider.css">
   <link rel="stylesheet" href="../../content/css/main.css">
+  <link rel="stylesheet" href="../../content/css/modal.css">
   <link rel="stylesheet" href="../../content/css/catalog/header.css">
   <link rel="stylesheet" href="../../content/css/catalog/mainbody.css">
   <!--[if lt IE 9]>
@@ -35,6 +36,76 @@
 </head>
 
 <body>
+
+<div id="darkness" ng-init="hiddenModal = true;" ng-hide="hiddenModal">
+  <div id="modal">
+    <div class="status ">Enter your data</div>
+    <form>
+      <input type="text" name="name" placeholder="Full Name" autocomplete="off" required>
+      <input type="text" name="email" placeholder="Email" autocomplete="off" required>
+      <input type="text" name="phone" placeholder="Phone Number" autocomplete="off" required>
+
+      <hr>
+
+      <span>Do you have a doctors prescription?</span>
+
+      <div class="switchs sws-one">
+        <div class="switch sw-one pull-left">
+          <span>Yes</span>
+          <label class="label label-one">
+            <input type="radio" name="docPrescription">
+            <div class="elem"></div>
+          </label>
+        </div>
+
+        <div class="switch sw-two pull-left">
+          <span>No</span>
+          <label class="label label-two">
+            <input type="radio" name="docPrescription">
+            <div class="elem"></div>
+          </label>
+        </div>
+
+        <div class="switch sw-three pull-left">
+          <span>Unsure</span>
+          <label class="label label-three">
+            <input type="radio" name="docPrescription">
+            <div class="elem"></div>
+          </label>
+        </div>
+      </div>
+
+      <hr>
+
+      <span>Preferred method of contact</span>
+
+      <div class="switchs sws-two">
+        <div class="switch sw-four pull-left">
+          <span>Phone</span>
+          <label class="label label-four">
+            <input type="radio" name="methodOfContact">
+            <div class="elem"></div>
+          </label>
+        </div>
+
+        <div class="switch sw-five pull-left">
+          <span>Email</span>
+          <label class="label label-five">
+            <input type="radio" name="methodOfContact">
+            <div class="elem"></div>
+          </label>
+        </div>
+      </div>
+
+      <hr>
+
+      <textarea name="" placeholder="Comments"></textarea>
+
+      <div class="btn-close" ng-click="hiddenModal = !hiddenModal">Close</div>
+      <input type="submit" value="Send">
+    </form>
+  </div>
+</div>
 
 <div id="header">
   <div class="header">
@@ -137,6 +208,7 @@
 
       <div class="pull-left"
            ng-repeat="machine in vm.data | filter: search | companyFilter:vm.includedCompanies | priceFilter:vm.slider">
+        <div class="content-elements-rent">Rent</div>
         <div class="content-elements-img"><img src="/good-night-medical/front-end/content/images/machines/{{machine.imageUrl}}" alt=""></div>
         <span class="content-elements-model">{{machine.name}}</span>
         <span class="content-elements-price">${{machine.pricePerMonth}} / month</span>

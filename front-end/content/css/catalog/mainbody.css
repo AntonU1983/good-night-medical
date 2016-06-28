@@ -183,32 +183,18 @@ input:checked + .form-switch-elem:before {
   border-color: #fff;
   border-radius: 5px;
   outline: none;
-  background: url(../images/other/search.png) no-repeat 14px center, #fff;
+  background: url(../../images/other/search.png) no-repeat 14px center, #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, .05);}
 
-.content-search:focus::-webkit-input-placeholder {
-  color: transparent;}
+.content-search:focus::-webkit-input-placeholder {color: transparent;}
+.content-search:focus::-moz-placeholder {color: transparent;}
+.content-search:focus:-moz-placeholder {color: transparent;}
+.content-search:focus:-ms-input-placeholder {color: transparent;}
 
-.content-search:focus::-moz-placeholder {
-  color: transparent;}
-
-.content-search:focus:-moz-placeholder {
-  color: transparent;}
-
-.content-search:focus:-ms-input-placeholder {
-  color: transparent;}
-
-.content-search::-webkit-input-placeholder {
-  color: #ccc;}
-
-.content-search::-moz-placeholder {
-  color: #ccc;}
-
-.content-search:-moz-placeholder {
-  color: #ccc;}
-
-.content-search:-ms-input-placeholder {
-  color: #ccc;}
+.content-search::-webkit-input-placeholder {color: #ccc;}
+.content-search::-moz-placeholder {color: #ccc;}
+.content-search:-moz-placeholder {color: #ccc;}
+.content-search:-ms-input-placeholder {color: #ccc;}
 
 .content-elements > div {
   position: relative;
@@ -222,6 +208,29 @@ input:checked + .form-switch-elem:before {
   -moz-transition: all .0s ease-in-out;
   -o-transition: all .0s ease-in-out;
   transition: all .0s ease-in-out;}
+
+.content-elements > div:hover .content-elements-rent {
+  -webkit-transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+  opacity: 1;}
+
+.content-elements-rent {
+  opacity: 0;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 157px;
+  position: absolute;
+  z-index: 900;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 157px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(0,0,0,0.5);}
 
 .content-elements >:nth-child(3n) {
   margin: 0 0 10px 0;}
@@ -265,14 +274,9 @@ input:checked + .form-switch-elem:before {
   border-color: #fff;
   border-radius: 999px;}
 
-.content-elements-reviews-ava-1 {
-  left: 0;}
-
-.content-elements-reviews-ava-2 {
-  left: 12px;}
-
-.content-elements-reviews-ava-3 {
-  left: 24px;}
+.content-elements-reviews-ava-1 {left: 0;}
+.content-elements-reviews-ava-2 {left: 12px;}
+.content-elements-reviews-ava-3 {left: 24px;}
 
 .content-elements-reviews > span {
   font-family: 'Roboto';
