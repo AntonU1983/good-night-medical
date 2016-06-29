@@ -27,11 +27,16 @@ namespace GenericBackend.Controllers
 
         [HttpPost]
         [Route("")]
-        public async Task<IHttpActionResult> Post([FromBody] Customer customer)
+        public IHttpActionResult Post([FromBody] CustomerInsert customer)
         {
-            var machines = await _customersRepository.Collection.Find(new BsonDocument()).ToListAsync();
+            _customersRepository.Add(new Customer
+            {
+                Email = customer.Email,
+                FullName = customer.FullName,
+                Phone = customer.Phone
+            });
 
-            return Ok(machines);
+            return Ok();
         }
     }
 }
