@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="GoodNightMedical\Company.cs" />
     <Compile Include="GoodNightMedical\ContractMethod.cs" />
+    <Compile Include="GoodNightMedical\Customer.cs" />
     <Compile Include="GoodNightMedical\DoctorPrescription.cs" />
     <Compile Include="GoodNightMedical\Machine.cs" />
     <Compile Include="GoodNightMedical\MachineOrder.cs" />

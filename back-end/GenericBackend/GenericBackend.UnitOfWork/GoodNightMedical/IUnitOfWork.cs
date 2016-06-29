@@ -13,6 +13,7 @@ namespace GenericBackend.UnitOfWork.GoodNightMedical
         IMongoRepository<Machine> Machines { get; }
         IMongoRepository<RentOption> RentOptions { get; }
         IMongoRepository<MachineOrder> MachineOrders { get; }
+        IMongoRepository<Customer> Customers { get; } 
 
     }
 }
