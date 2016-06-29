@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GoodNightMedical\CustomerRepository.cs" />
+    <Compile Include="GoodNightMedical\FullRentCustomerRepository.cs" />
     <Compile Include="GoodNightMedical\MachineOrderRepository.cs" />
     <Compile Include="GoodNightMedical\MachineRepository.cs" />
     <Compile Include="GoodNightMedical\RentOptionRepository.cs" />

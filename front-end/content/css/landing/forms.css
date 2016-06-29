@@ -1,0 +1,11 @@
+form.ng-submitted input.ng-invalid{
+     box-shadow: 0 0 15px rgba(229, 57, 53, 1);
+ }
+
+form.copyright-form.ng-submitted input.ng-invalid{
+    border-color: rgba(229, 57, 53, 1);
+}
+
+form.rentForm.ng-submitted input.ng-invalid{
+    border-color: rgba(229, 57, 53, 1);
+}

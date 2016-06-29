@@ -1,6 +1,6 @@
 ﻿    namespace GenericBackend.DataModels.GoodNightMedical
 {
-    public enum ContractMethod
+    public enum ContactMethod
     {
         Phone,
         Email

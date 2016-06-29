@@ -10,7 +10,7 @@ namespace GenericBackend.DataModels.GoodNightMedical
         public string ClientName { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
-        public ContractMethod PreferredContract { get; set; }
+        public ContactMethod PreferredContract { get; set; }
         public string Comments { get; set; }
 
     }
