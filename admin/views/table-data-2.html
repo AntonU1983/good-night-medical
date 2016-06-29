@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Good Night Medical - Dashboard</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../content/css/lib/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../content/css/lib/bootstrap/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="../content/css/lib/bootstrap/bootstrap-table.css">
+  <link rel="stylesheet" href="../content/css/lib/jquery/jquery-ui.min.css">
+  <link rel="stylesheet" href="../content/css/main.css">
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="">
+  <!--[if lt IE 9]>
+    <script src="../scripts/lib/ie/html5shiv.min.js"></script>
+    <script src="../scripts/lib/ie/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"> <!-- NAVIGATION BAR -->
+    <div class="container-fluid">
+      <div class="navbar-header">
+      </div>
+    </div>
+  </nav>
+
+  <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar"> <!-- SIDEBAR -->
+    <ul class="nav menu">
+      <li role="presentation" class="divider"></li>
+      <li><a href="../index.html">Dashboard</a></li>
+      <li role="presentation" class="divider"></li>
+      <li><a href="table-data-1.html">Table 1</a></li>
+      <li class="active"><a href="table-data-2.html">Table 2</a></li>
+      <li><a href="add-machine.html">Add Machine</a></li>
+      <li><a href="edit-machine.html">Edit Machine</a></li>
+    </ul>
+  </div>
+  <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+
+    <div class="row"> <!-- BREADCRUMB -->
+      <ol class="breadcrumb">
+        <li class="active">Home</li>
+        <li>Table 2</li>
+      </ol>
+    </div>
+
+    <div class="row"> <!-- VIEW TITLE -->
+      <div class="col-lg-12">
+        <h1 class="page-header">Table 2</h1>
+      </div>
+    </div>
+
+    <div class="row"> <!-- TABLE -->
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Animi mollitia earum dolor in atque ipsam, reprehenderit aspernatur dignissimos</div>
+          <div class="panel-body">
+            <table data-toggle="table" data-url="../content/data/table-data-2.json">
+              <thead>
+                <tr>
+                  <th data-field="name" data-sortable="true">Name</th>
+                  <th data-field="email" data-sortable="true">Email</th>
+                  <th data-field="phone" data-sortable="true">Phone</th>
+                  <th data-field="prescription" data-sortable="true">Prescription</th>
+                  <th data-field="contactMethod" data-sortable="true">Contact Method</th>
+                  <th data-field="comment" data-sortable="true">Comment</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="../scripts/lib/jquery/jquery.min.js"></script>
+  <script src="../scripts/lib/jquery/jquery-ui.min.js"></script>
+  <script src="../scripts/lib/bootstrap/bootstrap.min.js"></script>
+  <script src="../scripts/lib/bootstrap/bootstrap-table.js"></script>
+  <script src="../scripts/lib/angular/angular.min.js"></script>
+  <script src="../scripts/lib/angular/ellipsis.min.js"></script>
+  <script src="../scripts/script.js"></script>
+</body>
+</html>
