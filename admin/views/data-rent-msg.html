@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-lg-12 table-view">
+
+    <div class="title">Consequatur quisquam omnis voluptatum aliquam corporis doloremque deserunt reiciendis optio veniam laboriosam voluptate similique a, dignissimos officiis, rem voluptatem iste maxime commodi porro. Dolore eum aliquam molestias modi, officiis saepe. Voluptatem repellat veritatis, a pariatur debitis numquam inventore quis! Laborum blanditiis voluptas tempore perspiciatis aspernatur qui numquam illo vel ex ipsa! Possimus ullam minima inventore itaque quibusdam, ut laudantium rem ipsam.</div>
+
+    <form>
+      <input class="pull-left" type="search" placeholder="search">
+      <div class="checkbox pull-left">
+        <label>
+          <input type="checkbox"> Hide old messages
+        </label>
+      </div>
+      <div class="checkbox pull-left">
+        <label>
+          <input type="checkbox"> Hide new messages
+        </label>
+      </div>
+      <input class="pull-right" type="submit" value="Apply">
+    </form>
+
+    <div class="table">
+      <table>
+
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Phone</td>
+            <td>Prescription</td>
+            <td>Contact Method</td>
+            <td>Comment</td>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="msg in rentMsg">
+            <td>{{msg.name}}</td>
+            <td>{{msg.email}}</td>
+            <td>{{msg.phone}}</td>
+            <td>{{msg.prescription}}</td>
+            <td>{{msg.contactMethod}}</td>
+            <td>{{msg.comment | characters:7}}</td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+
+  </div>
+</div>

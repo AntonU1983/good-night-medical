@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-lg-12 table-view">
+
+    <div class="title">Quis velit voluptas repellat, deserunt mollitia, id itaque tempore, aliquid aperiam molestias necessitatibus vero sint qui. Doloremque deserunt odio inventore tenetur similique sunt, nihil ut, dolor exercitationem sequi quod unde quasi facere. Esse maxime reiciendis corporis magni vel itaque quod maiores necessitatibus!</div>
+
+    <form>
+      <input class="pull-left" type="search" placeholder="search">
+      <div class="checkbox pull-left">
+        <label>
+          <input type="checkbox"> Hide old messages
+        </label>
+      </div>
+      <div class="checkbox pull-left">
+        <label>
+          <input type="checkbox"> Hide new messages
+        </label>
+      </div>
+      <input class="pull-right" type="submit" value="Apply">
+    </form>
+
+    <div class="table">
+      <table>
+
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Phone</td>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="msg in contactMsg">
+            <td>{{msg.name}}</td>
+            <td>{{msg.email}}</td>
+            <td>{{msg.phone}}</td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+
+  </div>
+</div>

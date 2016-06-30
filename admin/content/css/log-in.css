@@ -1,0 +1,89 @@
+body {background-color: #f0f0f2;}
+
+.window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -60%);
+  -ms-transform: translate(-50%, -60%);
+  -o-transform: translate(-50%, -60%);
+  transform: translate(-50%, -60%);}
+
+.window .logotype {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #393E46;}
+
+.window .logotype span {color: #f98b60;}
+
+.window .form {
+  width: 340px;
+  background-color: #fff;
+  box-shadow: 0 0 35px rgba(0,0,0,.05);}
+
+.window .form .title {
+  font-size: 16px;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;}
+
+.window .form form {
+  width: 340px;
+  padding: 0 40px;}
+
+.window .form form input[type="text"] {
+  width: 260px;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+  color: #eee;
+  border: 1px;
+  border-style: solid;
+  border-color: #393e46;
+  border-radius: 0;
+  background-color: #393e46;}
+
+.window .form form input[type="text"]:focus {
+  border-color: #222831;
+  background-color: #222831;}
+
+.window .form form input:focus::-webkit-input-placeholder {color: transparent}
+.window .form form input:focus::-moz-placeholder {color: transparent}
+.window .form form input:focus:-moz-placeholder {color: transparent}
+.window .form form input:focus:-ms-input-placeholder {color: transparent}
+
+.window .form form input::-webkit-input-placeholder {color: #ccc;}
+.window .form form input::-moz-placeholder {color: #ccc;}
+.window .form form input:-moz-placeholder {color: #ccc;}
+.window .form form input:-ms-input-placeholder {color: #ccc;}
+
+.window .form form input[type="submit"] {
+  font-weight: 500;
+  width: 100px;
+  height: 40px;
+  margin: 0 80px 30px 80px;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #eee;
+  border: 1px;
+  border-style: solid;
+  border-color: #f98b60;
+  border-radius: 0;
+  background-color: #f98b60;}
+
+.window .form form input[type="submit"]:hover,
+.window .form form input[type="submit"]:focus,
+.window .form form input[type="submit"]:active {
+  width: 120px;
+  margin: 0 70px 30px 70px;
+  border-color: #fe7847;
+  background-color: #fe7847;}
+
+.window .form form input[type="text"].alert {
+  border-color: rgb(229, 57, 53);
+  box-shadow: inset 0 0 60px rgb(229, 57, 53)}

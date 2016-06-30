@@ -1,160 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Good Night Medical - Dashboard</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="content/css/lib/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="content/css/lib/bootstrap/bootstrap-theme.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700&subset=latin,cyrillic' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Rubik:400,400italic,500,700&subset=latin,cyrillic' rel='stylesheet'>
+  <link rel="stylesheet" href="content/css/lib/bootstrap/bootstrap.css">
   <link rel="stylesheet" href="content/css/lib/jquery/jquery-ui.min.css">
   <link rel="stylesheet" href="content/css/main.css">
-  <link rel="stylesheet" href="">
-  <link rel="stylesheet" href="">
-  <link rel="stylesheet" href="">
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="content/css/navbar.css">
+  <link rel="stylesheet" href="content/css/sidebar.css">
+  <link rel="stylesheet" href="content/css/view-content.css">
+  <link rel="stylesheet" href="content/css/table.css">
   <!--[if lt IE 9]>
     <script src="scripts/lib/ie/html5shiv.min.js"></script>
     <script src="scripts/lib/ie/respond.min.js"></script>
   <![endif]-->
 </head>
-<body>
 
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"> <!-- NAVIGATION BAR -->
-    <div class="container-fluid">
-      <div class="navbar-header">
-<!--         <a class="navbar-brand" href="#"><span>Good</span>NightMedical</a>
-        <a class="user-menu" href="#">Admin User Name</a> -->
-      </div>
-    </div>
+<body ng-controller="Ctrl" ng-init="onLoad();">
+
+  <nav class="nav-bar"> <!-- NAVIGATION BAR -->
+    <a class="brand pull-left" href="#">good <span>night</span> medical</a>
+    <a class="log-out pull-right" href="#">log out</a>
   </nav>
 
-  <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar"> <!-- SIDEBAR -->
-    <ul class="nav menu">
-      <li role="presentation" class="divider"></li>
-      <li class="active"><a href="index.html">Dashboard</a></li>
-      <li role="presentation" class="divider"></li>
-      <li><a href="views/table-data-1.html">Table 1</a></li>
-      <li><a href="views/table-data-2.html">Table 2</a></li>
-      <li><a href="views/add-machine.html">Add Machine</a></li>
-      <li><a href="views/edit-machine.html">Edit Machine</a></li>
-      <!-- <li><a href="">Login Page</a></li> -->
+  <div class="sidebar">
+    <ul>
+      <li ng-class="returnActiveClass(0);" ng-click="pageSelection(0);">
+        <a href="">Dashboard</a>
+      </li>
+
+      <li class="separate"></li>
+
+      <li ng-class="returnActiveClass(1);" ng-click="pageSelection(1);">
+        <a href="">Contact Us MSG</a>
+      </li>
+
+      <li ng-class="returnActiveClass(2);" ng-click="pageSelection(2);">
+        <a href="">Rent CPAP MSG</a>
+      </li>
+
+      <li ng-class="returnActiveClass(3);" ng-click="pageSelection(3);">
+        <a href="">Help Pick CPAP MSG</a>
+      </li>
+
+      <li ng-class="returnActiveClass(4);" ng-click="pageSelection(4);">
+        <a href="">Add Machine</a>
+      </li>
+
+      <li ng-class="returnActiveClass(5);" ng-click="pageSelection(5);">
+        <a href="">Edit Machine</a>
+      </li>
+
+      <li class="separate"></li>
+
+      <li>
+        <a href="login.html">Log In Page</a>
+      </li>
     </ul>
   </div>
 
-  <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+  <div class="view-content">
 
-    <div class="row"> <!-- BREADCRUMB -->
-      <ol class="breadcrumb">
-        <li class="active">Home</li>
-        <li>Dashboard</li>
-      </ol>
+    <div class="row">
+      <div class="col-lg-12" ng-include="returnViewPage();"></div>
     </div>
-
-    <div class="row"> <!-- VIEW TITLE -->
-      <div class="col-lg-12">
-        <h1 class="page-header">Dashboard</h1>
-      </div>
-    </div>
-
-    <div class="row"> <!-- INFO BLOCKS -->
-      <div class="col-xs-12 col-md-6 col-lg-3">
-        <div class="panel panel-blue panel-widget ">
-          <div class="row no-padding">
-            <div class="col-sm-3 col-lg-5 widget-left"></div>
-            <div class="col-sm-9 col-lg-7 widget-right">
-              <div class="large">10</div>
-              <div class="text-muted">Info 1</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-md-6 col-lg-3">
-        <div class="panel panel-orange panel-widget">
-          <div class="row no-padding">
-            <div class="col-sm-3 col-lg-5 widget-left"></div>
-            <div class="col-sm-9 col-lg-7 widget-right">
-              <div class="large">100</div>
-              <div class="text-muted">Info 2</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-md-6 col-lg-3">
-        <div class="panel panel-teal panel-widget">
-          <div class="row no-padding">
-            <div class="col-sm-3 col-lg-5 widget-left"></div>
-            <div class="col-sm-9 col-lg-7 widget-right">
-              <div class="large">1000</div>
-              <div class="text-muted">Info 3</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-md-6 col-lg-3">
-        <div class="panel panel-red panel-widget">
-          <div class="row no-padding">
-            <div class="col-sm-3 col-lg-5 widget-left"></div>
-            <div class="col-sm-9 col-lg-7 widget-right">
-              <div class="large">10.1k</div>
-              <div class="text-muted">Info 4</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row"> <!-- SITE TRAFFIC -->
-      <div class="col-lg-12">
-        <div class="panel panel-default">
-          <div class="panel-heading">Traffic Information</div>
-          <div class="panel-body">
-            <div class="canvas-wrapper">
-              <canvas class="main-chart" id="line-chart" height="100" width="600"></canvas>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row"> <!-- ORDERS INFO -->
-      <div class="col-xs-6 col-md-3">
-        <div class="panel panel-default">
-          <div class="panel-body easypiechart-panel">
-            <h4>Info 1</h4>
-            <div class="easypiechart" id="easypiechart-blue" data-percent="92"><span class="percent">92%</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-3">
-        <div class="panel panel-default">
-          <div class="panel-body easypiechart-panel">
-            <h4>Info 2</h4>
-            <div class="easypiechart" id="easypiechart-orange" data-percent="65"><span class="percent">65%</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-3">
-        <div class="panel panel-default">
-          <div class="panel-body easypiechart-panel">
-            <h4>Info 3</h4>
-            <div class="easypiechart" id="easypiechart-teal" data-percent="56"><span class="percent">56%</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-6 col-md-3">
-        <div class="panel panel-default">
-          <div class="panel-body easypiechart-panel">
-            <h4>Info 4</h4>
-            <div class="easypiechart" id="easypiechart-red" data-percent="27"><span class="percent">27%</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 
   <script src="scripts/lib/jquery/jquery.min.js"></script>
@@ -162,6 +76,7 @@
   <script src="scripts/lib/bootstrap/bootstrap.min.js"></script>
   <script src="scripts/lib/angular/angular.min.js"></script>
   <script src="scripts/lib/angular/ellipsis.min.js"></script>
+  <script src="app/app.js"></script>
   <script src="scripts/script.js"></script>
   <script src="scripts/other/chart.min.js"></script> <!-- TRAFFIC LOGIC -->
   <script src="scripts/other/chart-data.js"></script> <!-- TRAFFIC DATA -->
