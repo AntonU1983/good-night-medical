@@ -107,6 +107,74 @@
   </div>
 </div>
 
+
+<div id="darkness" ng-hide="true"> <!-- Вторая модалка -->
+  <div id="modal">
+    <div class="status ">Let's Help You Pick a CPAP</div>
+    <form name="rentForm" novalidate ng-submit="vm.submitRental(rentForm)">
+      <input type="text" name="name" placeholder="Full Name" autocomplete="off" required>
+      <input type="email" name="email"
+             placeholder="Email" autocomplete="off"
+             ng-pattern="/^[_a-z0-9A-Z]+(\.[_a-z0-9A-Z]+)*@[a-z0-9A-Z-]+(\.[a-z0-9A-Z-]+)*(\.[a-zA-Z]{2,10})$/"
+             required>
+
+      <input type="text" name="phone" placeholder="Phone Number" autocomplete="off" required>
+
+      <hr>
+
+      <span>Preferred method of contact</span>
+
+      <div class="switchs sws-two">
+        <div class="switch sw-four pull-left">
+          <span>Phone</span>
+          <label class="label label-four">
+            <input type="radio" value="Phone" name="methodOfContact">
+            <div class="elem"></div>
+          </label>
+        </div>
+
+        <div class="switch sw-five pull-left">
+          <span>Email</span>
+          <label class="label label-five">
+            <input type="radio" value="Email" name="methodOfContact">
+            <div class="elem"></div>
+          </label>
+        </div>
+      </div>
+
+      <hr>
+
+      <span>Are you a current Good Night Medical patient?</span>
+
+      <div class="switchs sws-three">
+        <div class="switch sw-six pull-left">
+          <span>Yes</span>
+          <label class="label label-one">
+            <input type="radio" value="Yes" name="docPrescription">
+            <div class="elem"></div>
+          </label>
+        </div>
+
+        <div class="switch sw-seven pull-left">
+          <span>No</span>
+          <label class="label label-two">
+            <input type="radio" value="No" name="docPrescription">
+            <div class="elem"></div>
+          </label>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <textarea name="" placeholder="Comments"></textarea>
+
+      <div class="btn-close">Close</div>
+      <input type="submit" value="Send">
+    </form>
+  </div>
+</div>
+
 <div id="header">
   <div class="header">
     <div class="header-logotype"><img src="../../content/images/logotype.png" alt=""></div>
@@ -196,6 +264,10 @@
           <div class="form-switch-elem"></div>
         </label>
       </div>
+
+      <hr class="form-hr">
+
+      <div class="help-pick-btn">Let's Help You<br>Pick a CPAP</div>
 
     </form>
   </div>

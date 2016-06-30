@@ -136,6 +136,7 @@
 
 .sws-one {width: 245px;}
 .sws-two {width: 170px;}
+.sws-three {width: 133px;}
 
 .switchs .switch {
   position: relative;
@@ -147,13 +148,12 @@
 .switchs .sw-three {width: 70px;}
 .switchs .sw-four  {width: 65px;}
 .switchs .sw-five  {width: 60px;}
+.switchs .sw-six   {width: 49px;}
+.switchs .sw-seven {width: 44px;}
 
-.switchs .sw-two {
-  width: 43px;
-  margin: 0 40px;}
-.switchs .sw-four {
-  width: 65px;
-  margin: 0 40px 0 0;}
+.switchs .sw-two   {margin: 0 40px;}
+.switchs .sw-four  {margin: 0 40px 0 0;}
+.switchs .sw-six {margin: 0 40px 0 0;}
 
 .switchs .switch span {
   font-size: 14px;
@@ -184,6 +184,8 @@
   right: 0;
   bottom: 0;
   left: 0;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
   border-radius: 999px;
   background-color: #222831;}

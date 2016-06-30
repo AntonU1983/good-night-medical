@@ -167,6 +167,21 @@ input:checked + .form-switch-elem:before {
   -o-transform: translateX(12px);
   transform: translateX(12px);}
 
+.help-pick-btn {
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  border: 1px;
+  border-style: solid;
+  border-color: #fe7847;
+  border-radius: 3px;
+  background-color: #fe7847;}
+
+.help-pick-btn:hover {background-color: #f98b60;}
+
 .content {
   width: 700px;
   margin: 0 0 0 20px;}
