@@ -2,7 +2,7 @@ var app = angular.module('app', ['angular-ellipses', 'ui.router', 'LocalStorageM
 
 app.constant('globalConstants', {
   //apiUrl: "http://localhost:51925/",
-  apiUrl: "goodnight-medical-demo.azurewebsites.net/"
+  apiUrl: "http://goodnight-medical-demo.azurewebsites.net/"
 });
 
 app.controller('Ctrl', function($scope, $http) {
