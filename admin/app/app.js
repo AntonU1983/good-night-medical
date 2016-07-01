@@ -2,7 +2,7 @@ var app = angular.module('app', ['angular-ellipses']);
 
 app.controller('Ctrl', function($scope, $http) {
 
-  var view = 0;
+  var view = 1;
   var pageUrl = [
     'dashboard.html',
     'data-contact-us-msg.html',

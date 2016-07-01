@@ -1,48 +1,55 @@
 <div class="row">
-  <div class="col-lg-12">
-    <div class="panel panel-default">
-      <div class="panel-heading">Tempore voluptatibus architecto minima quidem veniam quod, aperiam numquam repudiandae voluptates vitae.</div>
-      <div class="panel-body">
-        <div class="col-md-12">
-          <form role="form">
-            <div class="form-group">
-              <label>Company</label>
-              <input class="form-control" placeholder="Philips, ResMed etc.">
-            </div>
-            <div class="form-group">
-              <label>Model Name</label>
-              <input class="form-control" placeholder="A210">
-            </div>
-            <div class="form-group">
-              <label>Price</label>
-              <input class="form-control" placeholder="65">
-            </div>
-            <div class="form-group">
-              <label>Image</label>
-              <input type="file">
-              <p class="help-block">Need JPG 500x500!</p>
-            </div>
-            <div class="form-group">
-              <label>Description</label>
-              <textarea class="form-control" rows="3"></textarea>
-            </div>
-            <div class="form-group">
-              <label>Refurbished</label>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Yes
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">No
-                </label>
-              </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit Button</button>
-          </form>
+  <div class="col-lg-12 machine-add-view">
+
+    <div class="title">Voluptatibus officiis harum excepturi nesciunt obcaecati eveniet officia natus libero, est ea eligendi ipsum exercitationem aut provident cupiditate inventore, assumenda beatae dolor quia, voluptate animi, soluta. Eveniet veritatis cumque inventore, accusantium rem perferendis? Iste dolorum, aliquam perferendis, inventore beatae earum quod nobis.</div>
+
+    <form role="form" novalidate="">
+
+      <div class="group">
+        <label>Company</label>
+        <input type="text" placeholder="Philips" required>
+      </div>
+
+      <div class="group">
+        <label>Model Name</label>
+        <input type="text" placeholder="Philips Respironics DreamStation Auto / Pro" required>
+      </div>
+
+      <div class="group">
+        <label>Price</label>
+        <input type="text" placeholder="65" required>
+      </div>
+
+      <div class="group">
+        <label>Image</label>
+        <input type="file" required>
+        <p class="help">(size 500x500 pixels, format .jpg)</p>
+      </div>
+
+      <div class="group">
+        <label>Description</label>
+        <textarea></textarea>
+      </div>
+
+      <div class="group">
+        <label>Refurbished</label>
+        <div class="radio">
+          <label>
+            <input type="radio" name="refurbished" checked>
+            <span><span></span></span>Yes
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="refurbished">
+            <span><span></span></span>No
+          </label>
         </div>
       </div>
-    </div>
+
+      <input type="submit" value="Add Machine">
+
+    </form>
+
   </div>
 </div>
