@@ -8,16 +8,22 @@ app.controller('Ctrl', function($scope, $http) {
     'data-contact-us-msg.html',
     'data-rent-msg.html',
     'data-help-msg.html',
-    'machine-add.html',
-    'machine-edit.html'];
+    'machine.html'];
 
   $http.get('content/data/contact-msg.json').success(function(data){$scope.contactMsg = data;});
   $http.get('content/data/rent-msg.json').success(function(data){$scope.rentMsg = data;});
   $http.get('content/data/help-msg.json').success(function(data){$scope.helpMsg = data;});
+  $http.get('content/data/machine.json').success(function(data){$scope.machineData = data;});
 
   $scope.pageSelection = function(pageNumber) {view = pageNumber;}
   $scope.returnViewPage = function() {return 'views/' + pageUrl[view];}
   $scope.returnActiveClass = function(pageNumber) {return (pageNumber == view) ? 'active' : '';}
+  $scope.returnClassNewMsg = function(newMsg) {return newMsg ? 'new' : '';};
+
+  $scope.hideMachine = function(msgNew, hideOld, hideNew) {
+    if (hideOld && !msgNew) {return true;}
+    if (hideNew && msgNew) {return true;}
+  };
 
 })
 

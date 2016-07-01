@@ -3,21 +3,20 @@
 
     <div class="title">Consequatur quisquam omnis voluptatum aliquam corporis doloremque deserunt reiciendis optio veniam laboriosam voluptate similique a, dignissimos officiis, rem voluptatem iste maxime commodi porro. Dolore eum aliquam molestias modi, officiis saepe. Voluptatem repellat veritatis, a pariatur debitis numquam inventore quis! Laborum blanditiis voluptas tempore perspiciatis aspernatur qui numquam illo vel ex ipsa! Possimus ullam minima inventore itaque quibusdam, ut laudantium rem ipsam.</div>
 
-    <form>
-      <input class="pull-left" type="search" placeholder="search">
+    <form class="filter" novalidate>
+      <input class="pull-left" type="search" placeholder="search" ng-model="search">
       <div class="checkbox pull-left">
         <label>
-          <input type="checkbox">
+          <input type="checkbox" ng-model="hideOld">
           <span><span></span></span>Hide old messages
         </label>
       </div>
       <div class="checkbox pull-left">
         <label>
-          <input type="checkbox">
+          <input type="checkbox" ng-model="hideNew">
           <span><span></span></span>Hide new messages
         </label>
       </div>
-      <input class="pull-right" type="submit" value="Apply">
     </form>
 
     <div class="table">
@@ -35,7 +34,8 @@
         </thead>
 
         <tbody>
-          <tr ng-repeat="msg in rentMsg">
+          <tr ng-repeat="msg in rentMsg | filter: search" ng-class="returnClassNewMsg(msg.new);"
+              ng-hide="hideMachine(msg.new, hideOld, hideNew);">
             <td>{{msg.name}}</td>
             <td>{{msg.email}}</td>
             <td>{{msg.phone}}</td>
