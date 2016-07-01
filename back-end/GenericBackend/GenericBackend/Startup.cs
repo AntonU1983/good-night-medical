@@ -16,6 +16,8 @@ namespace GenericBackend
             WebApiConfig.Register(configuration);
             app.UseWebApi(configuration);
             ConfigurateAutofac(configuration, app);
+
+            ConfigureOAuth(app);
 		}
 	}
 }

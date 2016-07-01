@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AuthRepository.cs" />
     <Compile Include="GoodNightMedical\CustomerRepository.cs" />
     <Compile Include="GoodNightMedical\FullRentCustomerRepository.cs" />
     <Compile Include="GoodNightMedical\MachineOrderRepository.cs" />

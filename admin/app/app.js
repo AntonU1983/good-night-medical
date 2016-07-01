@@ -1,4 +1,4 @@
-var app = angular.module('app', ['angular-ellipses']);
+var app = angular.module('app', ['angular-ellipses', 'ui.router']);
 
 app.controller('Ctrl', function($scope, $http) {
 
