@@ -1,4 +1,8 @@
-var app = angular.module('app', ['angular-ellipses', 'ui.router']);
+var app = angular.module('app', ['angular-ellipses', 'ui.router', 'LocalStorageModule']);
+
+app.constant('globalConstants', {
+  apiUrl: "http://goodnight-medical-demo.azurewebsites.net/"
+});
 
 app.controller('Ctrl', function($scope, $http) {
 

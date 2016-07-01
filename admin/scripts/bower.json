@@ -6,5 +6,8 @@
   ],
   "description": "",
   "main": "",
-  "license": "steadyworks.pro"
+  "license": "steadyworks.pro",
+  "dependencies": {
+    "angular-local-storage": "^0.2.7"
+  }
 }

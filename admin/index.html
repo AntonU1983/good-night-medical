@@ -15,83 +15,28 @@
   <link rel="stylesheet" href="content/css/table.css">
   <link rel="stylesheet" href="content/css/modal.css">
   <link rel="stylesheet" href="content/css/util.css">
+  <link rel="stylesheet" href="content/css/log-in.css">
   <!--[if lt IE 9]>
-    <script src="scripts/lib/ie/html5shiv.min.js"></script>
-    <script src="scripts/lib/ie/respond.min.js"></script>
+  <script src="/scripts/lib/ie/html5shiv.min.js"></script>
+  <script src="/scripts/lib/ie/respond.min.js"></script>
   <![endif]-->
 </head>
 
-<body ng-controller="Ctrl" ng-init="onLoad(); modalMessage = true;">
+<body>
 
-  <div class="nav-bar">
-    <a class="brand pull-left" href="#">good <span>night</span> medical</a>
-    <a class="log-out pull-right" href="#" ng-click="modalMessage = false">log out</a>
-  </div>
-
-  <div class="sidebar">
-    <ul>
-      <li ng-class="returnActiveClass(0);" ng-click="pageSelection(0);">
-        <a href="">Dashboard</a>
-      </li>
-
-      <li class="separate"></li>
-
-      <li ng-class="returnActiveClass(1);" ng-click="pageSelection(1);">
-        <a href="">Contact Us MSG</a>
-      </li>
-
-      <li ng-class="returnActiveClass(2);" ng-click="pageSelection(2);">
-        <a href="">Rent CPAP MSG</a>
-      </li>
-
-      <li ng-class="returnActiveClass(3);" ng-click="pageSelection(3);">
-        <a href="">Help Pick CPAP MSG</a>
-      </li>
-
-      <li ng-class="returnActiveClass(4);" ng-click="pageSelection(4);">
-        <a href="">Machine</a>
-      </li>
-
-      <li class="separate"></li>
-
-      <li>
-        <a href="login.html">Log In Page</a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="darkness" ng-hide="modalMessage">
-    <div class="window">
-      <div class="title">Deleniti, sapiente. Dolore doloremque tempore, ea adipisci</div>
-      <div class="text"><span>Name:</span> George Perez</div>
-      <div class="text"><span>Email:</span> dfernandez@talane.edu</div>
-      <div class="text"><span>Phone:</span> 8 (743) 138 86 99</div>
-      <div class="text"><span>Prescription:</span> Yes</div>
-      <div class="text"><span>Contact Method:</span> Phone</div>
-      <div class="text"><span>Originality:</span> New Message</div>
-      <div class="text"><span>Comment:</span> Sint ut molestiae earum odio explicabo, sapiente. Ea, odit, omnis! Eos ipsa deserunt, atque id quos inventore, debitis quisquam nobis cum quidem temporibus quo non beatae! Pariatur ipsam magnam doloribus earum recusandae. Iste officia accusantium, repellat sapiente quae quidem alias itaque corporis?</div>
-      <form>
-        <input class="left" type="submit" value="mark as read">
-        <!-- <input type="submit" value="Simple"> -->
-        <input class="right" type="submit" value="Close" ng-click="modalMessage = true">
-      </form>
-    </div>
-  </div>
-
-  <div class="view-content">
-    <div class="row">
-      <div class="col-lg-12" ng-include="returnViewPage();"></div>
-    </div>
-  </div>
-
+<div ui-view></div>
   <script src="scripts/lib/jquery/jquery.min.js"></script>
   <script src="scripts/lib/bootstrap/bootstrap.js"></script>
   <script src="scripts/lib/angular/angular.min.js"></script>
-  <script src="scripts/lib/angular/ellipsis.min.js"></script>
   <script src="scripts/lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="scripts/lib/angular-local-storage/dist/angular-local-storage.min.js"></script>
+  <script src="scripts/lib/angular/ellipsis.min.js"></script>
+
   <script src="app/app.js"></script>
-  <script src="app/principal.js"></script>
+  <script src="app/authService.js"></script>
   <script src="app/route.js"></script>
+  <script src="app/controllers/loginController.js"></script>
   <script src="scripts/script.js"></script>
+
 </body>
 </html>
