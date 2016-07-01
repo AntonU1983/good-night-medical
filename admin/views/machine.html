@@ -1,4 +1,4 @@
-<div class="row" ng-init="addMachine = 'hide-me'; check = ''">
+<div class="row" ng-init="addMachine = 'hide-me'; editMachine = 'hide-me'; check = ''">
   <div class="col-lg-12 table-view">
 
     <div class="title">Quis velit voluptas repellat, deserunt mollitia, id itaque tempore, aliquid aperiam molestias necessitatibus vero sint qui. Doloremque deserunt odio inventore tenetur similique sunt, nihil ut, dolor exercitationem sequi quod unde quasi facere. Esse maxime reiciendis corporis magni vel itaque quod maiores necessitatibus!</div>
@@ -6,9 +6,10 @@
     <form class="filter" novalidate>
       <input class="pull-left" type="search" placeholder="search" ng-model="search">
       <input class="pull-right" type="submit" value="Add Machine" ng-click="addMachine = 'show-me';">
+      <input class="pull-right" type="submit" value="Edit Machine" ng-click="editMachine = 'show-me';">
     </form>
 
-    <form class="machine-add" novalidate ng-class="addMachine">
+    <form class="machine" novalidate ng-class="addMachine">
       <div class="group">
         <label>Company</label>
         <input type="text" placeholder="Philips" required ng-class="check">
@@ -50,6 +51,48 @@
       <input class="left" type="reset" value="Reset">
     </form>
 
+    <form class="machine" novalidate ng-class="editMachine">
+      <div class="group">
+        <label>Company</label>
+        <input type="text" placeholder="Philips" required ng-class="check">
+      </div>
+      <div class="group">
+        <label>Model Name</label>
+        <input type="text" placeholder="Philips Respironics DreamStation Auto / Pro" required ng-class="check">
+      </div>
+      <div class="group">
+        <label>Price</label>
+        <input type="text" placeholder="65" required ng-class="check">
+      </div>
+      <div class="group">
+        <label>Image</label>
+        <input type="file" required>
+        <p class="help">(size 500x500 pixels, format .jpg)</p>
+      </div>
+      <div class="group">
+        <label>Description</label>
+        <textarea ng-class="check"></textarea>
+      </div>
+      <div class="group">
+        <label>Refurbished</label>
+        <div class="radio">
+          <label>
+            <input type="radio" name="refurbished" checked>
+            <span><span></span></span>No
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="refurbished">
+            <span><span></span></span>Yes
+          </label>
+        </div>
+      </div>
+      <input type="submit" value="Save" ng-click="check = 'alert'">
+      <input class="right" type="submit" value="Close" ng-click="editMachine = 'hide-me';">
+      <input class="left" type="reset" value="Reset">
+    </form>
+
     <div class="table">
       <table>
 
@@ -70,6 +113,8 @@
             <td>&dollar;{{machine.pricePerMonth}}</td>
             <td>{{machine.refurbished}}</td>
             <td>{{machine.imageUrl}}</td>
+            <td><input type="submit" value="Edit" ng-click="editMachine = 'show-me';"></td>
+            <td><input type="submit" value="View"></td>
           </tr>
         </tbody>
 

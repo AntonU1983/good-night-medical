@@ -14,7 +14,7 @@
       <div class="checkbox pull-left">
         <label>
           <input type="checkbox" ng-model="hideNew">
-          <span><span></span></span>Hide new messages
+          <span><span></span></span>Hide new messages{{modalMessage}}
         </label>
       </div>
     </form>
@@ -34,7 +34,8 @@
         </thead>
 
         <tbody>
-          <tr ng-repeat="msg in rentMsg | filter: search" ng-class="returnClassNewMsg(msg.new);"
+          <tr ng-repeat="msg in rentMsg | filter: search"
+              ng-class="returnClassNewMsg(msg.new);"
               ng-hide="hideMachine(msg.new, hideOld, hideNew);">
             <td>{{msg.name}}</td>
             <td>{{msg.email}}</td>
@@ -42,6 +43,7 @@
             <td>{{msg.prescription}}</td>
             <td>{{msg.contactMethod}}</td>
             <td>{{msg.comment | characters:7}}</td>
+            <td><input type="submit" value="Read"></td>
           </tr>
         </tbody>
 
