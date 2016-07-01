@@ -18,8 +18,6 @@ namespace GenericBackend
             ConfigurateAutofac(configuration, app);
 
             ConfigureOAuth(app);
-
-            app.UseCors(CorsOptions.AllowAll);
         }
 	}
 }
