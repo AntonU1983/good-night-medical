@@ -19,8 +19,9 @@ namespace GenericBackend.Providers
 
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
-
+            context.OwinContext.Response.Headers.Add("Access-Control-Allow-Headers", new[] { "Content - Type" });
             context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
+            context.OwinContext.Response.Headers.Add("Access-Control-Allow-Methods", new[] { "GET,POST,OPTIONS" });
 
             using (var repo = new AuthRepository())
             {

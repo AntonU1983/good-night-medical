@@ -1,23 +1,26 @@
 var app = angular.module('app');
 
 'use strict';
-app.controller('loginController', ['$scope', '$location', 'authService', function ($scope, $location, authService) {
+app.controller('loginController', ['$scope', '$state', 'authService', function ($scope, $state, authService) {
 
     $scope.loginData = {
         userName: "",
         password: ""
     };
 
+    $scope.invalid = false;
+
     $scope.message = "";
 
     $scope.login = function () {
 
         authService.login($scope.loginData).then(function (response) {
-
-                $location.path('/orders');
+                $scope.invalid = false;
+                $state.go('main.contactus');
 
             },
             function (err) {
+                $scope.invalid = true;
                 $scope.message = err.error_description;
             });
     };

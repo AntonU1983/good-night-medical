@@ -3,9 +3,12 @@
     <div class="form" ng-controller="loginController">
       <div class="title">Enter Your Data</div>
       <form ng-submit="login();">
-        <input type="text" placeholder="login" ng-class="check" ng-model="userName">
-        <input type="password" placeholder="password" ng-class="check" ng-model="password">
+        <input type="text" placeholder="login" ng-class="check" ng-model="loginData.userName">
+        <input type="password" placeholder="password" ng-class="check" ng-model="loginData.password">
+          <div ng-show="invalid==true">{{message}}</div>
+
         <input type="submit" value="log in" ng-click="check = 'alert'">
+
       </form>
     </div>
 </div>
