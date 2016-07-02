@@ -146,6 +146,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\dependencies.xml" />
+    <None Include="App_Data\Images\dont-remove.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
