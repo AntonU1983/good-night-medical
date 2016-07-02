@@ -5,7 +5,8 @@ angular.module('dataServiceModule', []).factory(serviceId, ['$http', dataService
 function dataService($http) {
 
     // Change with appropriate url
-    var urlBase = "http://goodnight-medical-demo.azurewebsites.net/";
+    //var urlBase = "http://goodnight-medical-demo.azurewebsites.net/";
+    var urlBase = "http://localhost:51925/";
 
     var service = {
         getMachines: getMachines,

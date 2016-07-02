@@ -21,6 +21,7 @@ namespace GenericBackend.Controllers
 
         [HttpPost]
         [Route("")]
+        [AcceptVerbs("POST")]
         public IHttpActionResult Post([FromBody] CustomerInsert customer)
         {
             _customersRepository.Add(new Customer
@@ -35,6 +36,7 @@ namespace GenericBackend.Controllers
 
         [HttpPost]
         [Route("rent")]
+        [AcceptVerbs("POST")]
         public IHttpActionResult PostContact([FromBody] CustomerRentInsert customerRent)
         {
             _fullCustomersRepository.Add(new FullRentCustomer

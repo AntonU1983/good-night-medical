@@ -11,15 +11,15 @@ namespace GenericBackend
 		public void Configuration(IAppBuilder app)
 		{
 			var configuration = new HttpConfiguration();
+            app.UseCors(CorsOptions.AllowAll);
 
-            
             WebApiConfig.Register(configuration);
             app.UseWebApi(configuration);
             ConfigurateAutofac(configuration, app);
 
             ConfigureOAuth(app);
 
-            app.UseCors(CorsOptions.AllowAll);
+            
         }
 	}
 }
