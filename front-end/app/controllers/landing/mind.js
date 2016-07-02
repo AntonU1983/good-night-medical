@@ -11,8 +11,8 @@
 
     var content = {
         Title: "Think You or Your Spouse has Sleep Apnea?",
-        Description: "Enter your contact information below and receive details on our convenient home sleep testing.<br>It’s simple, easy, and sent directly to your door!",
-        
+        Description: "Enter your contact information below and receive details on our convenient home sleep testing.",
+        Description2: "It’s simple, easy, and sent directly to your door!"
     };
 
 })();
