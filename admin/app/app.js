@@ -1,4 +1,4 @@
-var app = angular.module('app', ['angular-ellipses', 'ui.router', 'LocalStorageModule']);
+var app = angular.module('app', ['angular-ellipses', 'ui.router', 'LocalStorageModule', 'dataServiceModule']);
 
 app.constant('globalConstants', {
   apiUrl: "http://localhost:51925/"
@@ -15,7 +15,7 @@ app.controller('Ctrl', function($scope, $http) {
     'data-help-msg.html',
     'machine.html'];
 
-  $http.get('content/data/contact-msg.json').success(function(data){$scope.contactMsg = data;});
+  
   $http.get('content/data/rent-msg.json').success(function(data){$scope.rentMsg = data;});
   $http.get('content/data/help-msg.json').success(function(data){$scope.helpMsg = data;});
   $http.get('content/data/machine.json').success(function(data){$scope.machineData = data;});

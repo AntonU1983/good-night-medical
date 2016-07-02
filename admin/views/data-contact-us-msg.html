@@ -1,7 +1,7 @@
-<div class="row">
+<div class="row" ng-controller="ContactUs">
   <div class="col-lg-12 table-view">
 
-    <div class="title">Quis velit voluptas repellat, deserunt mollitia, id itaque tempore, aliquid aperiam molestias necessitatibus vero sint qui. Doloremque deserunt odio inventore tenetur similique sunt, nihil ut, dolor exercitationem sequi quod unde quasi facere. Esse maxime reiciendis corporis magni vel itaque quod maiores necessitatibus!</div>
+    <div class="title">Please, review new customer contacts!</div>
 
     <form class="filter" novalidate>
       <input class="pull-left" type="search" placeholder="search" ng-model="search">
@@ -19,6 +19,20 @@
       </div>
     </form>
 
+    <div class="darkness" ng-show="readContactInfo">
+      <div class="window">
+        <div class="title">User info</div>
+        <div class="text"><span>Full Name:</span> {{currentUser.fullName}}</div>
+        <div class="text"><span>Email:</span> {{currentUser.email}}</div>
+        <div class="text"><span>Phone:</span> {{currentUser.phone}}</div>
+        <form>
+          <input class="left" type="submit" value="mark as read" ng-click="markAsRead(msg.id)" ng-show="currentUser.new == true">
+          <!-- <input type="submit" value="Simple"> -->
+          <input class="right" type="submit" value="Close" ng-click="readContactInfo = false">
+        </form>
+      </div>
+    </div>
+
     <div class="table">
       <table>
 
@@ -33,10 +47,10 @@
         <tbody>
           <tr ng-repeat="msg in contactMsg | filter: search" ng-class="returnClassNewMsg(msg.new);"
               ng-hide="hideMachine(msg.new, hideOld, hideNew);">
-            <td>{{msg.name}}</td>
+            <td>{{msg.fullName}}</td>
             <td>{{msg.email}}</td>
             <td>{{msg.phone}}</td>
-            <td><input type="submit" value="Read" ng-click="alert('Hello');modalMessage = false;"></td>
+            <td><input type="submit" value="Read" ng-click="read(msg.id)"></td>
           </tr>
         </tbody>
 

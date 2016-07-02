@@ -103,23 +103,10 @@ namespace GenericBackend.Repository
         /// <returns>The Entity T.</returns>
         public virtual T GetById(TKey id)
         {
-            if (typeof(T).IsSubclassOf(typeof(Entity)))
-            {
-                return this.GetById(new ObjectId(id as string));
-            }
-            //TODO need to check this
-            return this.collection.Find<T>(x => x.Id.ToString() == id.ToString()).FirstOrDefault();
-        }
+            var builder = Builders<T>.Filter;
+            var filter = builder.Eq("Id", id.ToString());
 
-        /// <summary>
-        /// Returns the T by its given id.
-        /// </summary>
-        /// <param name="id">The Id of the entity to retrieve.</param>
-        /// <returns>The Entity T.</returns>
-        public virtual T GetById(ObjectId id)
-        {
-            // TODO need to check how it works
-            return this.collection.Find<T>(x => x.ToString() == id.ToString()).FirstOrDefault();
+            return collection.Find<T>(filter).FirstOrDefault();
         }
 
         /// <summary>

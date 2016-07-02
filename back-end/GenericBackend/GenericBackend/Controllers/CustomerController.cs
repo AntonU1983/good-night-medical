@@ -1,8 +1,11 @@
-﻿using System.Web.Http;
+﻿using System.Threading.Tasks;
+using System.Web.Http;
 using GenericBackend.DataModels.GoodNightMedical;
 using GenericBackend.Models.Customer;
 using GenericBackend.Repository;
 using GenericBackend.UnitOfWork.GoodNightMedical;
+using MongoDB.Bson;
+using MongoDB.Driver;
 
 namespace GenericBackend.Controllers
 {
@@ -19,9 +22,40 @@ namespace GenericBackend.Controllers
             _fullCustomersRepository = unitOfWork.FullRentCustomers;
         }
 
+        [HttpGet]
+        [Route("")]
+        public async Task<IHttpActionResult> Get()
+        {
+            var customers = await _customersRepository.Collection.Find(new BsonDocument()).ToListAsync();
+
+            return Ok(customers);
+        }
+
+        [HttpGet]
+        [Route("{id}")]
+        public IHttpActionResult Get(string id)
+        {
+            var customer = _customersRepository.GetById(id);
+
+            return Ok(customer);
+        }
+
+        [HttpGet]
+        [Route("seen/{id}")]
+        public IHttpActionResult SetSeen(string id)
+        {
+            var customer = _customersRepository.GetById(id);
+
+            if (customer == null) return Ok();
+
+            customer.New = false;
+            _customersRepository.Update(customer);
+
+            return Ok();
+        }
+
         [HttpPost]
         [Route("")]
-        [AcceptVerbs("POST")]
         public IHttpActionResult Post([FromBody] CustomerInsert customer)
         {
             _customersRepository.Add(new Customer
@@ -36,7 +70,6 @@ namespace GenericBackend.Controllers
 
         [HttpPost]
         [Route("rent")]
-        [AcceptVerbs("POST")]
         public IHttpActionResult PostContact([FromBody] CustomerRentInsert customerRent)
         {
             _fullCustomersRepository.Add(new FullRentCustomer
