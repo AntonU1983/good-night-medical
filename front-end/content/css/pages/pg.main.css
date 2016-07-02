@@ -1,0 +1,18 @@
+* {color: #5f6468;}
+body {background-color: #eee;}
+
+.mainbody {
+  width: 920px;
+  margin: 20px auto;}
+
+.sidebar {
+  width: 200px;
+  height: auto;
+  padding: 20px;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0 0 7px rgba(0,0,0,.03);}
+
+.content {
+  width: 700px;
+  height: auto;}

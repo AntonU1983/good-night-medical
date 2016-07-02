@@ -10,5 +10,6 @@ namespace GenericBackend.Models.Customer
         public ContactMethod Contact { get; set; }
         public DoctorPrescription Prescription { get; set; }
         public string Comments { get; set; }
+        public string MachineId { get; set; }
     }
 }

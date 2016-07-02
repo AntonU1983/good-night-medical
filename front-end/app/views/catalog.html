@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="../../content/css/modal.css">
   <link rel="stylesheet" href="../../content/css/catalog/header.css">
   <link rel="stylesheet" href="../../content/css/catalog/mainbody.css">
+  <link rel="stylesheet" href="../../content/css/util.css">
   <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -26,8 +27,8 @@
   <script src="../../scripts/lib/angular/ellipsis.min.js"></script>
   <script src="../../scripts/lib/angular/slider.min.js"></script>
   <script src="../app.js"></script>
-  <script src="../controllers/catalog/catalog.js"></script>
   <script src="../services/dataService.js"></script>
+  <script src="../controllers/catalog/catalog.js"></script>
   <script src="../filters/priceFilter.js"></script>
   <script src="../filters/companyFilter.js"></script>
 
@@ -35,15 +36,20 @@
   <script src="../../scripts/script.js"></script>
 </head>
 
-<body>
+<body  ng-controller="catalog as vm" ng-init="vm.init()">
 
-<div id="darkness" ng-init="hiddenModal = true;" ng-hide="hiddenModal">
+<div id="darkness" ng-hide="vm.hiddenModal">
   <div id="modal">
     <div class="status ">Let Us Contact You</div>
-    <form>
-      <input type="text" name="name" placeholder="Full Name" autocomplete="off" required>
-      <input type="text" name="email" placeholder="Email" autocomplete="off" required>
-      <input type="text" name="phone" placeholder="Phone Number" autocomplete="off" required>
+    <form name="rentForm" novalidate ng-submit="vm.submitRental(rentForm)">
+      <input type="text" name="name" ng-model="vm.rentMachine.fullName" placeholder="Full Name" autocomplete="off" required>
+      <input type="email" name="email"
+             ng-model="vm.rentMachine.email"
+             placeholder="Email" autocomplete="off"
+             ng-pattern="/^[_a-z0-9A-Z]+(\.[_a-z0-9A-Z]+)*@[a-z0-9A-Z-]+(\.[a-z0-9A-Z-]+)*(\.[a-zA-Z]{2,10})$/"
+             required>
+
+      <input type="text" name="phone" ng-model="vm.rentMachine.phone" placeholder="Phone Number" autocomplete="off" required>
 
       <hr>
 
@@ -53,7 +59,7 @@
         <div class="switch sw-one pull-left">
           <span>Yes</span>
           <label class="label label-one">
-            <input type="radio" name="docPrescription">
+            <input type="radio" ng-model="vm.rentMachine.prescription" value="Yes" name="docPrescription">
             <div class="elem"></div>
           </label>
         </div>
@@ -61,7 +67,7 @@
         <div class="switch sw-two pull-left">
           <span>No</span>
           <label class="label label-two">
-            <input type="radio" name="docPrescription">
+            <input type="radio" ng-model="vm.rentMachine.prescription" value="No" name="docPrescription">
             <div class="elem"></div>
           </label>
         </div>
@@ -69,7 +75,7 @@
         <div class="switch sw-three pull-left">
           <span>Unsure</span>
           <label class="label label-three">
-            <input type="radio" name="docPrescription">
+            <input type="radio" ng-model="vm.rentMachine.prescription" value="Unsure" name="docPrescription">
             <div class="elem"></div>
           </label>
         </div>
@@ -83,7 +89,7 @@
         <div class="switch sw-four pull-left">
           <span>Phone</span>
           <label class="label label-four">
-            <input type="radio" name="methodOfContact">
+            <input type="radio" ng-model="vm.rentMachine.contact" value="Phone" name="methodOfContact">
             <div class="elem"></div>
           </label>
         </div>
@@ -91,7 +97,7 @@
         <div class="switch sw-five pull-left">
           <span>Email</span>
           <label class="label label-five">
-            <input type="radio" name="methodOfContact">
+            <input type="radio" ng-model="vm.rentMachine.contact" value="Email" name="methodOfContact">
             <div class="elem"></div>
           </label>
         </div>
@@ -99,14 +105,13 @@
 
       <hr>
 
-      <textarea name="" placeholder="Comments"></textarea>
+      <textarea  ng-model="vm.rentMachine.comments" name="" placeholder="Comments"></textarea>
 
-      <div class="btn-close" ng-click="hiddenModal = !hiddenModal">Close</div>
+      <div class="btn-close" ng-click="vm.hiddenModal = !vm.hiddenModal">Close</div>
       <input type="submit" value="Send">
     </form>
   </div>
 </div>
-
 
 <div id="darkness" ng-hide="true"> <!-- Вторая модалка -->
   <div id="modal">
@@ -199,7 +204,7 @@
   </div>
 </div>
 
-<div id="mainbody" ng-controller="catalog as vm" ng-init="vm.init()">
+<div id="mainbody">
   <div class="sidebar pull-left" ng-style="vm.returnHeight();">
     <form name="form" id="form" novalidate>
 
@@ -279,9 +284,9 @@
     <div class="content-elements">
 
       <div class="pull-left"
-           ng-repeat="machine in vm.data | filter: search | companyFilter:vm.includedCompanies | priceFilter:vm.slider">
+           ng-repeat="machine in vm.data | filter: search | companyFilter:vm.includedCompanies | priceFilter:vm.slider" ng-click="vm.rent(machine.id)">
         <div class="content-elements-rent">Rent</div>
-        <div class="content-elements-img"><img ng-src="/content/images/machines/{{machine.imageUrl}}" alt=""></div>
+        <div class="content-elements-img"><img ng-src="../../content/images/machines/{{machine.imageUrl}}" alt=""></div>
         <span class="content-elements-model">{{machine.name}}</span>
         <span class="content-elements-price">${{machine.pricePerMonth}} / month</span>
       </div>

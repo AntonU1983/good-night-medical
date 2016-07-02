@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Good Night Medical</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700&subset=latin,cyrillic' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Rubik:400,400italic,500,700&subset=latin,cyrillic' rel='stylesheet'>
+  <link rel="stylesheet" href="../../content/css/lib/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../content/css/lib/angular/slider.css">
+  <link rel="stylesheet" href="../../content/css/main.css">
+  <link rel="stylesheet" href="../../content/css/ui.css">
+  <link rel="stylesheet" href="../../content/css/pages/pg.main.css">
+  <link rel="stylesheet" href="../../content/css/pages/pg.header.css">
+  <link rel="stylesheet" href="../../content/css/pages/pg.style.sidebar.css">
+  <link rel="stylesheet" href="../../content/css/pages/pg.style.content.css">
+  <link rel="stylesheet" href="../../content/css/util.css">
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+  <header>
+    <div class="header">
+      <img class="logotype pull-left" src="../../content/images/logotype.png" alt="Good Night Medical Logotype">
+      <div class="nav-bar pull-right">
+        <a href="../../index.html#home"">home</a>
+        <div class="separate"></div>
+        <a href="../../index.html#reasons"">reasons</a>
+        <div class="separate"></div>
+        <a href="../../index.html#process"">process</a>
+        <div class="separate"></div>
+        <a href="../../index.html#benefits"">benefits</a>
+        <div class="separate"></div>
+        <a href="../../index.html#rent"">rent</a>
+        <div class="separate"></div>
+        <a href="../../index.html#accredition"">accredition</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="mainbody">
+
+    <div class="sidebar pull-left">
+      <div class="button">Let&#39;s Help You Pick a CPAP</div>
+    </div>
+
+    <div class="content pull-right">
+      <form class="help-pick" ng-init="currentPacientGND = true; diagnostedWithOs = true; copiesSleepStudy = true; havePrescription = false;">
+
+        <div class="group"> <!-- FULL NAME (INPUT) -->
+          <label>Full Name *</label>
+          <input type="text" placeholder="Jessica Dixon" required>
+        </div>
+
+        <div class="group"> <!-- EMAIL (INPUT) -->
+          <label>Email *</label>
+          <input type="text" placeholder="example@mail.com" required>
+        </div>
+
+        <div class="group"> <!-- PHONE (INPUT) -->
+          <label>Phone *</label>
+          <input type="text" placeholder="(623) 829 43 16" required>
+        </div>
+
+        <div class="group"> <!-- METHOD CONTACT (RADIO) -->
+          <label>Method Of Contact</label>
+          <div class="radio">
+            <label>
+              <input type="radio" name="methodContact" checked>
+              <span><span></span></span>Phone
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="methodContact">
+              <span><span></span></span>Email
+            </label>
+          </div>
+        </div>
+
+        <div class="group"> <!-- PATINET GND (RADIO) -->
+          <label>Are You Current Good Night Medical Patient?</label>
+          <div class="radio">
+            <label ng-click="currentPacientGND = true;">
+              <input type="radio" name="patientGnm" checked>
+              <span><span></span></span>Yes
+            </label>
+          </div>
+          <div class="radio">
+            <label ng-click="currentPacientGND = false;">
+              <input type="radio" name="patientGnm">
+              <span><span></span></span>No
+            </label>
+          </div>
+        </div>
+
+        <div ng-hide="currentPacientGND">
+
+          <div class="group"> <!-- ADDRESS (INPUT) -->
+            <label>Address *</label>
+            <input type="text" placeholder="City: Vernon State, Street: Nelson 217" required>
+          </div>
+
+          <div class="group"> <!-- DATE OF BIRTH (INPUT) -->
+            <label>Date of Birth</label>
+            <input type="date">
+          </div>
+
+          <div class="group"> <!-- DIAGNOSED WITH OS (RADIO) -->
+            <label>Have You Been Diagnosed With Obstructive Sleep</label>
+            <div class="radio">
+              <label ng-click="diagnostedWithOs = false;">
+                <input type="radio" name="diagnosedOs">
+                <span><span></span></span>Yes
+              </label>
+            </div>
+            <div class="radio">
+              <label ng-click="diagnostedWithOs = true;">
+                <input type="radio" name="diagnosedOs" checked>
+                <span><span></span></span>No
+              </label>
+            </div>
+          </div>
+
+          <div ng-hide="diagnostedWithOs">
+
+            <div class="group"> <!-- CURRENT MACHINE (RADIO) -->
+              <label>What Is Your Current Treatment?</label>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="currentMachine" checked>
+                  <span><span></span></span>CPAP
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="currentMachine">
+                  <span><span></span></span>APAP
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="currentMachine">
+                  <span><span></span></span>BiPAP
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="currentMachine">
+                  <span><span></span></span>Other
+                </label>
+              </div>
+            </div>
+
+            <div class="group"> <!-- CURRENT EQUIPMENT (INPUT) -->
+              <label>What Is The Manufacturer Of Your Current Equipment? *</label>
+              <input type="text" required>
+            </div>
+
+            <div class="group"> <!-- CURRENT MASK (INPUT) -->
+              <label>What Mask Are You Currently Using? *</label>
+              <input type="text" required>
+            </div>
+
+            <div class="group"> <!-- COPIES SLEEP STUDY (RADIO) -->
+              <label>Do you have copies of your sleep study?</label>
+              <div class="radio">
+                <label ng-click="copiesSleepStudy = true;">
+                  <input type="radio" name="sleepStudy" checked>
+                  <span><span></span></span>Yes
+                </label>
+              </div>
+              <div class="radio">
+                <label ng-click="copiesSleepStudy = false;">
+                  <input type="radio" name="sleepStudy">
+                  <span><span></span></span>No
+                </label>
+              </div>
+            </div>
+
+            <div class="group" ng-hide="!copiesSleepStudy"> <!-- SLEEP STUDY (FILE) -->
+              <label>Upload A Scan / Picture Of Your Sleep Study</label>
+              <div class="grp-file">
+                <label>
+                  <span>Choose file<input type="file"></span>
+                </label>
+                <input type="text" readonly>
+              </div>
+            </div>
+
+            <div class="group" ng-hide="copiesSleepStudy"> <!-- SLEEP TEST (TEXTAREA) -->
+              <label>List The Information For The Physician Facilities That Conducted The Sleep Test</label>
+              <textarea placeholder="Name, Phone, Address"></textarea>
+            </div>
+
+            <div class="group"> <!-- PRESCRIPTION (RADIO) -->
+              <label>Do You Have A Prescription</label>
+              <div class="radio">
+                <label ng-click="havePrescription = false;">
+                  <input type="radio" name="prescription" checked>
+                  <span><span></span></span>Yes
+                </label>
+              </div>
+              <div class="radio">
+                <label ng-click="havePrescription = true;">
+                  <input type="radio" name="prescription">
+                  <span><span></span></span>No
+                </label>
+              </div>
+              <div class="radio">
+                <label ng-click="havePrescription = true;">
+                  <input type="radio" name="prescription">
+                  <span><span></span></span>Unsure
+                </label>
+              </div>
+            </div>
+
+            <div class="group" ng-hide="havePrescription"> <!-- PRESCRIPTION (FILE) -->
+              <label>Upload A Scan / Picture Of Your Prescription</label>
+              <div class="grp-file">
+                <label>
+                  <span>Choose file<input type="file"></span>
+                </label>
+                <input type="text" readonly>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="group"> <!-- MESSAGE (TEXTAREA) -->
+          <label>Message</label>
+          <textarea></textarea>
+        </div>
+
+        <div class="group grp-buttons"> <!-- SEND / RESET (BUTTONS) -->
+          <input class="left" type="reset" value="reset">
+          <input class="right" type="submit" value="send">
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <script src="../../scripts/lib/jquery/jquery.min.js"></script>
+  <script src="../../scripts/lib/angular/angular.min.js"></script>
+  <script src="../app.js"></script>
+  <script src="../../scripts/lib/bootstrap/bootstrap.min.js"></script>
+  <script src="../../scripts/script.js"></script>
+</body>
+</html>

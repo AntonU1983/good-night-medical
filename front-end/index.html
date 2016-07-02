@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="content/css/landing/block-6.css">
   <link rel="stylesheet" href="content/css/landing/block-7.css">
   <link rel="stylesheet" href="content/css/landing/forms.css">
+  <link rel="stylesheet" href="content/css/util.css">
   <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -28,6 +29,15 @@
 </head>
 
 <body ng-controller="rental as vm">
+
+<div id="darkness" ng-show="vm.thankYouModal == true">
+  <div id="modal">
+
+    <div class="text" style="color:black">Thank you for your interest!<br>We will contact as soon as possible!</div>
+    <div class="btn-close" ng-click="vm.thankYouModal = false;">Close</div>
+
+  </div>
+</div>
 
  <div id="darkness" ng-hide="vm.hiddenModal">
   <div id="modal">
@@ -181,6 +191,8 @@
 
  <script src="app/controllers/landing/rental.js"></script>
  <script src="app/controllers/landing/mind.js"></script>
+ <script src="app/controllers/landing/reasons.js"></script>
+ <script src="app/controllers/landing/process.js"></script>
  <script src="scripts/lib/bootstrap/bootstrap.min.js"></script>
  <script src="scripts/script.js"></script>
 </body>

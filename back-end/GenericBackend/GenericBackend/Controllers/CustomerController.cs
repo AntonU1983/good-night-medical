@@ -81,7 +81,8 @@ namespace GenericBackend.Controllers
                 Phone = customerRent.Phone,
                 Comments = customerRent.Comments,
                 ContactMethod = customerRent.Contact,
-                DoctorPrescription = customerRent.Prescription
+                DoctorPrescription = customerRent.Prescription,
+                MachineId = customerRent.MachineId
             });
 
             return Ok();

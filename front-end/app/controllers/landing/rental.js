@@ -17,6 +17,7 @@
         };
 
         vm.hiddenModal = true;
+        vm.thankYouModal = false;
         vm.fieldsValidOne = true;
         vm.fieldsValidTwo = true;
 
@@ -31,6 +32,7 @@
                         currentForm.$setPristine();
                         vm.contact = {};
                         vm.contact2 = {};
+                        vm.thankYouModal = true;
                     });
             }else {
                 return;

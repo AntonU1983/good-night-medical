@@ -1,9 +1,10 @@
 var app = angular.module('app', ['angular-ellipses', 'ui.router', 'LocalStorageModule', 'dataServiceModule']);
 
 app.constant('globalConstants', {
-  apiUrl: "http://localhost:51925/",
-  //apiUrl: "http://goodnight-medical-demo.azurewebsites.net/",
-  landingId: "admin"
+  //apiUrl: "http://localhost:51925/",
+  apiUrl: "http://goodnight-medical-demo.azurewebsites.net/",
+  landingId: "admin",
+  doctorPrescription: [ "Unsure", "Yes", "No" ]
 });
 
 app.controller('Ctrl', function($scope, $http) {
@@ -17,7 +18,6 @@ app.controller('Ctrl', function($scope, $http) {
     'machine.html'];
 
   
-  $http.get('content/data/rent-msg.json').success(function(data){$scope.rentMsg = data;});
   $http.get('content/data/help-msg.json').success(function(data){$scope.helpMsg = data;});
   $http.get('content/data/machine.json').success(function(data){$scope.machineData = data;});
 
