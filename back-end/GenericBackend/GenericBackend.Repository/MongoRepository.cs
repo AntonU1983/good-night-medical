@@ -32,7 +32,7 @@ namespace GenericBackend.Repository
         /// </summary>
         /// <remarks>Default constructor defaults to "MongoServerSettings" key for connectionstring.</remarks>
         public MongoRepository()
-            : this(Util<TKey>.GetDefaultConnectionString())
+            : this(MongoUtil<TKey>.GetDefaultConnectionString())
         {
         }
 
@@ -42,7 +42,7 @@ namespace GenericBackend.Repository
         /// <param name="connectionString">Connectionstring to use for connecting to MongoDB.</param>
         public MongoRepository(string connectionString)
         {
-            this.collection = Util<TKey>.GetCollectionFromConnectionString<T>(connectionString);
+            this.collection = MongoUtil<TKey>.GetCollectionFromConnectionString<T>(connectionString);
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace GenericBackend.Repository
         /// <param name="collectionName">The name of the collection to use.</param>
         public MongoRepository(string connectionString, string collectionName)
         {
-            this.collection = Util<TKey>.GetCollectionFromConnectionString<T>(connectionString, collectionName);
+            this.collection = MongoUtil<TKey>.GetCollectionFromConnectionString<T>(connectionString, collectionName);
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace GenericBackend.Repository
         /// <param name="url">Url to use for connecting to MongoDB.</param>
         public MongoRepository(MongoUrl url)
         {
-            this.collection = Util<TKey>.GetCollectionFromUrl<T>(url);
+            this.collection = MongoUtil<TKey>.GetCollectionFromUrl<T>(url);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace GenericBackend.Repository
         /// <param name="collectionName">The name of the collection to use.</param>
         public MongoRepository(MongoUrl url, string collectionName)
         {
-            this.collection = Util<TKey>.GetCollectionFromUrl<T>(url, collectionName);
+            this.collection = MongoUtil<TKey>.GetCollectionFromUrl<T>(url, collectionName);
         }
 
         /// <summary>

@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MongoDB.Driver;
+using System.Configuration;
 
 namespace GenericBackend.Core.Utils
 {
-    using MongoDB.Driver;
-    using System;
-    using System.Configuration;
+    
 
     /// <summary>
     /// Internal miscellaneous utility functions.
     /// </summary>
-    public static class Util<U>
+    public static class MongoUtil<U>
     {
         /// <summary>
         /// The default key MongoRepository will look for in the App.config or Web.config file.
@@ -49,7 +49,7 @@ namespace GenericBackend.Core.Utils
         public static IMongoCollection<T> GetCollectionFromConnectionString<T>(string connectionString)
             where T : IEntity<U>
         {
-            return Util<U>.GetCollectionFromConnectionString<T>(connectionString, GetCollectionName<T>());
+            return MongoUtil<U>.GetCollectionFromConnectionString<T>(connectionString, GetCollectionName<T>());
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace GenericBackend.Core.Utils
         public static IMongoCollection<T> GetCollectionFromConnectionString<T>(string connectionString, string collectionName)
             where T : IEntity<U>
         {
-            return Util<U>.GetDatabaseFromUrl(new MongoUrl(connectionString))
+            return MongoUtil<U>.GetDatabaseFromUrl(new MongoUrl(connectionString))
                 .GetCollection<T>(collectionName);
         }
 
@@ -75,7 +75,7 @@ namespace GenericBackend.Core.Utils
         public static IMongoCollection<T> GetCollectionFromUrl<T>(MongoUrl url)
             where T : IEntity<U>
         {
-            return Util<U>.GetCollectionFromUrl<T>(url, GetCollectionName<T>());
+            return MongoUtil<U>.GetCollectionFromUrl<T>(url, GetCollectionName<T>());
         }
 
         /// <summary>
@@ -88,7 +88,7 @@ namespace GenericBackend.Core.Utils
         public static IMongoCollection<T> GetCollectionFromUrl<T>(MongoUrl url, string collectionName)
             where T : IEntity<U>
         {
-            return Util<U>.GetDatabaseFromUrl(url)
+            return MongoUtil<U>.GetDatabaseFromUrl(url)
                 .GetCollection<T>(collectionName);
         }
 

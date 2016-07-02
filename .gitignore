@@ -3,6 +3,6 @@
 ################################################################################
 .vscode
 /front-end/.idea
-
+.idea/
 prepros.cfg
 admin/.idea/workspace.xml

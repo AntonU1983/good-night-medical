@@ -153,7 +153,9 @@
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Controllers\MachineController.cs" />
+    <Compile Include="Images\ImageMultipartFormDataStreamProvider.cs" />
     <Compile Include="Models\Customer\CustomerInsert.cs" />
     <Compile Include="Models\Customer\CustomerRentInsert.cs" />
     <Compile Include="Models\ModelBase.cs" />
