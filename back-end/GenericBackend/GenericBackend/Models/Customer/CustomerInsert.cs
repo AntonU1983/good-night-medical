@@ -5,7 +5,7 @@ using System.Web;
 
 namespace GenericBackend.Models.Customer
 {
-    public class CustomerInsert
+    public class CustomerInsert : ModelBase
     {
         public string FullName { get; set; }
         public string Email { get; set; }

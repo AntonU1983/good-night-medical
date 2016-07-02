@@ -1,12 +1,11 @@
 
 var serviceId = 'dataService';
-angular.module('dataServiceModule', []).factory(serviceId, ['$http', dataService]);
+angular.module('dataServiceModule', []).factory(serviceId, ['$http', 'globalConstants', dataService]);
 
-function dataService($http) {
+function dataService($http, globalConstants) {
 
     // Change with appropriate url
-    //var urlBase = "http://goodnight-medical-demo.azurewebsites.net/";
-    var urlBase = "http://localhost:51925/";
+    var urlBase = globalConstants.apiUrl;
 
     var service = {
         getMachines: getMachines,
@@ -23,11 +22,16 @@ function dataService($http) {
 
     function postContact(data) {
         var subUrl = 'api/customer/';
-        return $http.post(urlBase + subUrl, data);
+        return post(urlBase + subUrl, data);
     }
 
     function postRent(data) {
         var subUrl = 'api/customer/rent';
-        return $http.post(urlBase + subUrl, data);
+        return post(urlBase + subUrl, data);
+    }
+    
+    function post(url, data) {
+        data.landingId = globalConstants.landingId;
+        return $http.post(url, data);
     }
 }

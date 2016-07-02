@@ -2,7 +2,7 @@
 
 namespace GenericBackend.Models.Customer
 {
-    public class CustomerRentInsert
+    public class CustomerRentInsert : ModelBase
     {
         public string FullName { get; set; }
         public string Email { get; set; }

@@ -1,0 +1,29 @@
+<div  ng-controller="mind">
+
+<div id="darkness" ng-show="thankYouModal == true">
+    <div id="modal">
+
+            <span>Thank you for your interest! We will contact as soon as possible!</span>
+            <hr />
+            <div class="btn-close">Close</div>
+
+    </div>
+</div>
+
+<div class="mind">
+    <div class="mind-title">{{content.Title}}</div>
+    <div class="mind-desc">{{content.Description}}</div>
+
+    <form class="mind-form" novalidate name="formOne" ng-submit="vm.submitForm(formOne, vm.contact)">
+        <input name="name" type="text" autocomplete="off" placeholder="full name" required
+               ng-model="vm.contact.fullName">
+        <input name="email" type="email" autocomplete="off" placeholder="email" required
+               ng-model="vm.contact.email"
+               ng-pattern="/^[_a-z0-9A-Z]+(\.[_a-z0-9A-Z]+)*@[a-z0-9A-Z-]+(\.[a-z0-9A-Z-]+)*(\.[a-zA-Z]{2,10})$/">
+        <input name="phone" type="text" autocomplete="off" placeholder="phone" required
+               ng-model="vm.contact.phone">
+        <input name="submit" type="submit" value="Contact me!">
+    </form>
+    <div class="mind-form-desc"><a href="">Click here</a> to learn more about home sleep testing</div>
+</div>
+</div>

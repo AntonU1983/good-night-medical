@@ -1,0 +1,38 @@
+<div id="copyright" name="copyright">
+    <div class="copyright">
+        <div class="copyright-info">
+            <div class="copyright-info-title">ABOUT US</div>
+            <div class="copyright-info-desc">Good Night Medical is proud to be nationally known for its strength and knowledge in the area of sleep medicine and home ventilation. Good Night Medical provides the required services needed to diagnose a Sleep Apnea patient in their home. Once diagnosed, Good Night Medical provides CPAP treatment via home ventilation and oxygen equipment to our patients. Good Night Medical is dedicated to saving patients on their healthcare costs. This includes fighting for their insurance coverage, offering low cost options for those without insurance, and finding ways to cut the costs of these products through innovative recycling, refurbishing, or sourcing.</div>
+            <div class="copyright-info-dev">Copyright © 2016 Good Night Medical. All Rights Reserved.
+            </div>
+        </div>
+        <div class="copyright-info">
+            <div class="copyright-info-title">LINKS</div>
+            <div class="copyright-info-links">
+                <a href="">Home</a>
+                <a href="">Home Sleep Test</a>
+                <a href="">CPAP Rentals</a>
+                <a href="">Accredidation</a>
+            </div>
+        </div>
+        <div class="copyright-info">
+            <div class="copyright-info-title">SOCIAL</div>
+            <div class="copyright-info-links">
+                <a href="https://facebook.com/goodnightmedica" target="_blank">Facebook</a>
+                <a href="https://twitter.com/goodnightmed" target="_blank">Twitter</a>
+                <a href="https://www.pinterest.com/goodnightmed/" target="_blank">Pinterest­</a>
+            </div>
+        </div>
+        <form class="copyright-form" novalidate name="formTwo" ng-submit="vm.submitForm(formTwo, vm.contact2)">
+            <input name="name" type="text" autocomplete="off" placeholder="full name" required
+                   ng-model="vm.contact2.fullName">
+            <input name="email" type="email" autocomplete="off" placeholder="email" required
+                   ng-model="vm.contact2.email"
+                   ng-pattern="/^[_a-z0-9A-Z]+(\.[_a-z0-9A-Z]+)*@[a-z0-9A-Z-]+(\.[a-z0-9A-Z-]+)*(\.[a-zA-Z]{2,10})$/">
+            <input name="phone" type="text" autocomplete="off" placeholder="phone" required
+                   ng-model="vm.contact2.phone">
+            <input name="submit" type="submit" value="Contact me!"
+                   ng-model="submit">
+        </form>
+    </div>
+</div>

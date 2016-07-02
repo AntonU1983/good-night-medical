@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson.Serialization.IdGenerators;
@@ -22,6 +23,7 @@ namespace GenericBackend.Core
         }
 
         public string Id { get; set; }
+        public string LandingId { get; set; } = "unknown";
     }
     public interface IMongoEntity<TKey> : IEntity<TKey>
         where TKey: IComparable

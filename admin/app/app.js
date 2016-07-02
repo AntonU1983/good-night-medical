@@ -1,8 +1,9 @@
 var app = angular.module('app', ['angular-ellipses', 'ui.router', 'LocalStorageModule', 'dataServiceModule']);
 
 app.constant('globalConstants', {
-  apiUrl: "http://localhost:51925/"
-  //apiUrl: "http://goodnight-medical-demo.azurewebsites.net/"
+  apiUrl: "http://localhost:51925/",
+  //apiUrl: "http://goodnight-medical-demo.azurewebsites.net/",
+  landingId: "admin"
 });
 
 app.controller('Ctrl', function($scope, $http) {

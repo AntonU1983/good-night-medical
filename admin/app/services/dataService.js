@@ -33,11 +33,16 @@ function dataService($http, globalConstants) {
 
     function postContact(data) {
         var subUrl = 'api/customer/';
-        return $http.post(urlBase + subUrl, data);
+        return post(urlBase + subUrl, data);
     }
 
     function postRent(data) {
         var subUrl = 'api/customer/rent';
-        return $http.post(urlBase + subUrl, data);
+        return post(urlBase + subUrl, data);
+    }
+
+    function post(url, data) {
+        data.landingId = globalConstants.landingId;
+        return post(url, data);
     }
 }

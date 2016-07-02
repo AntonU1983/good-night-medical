@@ -60,6 +60,7 @@ namespace GenericBackend.Controllers
         {
             _customersRepository.Add(new Customer
             {
+                LandingId = customer.LandingId,
                 Email = customer.Email,
                 FullName = customer.FullName,
                 Phone = customer.Phone
@@ -74,6 +75,7 @@ namespace GenericBackend.Controllers
         {
             _fullCustomersRepository.Add(new FullRentCustomer
             {
+                LandingId = customerRent.LandingId,
                 Email = customerRent.Email,
                 FullName = customerRent.FullName,
                 Phone = customerRent.Phone,
