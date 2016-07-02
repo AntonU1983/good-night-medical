@@ -38,7 +38,7 @@ a:focus {text-decoration: none;}
   text-overflow: ellipsis;}
 
 .pull-right {float: right !important;}
-.pull-left {float: left !important;}
+.pull-left {float: left !important; cursor: pointer;}
 .hide {display: none !important;}
 .show {display: block !important;}
 .invisible {visibility: hidden;}

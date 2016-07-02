@@ -8,8 +8,15 @@
 
     var vm = this;
     vm.data = [];
-
+    vm.hiddenModal = true;
+    vm.machineId = '';
+    
     vm.init = getData;
+
+    vm.rent = function (id) {
+        vm.hiddenModal = false;
+        vm.machineId = id;
+    }
 
     function getData() {
       dataService.getMachines()
@@ -31,6 +38,16 @@
       }
     };
 
+    vm.rentMachine = {
+      fullName: "",
+      email: "",
+      phone: "",
+      prescription: "No",
+      contact: "Email",
+      comments: "",
+      machineId: ""
+    };
+
     // Вычисляем высоту боковой панели
     // Минус отступы и header
     // Получаем красивую боковую панель
@@ -50,6 +67,28 @@
         vm.includedCompanies.splice(i, 1);
       } else {
         vm.includedCompanies.push(company);
+      }
+    };
+
+    vm.submitRental = function(rentalForm) {
+      if(rentalForm.$valid) {
+        vm.rentMachine.machineId = vm.machineId;
+
+        dataService.postRent(vm.rentMachine)
+            .success(function (){
+              rentalForm.$setPristine();
+              vm.rentMachine = {
+                fullName: "",
+                email: "",
+                phone: "",
+                prescription: "No",
+                contact: "Email",
+                comments: ""
+
+              };
+            });
+      }else {
+        return;
       }
     };
   }

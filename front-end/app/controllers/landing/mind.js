@@ -6,7 +6,6 @@
 
     function formsController($scope, dataService) {
         $scope.content = content;
-        $scope.thankYouModal = false;
     }
 
     var content = {

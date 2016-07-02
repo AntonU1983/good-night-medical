@@ -11,7 +11,9 @@ function dataService($http, globalConstants) {
         getContacts: getContacts,
         postContact : postContact,
         postRent: postRent,
-        setReadContact: setReadContact
+        setReadContact: setReadContact,
+        getRents: getRents,
+        setReadRent: setReadRent
     };
 
     return service;
@@ -19,6 +21,21 @@ function dataService($http, globalConstants) {
     function getMachines() {
         var subUrl = 'api/Machines';
         return $http.get(urlBase + subUrl);
+    }
+
+    function getMachine(id) {
+        var subUrl = 'api/Machines/';
+        return $http.get(urlBase + subUrl + id);
+    }
+
+    function getRents() {
+        var subUrl = 'api/Machines/rents';
+        return $http.get(urlBase + subUrl);
+    }
+
+    function setReadRent(id) {
+        var subUrl = 'api/customer/seen/'
+        return $http.get(urlBase + subUrl + id);
     }
 
     function getContacts() {

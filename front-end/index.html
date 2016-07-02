@@ -29,6 +29,15 @@
 
 <body ng-controller="rental as vm">
 
+<div id="darkness" ng-show="vm.thankYouModal == true">
+  <div id="modal">
+
+    <div class="text" style="color:black">Thank you for your interest!<br>We will contact as soon as possible!</div>
+    <div class="btn-close" ng-click="vm.thankYouModal = false;">Close</div>
+
+  </div>
+</div>
+
  <div id="darkness" ng-hide="vm.hiddenModal">
   <div id="modal">
     <div class="status ">Let Us Contact You</div>

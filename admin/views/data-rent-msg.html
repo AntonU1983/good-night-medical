@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" ng-controller="Rent">
   <div class="col-lg-12 table-view">
 
     <div class="title">Consequatur quisquam omnis voluptatum aliquam corporis doloremque deserunt reiciendis optio veniam laboriosam voluptate similique a, dignissimos officiis, rem voluptatem iste maxime commodi porro. Dolore eum aliquam molestias modi, officiis saepe. Voluptatem repellat veritatis, a pariatur debitis numquam inventore quis! Laborum blanditiis voluptas tempore perspiciatis aspernatur qui numquam illo vel ex ipsa! Possimus ullam minima inventore itaque quibusdam, ut laudantium rem ipsam.</div>
@@ -19,6 +19,23 @@
       </div>
     </form>
 
+    <div class="darkness" ng-show="readRentInfo">
+      <div class="window">
+        <div class="title">Rent CPAP Info</div>
+        <div class="text"><span>Full Name:</span> {{currentRent.fullName}}</div>
+        <div class="text"><span>Email:</span> {{currentRent.email}}</div>
+        <div class="text"><span>Phone:</span> {{currentRent.phone}}</div>
+        <div class="text"><span>Prescription:</span> {{doctorPrescription(currentRent.doctorPrescription)}}</div>
+        <div class="text"><span>Contact Method:</span>{{currentRent.contactMethod == 0 ? "Email" : "Phone"}}</div>
+        <div class="text"><span>Comment:</span> {{currentRent.comments}}</div>
+        <form>
+          <input class="left" type="submit" value="mark as read" ng-click="markAsRead(msg.id)" ng-show="currentRent.new == true">
+          <!-- <input type="submit" value="Simple"> -->
+          <input class="right" type="submit" value="Close" ng-click="readRentInfo = false">
+        </form>
+      </div>
+    </div>
+
     <div class="table">
       <table>
 
@@ -37,13 +54,13 @@
           <tr ng-repeat="msg in rentMsg | filter: search"
               ng-class="returnClassNewMsg(msg.new);"
               ng-hide="hideMachine(msg.new, hideOld, hideNew);">
-            <td>{{msg.name}}</td>
+            <td>{{msg.fullName}}</td>
             <td>{{msg.email}}</td>
             <td>{{msg.phone}}</td>
-            <td>{{msg.prescription}}</td>
-            <td>{{msg.contactMethod}}</td>
-            <td>{{msg.comment | characters:7}}</td>
-            <td><input type="submit" value="Read"></td>
+            <td>{{doctorPrescription(msg.doctorPrescription)}}</td>
+            <td>{{msg.contactMethod == 0 ? "Email" : "Phone"}}</td>
+            <td>{{msg.comments | characters:7}}</td>
+            <td><input type="submit" value="Read" ng-click="read(msg.id)"></td>
           </tr>
         </tbody>
 
