@@ -286,7 +286,7 @@
       <div class="pull-left"
            ng-repeat="machine in vm.data | filter: search | companyFilter:vm.includedCompanies | priceFilter:vm.slider" ng-click="vm.rent(machine.id)">
         <div class="content-elements-rent">Rent</div>
-        <div class="content-elements-img"><img ng-src="../../content/images/machines/{{machine.imageUrl}}" alt=""></div>
+        <div class="content-elements-img"><img ng-src="{{machine.imageUrl}}" alt="{{machine.name}}"></div>
         <span class="content-elements-model">{{machine.name}}</span>
         <span class="content-elements-price">${{machine.pricePerMonth}} / month</span>
       </div>
