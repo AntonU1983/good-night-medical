@@ -1,0 +1,40 @@
+.sidebar :last-child {margin-bottom: 0 !important;}
+
+/*
+ * Button, Sidebar
+ */
+
+.sidebar .button {
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 3px;
+  background-color: #fe7847;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;}
+
+.sidebar .button:hover {background-color: #f98b60;}
+
+/*
+ * Blue Style
+ */
+
+.sidebar.blue .button       {background-color: #579eff;}
+.sidebar.blue .button:hover {background-color: #84c7ff;}
+
+/*
+ * Orange Style
+ */
+
+.sidebar.orange .button       {background-color: #fe7847;}
+.sidebar.orange .button:hover {background-color: #f98b60;}
+

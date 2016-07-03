@@ -12,10 +12,10 @@
   <link rel="stylesheet" href="../../content/css/lib/angular/slider.css">
   <link rel="stylesheet" href="../../content/css/main.css">
   <link rel="stylesheet" href="../../content/css/ui.css">
-  <link rel="stylesheet" href="../../content/css/pages/pg.main.css">
+  <link rel="stylesheet" href="../../content/css/pages/pg.style.css">
   <link rel="stylesheet" href="../../content/css/pages/pg.header.css">
-  <link rel="stylesheet" href="../../content/css/pages/pg.style.sidebar.css">
-  <link rel="stylesheet" href="../../content/css/pages/pg.style.content.css">
+  <link rel="stylesheet" href="../../content/css/pages/pg.sidebar.css">
+  <link rel="stylesheet" href="../../content/css/pages/pg.content.css">
   <link rel="stylesheet" href="../../content/css/util.css">
   <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -46,12 +46,12 @@
 
   <div class="mainbody">
 
-    <div class="sidebar pull-left">
+    <div class="sidebar blue pull-left">
       <div class="button">Let&#39;s Help You Pick a CPAP</div>
     </div>
 
     <div class="content pull-right">
-      <form class="help-pick" ng-init="currentPacientGND = true; diagnostedWithOs = true; copiesSleepStudy = true; havePrescription = false;">
+      <form class="blue" ng-init="currentPacientGND = true; diagnostedWithOs = true; copiesSleepStudy = true; havePrescription = false;">
 
         <div class="group"> <!-- FULL NAME (INPUT) -->
           <label>Full Name *</label>
@@ -190,7 +190,7 @@
                 <label>
                   <span>Choose file<input type="file"></span>
                 </label>
-                <input type="text" readonly>
+                <input type="text" readonly disabled>
               </div>
             </div>
 
@@ -227,7 +227,7 @@
                 <label>
                   <span>Choose file<input type="file"></span>
                 </label>
-                <input type="text" readonly>
+                <input type="text" disabled>
               </div>
             </div>
 
