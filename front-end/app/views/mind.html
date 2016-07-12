@@ -1,18 +1,29 @@
-<div  ng-controller="mind">
-<div class="mind">
-    <div class="mind-title">{{content.Title}}</div>
-    <div class="mind-desc">{{content.Description}}<br>{{content.Description2}}</div>
+<div ng-controller="mind">
 
-    <form class="mind-form" novalidate name="formOne" ng-submit="vm.submitForm(formOne, vm.contact)">
-        <input name="name" type="text" autocomplete="off" placeholder="full name" required
-               ng-model="vm.contact.fullName">
-        <input name="email" type="email" autocomplete="off" placeholder="email" required
-               ng-model="vm.contact.email"
-               ng-pattern="/^[_a-z0-9A-Z]+(\.[_a-z0-9A-Z]+)*@[a-z0-9A-Z-]+(\.[a-z0-9A-Z-]+)*(\.[a-zA-Z]{2,10})$/">
-        <input name="phone" type="text" autocomplete="off" placeholder="phone" required
-               ng-model="vm.contact.phone">
-        <input name="submit" type="submit" value="Contact me!">
+  <div class="mind">
+    <div class="title">{{content.Title}}</div>
+    <div class="desc">{{content.Description}}<br>{{content.Description2}}</div>
+    <form class="mind-form" autocomplete="off" novalidate name="formOne" ng-submit="vm.submitForm(formOne, vm.contact)">
+        <span><input name="name" type="text" placeholder="full name" required ng-model="vm.contact.fullName"></span>
+        <span><input name="email" type="email" placeholder="email" required ng-model="vm.contact.email"
+               ng-pattern="/^[_a-z0-9A-Z]+(\.[_a-z0-9A-Z]+)*@[a-z0-9A-Z-]+(\.[a-z0-9A-Z-]+)*(\.[a-zA-Z]{2,10})$/"></span>
+        <span><input name="phone" type="text" placeholder="phone" required ng-model="vm.contact.phone"></span>
+        <span><input name="submit" type="submit" value="Contact me!"></span>
     </form>
-    <div class="mind-form-desc"><a href="">Click here</a> to learn more about home sleep testing</div>
+
+    <div class="help"><a href="">Click here</a> to learn more about home sleep testing</div>
+  </div>
+
 </div>
+
+<div class="scroll">
+  <svg x="0px" y="0px" width="30px" height="53px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 53">
+    <path d="M15,0A15,15,0,0,0,0,15V38a15,15,0,0,0,30,0V15A15,15,0,0,0,15,0ZM28.21,38A13.21,13.21,0,0,1,1.79,38V15A13.21,13.21,0,0,1,28.2,15V38h0ZM15.13,18.61H14.87a1.27,1.27,0,0,1-1.28-1.28V13a1.28,1.28,0,0,1,1.28-1.28h0.26A1.27,1.27,0,0,1,16.41,13v4.3a1.29,1.29,0,0,1-1.28,1.31h0Zm4.46,18.18-4.59,4-4.64-4a0.89,0.89,0,0,1,1.15-1.36l2.56,2.2V29.29a0.9,0.9,0,0,1,1.79,0v8.35l2.56-2.2a0.89,0.89,0,1,1,1.15,1.36h0Z" fill="#fff" />
+  </svg>
+</div>
+
+<div class="bot-cut">
+  <svg x="0px" y="0px" width="100%" height="40px" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 40">
+    <path d="M0,30S320,0,640,0s640,30,640,30V40H0V30Z" fill="#f0f0f2" />
+  </svg>
 </div>

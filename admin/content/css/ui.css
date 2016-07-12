@@ -712,9 +712,6 @@ form .group.double-slider .description div {
 .blue form .group .select:hover,
 .blue form .group .select:focus {border: 2px solid #579eff;}
 
-.blue .dd-container .dd-select:hover,
-.blue .dd-container .dd-select:focus {border: 2px solid #579eff;}
-
 .blue form .group input[type='reset'],
 .blue form .group input[type='submit'],
 .blue form .group input[type='button']  {
@@ -778,9 +775,6 @@ form .group.double-slider .description div {
 
 .orange form .group .select:hover,
 .orange form .group .select:focus {border: 2px solid #fe7847;}
-
-.orange .dd-container .dd-select:hover,
-.orange .dd-container .dd-select:focus {border: 2px solid #fe7847;}
 
 .orange form .group input[type='reset'],
 .orange form .group input[type='submit'],

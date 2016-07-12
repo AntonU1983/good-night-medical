@@ -1,4 +1,4 @@
-.sidebar {
+aside {
   position: fixed;
   z-index: 600;
   top: 50px;
@@ -10,31 +10,33 @@
   margin: 0;
   padding: 20px 0 0 0;
   background-color: #fff;
-  box-shadow: 1px 0px 7px rgba(0,0,0,.05);}
+  -webkit-box-shadow: 1px 0px 7px rgba(0,0,0,.05);
+     -moz-box-shadow: 1px 0px 7px rgba(0,0,0,.05);
+          box-shadow: 1px 0px 7px rgba(0,0,0,.05);}
 
-.sidebar ul {
+aside ul {
   margin: 0;
   padding: 0;}
 
-.sidebar ul li,
-.sidebar ul li a {
+aside ul li,
+aside ul li a {
   position: relative;
   display: block;}
 
-.sidebar ul li a {
+aside ul li a {
   font-size: 14px;
   padding: 10px 20px;
   color: #222831;}
 
-.sidebar ul a:hover {
+aside ul a:hover {
   background-color: #f0f0f2;}
 
-.sidebar ul .active a,
-.sidebar ul .active > a:hover,
-.sidebar ul .active > a:focus {
+aside ul .active a,
+aside ul .active > a:hover,
+aside ul .active > a:focus {
   color: #fff;
   background-color: #fe7847;}
 
-.sidebar ul li.separate {
+aside ul li.separate {
   margin: 20px 0;
   border-bottom: 1px solid #eee;}

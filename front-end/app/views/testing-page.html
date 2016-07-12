@@ -9,9 +9,9 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700&subset=latin,cyrillic' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Rubik:400,400italic,500,700&subset=latin,cyrillic' rel='stylesheet'>
   <link rel="stylesheet" href="../../content/css/lib/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="../../content/css/lib/angular/slider.css">
   <link rel="stylesheet" href="../../content/css/main.css">
   <link rel="stylesheet" href="../../content/css/ui.css">
+  <link rel="stylesheet" href="../../content/css/modal.css">
   <link rel="stylesheet" href="../../content/css/pages/pg.style.css">
   <link rel="stylesheet" href="../../content/css/pages/pg.header.css">
   <link rel="stylesheet" href="../../content/css/pages/pg.sidebar.css">
@@ -21,13 +21,18 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+
+  <style>
+  </style>
+
 </head>
-<body ng-init="style = 'blue'">
+
+<body ng-init="style = 'blue'" ng-class="style">
 
   <header>
-    <div class="header">
+    <div class="wrapper">
       <img class="logotype pull-left" src="../../content/images/logotype.png" alt="Good Night Medical Logotype">
-      <div class="nav-bar pull-right">
+      <nav class="pull-right">
         <a href="../../index.html#home"">home</a>
         <div class="separate"></div>
         <a href="../../index.html#reasons"">reasons</a>
@@ -39,32 +44,65 @@
         <a href="../../index.html#rent"">rent</a>
         <div class="separate"></div>
         <a href="../../index.html#accredition"">accredition</a>
-      </div>
+      </nav>
     </div>
   </header>
 
   <div class="mainbody">
-
-    <div class="sidebar pull-left" ng-class="style">
+    <aside class="pull-left">
       <div class="button" ng-click="style = 'blue'">Blue Style</div>
       <div class="button" ng-click="style = 'orange'">Orange Style</div>
-    </div>
+    </aside>
 
     <div class="content pull-right">
-      <form ng-class="style">
+      <form>
         <div class="group"> <!-- INPUT TEXT -->
           <label>Input Text</label>
           <input type="text" placeholder="text">
         </div>
 
-        <div class="group"> <!-- INPUT SEARCH -->
-          <label>Input Search</label>
-          <input type="search" placeholder="text">
+        <div class="group"> <!-- INPUT EMAIL -->
+          <label>Input Email</label>
+          <input type="email" placeholder="text">
+        </div>
+
+        <div class="group"> <!-- INPUT PHONE -->
+          <label>Input Phone</label>
+          <input type="phone" placeholder="text">
         </div>
 
         <div class="group"> <!-- INPUT PASSWORD -->
           <label>Input Password</label>
           <input type="password" placeholder="text">
+        </div>
+
+        <div class="group"> <!-- SELECT (HTML5) -->
+          <label>Select Item</label>
+          <div class="select">
+            <select>
+              <option value="">item</option>
+              <option value="">item</option>
+              <option value="">item</option>
+              <option value="">item</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="group"> <!-- DROP DOWN J-UI -->
+          <select id="select-img">
+            <option data-imagesrc="http://swimages.blob.core.windows.net/goodnightmedical-preview/philips-respironics-dreamstation-bipap-60x60.jpg"
+                    data-description="philips-respironics-dreamstation-bipap.jpg"
+                    value="0">Philips Respironics DreamStation BiPAP</option>
+            <option data-imagesrc="http://swimages.blob.core.windows.net/goodnightmedical-preview/philips-respironics-remstar-system-one-auto-60x60.jpg"
+                    data-description="philips-respironics-remstar-system-one-auto,jpg"
+                    value="1">Philips Respironics RemStar System One Auto</option>
+            <option data-imagesrc="http://swimages.blob.core.windows.net/goodnightmedical-preview/resmed-s9-auto-cpap-60x60.jpg"
+                    data-description="resmed-s9-auto-cpap.jpg"
+                    value="2">ResMed S9 Auto/CPAP</option>
+            <option data-imagesrc="http://swimages.blob.core.windows.net/goodnightmedical-preview/fisher-and-paykel-icon-premo-auto-60x60.jpg"
+                    data-description="fisher-and-paykel-icon-premo-auto.jpg"
+                    value="3">Fisher & Paykel ICON Premo/Auto</option>
+          </select>
         </div>
 
         <div class="group"> <!-- TEXT AREA -->
@@ -106,12 +144,14 @@
 
         <div class="group"> <!-- INPUT FILE -->
           <label>Input File</label>
+
           <div class="grp-file">
             <label>
               <span>Choose file<input type="file"></span>
             </label>
             <input type="text" disabled>
           </div>
+
           <div class="help">Try selecting one or more files and watch the feedback</div>
         </div>
 
@@ -123,13 +163,14 @@
 
       </form>
     </div>
-
   </div>
 
   <script src="../../scripts/lib/jquery/jquery.min.js"></script>
+  <script src="../../scripts/lib/jquery/jquery-ui.min.js"></script>
   <script src="../../scripts/lib/bootstrap/bootstrap.min.js"></script>
-  <script src="../../scripts/lib/angular/angular.min.js"></script>
+  <script src="../../scripts/lib/angular/angular.js"></script>
   <script src="../app.js"></script>
   <script src="../../scripts/script.js"></script>
+  <script src="../../scripts/select.js"></script>
 </body>
 </html>

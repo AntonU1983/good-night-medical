@@ -9,29 +9,82 @@
       <input class="pull-right" type="submit" value="Edit Machine" ng-click="editMachine = 'show-me';">
     </form>
 
-    <form class="machine" novalidate ng-class="addMachine">
-      <div class="group">
+    <form class="machine" novalidate ng-class="addMachine" ng-init="selectOrDownload = true">
+      <div class="group"> <!-- COMPANY -->
         <label>Company</label>
-        <input type="text" placeholder="Philips" required ng-class="check">
+        <input type="text" placeholder="Philips" autofocus required ng-class="check">
       </div>
-      <div class="group">
+
+      <div class="group"> <!-- MODEL NAME -->
         <label>Model Name</label>
         <input type="text" placeholder="Philips Respironics DreamStation Auto / Pro" required ng-class="check">
       </div>
-      <div class="group">
+
+      <div class="group"> <!-- PRICE -->
         <label>Price</label>
         <input type="text" placeholder="65" required ng-class="check">
       </div>
-      <div class="group">
-        <label>Image</label>
-        <input type="file" required>
-        <p class="help">(size 500x500 pixels, format .jpg)</p>
+
+      <div class="group"> <!-- SELECT IMAGE OR DONWLOAD NEW -->
+        <label>Select Image or Download New</label>
+
+        <div class="radio">
+          <label ng-click="selectOrDownload = true;">
+            <input type="radio" name="patientGnm" checked>
+            <span><span></span></span>Select Image
+          </label>
+        </div>
+
+        <div class="radio">
+          <label ng-click="selectOrDownload = false;">
+            <input type="radio" name="patientGnm">
+            <span><span></span></span>Download New Image
+          </label>
+        </div>
+
+        <div class="select" ng-hide="!selectOrDownload">
+          <select>
+            <option value="">Lorem ipsum dolor sit amet</option>
+            <option value="">Lorem ipsum dolor sit amet</option>
+            <option value="">Lorem ipsum dolor sit amet</option>
+            <option value="">Lorem ipsum dolor sit amet</option>
+          </select>
+        </div>
+
+        <div ng-hide="selectOrDownload"> <!-- IMAGE -->
+          <div class="grp-file">
+            <label>
+              <span>Choose file<input type="file"></span>
+            </label>
+            <input type="text" disabled>
+          </div>
+          <div class="help">(size 500x500 pixels, format .jpg)</div>
+        </div>
       </div>
-      <div class="group">
+
+      <div class="group"> <!-- DROP DOWN J-UI -->
+        <select id="select-img">
+          <option data-imagesrc="http://swimages.blob.core.windows.net/goodnightmedical-preview/philips-respironics-dreamstation-bipap-60x60.jpg"
+                  data-description="philips-respironics-dreamstation-bipap.jpg"
+                  value="0">Philips Respironics DreamStation BiPAP</option>
+          <option data-imagesrc="http://swimages.blob.core.windows.net/goodnightmedical-preview/philips-respironics-remstar-system-one-auto-60x60.jpg"
+                  data-description="philips-respironics-remstar-system-one-auto,jpg"
+                  value="1">Philips Respironics RemStar System One Auto</option>
+          <option data-imagesrc="http://swimages.blob.core.windows.net/goodnightmedical-preview/resmed-s9-auto-cpap-60x60.jpg"
+                  data-description="resmed-s9-auto-cpap.jpg"
+                  value="2">ResMed S9 Auto/CPAP</option>
+          <option data-imagesrc="http://swimages.blob.core.windows.net/goodnightmedical-preview/fisher-and-paykel-icon-premo-auto-60x60.jpg"
+                  data-description="fisher-and-paykel-icon-premo-auto.jpg"
+                  value="3">Fisher & Paykel ICON Premo/Auto</option>
+        </select>
+      </div>
+
+      <div class="group"> <!-- DESCRIPTION -->
         <label>Description</label>
         <textarea ng-class="check"></textarea>
       </div>
-      <div class="group">
+
+      <div class="group"> <!-- REFURBUSHED -->
         <label>Refurbished</label>
         <div class="radio">
           <label>
@@ -46,34 +99,90 @@
           </label>
         </div>
       </div>
-      <input type="submit" value="Add Machine" ng-click="check = 'alert'">
-      <input class="right" type="submit" value="Close" ng-click="addMachine = 'hide-me';">
-      <input class="left" type="reset" value="Reset">
+
+      <div class="group grp-buttons"> <!-- BUTTONS -->
+        <input class="left" type="reset" value="Reset">
+        <input class="center" type="submit" value="Add Machine" ng-click="check = 'alert'">
+        <input class="right" type="submit" value="Close" ng-click="addMachine = 'hide-me';">
+      </div>
     </form>
 
     <form class="machine" novalidate ng-class="editMachine">
-      <div class="group">
+      <div class="group"> <!-- COMPANY -->
         <label>Company</label>
-        <input type="text" placeholder="Philips" required ng-class="check">
+        <input type="text" placeholder="Philips" autofocus required ng-class="check">
       </div>
-      <div class="group">
+
+      <div class="group"> <!-- MODEL NAME -->
         <label>Model Name</label>
         <input type="text" placeholder="Philips Respironics DreamStation Auto / Pro" required ng-class="check">
       </div>
-      <div class="group">
+
+      <div class="group"> <!-- PRICE -->
         <label>Price</label>
         <input type="text" placeholder="65" required ng-class="check">
       </div>
-      <div class="group">
-        <label>Image</label>
-        <input type="file" required>
-        <p class="help">(size 500x500 pixels, format .jpg)</p>
+
+      <div class="group"> <!-- SELECT IMAGE OR DONWLOAD NEW -->
+        <label>Select Image or Download New</label>
+
+        <div class="radio">
+          <label ng-click="selectOrDownload = true;">
+            <input type="radio" name="patientGnm" checked>
+            <span><span></span></span>Select Image
+          </label>
+        </div>
+
+        <div class="radio">
+          <label ng-click="selectOrDownload = false;">
+            <input type="radio" name="patientGnm">
+            <span><span></span></span>Download New Image
+          </label>
+        </div>
+
+        <div class="select" ng-hide="!selectOrDownload">
+          <select>
+            <option value="">Lorem ipsum dolor sit amet</option>
+            <option value="">Lorem ipsum dolor sit amet</option>
+            <option value="">Lorem ipsum dolor sit amet</option>
+            <option value="">Lorem ipsum dolor sit amet</option>
+          </select>
+        </div>
+
+        <div ng-hide="selectOrDownload"> <!-- IMAGE -->
+          <div class="grp-file">
+            <label>
+              <span>Choose file<input type="file"></span>
+            </label>
+            <input type="text" disabled>
+          </div>
+          <div class="help">(size 500x500 pixels, format .jpg)</div>
+        </div>
       </div>
-      <div class="group">
+
+      <div class="group"> <!-- DROP DOWN J-UI -->
+        <select id="select-img">
+          <option data-imagesrc="http://swimages.blob.core.windows.net/goodnightmedical-preview/philips-respironics-dreamstation-bipap-60x60.jpg"
+                  data-description="philips-respironics-dreamstation-bipap.jpg"
+                  value="0">Philips Respironics DreamStation BiPAP</option>
+          <option data-imagesrc="http://swimages.blob.core.windows.net/goodnightmedical-preview/philips-respironics-remstar-system-one-auto-60x60.jpg"
+                  data-description="philips-respironics-remstar-system-one-auto,jpg"
+                  value="1">Philips Respironics RemStar System One Auto</option>
+          <option data-imagesrc="http://swimages.blob.core.windows.net/goodnightmedical-preview/resmed-s9-auto-cpap-60x60.jpg"
+                  data-description="resmed-s9-auto-cpap.jpg"
+                  value="2">ResMed S9 Auto/CPAP</option>
+          <option data-imagesrc="http://swimages.blob.core.windows.net/goodnightmedical-preview/fisher-and-paykel-icon-premo-auto-60x60.jpg"
+                  data-description="fisher-and-paykel-icon-premo-auto.jpg"
+                  value="3">Fisher & Paykel ICON Premo/Auto</option>
+        </select>
+      </div>
+
+      <div class="group"> <!-- DESCRIPTION -->
         <label>Description</label>
         <textarea ng-class="check"></textarea>
       </div>
-      <div class="group">
+
+      <div class="group"> <!-- REFURBUSHED -->
         <label>Refurbished</label>
         <div class="radio">
           <label>
@@ -88,9 +197,12 @@
           </label>
         </div>
       </div>
-      <input type="submit" value="Save" ng-click="check = 'alert'">
+
+      <div class="group grp-buttons"> <!-- BUTTONS -->
       <input class="right" type="submit" value="Close" ng-click="editMachine = 'hide-me';">
+      <input class="center" type="submit" value="Save" ng-click="check = 'alert'">
       <input class="left" type="reset" value="Reset">
+      </div>
     </form>
 
     <div class="table">
@@ -112,7 +224,11 @@
             <td>{{machine.name}}</td>
             <td>&dollar;{{machine.pricePerMonth}}</td>
             <td>{{machine.refurbished}}</td>
-            <td>{{machine.imageUrl}}</td>
+            <td class="machine-img">{{machine.imageUrl}}
+              <div>
+                <img src="http://swimages.blob.core.windows.net/goodnightmedical-preview/philips-respironics-dreamstation-bipap-60x60.jpg">
+              </div>
+            </td>
             <td><input type="submit" value="Edit" ng-click="editMachine = 'show-me';"></td>
             <td><input type="submit" value="View"></td>
           </tr>

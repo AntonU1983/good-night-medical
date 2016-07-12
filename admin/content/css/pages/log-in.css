@@ -1,13 +1,15 @@
-body {background-color: #f0f0f2;}
+body {
+  background-color: #f0f0f2;}
 
 .window {
   position: fixed;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -60%);
-  -ms-transform: translate(-50%, -60%);
-  -o-transform: translate(-50%, -60%);
-  transform: translate(-50%, -60%);}
+  -webkit-transform: translate(-50%,-60%);
+     -moz-transform: translate(-50%,-60%);
+      -ms-transform: translate(-50%,-60%);
+       -o-transform: translate(-50%,-60%);
+          transform: translate(-50%,-60%);}
 
 .window .logotype {
   font-size: 26px;
@@ -22,7 +24,9 @@ body {background-color: #f0f0f2;}
 .window .form {
   width: 340px;
   background-color: #fff;
-  box-shadow: 0 0 35px rgba(0,0,0,.05);}
+  -webkit-box-shadow: 0 0 35px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 0 35px rgba(0,0,0,.05);
+          box-shadow: 0 0 35px rgba(0,0,0,.05);}
 
 .window .form .title {
   font-size: 16px;
@@ -44,24 +48,24 @@ body {background-color: #f0f0f2;}
   text-align: center;
   color: #222831;
   border: 2px solid #ddd;
-  border-radius: 3px;
-  background-color: #fff;}
+  background-color: #fff;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;}
 
 .window .form form input[type="text"]:hover,
 .window .form form input[type="password"]:hover,
 .window .form form input[type="text"]:focus,
-.window .form form input[type="password"]:focus {
-  border-color: #fe7847;}
+.window .form form input[type="password"]:focus {border-color: #fe7847;}
 
 .window .form form input:focus::-webkit-input-placeholder {color: transparent}
-.window .form form input:focus::-moz-placeholder {color: transparent}
-.window .form form input:focus:-moz-placeholder {color: transparent}
-.window .form form input:focus:-ms-input-placeholder {color: transparent}
-
-.window .form form input::-webkit-input-placeholder {color: #ccc;}
-.window .form form input::-moz-placeholder {color: #ccc;}
-.window .form form input:-moz-placeholder {color: #ccc;}
-.window .form form input:-ms-input-placeholder {color: #ccc;}
+.window .form form input:focus::-moz-placeholder          {color: transparent}
+.window .form form input:focus:-moz-placeholder           {color: transparent}
+.window .form form input:focus:-ms-input-placeholder      {color: transparent}
+.window .form form input::-webkit-input-placeholder       {color: #ccc;}
+.window .form form input::-moz-placeholder                {color: #ccc;}
+.window .form form input:-moz-placeholder                 {color: #ccc;}
+.window .form form input:-ms-input-placeholder            {color: #ccc;}
 
 .window .form form input[type="submit"] {
   font-weight: 600;
@@ -72,8 +76,10 @@ body {background-color: #f0f0f2;}
   text-transform: uppercase;
   color: #eee;
   border: 0 solid #f98b60;
-  border-radius: 3px;
-  background-color: #f98b60;}
+  background-color: #f98b60;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;}
 
 .window .form form input[type="submit"]:hover,
 .window .form form input[type="submit"]:focus,
@@ -85,3 +91,9 @@ body {background-color: #f0f0f2;}
 
 .window .form form input[type="text"].alert,
 .window .form form input[type="password"].alert {border-color: rgb(229, 57, 53);}
+
+.window .form form div {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;}

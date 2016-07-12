@@ -1,8 +1,142 @@
+.content > * {margin-bottom: 20px !important;}
+
+/*
+ * Content with Form
+ */
+
 .content > form {
   width: 100%;
   height: auto;
-  margin-bottom: 20px;
   padding: 20px;
-  border-radius: 3px;
   background-color: #fff;
-  box-shadow: 0 0 7px rgba(0,0,0,.03);}
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, .03);
+     -moz-box-shadow: 0 0 7px rgba(0, 0, 0, .03);
+          box-shadow: 0 0 7px rgba(0, 0, 0, .03);}
+
+/*
+ * Content for Catalog
+ */
+
+.content input.search {
+  font-size: 14px;
+  width: 100%;
+  height: 40px;
+  padding-right: 14px;
+  padding-left: 35px;
+  color: #000;
+  border: 0 solid #fff;
+  background: url(../../images/other/search.png) no-repeat 14px center, #fff;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, .03);
+     -moz-box-shadow: 0 0 7px rgba(0, 0, 0, .03);
+          box-shadow: 0 0 7px rgba(0, 0, 0, .03);}
+
+.content .elem > div {
+  position: relative;
+  width: 220px;
+  height: 240px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border: 0 solid #fff;
+  background-color: #393e46;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-transition: all .0s ease-in-out;
+     -moz-transition: all .0s ease-in-out;
+       -o-transition: all .0s ease-in-out;
+          transition: all .0s ease-in-out;
+  -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, .03);
+     -moz-box-shadow: 0 0 7px rgba(0, 0, 0, .03);
+          box-shadow: 0 0 7px rgba(0, 0, 0, .03);}
+
+.content .elem >:nth-child(3n) {margin-right: 0;}
+
+.content .elem > div .rent {
+  font-family: 'Rubik';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 157px;
+  position: absolute;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 157px;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 0;
+  color: #fff;
+  border: 0 solid #fff;
+  background-color: rgba(57, 62, 70, .85);
+  -webkit-border-radius: 3px 3px 0 0;
+     -moz-border-radius: 3px 3px 0 0;
+          border-radius: 3px 3px 0 0;}
+
+.content .elem > div:hover .rent {
+  opacity: 1;
+  -webkit-transition: opacity .5s ease-in-out;
+     -moz-transition: opacity .5s ease-in-out;
+       -o-transition: opacity .5s ease-in-out;
+          transition: opacity .5s ease-in-out;}
+
+.content .elem > div .img {
+  width: 220px;
+  height: 157px;
+  border: 0 solid #fff;
+  background-color: #fff;
+  -webkit-border-radius: 2px 2px 0 0;
+     -moz-border-radius: 2px 2px 0 0;
+          border-radius: 2px 2px 0 0;}
+
+.content .elem > div .img img {
+  display: block;
+  overflow: hidden;
+  width: 157px;
+  height: 157px;
+  margin: 0 auto;
+  background-color: #fff;}
+
+.content .elem > div .model {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  position: absolute;
+  top: 167px;
+  left: 10px;
+  width: 200px;
+  text-align: left;
+  color: #fff;}
+
+.content .elem > div .refurbished,
+.content .elem > div .price {
+  font-size: 13px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 10px;}
+
+.content .elem > div .refurbished {
+  left: 10px;
+  color: #fff;}
+
+.content .elem > div .price {
+  right: 10px;
+  color: #fe7847;}
+
+/*
+ * Blue Style
+ */
+
+.blue .content .elem > div .price {color: #579eff;}
+
+/*
+ * Orange Style
+ */
+
+.orange .content .elem > div .price {color: #fe7847;}

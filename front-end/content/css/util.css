@@ -37,6 +37,7 @@
 
 .color-blue-900   {color : #22313f;}
 .color-blue-800   {color : #34495e;}
+
 .color-blue-500   {color : #579eff;}
 .color-blue-400   {color : #84c7ff;}
 .color-blue-300   {color : #8dc6ff;}
@@ -79,6 +80,10 @@
 .error   {border : 2px solid #f44336 !important;}
 .success {border : 2px solid #4caf50 !important;}
 .warning {border : 2px solid #ffc107 !important;}
+
+form.mind-form.ng-submitted span input.ng-invalid {box-shadow: 0 0 15px rgba(255,0,0,.9)}
+form.copyright-form.ng-submitted input.ng-invalid {border-color: rgba(229, 57, 53, 1);}
+form.rentForm.ng-submitted input.ng-invalid       {border : 2px solid #f44336 !important;}
 
 /*
  * Стили, для таблиц

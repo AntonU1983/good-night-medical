@@ -1,4 +1,4 @@
-.nav-bar {
+nav {
   position: fixed;
   z-index: 700;
   top: 0;
@@ -8,23 +8,22 @@
   border: 0;
   background-color: #222831;}
 
-.nav-bar .brand {
+nav .brand {
   font-size: 18px;
   line-height: 50px;
   text-transform: uppercase;
   color: #f0f0f2;}
 
-.nav-bar .brand span {
+nav .brand span {
   font-size: 18px;
   color: #f98b60;}
 
-.nav-bar .log-out {
+nav .log-out {
   font-size: 18px;
   line-height: 50px;
   text-transform: uppercase;
   color: #f98b60;}
 
-.nav-bar .brand:hover,
-.nav-bar .brand:hover span,
-.nav-bar .log-out:hover {
-  font-size: 19px;}
+nav .brand:hover,
+nav .brand:hover span,
+nav .log-out:hover {font-size: 19px;}

@@ -1,19 +1,21 @@
-<div id="reasons" name="reasons" ng-controller="reasons">
-    <div class="reasons-block-one">
-        <img class="reasons-block-img pull-left" src="content/images/reasons/photo-1.jpg" alt="">
-        <div class="reasons-block-info pull-right">
-            <div>{{content.Title1}}</div>
-            <hr>
-            <div>{{content.Description1}}</div>
-        </div>
-    </div>
+<div class="reasons" name="reasons" ng-controller="reasons">
 
-    <div class="reasons-block-two">
-        <img class="reasons-block-img pull-right" src="content/images/reasons/photo-2.jpg" alt="">
-        <div class="reasons-block-info pull-left">
-            <div>{{content.Title2}}</div>
-            <hr>
-            <div>{{content.Description2}}</div>
-        </div>
+  <article>
+    <img class="pull-left" src="content/images/reasons/photo-1.jpg" alt="">
+    <div class="info pull-right">
+      <div>{{content.Title1}}</div>
+      <hr>
+      <div>{{content.Description1}}</div>
     </div>
+  </article>
+
+  <article>
+    <img class="pull-right" src="content/images/reasons/photo-2.jpg" alt="">
+    <div class="info pull-left">
+      <div>{{content.Title2}}</div>
+      <hr>
+      <div>{{content.Description2}}</div>
+    </div>
+  </article>
+
 </div>

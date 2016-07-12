@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="catalogApp" ng-cloak>
+<html lang="en" ng-app="catalogApp" ng-cloak>
 
 <head>
   <meta charset="utf-8">
@@ -9,290 +9,204 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700&subset=latin,cyrillic' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Rubik:400,400italic,500,700&subset=latin,cyrillic' rel='stylesheet'>
   <link rel="stylesheet" href="../../content/css/lib/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="../../content/css/lib/angular/slider.css">
   <link rel="stylesheet" href="../../content/css/main.css">
+  <link rel="stylesheet" href="../../content/css/ui.css">
   <link rel="stylesheet" href="../../content/css/modal.css">
-  <link rel="stylesheet" href="../../content/css/catalog/header.css">
-  <link rel="stylesheet" href="../../content/css/catalog/mainbody.css">
+  <link rel="stylesheet" href="../../content/css/pages/pg.style.css">
+  <link rel="stylesheet" href="../../content/css/pages/pg.header.css">
+  <link rel="stylesheet" href="../../content/css/pages/pg.sidebar.css">
+  <link rel="stylesheet" href="../../content/css/pages/pg.content.css">
   <link rel="stylesheet" href="../../content/css/util.css">
   <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+</head>
 
-  <!--<script src="../../scripts/lib/jquery/jquery.min.js"></script>-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<body class="orange" ng-controller="catalog as vm" ng-init="vm.init()">
+
+  <div class="darkness" ng-hide="vm.hiddenModal">
+    <div class="window">
+      <div class="status">Let Us Contact You</div>
+
+      <form autocomplete="off" ng-submit="vm.submitRental(rentForm)">
+        <div class="group"> <!-- FULL NAME -->
+          <input type="text" placeholder="Full Name" ng-model="vm.rentMachine.fullName" required>
+        </div>
+
+        <div class="group"> <!-- EMAIL -->
+          <input type="email" placeholder="Email" ng-model="vm.rentMachine.email" required
+                 ng-pattern="/^[_a-z0-9A-Z]+(\.[_a-z0-9A-Z]+)*@[a-z0-9A-Z-]+(\.[a-z0-9A-Z-]+)*(\.[a-zA-Z]{2,10})$/">
+        </div>
+
+        <div class="group"> <!-- PHONE -->
+          <input type="text" placeholder="Phone Number" ng-model="vm.rentMachine.phone" required>
+        </div>
+
+        <hr>
+
+        <div class="group"> <!-- DOCTORS PRESCRIPTION -->
+          <label>Do you have a doctors prescription</label>
+          <div class="modal-radio">
+            <div class="radio-one">
+              <div class="radio pull-left">
+                <label>
+                  <input type="radio" value="Yes" ng-model="vm.rentMachine.prescription" checked>
+                  <span><span></span></span>Yes
+                </label>
+              </div>
+              <div class="radio pull-left">
+                <label>
+                  <input type="radio" value="No" ng-model="vm.rentMachine.prescription">
+                  <span><span></span></span>No
+                </label>
+              </div>
+              <div class="radio pull-left">
+                <label>
+                  <input type="radio" value="Unsure" ng-model="vm.rentMachine.prescription">
+                  <span><span></span></span>Unsure
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="group"> <!-- METHOD OF CONTACT -->
+          <label>Preferred method of contact</label>
+          <div class="modal-radio">
+            <div class="radio-two">
+              <div class="radio pull-left">
+                <label>
+                  <input type="radio" value="Phone" ng-model="vm.rentMachine.contact" checked>
+                  <span><span></span></span>Phone
+                </label>
+              </div>
+              <div class="radio pull-left">
+                <label>
+                  <input type="radio" value="Email" ng-model="vm.rentMachine.contact">
+                  <span><span></span></span>Email
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="group"> <!-- MESSAGE -->
+          <textarea placeholder="Message" ng-model="vm.rentMachine.comments"></textarea>
+        </div>
+
+        <div class="group grp-buttons"> <!-- BUTTONS -->
+          <input class="left" type="button" value="Close" ng-click="vm.hiddenModal = !vm.hiddenModal">
+          <input class="right" type="submit" value="Send">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <header>
+    <div class="wrapper">
+      <img class="logotype pull-left" src="../../content/images/logotype.png" alt="Good Night Medical Logotype">
+      <nav class="pull-right">
+        <a href="../../index.html#home"">home</a>
+        <div class="separate"></div>
+        <a href="../../index.html#reasons"">reasons</a>
+        <div class="separate"></div>
+        <a href="../../index.html#process"">process</a>
+        <div class="separate"></div>
+        <a href="../../index.html#benefits"">benefits</a>
+        <div class="separate"></div>
+        <a href="../../index.html#rent"">rent</a>
+        <div class="separate"></div>
+        <a href="../../index.html#accredition"">accredition</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="mainbody">
+    <aside class="sidebar pull-left">
+      <form name="form" novalidate>
+        <div class="group double-slider"> <!-- SLIDER -->
+          <div class="title">Price</div>
+          <rzslider rz-slider-model="vm.slider.minValue" rz-slider-high="vm.slider.maxValue" rz-slider-options="vm.slider.options"></rzslider>
+          <div class="description">
+            <div class="pull-left">&#36;{{vm.slider.minValue}}</div>
+            <div class="pull-right">&#36;{{vm.slider.maxValue}}</div>
+          </div>
+        </div>
+
+        <hr> <!-- SEPARATE -->
+
+        <div class="group"> <!-- SWITCH -->
+          <div class="switch">
+            <label>Refurbished
+              <input type="checkbox">
+              <div><div></div></div>
+            </label>
+          </div>
+        </div>
+
+        <hr> <!-- SEPARATE -->
+
+        <div class="group"> <!-- SWITCH -->
+          <div class="switch">
+            <label>Philips
+              <input type="checkbox" ng-click="vm.includeCompany('Philips')">
+              <div><div></div></div>
+            </label>
+          </div>
+
+          <div class="switch">
+            <label>ResMed
+              <input type="checkbox" ng-click="vm.includeCompany('ResMed')">
+              <div><div></div></div>
+            </label>
+          </div>
+
+          <div class="switch">
+            <label>Fisher &amp; Paykel
+              <input type="checkbox" ng-click="vm.includeCompany('Fisher & Paykel')">
+              <div><div></div></div>
+            </label>
+          </div>
+        </div>
+
+        <hr> <!-- SEPARATE -->
+      </form>
+      <a class="button" href="pages.html" >Let's Help You Pick a CPAP</a>
+    </aside>
+
+    <div class="content pull-right">
+      <input class="search" type="search" placeholder="search..." ng-model="search.name">
+
+      <div class="elem">
+
+        <div class="pull-left"
+             ng-repeat="machine in vm.data | filter: search | companyFilter:vm.includedCompanies | priceFilter:vm.slider"
+             ng-click="vm.rent(machine.id)">
+          <div class="rent">Rent</div>
+          <div class="img"><img ng-src="{{machine.imageUrl}}" alt="{{machine.name}}"></div>
+          <div class="model">{{machine.name}}</div>
+          <div class="refurbished">{{machine.refurbished ? 'Refurbished' : 'New'}}</div>
+          <div class="price">&dollar;{{machine.pricePerMonth}} &#47; month</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../../scripts/lib/jquery/jquery.min.js"></script>
+  <script src="../../scripts/lib/bootstrap/bootstrap.min.js"></script>
   <script src="../../scripts/lib/angular/angular.min.js"></script>
-  <script src="../../scripts/lib/angular/angular-animate.min.js"></script>
-  <script src="../../scripts/lib/angular/ellipsis.min.js"></script>
   <script src="../../scripts/lib/angular/slider.min.js"></script>
   <script src="../app.js"></script>
   <script src="../services/dataService.js"></script>
   <script src="../controllers/catalog/catalog.js"></script>
   <script src="../filters/priceFilter.js"></script>
   <script src="../filters/companyFilter.js"></script>
-
-  <script src="../../scripts/lib/bootstrap/bootstrap.min.js"></script>
   <script src="../../scripts/script.js"></script>
-</head>
-
-<body  ng-controller="catalog as vm" ng-init="vm.init()">
-
-<div id="darkness" ng-hide="vm.hiddenModal">
-  <div id="modal">
-    <div class="status ">Let Us Contact You</div>
-    <form name="rentForm" novalidate ng-submit="vm.submitRental(rentForm)">
-      <input type="text" name="name" ng-model="vm.rentMachine.fullName" placeholder="Full Name" autocomplete="off" required>
-      <input type="email" name="email"
-             ng-model="vm.rentMachine.email"
-             placeholder="Email" autocomplete="off"
-             ng-pattern="/^[_a-z0-9A-Z]+(\.[_a-z0-9A-Z]+)*@[a-z0-9A-Z-]+(\.[a-z0-9A-Z-]+)*(\.[a-zA-Z]{2,10})$/"
-             required>
-
-      <input type="text" name="phone" ng-model="vm.rentMachine.phone" placeholder="Phone Number" autocomplete="off" required>
-
-      <hr>
-
-      <span>Do you have a doctors prescription?</span>
-
-      <div class="switchs sws-one">
-        <div class="switch sw-one pull-left">
-          <span>Yes</span>
-          <label class="label label-one">
-            <input type="radio" ng-model="vm.rentMachine.prescription" value="Yes" name="docPrescription">
-            <div class="elem"></div>
-          </label>
-        </div>
-
-        <div class="switch sw-two pull-left">
-          <span>No</span>
-          <label class="label label-two">
-            <input type="radio" ng-model="vm.rentMachine.prescription" value="No" name="docPrescription">
-            <div class="elem"></div>
-          </label>
-        </div>
-
-        <div class="switch sw-three pull-left">
-          <span>Unsure</span>
-          <label class="label label-three">
-            <input type="radio" ng-model="vm.rentMachine.prescription" value="Unsure" name="docPrescription">
-            <div class="elem"></div>
-          </label>
-        </div>
-      </div>
-
-      <hr>
-
-      <span>Preferred method of contact</span>
-
-      <div class="switchs sws-two">
-        <div class="switch sw-four pull-left">
-          <span>Phone</span>
-          <label class="label label-four">
-            <input type="radio" ng-model="vm.rentMachine.contact" value="Phone" name="methodOfContact">
-            <div class="elem"></div>
-          </label>
-        </div>
-
-        <div class="switch sw-five pull-left">
-          <span>Email</span>
-          <label class="label label-five">
-            <input type="radio" ng-model="vm.rentMachine.contact" value="Email" name="methodOfContact">
-            <div class="elem"></div>
-          </label>
-        </div>
-      </div>
-
-      <hr>
-
-      <textarea  ng-model="vm.rentMachine.comments" name="" placeholder="Comments"></textarea>
-
-      <div class="btn-close" ng-click="vm.hiddenModal = !vm.hiddenModal">Close</div>
-      <input type="submit" value="Send">
-    </form>
-  </div>
-</div>
-
-<div id="darkness" ng-hide="true"> <!-- Вторая модалка -->
-  <div id="modal">
-    <div class="status ">Let's Help You Pick a CPAP</div>
-    <form name="rentForm" novalidate ng-submit="vm.submitRental(rentForm)">
-      <input type="text" name="name" placeholder="Full Name" autocomplete="off" required>
-      <input type="email" name="email"
-             placeholder="Email" autocomplete="off"
-             ng-pattern="/^[_a-z0-9A-Z]+(\.[_a-z0-9A-Z]+)*@[a-z0-9A-Z-]+(\.[a-z0-9A-Z-]+)*(\.[a-zA-Z]{2,10})$/"
-             required>
-
-      <input type="text" name="phone" placeholder="Phone Number" autocomplete="off" required>
-
-      <hr>
-
-      <span>Preferred method of contact</span>
-
-      <div class="switchs sws-two">
-        <div class="switch sw-four pull-left">
-          <span>Phone</span>
-          <label class="label label-four">
-            <input type="radio" value="Phone" name="methodOfContact">
-            <div class="elem"></div>
-          </label>
-        </div>
-
-        <div class="switch sw-five pull-left">
-          <span>Email</span>
-          <label class="label label-five">
-            <input type="radio" value="Email" name="methodOfContact">
-            <div class="elem"></div>
-          </label>
-        </div>
-      </div>
-
-      <hr>
-
-      <span>Are you a current Good Night Medical patient?</span>
-
-      <div class="switchs sws-three">
-        <div class="switch sw-six pull-left">
-          <span>Yes</span>
-          <label class="label label-one">
-            <input type="radio" value="Yes" name="docPrescription">
-            <div class="elem"></div>
-          </label>
-        </div>
-
-        <div class="switch sw-seven pull-left">
-          <span>No</span>
-          <label class="label label-two">
-            <input type="radio" value="No" name="docPrescription">
-            <div class="elem"></div>
-          </label>
-        </div>
-
-      </div>
-
-      <hr>
-
-      <textarea name="" placeholder="Comments"></textarea>
-
-      <div class="btn-close">Close</div>
-      <input type="submit" value="Send">
-    </form>
-  </div>
-</div>
-
-<div id="header">
-  <div class="header">
-    <div class="header-logotype"><img src="../../content/images/logotype.png" alt=""></div>
-    <div class="header-nav-bar">
-      <a href="../../index.html#home"">home</a>
-      <div class="header-separate"></div>
-      <a href="../../index.html#reasons"">reasons</a>
-      <div class="header-separate"></div>
-      <a href="../../index.html#process"">process</a>
-      <div class="header-separate"></div>
-      <a href="../../index.html#benefits"">benefits</a>
-      <div class="header-separate"></div>
-      <a href="../../index.html#rent"">rent</a>
-      <div class="header-separate"></div>
-      <a href="../../index.html#accredition"">accredition</a>
-    </div>
-    <div class="header-login hide">
-      <a href="#">sign in</a>
-      <div class="header-separate"></div>
-      <a href="#">sign up</a>
-    </div>
-  </div>
-</div>
-
-<div id="mainbody">
-  <div class="sidebar pull-left" ng-style="vm.returnHeight();">
-    <form name="form" id="form" novalidate>
-
-      <div class="form-price">
-        <div class="form-price-title">Price</div>
-        <rzslider rz-slider-model="vm.slider.minValue"
-                  rz-slider-high="vm.slider.maxValue"
-                  rz-slider-options="vm.slider.options"></rzslider>
-        <div class="form-price-desc">
-          <div class="pull-left" id="minCostDiv">&#36;{{vm.slider.minValue}}</div>
-          <div class="pull-right" id="maxCostDiv">&#36;{{vm.slider.maxValue}}</div>
-        </div>
-      </div>
-
-      <hr class="form-hr hide">
-
-      <div class="form-buttons hide" ng-init="vm.filterOne = 0">
-        <input class="form-left-btn pull-left"
-               type="submit"
-               value="all"
-               ng-click="vm.filterOne = 0"
-               ng-class="returnClassBtnFilterOne(0);">
-        <input class="form-right-btn pull-left"
-               type="submit"
-               value="new"
-               ng-click="vm.filterOne = 1"
-               ng-class="returnClassBtnFilterOne(1);">
-      </div>
-
-      <hr class="form-hr">
-
-      <div class="form-switch">
-        <span>Refurbished</span>
-        <label class="form-switch-label">
-          <input type="checkbox">
-          <div class="form-switch-elem"></div>
-        </label>
-      </div>
-
-      <hr class="form-hr">
-
-      <div class="form-switch">
-        <span>Philips</span>
-        <label class="form-switch-label">
-          <input type="checkbox" ng-click="vm.includeCompany('Philips')">
-          <div class="form-switch-elem"></div>
-        </label>
-      </div>
-
-      <div class="form-switch">
-        <span>ResMed</span>
-        <label class="form-switch-label">
-          <input type="checkbox" ng-click="vm.includeCompany('ResMed')">
-          <div class="form-switch-elem"></div>
-        </label>
-      </div>
-
-      <div class="form-switch">
-        <span>Fisher &amp; Paykel</span>
-        <label class="form-switch-label">
-          <input type="checkbox" ng-click="vm.includeCompany('Fisher & Paykel')">
-          <div class="form-switch-elem"></div>
-        </label>
-      </div>
-
-      <hr class="form-hr">
-
-      <div class="help-pick-btn">Let's Help You<br>Pick a CPAP</div>
-
-    </form>
-  </div>
-  <div class="content pull-left">
-    <input class="content-search"
-           type="text"
-           placeholder="model, etc."
-           ng-model="search.name">
-    <div class="content-elements">
-
-      <div class="pull-left"
-           ng-repeat="machine in vm.data | filter: search | companyFilter:vm.includedCompanies | priceFilter:vm.slider" ng-click="vm.rent(machine.id)">
-        <div class="content-elements-rent">Rent</div>
-        <div class="content-elements-img"><img ng-src="{{machine.imageUrl}}" alt="{{machine.name}}"></div>
-        <span class="content-elements-model">{{machine.name}}</span>
-        <span class="content-elements-price">${{machine.pricePerMonth}} / month</span>
-      </div>
-
-    </div>
-  </div>
-</div>
 </body>
 </html>

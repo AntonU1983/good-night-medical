@@ -10,7 +10,7 @@
     vm.data = [];
     vm.hiddenModal = true;
     vm.machineId = '';
-    
+
     vm.init = getData;
 
     vm.rent = function (id) {
@@ -46,17 +46,6 @@
       contact: "Email",
       comments: "",
       machineId: ""
-    };
-
-    // Вычисляем высоту боковой панели
-    // Минус отступы и header
-    // Получаем красивую боковую панель
-    vm.returnHeight = function() {return {height: window.innerHeight - 130 + 'px'};}
-
-    // Смена стилей для первой пары кнопок фильтрации
-    vm.returnClassBtnFilterOne = function(number) {
-      if (vm.filterOne == number) {return 'form-btn-active'}
-      else  {return 'form-btn-inactive'}
     };
 
     vm.includedCompanies = [];

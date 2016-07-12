@@ -1,0 +1,545 @@
+.content {
+  font-size: 0;
+  width: 960px;
+  margin: 0 auto;}
+
+/*
+ * Small Elem
+ */
+
+.content > .elem {
+  font-size: 14px;
+  display: inline-block;
+  width: 280px;
+  margin: 60px 20px 20px 20px;
+  vertical-align: top;}
+
+.content > .elem > *          {margin-bottom: 25px;}
+.content > .elem >:last-child {margin-bottom: 0;}
+
+.content > .elem hr {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, .1);}
+
+/*
+ * Title
+ */
+
+.content > .elem > .title {
+  font-family: 'Roboto';
+  font-size: 28px;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #22313f;}
+
+/*
+ * Information
+ */
+
+.content > .elem > .info {
+  position: relative;
+  width: 100%;
+  height: 28px;}
+
+.content > .elem > .info .every,
+.content > .elem > .info .price,
+.content > .elem > .info .ships {
+  font-family: 'Roboto';
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;}
+
+.content > .elem > .info .every,
+.content > .elem > .info .ships {
+  font-size: 12px;
+  line-height: 14px;
+  color: #bbb;}
+
+.content > .elem > .info .every {left: 20px;}
+.content > .elem > .info .ships {right: 20px;}
+
+.content > .elem > .info .price {
+  font-size: 24px;
+  line-height: 28px;
+  left: 50%;
+  color: #fe7847;
+  -webkit-transform: translate(-50%, 0);
+     -moz-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+       -o-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);}
+
+/*
+ * Select Buttons
+ */
+
+.content > .elem > .group {width: 100%;}
+
+.content > .elem > .group .radio {
+  position: relative;
+  height: 42px;
+  margin: 0;}
+
+.content > .elem > .group .radio label {
+  width: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;}
+
+.content > .elem > .group .radio label:after {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  content: '';
+  cursor: default;
+  background-color: rgba(0, 0, 0, .1);}
+
+.content > .elem > .group .radio label input {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  display: none;
+  margin: 0;
+  padding: 0;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);}
+
+.content > .elem > .group .radio label div {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 50%;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 15px;
+  background-color: #fe7847;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-transform: translate(-50%, 0);
+     -moz-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+       -o-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  -webkit-box-shadow: 20px 0 0 #f0f0f2, -20px 0 0 #f0f0f2;
+     -moz-box-shadow: 20px 0 0 #f0f0f2, -20px 0 0 #f0f0f2;
+          box-shadow: 20px 0 0 #f0f0f2, -20px 0 0 #f0f0f2;
+  ;}
+
+.content > .elem > .group .radio label div,
+.content > .elem > .group .radio label div:after {
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 500;
+  content: '';
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: #fff;}
+
+.content > .elem > .group .radio label div:hover {
+  padding: 10px 35px;
+  background-color: #f98b60;}
+
+.content > .elem > .group .radio label input:checked:hover + div {background-color: #f0f0f2;}
+
+.content > .elem > .group .radio label input:checked + div {
+  padding: 5px;
+  color: #22313f;
+  border-bottom: 2px solid #f98b60;
+  background-color: #f0f0f2;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;}
+
+.content > .elem > .group .radio label input:checked + div:after {
+  content: 'ed';
+  color: #22313f;}
+
+/*
+ * Description
+ */
+
+.content > .elem > .desc {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0;
+  text-align: center;
+  color: #aaa;}
+
+/*
+ * Check Mark List
+ */
+
+.content > .elem > ul {
+  margin: 0;
+  padding: 0;}
+
+.content > .elem > ul li,
+.content > .elem > ul li:before {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  text-align: center;
+  vertical-align: middle;
+  color: #aaa;}
+
+.content > .elem > ul li:before {
+  font-size: 18px;
+  margin-right: 2px;
+  content: '✓';
+  color: #fe7847;}
+
+/*
+ * More
+ */
+
+.content > .elem > .more {
+  font-family: 'Rubik';
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: #fe7847;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;}
+
+.content > .elem > .more:hover {color: #f98b60;}
+
+/*
+ * Big elem
+ */
+
+.content > .big-elem {
+  font-size: 14px;
+  width: 960px;
+  margin: 140px auto 20px auto;
+  text-align: center;}
+
+.content > .big-elem > * {margin-bottom: 25px;}
+
+.content > .big-elem hr {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, .1);}
+
+/*
+ * Title
+ */
+
+.content > .big-elem > .title {
+  font-family: 'Roboto';
+  font-size: 28px;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #22313f;}
+
+/*
+ * Information
+ */
+
+.content > .big-elem > .info {
+  position: relative;
+  width: 100%;
+  height: 28px;}
+
+.content > .big-elem > .info .every,
+.content > .big-elem > .info .price,
+.content > .big-elem > .info .ships {
+  font-family: 'Roboto';
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;}
+
+.content > .big-elem > .info .every,
+.content > .big-elem > .info .ships {
+  font-size: 12px;
+  line-height: 14px;
+  color: #bbb;}
+
+.content > .big-elem > .info .every {
+  left: 35%;
+  -webkit-transform: translate(-50%, 0);
+     -moz-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+       -o-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);}
+
+.content > .big-elem > .info .ships {
+  right: 35%;
+  -webkit-transform: translate(50%, 0);
+     -moz-transform: translate(50%, 0);
+      -ms-transform: translate(50%, 0);
+       -o-transform: translate(50%, 0);
+          transform: translate(50%, 0);}
+
+.content > .big-elem > .info .price {
+  font-size: 24px;
+  line-height: 28px;
+  left: 50%;
+  color: #fe7847;
+  -webkit-transform: translate(-50%, 0);
+     -moz-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+       -o-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);}
+
+/*
+ * Select Buttons
+ */
+
+.content > .big-elem > .group {width: 100%;}
+
+.content > .big-elem > .group .radio {
+  position: relative;
+  height: 42px;
+  margin: 0;}
+
+.content > .big-elem > .group .radio label {
+  width: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;}
+
+.content > .big-elem > .group .radio label:after {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  content: '';
+  cursor: default;
+  background-color: rgba(0, 0, 0, .1);}
+
+.content > .big-elem > .group .radio label input {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  display: none;
+  margin: 0;
+  padding: 0;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);}
+
+.content > .big-elem > .group .radio label div {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 50%;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 15px;
+  background-color: #fe7847;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-transform: translate(-50%, 0);
+     -moz-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+       -o-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  -webkit-box-shadow: 20px 0 0 #f0f0f2, -20px 0 0 #f0f0f2;
+     -moz-box-shadow: 20px 0 0 #f0f0f2, -20px 0 0 #f0f0f2;
+          box-shadow: 20px 0 0 #f0f0f2, -20px 0 0 #f0f0f2;}
+
+.content > .big-elem > .group .radio label div,
+.content > .big-elem > .group .radio label div:after {
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 500;
+  content: '';
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: #fff;}
+
+.content > .big-elem > .group .radio label div:hover {
+  padding: 10px 35px;
+  background-color: #f98b60;}
+
+.content > .big-elem > .group .radio label input:checked:hover + div {background-color: #f0f0f2;}
+
+.content > .big-elem > .group .radio label input:checked + div {
+  padding: 5px;
+  color: #22313f;
+  border-bottom: 2px solid #f98b60;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+  background-color: #f0f0f2;}
+
+.content > .big-elem > .group .radio label input:checked + div:after {
+  content: 'ed';
+  color: #22313f;}
+
+/*
+ * Description
+ */
+
+.content > .big-elem > .description > * {margin-bottom: 20px;}
+
+.content > .big-elem > .description > .title {
+  font-family: 'Roboto';
+  font-size: 15px;
+  font-weight: 500;
+  text-align: left;}
+
+.content > .big-elem > .description > ul {
+  padding-left: 17px;
+  list-style: decimal;}
+
+.content > .big-elem > .description > ul > li {
+  font-family: 'Roboto';
+  font-size: 15px;
+  text-align: left;}
+
+.content > .big-elem > .description > p {
+  font-family: 'Roboto';
+  font-size: 15px;
+  text-align: left;}
+
+.content > .big-elem > .description > p span {
+  font-family: 'Roboto';
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;}
+
+/*
+ * Division
+ */
+
+.content > .big-elem > .division {
+  position: relative;
+  width: 100%;
+  height: 30px;}
+
+.content > .big-elem > .division div {
+  font-family: 'Roboto';
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 30px;
+  position: relative;
+  z-index: 100;
+  width: 200px;
+  height: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #f0f0f2;
+  -webkit-box-shadow: -20px 0 0 #f0f0f2, 20px 0 0 #f0f0f2;
+     -moz-box-shadow: -20px 0 0 #f0f0f2, 20px 0 0 #f0f0f2;
+          box-shadow: -20px 0 0 #f0f0f2, 20px 0 0 #f0f0f2;}
+
+.content > .big-elem > .division:after {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  content: '';
+  cursor: default;
+  background-color: rgba(0, 0, 0, .1);}
+
+/*
+ * Catalog
+ */
+
+.content > .big-elem > .catalog {
+  font-size: 0;
+  text-align: left;}
+
+.content > .big-elem > .catalog img {
+  display: inline-block;
+  width: 172px;
+  height: 172px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #fff;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;}
+
+/*
+ * Blue Style
+ */
+
+.blue .content > .elem > .info .price {color: #579eff;}
+
+.blue .content > .elem > .group .radio label div {background-color: #579eff;}
+.blue .content > .elem > .group .radio label div:hover {background-color: #84c7ff;}
+.blue .content > .elem > .group .radio label input:checked:hover + div {background-color: #f0f0f2;}
+.blue .content > .elem > .group .radio label input:checked + div {
+  border-bottom: 2px solid #579eff;
+  background-color: #f0f0f2;}
+
+.blue .content > .elem > ul li:before {color: #579eff;}
+
+.blue .content > .elem > .more {color: #579eff;}
+.blue .content > .elem > .more:hover {color: #84c7ff;}
+
+.blue .content > .big-elem > .info .price {color: #579eff;}
+.blue .content > .big-elem > .group .radio label div {background-color: #579eff;}
+.blue .content > .big-elem > .group .radio label div:hover {background-color: #84c7ff;}
+.blue .content > .big-elem > .group .radio label input:checked + div {border-bottom: 2px solid #84c7ff;}
+
+/*
+ * Orange Style
+ */
+
+.orange .content > .elem > .info .price {color: #fe7847;}
+
+.orange .content > .elem > .group .radio label div {background-color: #fe7847;}
+.orange .content > .elem > .group .radio label div:hover {background-color: #f98b60;}
+.orange .content > .elem > .group .radio label input:checked:hover + div {background-color: #f0f0f2;}
+.orange .content > .elem > .group .radio label input:checked + div {
+  border-bottom: 2px solid #fe7847;
+  background-color: #f0f0f2;}
+
+.orange .content > .elem > ul li:before {color: #fe7847;}
+
+.orange .content > .elem > .more {color: #fe7847;}
+.orange .content > .elem > .more:hover {color: #f98b60;}
+
+.orange .content > .big-elem > .info .price {color: #fe7847;}
+.orange .content > .big-elem > .group .radio label div {background-color: #fe7847;}
+.orange .content > .big-elem > .group .radio label div:hover {background-color: #f98b60;}
+.orange .content > .big-elem > .group .radio label input:checked + div {border-bottom: 2px solid #f98b60;}

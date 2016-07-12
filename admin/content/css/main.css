@@ -1,8 +1,12 @@
 * {
   font-family: 'Roboto', sans-serif, Arial, Verdana;
-  outline: none;
-  -moz-osx-font-smoothing: grayscale;
-   -webkit-font-smoothing: antialiased;
+  color: #5f6468;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;}
+
+*,
+*:after,
+*:before {
   -webkit-transition: all .3s ease-in-out;
      -moz-transition: all .3s ease-in-out;
        -o-transition: all .3s ease-in-out;
@@ -13,9 +17,27 @@ body {
   color: #5f6468;
   background: #f0f0f2;}
 
-input {outline: none;}
+img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;}
 
-ul, ol {list-style: none;}
+input,
+input:hover,
+input:focus,
+select,
+select:hover,
+select:focus,
+button,
+button:hover,
+button:focus,
+textarea,
+textarea:hover,
+textarea:focus {outline: none;}
+
+ul,
+ol {list-style: none;}
 
 a,
 a:link,
@@ -24,56 +46,13 @@ a:hover,
 a:active,
 a:focus {
   text-decoration: none;
-  color: #fff;}
-
-.color-grey-900   {color: #222831;}
-.color-grey-800   {color: #393e46;}
-.color-grey-400   {color: #ddd;}
-.color-grey-300   {color: #f0f0f2;}
-.color-blue-900   {color: #22313f;}
-.color-blue-800   {color: #34495e;}
-.color-blue-400   {color: #8dc6ff;}
-.color-blue-300   {color: #e4f1fe;}
-.color-orange-500 {color: #fe7847;}
-.color-orange-400 {color: #f98b60;}
-.color-orange-300 {color: #ffc057;}
-.color-orange-200 {color: #ffe084;}
-
-.text-light      {font-weight: 300;}
-.text-medium     {font-weight: 500;}
-.text-bold       {font-weight: 700;}
-.text-italic     {font-style: italic;}
-.text-left       {text-align: left;}
-.text-right      {text-align: right;}
-.text-center     {text-align: center;}
-.text-justify    {text-align: justify;}
-.text-nowrap     {white-space: nowrap;}
-.text-lowercase  {text-transform: lowercase;}
-.text-uppercase  {text-transform: uppercase;}
-.text-capitalize {text-transform: capitalize;}
-.text-ellipsis {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;}
-
-.pull-right {float: right !important;}
-.pull-left  {float: left !important;}
-.hide       {display: none !important;}
-.show       {display: block !important;}
-.invisible  {visibility: hidden;}
+  color: #5f6468;}
 
 .block-center {
   display: block;
-  margin: 0 auto;
-  margin-right: auto;
-  margin-left: auto;}
+  margin: 0 auto;}
 
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 0;
-  padding-left: 0;}
-
+.container,
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
@@ -83,7 +62,3 @@ a:focus {
 .row {
   margin-right: 0;
   margin-left: 0;}
-
-@media (min-width: 768px)  {.container {width: 750px; }}
-@media (min-width: 992px)  {.container {width: 970px;}}
-@media (min-width: 1200px) {.container {width: 1170px;}}
