@@ -270,14 +270,14 @@ form .group .switch label input:checked + div > div {
  * Select with Option
  */
 
-form .group .select {
+form .select {
   height: 34px;
   border: 2px solid #ddd;
   border-radius: 3px;
   background: url(../images/form-ctrl/arrow-dowm.png) no-repeat right center/34px 34px;
   background-color: #fff;}
 
-form .group .select select {
+form .select select {
   display: block;
   width: 100%;
   height: 100%;
@@ -290,8 +290,8 @@ form .group .select select {
      -moz-appearance: none;
           appearance: none;}
 
-form .group .select:hover,
-form .group .select:focus {border: 2px solid #fe7847;}
+form .select:hover,
+form .select:focus {border: 2px solid #fe7847;}
 
 /*
  * Drop Down jQuery UI
@@ -476,7 +476,16 @@ form .group input.right:focus,
 form .group input.right:active,
 form .group input.center:hover,
 form .group input.center:focus,
-form .group input.center:active {
+form .group input.center:active,
+form .group input[type='reset']:hover,
+form .group input[type='submit']:hover,
+form .group input[type='button']:hover,
+form .group input[type='reset']:focus,
+form .group input[type='submit']:focus,
+form .group input[type='button']:focus,
+form .group input[type='reset']:active,
+form .group input[type='submit']:active,
+form .group input[type='button']:active {
   border-color: #fe7847;
   background-color: #fe7847;}
 
@@ -734,7 +743,16 @@ form .group.double-slider .description div {
 .blue form .group input.right:active,
 .blue form .group input.center:hover,
 .blue form .group input.center:focus,
-.blue form .group input.center:active {
+.blue form .group input.center:active,
+.blue form .group input[type='reset']:hover,
+.blue form .group input[type='submit']:hover,
+.blue form .group input[type='button']:hover,
+.blue form .group input[type='reset']:focus,
+.blue form .group input[type='submit']:focus,
+.blue form .group input[type='button']:focus,
+.blue form .group input[type='reset']:active,
+.blue form .group input[type='submit']:active,
+.blue form .group input[type='button']:active {
   border-color: #84c7ff;
   background-color: #84c7ff;}
 
@@ -801,7 +819,16 @@ form .group.double-slider .description div {
 .orange form .group input.right:active,
 .orange form .group input.center:hover,
 .orange form .group input.center:focus,
-.orange form .group input.center:active {
+.orange form .group input.center:active,
+.orange form .group input[type='reset']:hover,
+.orange form .group input[type='submit']:hover,
+.orange form .group input[type='button']:hover,
+.orange form .group input[type='reset']:focus,
+.orange form .group input[type='submit']:focus,
+.orange form .group input[type='button']:focus,
+.orange form .group input[type='reset']:active,
+.orange form .group input[type='submit']:active,
+.orange form .group input[type='button']:active {
   border-color: #f98b60;
   background-color: #f98b60;}
 

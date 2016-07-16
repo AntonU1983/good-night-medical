@@ -499,6 +499,133 @@
           border-radius: 3px;}
 
 /*
+ * Billing Page
+ */
+
+.content.billing {
+  width: 300px;
+  margin: 0 auto;
+  padding-bottom: 20px;}
+
+.content.billing form {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 14px;}
+
+.content.billing form hr {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: 20px 0 !important;
+  cursor: default;
+  border: none;
+  opacity: .1;
+  background-color: #000;}
+
+.content.billing form .group label.title {
+  display: block;
+  width: 100%;
+  font-size: 22px;
+  text-align: center;
+  margin: 20px 0;}
+
+.content.billing form .group input.card {
+  padding-right: 40px;
+  background: url(../../images/form-ctrl/card.png) no-repeat calc(100% - 5px) center/30px;
+  background-color: #fff;}
+
+.content.billing form .group input {margin-bottom: 10px;}
+.content.billing form .group > *   {margin-bottom: 10px;}
+
+.content.billing form .group .name,
+.content.billing form .group .state,
+.content.billing form .group .date {height: 34px;}
+
+.content.billing form .group .name > * {width: 49%;}
+.content.billing form .group .name > :first-child {margin-left: 0;}
+.content.billing form .group .name > :last-child  {margin-left: 2%;}
+
+.content.billing form .group .state > :first-child {
+  width: 69%;
+  margin-left: 0;}
+.content.billing form .group .state > :last-child {
+  width: 29%;
+  margin-left: 2%;}
+
+.content.billing form .group .date > * {margin-left: 2%;}
+.content.billing form .group .date > :first-child {margin-left: 0%;}
+
+.content.billing form .group .date > :nth-child(1) {width: 32%;}
+.content.billing form .group .date > :nth-child(2) {width: 32%;}
+.content.billing form .group .date > :nth-child(3) {width: 24%;}
+.content.billing form .group .date > :nth-child(4) {width: 6%;}
+
+.content.billing form .group .date .cvv-help {
+  height: 100%;
+  position: relative;}
+
+.content.billing form .group .date .cvv-help div {
+  font-weight: 600;
+  line-height: 20px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 20px;
+  cursor: pointer;
+  height: 20px;
+  transform: translate(0, -50%);
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+  background-color: #393e46;}
+
+.content.billing form .group .date .cvv-help img {
+  position: absolute;
+  width: 74px;
+  height: 47px;
+  box-shadow: 0 0 15px rgba(255,255,255,.45);
+  top: 50%;
+  left: calc(100% + 10px);
+  transform: translate(0, -50%);
+  opacity: 0;
+  border-radius: 3px;}
+
+.content.billing form .group .date .cvv-help div:hover + img {opacity: 1;}
+
+.content.billing form .group .checkbox {
+  height: 20px;
+  position: relative;}
+.content.billing form .group .checkbox label {
+  position: absolute;
+  left: 50%;
+  white-space   : nowrap;
+  transform: translate(-50%,0);
+  min-height: 20px;}
+
+.content.billing form .group.result {
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.content.billing form .group.result div {
+  height: 20px;
+  margin-bottom: 0;}
+
+.content.billing form .group.result div span mark {
+  background-color: #f0f0f2;
+  padding: 0;
+  color: #579eff;}
+
+.content.billing form .purchase-info {
+  text-align: center;
+  font-size: 12px;}
+
+
+.content.billing form .group input[type="submit"] {
+  width: 100%;}
+
+/*
  * Blue Style
  */
 
