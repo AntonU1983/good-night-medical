@@ -11,11 +11,13 @@
   font-size: 14px;
   display: inline-block;
   width: 280px;
-  margin: 60px 20px 20px 20px;
+  margin: 20px;
   vertical-align: top;}
 
-.content > .elem > *          {margin-bottom: 25px;}
-.content > .elem >:last-child {margin-bottom: 0;}
+.content > .elem > * {
+  margin-bottom: 25px;}
+.content > .elem >:last-child {
+  margin-bottom: 0;}
 
 .content > .elem hr {
   width: 100%;
@@ -61,25 +63,28 @@
   line-height: 14px;
   color: #bbb;}
 
-.content > .elem > .info .every {left: 20px;}
-.content > .elem > .info .ships {right: 20px;}
+.content > .elem > .info .every {
+  left: 20px;}
+.content > .elem > .info .ships {
+  right: 20px;}
 
 .content > .elem > .info .price {
   font-size: 24px;
   line-height: 28px;
   left: 50%;
-  color: #fe7847;
   -webkit-transform: translate(-50%, 0);
-     -moz-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-       -o-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);}
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  color: #fe7847;}
 
 /*
  * Select Buttons
  */
 
-.content > .elem > .group {width: 100%;}
+.content > .elem > .group {
+  width: 100%;}
 
 .content > .elem > .group .radio {
   position: relative;
@@ -112,10 +117,10 @@
   margin: 0;
   padding: 0;
   -webkit-transform: translate(-50%, -50%);
-     -moz-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-       -o-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);}
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);}
 
 .content > .elem > .group .radio label div {
   position: absolute;
@@ -125,22 +130,22 @@
   display: block;
   margin: 0 auto;
   padding: 10px 15px;
-  background-color: #fe7847;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-transform: translate(-50%, 0);
-     -moz-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-       -o-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #fe7847;
   -webkit-box-shadow: 20px 0 0 #f0f0f2, -20px 0 0 #f0f0f2;
-     -moz-box-shadow: 20px 0 0 #f0f0f2, -20px 0 0 #f0f0f2;
-          box-shadow: 20px 0 0 #f0f0f2, -20px 0 0 #f0f0f2;
+  -moz-box-shadow: 20px 0 0 #f0f0f2, -20px 0 0 #f0f0f2;
+  box-shadow: 20px 0 0 #f0f0f2, -20px 0 0 #f0f0f2;
   ;}
 
 .content > .elem > .group .radio label div,
@@ -157,16 +162,17 @@
   padding: 10px 35px;
   background-color: #f98b60;}
 
-.content > .elem > .group .radio label input:checked:hover + div {background-color: #f0f0f2;}
+.content > .elem > .group .radio label input:checked:hover + div {
+  background-color: #f0f0f2;}
 
 .content > .elem > .group .radio label input:checked + div {
   padding: 5px;
   color: #22313f;
   border-bottom: 2px solid #f98b60;
-  background-color: #f0f0f2;
   -webkit-border-radius: 0;
-     -moz-border-radius: 0;
-          border-radius: 0;}
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background-color: #f0f0f2;}
 
 .content > .elem > .group .radio label input:checked + div:after {
   content: 'ed';
@@ -218,16 +224,17 @@
   font-weight: 500;
   display: block;
   width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
-  color: #fe7847;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;}
+  color: #fe7847;}
 
-.content > .elem > .more:hover {color: #f98b60;}
+.content > .elem > .more:hover {
+  color: #f98b60;}
 
 /*
  * Big elem
@@ -236,10 +243,11 @@
 .content > .big-elem {
   font-size: 14px;
   width: 960px;
-  margin: 140px auto 20px auto;
+  margin: 20px auto;
   text-align: center;}
 
-.content > .big-elem > * {margin-bottom: 25px;}
+.content > .big-elem > * {
+  margin-bottom: 25px;}
 
 .content > .big-elem hr {
   width: 100%;
@@ -288,35 +296,36 @@
 .content > .big-elem > .info .every {
   left: 35%;
   -webkit-transform: translate(-50%, 0);
-     -moz-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-       -o-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);}
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);}
 
 .content > .big-elem > .info .ships {
   right: 35%;
   -webkit-transform: translate(50%, 0);
-     -moz-transform: translate(50%, 0);
-      -ms-transform: translate(50%, 0);
-       -o-transform: translate(50%, 0);
-          transform: translate(50%, 0);}
+  -moz-transform: translate(50%, 0);
+  -ms-transform: translate(50%, 0);
+  -o-transform: translate(50%, 0);
+  transform: translate(50%, 0);}
 
 .content > .big-elem > .info .price {
   font-size: 24px;
   line-height: 28px;
   left: 50%;
-  color: #fe7847;
   -webkit-transform: translate(-50%, 0);
-     -moz-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-       -o-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);}
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  color: #fe7847;}
 
 /*
  * Select Buttons
  */
 
-.content > .big-elem > .group {width: 100%;}
+.content > .big-elem > .group {
+  width: 100%;}
 
 .content > .big-elem > .group .radio {
   position: relative;
@@ -350,10 +359,10 @@
   margin: 0;
   padding: 0;
   -webkit-transform: translate(-50%, -50%);
-     -moz-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-       -o-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);}
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);}
 
 .content > .big-elem > .group .radio label div {
   position: absolute;
@@ -363,22 +372,22 @@
   display: block;
   margin: 0 auto;
   padding: 10px 15px;
-  background-color: #fe7847;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-transform: translate(-50%, 0);
-     -moz-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-       -o-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #fe7847;
   -webkit-box-shadow: 20px 0 0 #f0f0f2, -20px 0 0 #f0f0f2;
-     -moz-box-shadow: 20px 0 0 #f0f0f2, -20px 0 0 #f0f0f2;
-          box-shadow: 20px 0 0 #f0f0f2, -20px 0 0 #f0f0f2;}
+  -moz-box-shadow: 20px 0 0 #f0f0f2, -20px 0 0 #f0f0f2;
+  box-shadow: 20px 0 0 #f0f0f2, -20px 0 0 #f0f0f2;}
 
 .content > .big-elem > .group .radio label div,
 .content > .big-elem > .group .radio label div:after {
@@ -394,15 +403,16 @@
   padding: 10px 35px;
   background-color: #f98b60;}
 
-.content > .big-elem > .group .radio label input:checked:hover + div {background-color: #f0f0f2;}
+.content > .big-elem > .group .radio label input:checked:hover + div {
+  background-color: #f0f0f2;}
 
 .content > .big-elem > .group .radio label input:checked + div {
   padding: 5px;
   color: #22313f;
   border-bottom: 2px solid #f98b60;
   -webkit-border-radius: 0;
-     -moz-border-radius: 0;
-          border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   background-color: #f0f0f2;}
 
 .content > .big-elem > .group .radio label input:checked + div:after {
@@ -410,25 +420,61 @@
   color: #22313f;}
 
 /*
+ * Program
+ */
+
+.program {
+  position: relative;
+  height: 230px;
+  margin: 30px 0;
+  background: url(../../images/bg/bg-lp-2.jpg) no-repeat center top;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;}
+
+.program > .wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 960px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);}
+
+.program > .wrapper .two,
+.program > .wrapper .three {
+  margin-left: 30px;}
+
+.program > .wrapper > .title {
+  font-family: 'Rubik';
+  font-size: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 15px rgba(0,0,0,.2);}
+
+.program > .wrapper .img {
+  margin: 11px 0;}
+.program > .wrapper .text {
+  margin-left: 8px;}
+
+.program > .wrapper .desc {
+  font-family: 'Rubik';
+  font-size: 14px;
+  width: 226px;
+  text-align: left;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0,0,0,.2);}
+
+
+/*
  * Description
  */
 
-.content > .big-elem > .description > * {margin-bottom: 20px;}
-
-.content > .big-elem > .description > .title {
-  font-family: 'Roboto';
-  font-size: 15px;
-  font-weight: 500;
-  text-align: left;}
-
-.content > .big-elem > .description > ul {
-  padding-left: 17px;
-  list-style: decimal;}
-
-.content > .big-elem > .description > ul > li {
-  font-family: 'Roboto';
-  font-size: 15px;
-  text-align: left;}
+.content > .big-elem > .description > * {
+  margin-bottom: 20px;}
 
 .content > .big-elem > .description > p {
   font-family: 'Roboto';
@@ -465,8 +511,8 @@
   text-transform: uppercase;
   background-color: #f0f0f2;
   -webkit-box-shadow: -20px 0 0 #f0f0f2, 20px 0 0 #f0f0f2;
-     -moz-box-shadow: -20px 0 0 #f0f0f2, 20px 0 0 #f0f0f2;
-          box-shadow: -20px 0 0 #f0f0f2, 20px 0 0 #f0f0f2;}
+  -moz-box-shadow: -20px 0 0 #f0f0f2, 20px 0 0 #f0f0f2;
+  box-shadow: -20px 0 0 #f0f0f2, 20px 0 0 #f0f0f2;}
 
 .content > .big-elem > .division:after {
   position: absolute;
@@ -493,10 +539,10 @@
   height: 172px;
   margin: 10px;
   padding: 10px;
-  background-color: #fff;
   -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;}
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #fff;}
 
 /*
  * Billing Page
@@ -508,9 +554,9 @@
   padding-bottom: 20px;}
 
 .content.billing form {
+  font-size: 14px;
   width: 100%;
-  margin: 0 auto;
-  font-size: 14px;}
+  margin: 0 auto;}
 
 .content.billing form hr {
   display: block;
@@ -518,32 +564,40 @@
   height: 1px;
   margin: 20px 0 !important;
   cursor: default;
-  border: none;
   opacity: .1;
+  border: none;
   background-color: #000;}
 
 .content.billing form .group label.title {
+  font-size: 22px;
   display: block;
   width: 100%;
-  font-size: 22px;
-  text-align: center;
-  margin: 20px 0;}
+  margin: 20px 0;
+  text-align: center;}
 
 .content.billing form .group input.card {
   padding-right: 40px;
+  background: url(../../images/form-ctrl/card.png) no-repeat -webkit-calc(100% - 5px) center/30px;
+  background: url(../../images/form-ctrl/card.png) no-repeat -moz-calc(100% - 5px) center/30px;
   background: url(../../images/form-ctrl/card.png) no-repeat calc(100% - 5px) center/30px;
   background-color: #fff;}
 
-.content.billing form .group input {margin-bottom: 10px;}
-.content.billing form .group > *   {margin-bottom: 10px;}
+.content.billing form .group input {
+  margin-bottom: 10px;}
+.content.billing form .group > * {
+  margin-bottom: 10px;}
 
 .content.billing form .group .name,
 .content.billing form .group .state,
-.content.billing form .group .date {height: 34px;}
+.content.billing form .group .date {
+  height: 34px;}
 
-.content.billing form .group .name > * {width: 49%;}
-.content.billing form .group .name > :first-child {margin-left: 0;}
-.content.billing form .group .name > :last-child  {margin-left: 2%;}
+.content.billing form .group .name > * {
+  width: 49%;}
+.content.billing form .group .name > :first-child {
+  margin-left: 0;}
+.content.billing form .group .name > :last-child {
+  margin-left: 2%;}
 
 .content.billing form .group .state > :first-child {
   width: 69%;
@@ -552,17 +606,23 @@
   width: 29%;
   margin-left: 2%;}
 
-.content.billing form .group .date > * {margin-left: 2%;}
-.content.billing form .group .date > :first-child {margin-left: 0%;}
+.content.billing form .group .date > * {
+  margin-left: 2%;}
+.content.billing form .group .date > :first-child {
+  margin-left: 0%;}
 
-.content.billing form .group .date > :nth-child(1) {width: 32%;}
-.content.billing form .group .date > :nth-child(2) {width: 32%;}
-.content.billing form .group .date > :nth-child(3) {width: 24%;}
-.content.billing form .group .date > :nth-child(4) {width: 6%;}
+.content.billing form .group .date > :nth-child(1) {
+  width: 32%;}
+.content.billing form .group .date > :nth-child(2) {
+  width: 32%;}
+.content.billing form .group .date > :nth-child(3) {
+  width: 24%;}
+.content.billing form .group .date > :nth-child(4) {
+  width: 6%;}
 
 .content.billing form .group .date .cvv-help {
-  height: 100%;
-  position: relative;}
+  position: relative;
+  height: 100%;}
 
 .content.billing form .group .date .cvv-help div {
   font-weight: 600;
@@ -571,102 +631,180 @@
   top: 50%;
   right: 0;
   width: 20px;
-  cursor: pointer;
   height: 20px;
+  cursor: pointer;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
   transform: translate(0, -50%);
   text-align: center;
   color: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
   border-radius: 10px;
   background-color: #393e46;}
 
 .content.billing form .group .date .cvv-help img {
   position: absolute;
+  top: 50%;
+  left: -webkit-calc(100% + 10px);
+  left: -moz-calc(100% + 10px);
+  left: calc(100% + 10px);
   width: 74px;
   height: 47px;
-  box-shadow: 0 0 15px rgba(255,255,255,.45);
-  top: 50%;
-  left: calc(100% + 10px);
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
   transform: translate(0, -50%);
   opacity: 0;
-  border-radius: 3px;}
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 15px rgba(255,255,255,.45);
+  -moz-box-shadow: 0 0 15px rgba(255,255,255,.45);
+  box-shadow: 0 0 15px rgba(255,255,255,.45);}
 
-.content.billing form .group .date .cvv-help div:hover + img {opacity: 1;}
+.content.billing form .group .date .cvv-help div:hover + img {
+  opacity: 1;}
 
 .content.billing form .group .checkbox {
-  height: 20px;
-  position: relative;}
+  position: relative;
+  height: 20px;}
+
 .content.billing form .group .checkbox label {
   position: absolute;
   left: 50%;
-  white-space   : nowrap;
+  min-height: 20px;
+  -webkit-transform: translate(-50%,0);
+  -moz-transform: translate(-50%,0);
+  -ms-transform: translate(-50%,0);
+  -o-transform: translate(-50%,0);
   transform: translate(-50%,0);
-  min-height: 20px;}
+  white-space   : nowrap;}
 
 .content.billing form .group.result {
   width: 80%;
   margin-right: auto;
-  margin-left: auto;
-}
+  margin-left: auto;}
 
 .content.billing form .group.result div {
   height: 20px;
   margin-bottom: 0;}
 
 .content.billing form .group.result div span mark {
-  background-color: #f0f0f2;
   padding: 0;
-  color: #579eff;}
+  color: #fe7847;
+  background-color: transparent;}
 
 .content.billing form .purchase-info {
-  text-align: center;
-  font-size: 12px;}
+  font-size: 12px;
+  text-align: center;}
 
-
-.content.billing form .group input[type="submit"] {
+.content.billing form .group input[type='submit'] {
   width: 100%;}
+
+/*
+ * Thanks Landing Page
+ */
+
+.content.thanks {
+  font-size: 14px;
+  width: 400px;}
+
+.content.thanks hr {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: 20px 0 !important;
+  cursor: default;
+  opacity: .1;
+  border: none;
+  background-color: #000;}
+
+.content.thanks div.title {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  height: 24px;
+  margin: 20px 0;
+  text-align: center;}
+
+.content.thanks div.description {
+  height: 20px;
+  margin: 5px auto;}
 
 /*
  * Blue Style
  */
 
-.blue .content > .elem > .info .price {color: #579eff;}
+.blue .content > .elem > .info .price {
+  color: #579eff;}
 
-.blue .content > .elem > .group .radio label div {background-color: #579eff;}
-.blue .content > .elem > .group .radio label div:hover {background-color: #84c7ff;}
-.blue .content > .elem > .group .radio label input:checked:hover + div {background-color: #f0f0f2;}
+.blue .content > .elem > .group .radio label div {
+  background-color: #579eff;}
+.blue .content > .elem > .group .radio label div:hover {
+  background-color: #84c7ff;}
+.blue .content > .elem > .group .radio label input:checked:hover + div {
+  background-color: #f0f0f2;}
 .blue .content > .elem > .group .radio label input:checked + div {
   border-bottom: 2px solid #579eff;
   background-color: #f0f0f2;}
 
-.blue .content > .elem > ul li:before {color: #579eff;}
+.blue .content > .elem > ul li:before {
+  color: #579eff;}
 
-.blue .content > .elem > .more {color: #579eff;}
-.blue .content > .elem > .more:hover {color: #84c7ff;}
+.blue .content > .elem > .more {
+  color: #579eff;}
+.blue .content > .elem > .more:hover {
+  color: #84c7ff;}
 
-.blue .content > .big-elem > .info .price {color: #579eff;}
-.blue .content > .big-elem > .group .radio label div {background-color: #579eff;}
-.blue .content > .big-elem > .group .radio label div:hover {background-color: #84c7ff;}
-.blue .content > .big-elem > .group .radio label input:checked + div {border-bottom: 2px solid #84c7ff;}
+.blue .content > .big-elem > .info .price {
+  color: #579eff;}
+.blue .content > .big-elem > .group .radio label div {
+  background-color: #579eff;}
+.blue .content > .big-elem > .group .radio label div:hover {
+  background-color: #84c7ff;}
+.blue .content > .big-elem > .group .radio label input:checked + div {
+  border-bottom: 2px solid #84c7ff;}
+
+.blue .content.billing form .group.result div span mark {
+  color: #579eff;}
 
 /*
  * Orange Style
  */
 
-.orange .content > .elem > .info .price {color: #fe7847;}
+.orange .content > .elem > .info .price {
+  color: #fe7847;}
 
-.orange .content > .elem > .group .radio label div {background-color: #fe7847;}
-.orange .content > .elem > .group .radio label div:hover {background-color: #f98b60;}
-.orange .content > .elem > .group .radio label input:checked:hover + div {background-color: #f0f0f2;}
+.orange .content > .elem > .group .radio label div {
+  background-color: #fe7847;}
+.orange .content > .elem > .group .radio label div:hover {
+  background-color: #f98b60;}
+.orange .content > .elem > .group .radio label input:checked:hover + div {
+  background-color: #f0f0f2;}
 .orange .content > .elem > .group .radio label input:checked + div {
   border-bottom: 2px solid #fe7847;
   background-color: #f0f0f2;}
 
-.orange .content > .elem > ul li:before {color: #fe7847;}
+.orange .content > .elem > ul li:before {
+  color: #fe7847;}
 
-.orange .content > .elem > .more {color: #fe7847;}
-.orange .content > .elem > .more:hover {color: #f98b60;}
+.orange .content > .elem > .more {
+  color: #fe7847;}
+.orange .content > .elem > .more:hover {
+  color: #f98b60;}
 
-.orange .content > .big-elem > .info .price {color: #fe7847;}
-.orange .content > .big-elem > .group .radio label div {background-color: #fe7847;}
-.orange .content > .big-elem > .group .radio label div:hover {background-color: #f98b60;}
-.orange .content > .big-elem > .group .radio label input:checked + div {border-bottom: 2px solid #f98b60;}
+.orange .content > .big-elem > .info .price {
+  color: #fe7847;}
+.orange .content > .big-elem > .group .radio label div {
+  background-color: #fe7847;}
+.orange .content > .big-elem > .group .radio label div:hover {
+  background-color: #f98b60;}
+.orange .content > .big-elem > .group .radio label input:checked + div {
+  border-bottom: 2px solid #f98b60;}
+
+.orange .content.billing form .group.result div span mark {
+  color: #fe7847;}
