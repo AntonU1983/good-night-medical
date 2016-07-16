@@ -8,6 +8,7 @@
   <title>Good Night Medical</title>
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700&subset=latin,cyrillic' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Rubik:400,400italic,500,700&subset=latin,cyrillic' rel='stylesheet'>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="../../content/css/lib/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="../../content/css/main.css">
   <link rel="stylesheet" href="../../content/css/ui.css">
@@ -22,8 +23,6 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
-  <style>
-  </style>
 
 </head>
 
@@ -76,6 +75,11 @@
           <input type="password" placeholder="text">
         </div>
 
+        <div class="group"> <!-- DATA PICKER -->
+          <label>Data Picker</label>
+          <input type="text" placeholder="mm/dd/yy" id="datepicker">
+        </div>
+
         <div class="group"> <!-- SELECT (HTML5) -->
           <label>Select Item</label>
           <div class="select">
@@ -103,6 +107,7 @@
         </div>
 
         <div class="group"> <!-- DROP DOWN J-UI -->
+          <label>Drop Down jQuery UI (Custom)</label>
           <select id="select-img">
             <option data-imagesrc="http://swimages.blob.core.windows.net/goodnightmedical-preview/philips-respironics-dreamstation-bipap-60x60.jpg"
                     data-description="philips-respironics-dreamstation-bipap.jpg"
