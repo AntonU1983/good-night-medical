@@ -1,9 +1,12 @@
 // Для Drop Down jQuery UI
 $(function() {
-  $('#select-img').ddslick({
-    onSelected: function displayDataConsole(data) {
-      console.log(data);
-    }
+  $('#select-img1').ddslick({
+    onSelected: function displayDataConsole(data) { console.log(data); }
+  });
+});
+$(function() {
+  $('#select-img2').ddslick({
+    onSelected: function displayDataConsole(data) { console.log(data); }
   });
 });
 

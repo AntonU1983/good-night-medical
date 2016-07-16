@@ -9,7 +9,7 @@
       <input class="pull-right" type="submit" value="Edit Machine" ng-click="editMachine = 'show-me';">
     </form>
 
-    <form class="machine" novalidate ng-class="addMachine" ng-init="selectOrDownload = true">
+    <form class="machine" novalidate ng-class="addMachine" ng-init="selectOrDownloadEdit = true; selectOrDownloadAdd = true">
       <div class="group"> <!-- COMPANY -->
         <label>Company</label>
         <input type="text" placeholder="Philips" autofocus required ng-class="check">
@@ -29,29 +29,20 @@
         <label>Select Image or Download New</label>
 
         <div class="radio">
-          <label ng-click="selectOrDownload = true;">
+          <label ng-click="selectOrDownloadAdd = true;">
             <input type="radio" name="patientGnm" checked>
             <span><span></span></span>Select Image
           </label>
         </div>
 
         <div class="radio">
-          <label ng-click="selectOrDownload = false;">
+          <label ng-click="selectOrDownloadAdd = false;">
             <input type="radio" name="patientGnm">
             <span><span></span></span>Download New Image
           </label>
         </div>
 
-        <div class="select" ng-hide="!selectOrDownload">
-          <select>
-            <option value="">Lorem ipsum dolor sit amet</option>
-            <option value="">Lorem ipsum dolor sit amet</option>
-            <option value="">Lorem ipsum dolor sit amet</option>
-            <option value="">Lorem ipsum dolor sit amet</option>
-          </select>
-        </div>
-
-        <div ng-hide="selectOrDownload"> <!-- IMAGE -->
+        <div ng-hide="selectOrDownloadAdd"> <!-- IMAGE -->
           <div class="grp-file">
             <label>
               <span>Choose file<input type="file"></span>
@@ -60,10 +51,8 @@
           </div>
           <div class="help">(size 500x500 pixels, format .jpg)</div>
         </div>
-      </div>
 
-      <div class="group"> <!-- DROP DOWN J-UI -->
-        <select id="select-img">
+        <select id="select-img1" ng-hide="!selectOrDownloadAdd"> <!-- DROP DOWN J-UI -->
           <option data-imagesrc="http://swimages.blob.core.windows.net/goodnightmedical-preview/philips-respironics-dreamstation-bipap-60x60.jpg"
                   data-description="philips-respironics-dreamstation-bipap.jpg"
                   value="0">Philips Respironics DreamStation BiPAP</option>
@@ -127,29 +116,20 @@
         <label>Select Image or Download New</label>
 
         <div class="radio">
-          <label ng-click="selectOrDownload = true;">
+          <label ng-click="selectOrDownloadEdit = true;">
             <input type="radio" name="patientGnm" checked>
             <span><span></span></span>Select Image
           </label>
         </div>
 
         <div class="radio">
-          <label ng-click="selectOrDownload = false;">
+          <label ng-click="selectOrDownloadEdit = false;">
             <input type="radio" name="patientGnm">
             <span><span></span></span>Download New Image
           </label>
         </div>
 
-        <div class="select" ng-hide="!selectOrDownload">
-          <select>
-            <option value="">Lorem ipsum dolor sit amet</option>
-            <option value="">Lorem ipsum dolor sit amet</option>
-            <option value="">Lorem ipsum dolor sit amet</option>
-            <option value="">Lorem ipsum dolor sit amet</option>
-          </select>
-        </div>
-
-        <div ng-hide="selectOrDownload"> <!-- IMAGE -->
+        <div ng-hide="selectOrDownloadEdit"> <!-- IMAGE -->
           <div class="grp-file">
             <label>
               <span>Choose file<input type="file"></span>
@@ -158,10 +138,8 @@
           </div>
           <div class="help">(size 500x500 pixels, format .jpg)</div>
         </div>
-      </div>
 
-      <div class="group"> <!-- DROP DOWN J-UI -->
-        <select id="select-img">
+        <select id="select-img2" ng-hide="!selectOrDownloadAdd"> <!-- DROP DOWN J-UI -->
           <option data-imagesrc="http://swimages.blob.core.windows.net/goodnightmedical-preview/philips-respironics-dreamstation-bipap-60x60.jpg"
                   data-description="philips-respironics-dreamstation-bipap.jpg"
                   value="0">Philips Respironics DreamStation BiPAP</option>
