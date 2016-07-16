@@ -274,6 +274,7 @@ form .group .select {
   height: 34px;
   border: 2px solid #ddd;
   border-radius: 3px;
+  background: url(../images/form-ctrl/arrow-dowm.png) no-repeat right center/34px 34px;
   background-color: #fff;}
 
 form .group .select select {
@@ -282,8 +283,12 @@ form .group .select select {
   height: 100%;
   line-height: 100%;
   padding: 0 10px;
+  margin: 0;
   border: none;
-  background-color: transparent;}
+  background: transparent;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;}
 
 form .group .select:hover,
 form .group .select:focus {border: 2px solid #fe7847;}
