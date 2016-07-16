@@ -57,3 +57,5 @@ $(function() {
     });
   });
 });
+
+$(function() {$("#datepicker").datepicker();});
