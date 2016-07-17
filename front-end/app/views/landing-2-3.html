@@ -26,8 +26,8 @@
 <body class="blue">
 
   <header class="billing">
-    <div class="header"> <!-- TOP NAV BAR -->
-      <a href="" class="back">Back</a>
+    <div class="header">
+      <div class="back">Back</div>
       <img class="logotype-center" src="../../content/images/logotype.png" alt="Good Night Medical Logotype">
     </div>
 
@@ -35,20 +35,20 @@
   </header>
 
   <div class="content billing">
-    <form>
+    <form novalidate>
 
-      <div class="group"> <!-- SHIPPING INFORMATION -->
+      <div class="group">
         <label class="title">Shipping Information</label>
         <div class="name">
-          <input class="pull-left" type="text" placeholder="First Name">
-          <input class="pull-left" type="text" placeholder="Last Name">
+          <input class="pull-left" type="text" placeholder="First Name" required>
+          <input class="pull-left" type="text" placeholder="Last Name" required>
         </div>
-        <input type="text" placeholder="Address Line 1">
+        <input type="text" placeholder="Address Line 1" required>
         <input type="text" placeholder="Address Line 2 (optional)">
-        <input type="text" placeholder="City">
+        <input type="text" placeholder="City" required>
         <div class="state">
           <div class="pull-left select">
-            <select>
+            <select required>
               <option>State</option>
               <option>State 1</option>
               <option>State 2</option>
