@@ -274,15 +274,15 @@ form .select {
   height: 34px;
   border: 2px solid #ddd;
   border-radius: 3px;
-  background: url(../images/form-ctrl/arrow-dowm.png) no-repeat right center/34px 34px;
+  background: url(../images/form-ctrl/double-arrow.png) no-repeat right center/19px 34px;
   background-color: #fff;}
 
 form .select select {
   display: block;
-  width: 100%;
+  width: calc(100% + 20px);
   height: 100%;
   line-height: 100%;
-  padding: 0 10px;
+  padding: 0 54px 0 10px;
   margin: 0;
   border: none;
   background: transparent;

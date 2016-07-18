@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="billingPageApp" ng-cloak>
 
 <head>
   <meta charset="utf-8">
@@ -23,7 +23,7 @@
   <![endif]-->
 </head>
 
-<body class="blue">
+<body class="blue" ng-controller="billingPageCtrl">
 
   <header class="billing">
     <div class="header">
@@ -34,27 +34,57 @@
     <div class="mind">Shipping and Billing</div>
   </header>
 
-  <div class="content billing">
-    <form novalidate>
+  <div class="billing">
+    <form name="billData" novalidate ng-submit="submitPurchase();">
 
-      <div class="group">
+      <div class="group"> <!-- SHIPPING INFORMATION -->
         <label class="title">Shipping Information</label>
+
         <div class="name">
-          <input class="pull-left" type="text" placeholder="First Name" required>
-          <input class="pull-left" type="text" placeholder="Last Name" required>
+          <input class="pull-left" type="text" placeholder="First Name"
+                 name="shipFullName"
+                 ng-model="shipFullName"
+                 ng-class="returnClass(billData.shipFullName.$touched, billData.shipFullName.$invalid, 'error');" required>
+          <input class="pull-left" type="text" placeholder="Last Name"
+                 name="shipLastName"
+                 ng-model="shipLastName"
+                 ng-class="returnClass(billData.shipLastName.$touched, billData.shipLastName.$invalid, 'error');" required>
         </div>
-        <input type="text" placeholder="Address Line 1" required>
-        <input type="text" placeholder="Address Line 2 (optional)">
-        <input type="text" placeholder="City" required>
+
+        <input type="text" placeholder="Address Line 1"
+               name="shipAddress1"
+               ng-model="shipAddress1"
+               ng-class="returnClass(billData.shipAddress1.$touched, billData.shipAddress1.$invalid, 'error');" required>
+
+        <input type="text" placeholder="Address Line 2 (optional)"
+               name="shipAddress2"
+               ng-model="shipAddress2">
+
+        <input type="text" placeholder="City"
+               name="shipCity"
+               ng-model="shipCity"
+               ng-class="returnClass(billData.shipCity.$touched, billData.shipCity.$invalid, 'error');" required>
+
         <div class="state">
-          <div class="pull-left select">
-            <select required>
-              <option>State</option>
-              <option>State 1</option>
-              <option>State 2</option>
+          <div class="pull-left select" ng-class="returnClass(billData.shipState.$touched, billData.shipState.$invalid, 'error');">
+            <select name="shipState" ng-model="shipState" required>
+              <option value="">State</option>
+              <option ng-repeat="state in states">{{state.name}}</option>
             </select>
           </div>
-          <input class="pull-left" type="text" placeholder="Zip">
+          <input class="pull-left" type="text" placeholder="Zip"
+                 name="shipZip"
+                 ng-model="shipZip"
+                 ng-class="returnClass(billData.shipZip.$touched, billData.shipZip.$invalid, 'error');" required>
+        </div>
+
+        <div class="validate-msg" ng-if="shipErrorMsg();">
+          <div ng-if="showErrorMsg(billData.shipFullName.$touched, billData.shipFullName.$invalid);">{{errorShipFullNameMsg}}</div>
+          <div ng-if="showErrorMsg(billData.shipLastName.$touched, billData.shipLastName.$invalid);">{{errorShipLastNameMsg}}</div>
+          <div ng-if="showErrorMsg(billData.shipAddress1.$touched, billData.shipAddress1.$invalid);">{{errorShipAddressMsg}}</div>
+          <div ng-if="showErrorMsg(billData.shipCity.$touched, billData.shipCity.$invalid);">{{errorShipCityMsg}}</div>
+          <div ng-if="showErrorMsg(billData.shipState.$touched, billData.shipState.$invalid);">{{errorShipStateMsg}}</div>
+          <div ng-if="showErrorMsg(billData.shipZip.$touched, billData.shipZip.$invalid);">{{errorShipZipMsg}}</div>
         </div>
       </div>
 
@@ -62,69 +92,112 @@
 
       <div class="group"> <!-- BILLING INFORMATION -->
         <label class="title">Billing Information</label>
-        <input class="card" type="text" placeholder="Credit Card Nubmer">
+
+        <input class="card" type="text" placeholder="Credit Card Nubmer"
+               name="cardNumber"
+               ng-model="cardNumber"
+               ng-class="returnClass(billData.cardNumber.$touched, billData.cardNumber.$invalid, 'error');" required>
+
         <div class="date">
-          <div class="select pull-left">
-            <select name="Month">
-              <option>01</option>
-              <option>02</option>
-              <option>03</option>
-              <option>04</option>
-              <option>05</option>
-              <option>06</option>
-              <option>07</option>
-              <option>08</option>
-              <option>09</option>
-              <option>10</option>
-              <option>11</option>
-              <option>12</option>
+          <div class="select pull-left" ng-class="returnClass(billData.cardMonth.$touched, billData.cardMonth.$invalid, 'error');">
+            <select name="cardMonth" ng-model="cardMonth" required>
+              <option value="">Month</option>
+              <option ng-repeat="month in months">{{month}}</option>
             </select>
           </div>
-          <div class="select pull-left">
-            <select name="Year">
-              <option>Year 1</option>
-              <option>Year 2</option>
-              <option>Year 3</option>
-              <option>Year 4</option>
+
+          <div class="select pull-left" ng-class="returnClass(billData.cardYear.$touched, billData.cardYear.$invalid, 'error');">
+            <select name="cardYear" ng-model="cardYear" required>
+              <option value="">Year</option>
+              <option ng-repeat="year in years">{{year}}</option>
             </select>
           </div>
-          <input class="pull-left" type="text" placeholder="CVV">
+
+          <input class="pull-left" type="text" placeholder="CVV"
+                 name="cardCvv"
+                 ng-model="cardCvv"
+                 ng-class="returnClass(billData.cardCvv.$touched, billData.cardCvv.$invalid, 'error');" required>
+
           <div class="cvv-help pull-left">
             <div>&#63;</div>
             <img src="../../content/images/form-ctrl/cvv-help.png">
           </div>
         </div>
+
+        <div class="validate-msg" ng-if="billCardErrorMsg();">
+          <div ng-if="showErrorMsg(billData.cardNumber.$touched, billData.cardNumber.$invalid);">{{errorBillCardNumberMsg}}</div>
+          <div ng-if="showErrorMsg(billData.cardMonth.$touched, billData.cardMonth.$invalid);">{{errorBillMonthMsg}}</div>
+          <div ng-if="showErrorMsg(billData.cardYear.$touched, billData.cardYear.$invalid);">{{errorBillYearMsg}}</div>
+          <div ng-if="showErrorMsg(billData.cardCvv.$touched, billData.cardCvv.$invalid);">{{errorBillCvvMsg}}</div>
+        </div>
+
         <div class="checkbox">
           <label>
-            <input type="checkbox" ng-model="hideBillingAddress">
+            <input type="checkbox" ng-model="checkboxModel">
             <span><span></span></span>Billing address same as shipping
           </label>
         </div>
-        <div ng-hide="hideBillingAddress">
+
+        <div class="group" ng-if="!checkboxModel">
           <div class="name">
-            <input class="pull-left" type="text" placeholder="First Name">
-            <input class="pull-left" type="text" placeholder="Last Name">
+            <input class="pull-left" type="text" placeholder="First Name"
+                   name="billFullName"
+                   ng-model="billFullName"
+                   ng-class="returnClass(billData.billFullName.$touched, billData.billFullName.$invalid, 'error');" required>
+            <input class="pull-left" type="text" placeholder="Last Name"
+                   name="billLastName"
+                   ng-model="billLastName"
+                   ng-class="returnClass(billData.billLastName.$touched, billData.billLastName.$invalid, 'error');" required>
           </div>
-          <input type="text" placeholder="Address Line 1">
-          <input type="text" placeholder="Address Line 2 (optional)">
-          <input type="text" placeholder="City">
+
+          <input type="text" placeholder="Address Line 1"
+                 name="billAddress1"
+                 ng-model="billAddress1"
+                 ng-class="returnClass(billData.billAddress1.$touched, billData.billAddress1.$invalid, 'error');" required>
+
+          <input type="text" placeholder="Address Line 2 (optional)"
+                 name="billAddress2"
+                 ng-model="billAddress2">
+
+          <input type="text" placeholder="City"
+                 name="billCity"
+                 ng-model="billCity"
+                 ng-class="returnClass(billData.billCity.$touched, billData.billCity.$invalid, 'error');" required>
+
           <div class="state">
-            <div class="pull-left select">
-              <select>
-                <option>State</option>
-                <option>State 1</option>
-                <option>State 2</option>
+            <div class="pull-left select" ng-class="returnClass(billData.billState.$touched, billData.billState.$invalid, 'error');">
+              <select name="billState" ng-model="billState" required>
+                <option value="">State</option>
+                <option ng-repeat="state in states">{{state.name}}</option>
               </select>
             </div>
-            <input class="pull-left" type="text" placeholder="Zip">
+            <input class="pull-left" type="text" placeholder="Zip"
+                   name="billZip"
+                   ng-model="billZip"
+                   ng-class="returnClass(billData.billZip.$touched, billData.billZip.$invalid, 'error');" required>
+          </div>
+
+          <div class="validate-msg" ng-if="billErrorMsg();">
+            <div ng-if="showErrorMsg(billData.billFullName.$touched, billData.billFullName.$invalid);">{{errorBillFullNameMsg}}</div>
+            <div ng-if="showErrorMsg(billData.billLastName.$touched, billData.billLastName.$invalid);">{{errorBillLastNameMsg}}</div>
+            <div ng-if="showErrorMsg(billData.billAddress1.$touched, billData.billAddress1.$invalid);">{{errorBillAddressMsg}}</div>
+            <div ng-if="showErrorMsg(billData.billCity.$touched, billData.billCity.$invalid);">{{errorBillCityMsg}}</div>
+            <div ng-if="showErrorMsg(billData.billState.$touched, billData.billState.$invalid);">{{errorBillStateMsg}}</div>
+            <div ng-if="showErrorMsg(billData.billZip.$touched, billData.billZip.$invalid);">{{errorBillZipMsg}}</div>
           </div>
         </div>
       </div>
 
        <hr>
 
-      <div class="group">
-        <input type="text" placeholder="Promo Code">
+      <div class="group"> <!-- PROMO CODE -->
+        <input type="text" placeholder="Promo Code"
+               name="promoCode"
+               ng-model="promoCode"
+               ng-class="returnClass(billData.promoCode.$touched, billData.promoCode.$invalid, 'error');">
+        <div class="validate-msg" ng-if="promoCodeErrorMsg();">
+          <div ng-if="billData.promoCode.$touched && billData.promoCode.$invalid">{{errorPromoCodeMsg}}</div>
+        </div>
       </div>
 
        <hr>
@@ -153,10 +226,10 @@
 
       <hr>
 
-      <div class="group purchase-info">&#42;By clicking “Purchase,” you understand that your insurance and/or prescription still need to be approved. If for any reason we are not able to process your order due to insurance or lack of valid prescription, we will refund your money in full.</div>
+      <div class="group purchase-info">&#42;By clicking “Purchase” you understand that your insurance and/or prescription still need to be approved. If for any reason we are not able to process your order due to insurance or lack of valid prescription, we will refund your money in full.</div>
 
       <div class="group">
-        <input type="submit" value="Rent">
+        <input type="submit" value="Rent" ng-click="submitPurchase();">
       </div>
 
     </form>
@@ -168,6 +241,7 @@
   <script src="../../scripts/lib/angular/angular-animate.min.js"></script>
   <script src="../../scripts/lib/angular/ellipsis.min.js"></script>
   <script src="../app.js"></script>
+  <script src="../controllers/landing-2/billing.js"></script>
   <script src="../../scripts/lib/bootstrap/bootstrap.min.js"></script>
   <script src="../../scripts/script.js"></script>
 </body>
