@@ -75,13 +75,8 @@ header .preview img {
  */
 
 header.all-info {
-  width: 100%;
   height: 340px;
-  margin-bottom: 100px;
-  background: url(../../images/bg/bg-lp-1.jpg) no-repeat center top;
-  -moz-background-size: cover;
-    -o-background-size: cover;
-       background-size: cover;}
+  margin-bottom: 100px;}
 
 header.all-info .header {
   position: relative;
@@ -147,10 +142,8 @@ header.all-info img {
  */
 
 header.billing {
-  width: 100%;
   height: auto;
-  margin-bottom: 0;
-  background: url(../../images/bg/bg-lp-1.jpg) no-repeat center top;}
+  margin-bottom: 0;}
 
 header.billing .header {
   position: relative;
@@ -193,9 +186,7 @@ header.billing .mind {
  * Landing Page 2-4
  */
 
-header.thanks {
-  height: auto;
-  background: url(../../images/bg/bg-lp-1.jpg) no-repeat center center;}
+header.thanks {height: auto;}
 
 header.thanks .header {
   width: 700px;}

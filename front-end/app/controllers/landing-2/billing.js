@@ -79,15 +79,15 @@ billingPageApp.controller('billingPageCtrl', function($scope){
         ($scope.formInvalid && $scope.billData.billZip.$invalid)) {return true;}
   };
 
+  // Скрывает или Показывает меню с сообщениями ошибок (Billing Shipping Information)
+  $scope.promoCodeErrorMsg = function(){
+    if (($scope.billData.promoCode.$touched && $scope.billData.promoCode.$invalid) ||
+        ($scope.formInvalid&& $scope.billData.promoCode.$invalid)) {return true;}
+  };
+
   // Показывает или скрывает сообщения с ошибками
   $scope.showErrorMsg = function(touched, invalid){
     if ((touched && invalid) || (invalid && $scope.formInvalid)) {return true;}
-  };
-
-  // Скрывает или Показывает меню с сообщениями ошибок (Billing Shipping Information)
-  $scope.promoCodeErrorMsg = function(){
-    if ($scope.billData.promoCode.$touched && $scope.billData.promoCode.$invalid) {
-      return true;}
   };
 
   // Возращает элементу который не прошел валидацию стиль
