@@ -81,8 +81,7 @@ billingPageApp.controller('billingPageCtrl', function($scope){
 
   // Скрывает или Показывает меню с сообщениями ошибок (Billing Shipping Information)
   $scope.promoCodeErrorMsg = function(){
-    if (($scope.billData.promoCode.$touched && $scope.billData.promoCode.$invalid) ||
-        ($scope.formInvalid&& $scope.billData.promoCode.$invalid)) {return true;}
+    if ($scope.billData.promoCode.$touched && $scope.billData.promoCode.$invalid) {return true;}
   };
 
   // Показывает или скрывает сообщения с ошибками

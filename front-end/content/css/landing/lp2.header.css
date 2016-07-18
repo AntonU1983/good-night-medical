@@ -186,10 +186,11 @@ header.billing .mind {
  * Landing Page 2-4
  */
 
-header.thanks {height: auto;}
+header.thanks {
+  margin-bottom: 40px;
+  height: auto;}
 
-header.thanks .header {
-  width: 700px;}
+header.thanks .header {width: 700px;}
 
 header.thanks .text {
   font-size: 14px;
