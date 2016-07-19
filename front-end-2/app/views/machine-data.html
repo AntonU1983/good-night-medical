@@ -1,0 +1,65 @@
+<header class="all-info">
+  <div class="header">
+    <div class="back" ui-sref="catalog">Back</div>
+  <div class="title">{{data.rentProgram}} Machines</div>
+  </div>
+  <div class="mind">Rental Program</div>
+  <img ng-src="content/images/machines/{{data.imgUrl}}">
+</header>
+
+<div class="content">
+  <div class="big-elem">
+    <div class="title">{{data.rentProgram}}</div>
+    <div class="info">
+      <span class="every">{{data.everyText}}</span>
+      <span class="price">&#36;{{data.priceDollars}}</span>
+      <span class="ships">{{data.shipsText}}</span>
+    </div>
+    <div class="select-btn">
+      <input type="button" value="select" ui-sref="billing">
+    </div>
+  </div>
+</div>
+
+<div class="program">
+  <div class="wrapper">
+    <span class="title">{{data.programTitle}} Machine Program</span>
+    <div class="step">
+      <div>
+        <div class="img one pull-left"></div>
+        <div class="desc pull-right">{{data.programDesc1}}</div>
+      </div>
+      <div>
+        <div class="img two pull-left"></div>
+        <div class="desc pull-right">{{data.programDesc2}}</div>
+      </div>
+      <div>
+        <div class="img three pull-left"></div>
+        <div class="desc pull-right">{{data.programDesc3}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="big-elem">
+    <div class="description">
+      <p><span>How it works: </span>{{data.howItWorks}}</p>
+      <p ng-if="data.textBlockOne">
+        <span ng-if="data.textBlockOneTitleBool">{{data.textBlockOneTitle}} </span>
+        {{data.textBlockOneDesc}}
+      </p>
+    </div>
+    <div class="division">
+      <div>See our options below</div>
+    </div>
+    <div class="catalog">
+      <div class="pull-left" ng-repeat="m in [1,2,3,4,5,6,7,8]">
+        <div class="img"><img src="http://fakeimg.pl/157x157/fff/393e46/?text=machine" alt=""></div>
+        <div class="model">machine name</div>
+        <div class="refurbished">refurbished status</div>
+        <div class="price">&dollar;?? &#47; month</div>
+      </div>
+    </div>
+  </div>
+</div>

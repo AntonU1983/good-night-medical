@@ -30,23 +30,23 @@
  * Цвета Style Guide
  */
 
-.color-grey-900   {color : #222831;}
-.color-grey-800   {color : #393e46;}
-.color-grey-400   {color : #ddd;}
-.color-grey-300   {color : #f0f0f2;}
+.color-900   {color : #222831;}
+.color-800   {color : #393e46;}
+.color-400   {color : #ddd;}
+.color-300   {color : #f0f0f2;}
 
-.color-blue-900   {color : #22313f;}
-.color-blue-800   {color : #34495e;}
+.color-pri-900   {color : #22313f;}
+.color-pri-800   {color : #34495e;}
 
-.color-blue-500   {color : #579eff;}
-.color-blue-400   {color : #84c7ff;}
-.color-blue-300   {color : #8dc6ff;}
-.color-blue-200   {color : #e4f1fe;}
+.color-pri-500   {color : #579eff;}
+.color-pri-400   {color : #84c7ff;}
+.color-pri-300   {color : #8dc6ff;}
+.color-pri-200   {color : #e4f1fe;}
 
-.color-orange-500 {color : #fe7847;}
-.color-orange-400 {color : #f98b60;}
-.color-orange-300 {color : #ffc057;}
-.color-orange-200 {color : #ffe084;}
+.color-sec-500 {color : #fe7847;}
+.color-sec-400 {color : #f98b60;}
+.color-sec-300 {color : #ffc057;}
+.color-sec-200 {color : #ffe084;}
 
 /*
  * Типография

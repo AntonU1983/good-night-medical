@@ -272,6 +272,7 @@ form .group .switch label input:checked + div > div {
 
 form .group .select {
   height: 34px;
+  overflow: hidden;
   border: 2px solid #ddd;
   border-radius: 3px;
   background: url(../images/form-ctrl/arrow-dowm.png) no-repeat right center/34px 34px;
@@ -279,7 +280,9 @@ form .group .select {
 
 form .group .select select {
   display: block;
-  width: 100%;
+  width: -webkit-calc(100% + 80px);
+  width:    -moz-calc(100% + 80px);
+  width:         calc(100% + 80px);
   height: 100%;
   line-height: 100%;
   padding: 0 10px;

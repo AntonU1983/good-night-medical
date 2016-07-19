@@ -1,6 +1,5 @@
 var billingPageApp = angular.module('billingPageApp', []);
 
-
 billingPageApp.controller('billingPageCtrl', function($scope){
 
   // Сообщения ошибок для Shipping Infromation

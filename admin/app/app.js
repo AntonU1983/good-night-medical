@@ -17,7 +17,6 @@ app.controller('Ctrl', function($scope, $http) {
     'data-help-msg.html',
     'machine.html'];
 
-  
   $http.get('content/data/help-msg.json').success(function(data){$scope.helpMsg = data;});
   $http.get('content/data/machine.json').success(function(data){$scope.machineData = data;});
 

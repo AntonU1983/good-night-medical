@@ -293,7 +293,7 @@
 
 .program {
   padding: 20px 0;
-  background: url(../../images/bg/bg-lp-2.jpg) no-repeat center top;
+  background: url(../../images/bg/bg-2.jpg) no-repeat center top;
   -moz-background-size: cover;
     -o-background-size: cover;
        background-size: cover;}
@@ -325,9 +325,9 @@
   height: 66px;
   background: url() no-repeat center top;}
 
-.program .wrapper .img.one   {background-image: url(../../images/other/step-1.png);}
-.program .wrapper .img.two   {background-image: url(../../images/other/step-2.png);}
-.program .wrapper .img.three {background-image: url(../../images/other/step-3.png);}
+.program .wrapper .img.one   {background-image: url(../../images/other/step-orange-1.png);}
+.program .wrapper .img.two   {background-image: url(../../images/other/step-orange-2.png);}
+.program .wrapper .img.three {background-image: url(../../images/other/step-orange-3.png);}
 
 .program .wrapper .desc {
   font-family: 'Rubik';
@@ -382,25 +382,60 @@
   cursor: default;
   background-color: rgba(0, 0, 0, .1);}
 
-.content .big-elem > .catalog {
-  font-size: 0;
-  text-align: left;}
+.content .big-elem > .catalog > div {
+  position: relative;
+  width: 220px;
+  height: 240px;
+  margin: 0 10px 20px 10px;
+  cursor: pointer;
+  transition: all .0s ease-in-out;
+  border: 0 solid #fff;
+  border-radius: 3px;
+  background-color: #393e46;
+  box-shadow: 0 0 7px rgba(0, 0, 0, .03);}
 
-.content .big-elem > .catalog img {
-  display: inline-block;
-  width: 172px;
-  height: 172px;
-  margin: 10px;
-  padding: 10px;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+.content .big-elem > .catalog > div .img {
+  width: 220px;
+  height: 157px;
+  border: 0 solid #fff;
+  background-color: #fff;
+  -webkit-border-radius: 2px 2px 0 0;
+     -moz-border-radius: 2px 2px 0 0;
+          border-radius: 2px 2px 0 0;}
+
+.content .big-elem > .catalog > div .img img {
+  display: block;
+  overflow: hidden;
+  width: 157px;
+  height: 157px;
+  margin: 0 auto;
   background-color: #fff;}
 
-.content .big-elem > .catalog img:hover {
-  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, .1);
-     -moz-box-shadow: 0 0 25px rgba(0, 0, 0, .1);
-          box-shadow: 0 0 25px rgba(0, 0, 0, .1)}
+.content .big-elem > .catalog > div .model {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  position: absolute;
+  top: 167px;
+  left: 10px;
+  width: 200px;
+  text-align: left;
+  color: #fff;}
+
+.content .big-elem > .catalog > div .refurbished,
+.content .big-elem > .catalog > div .price {
+  font-size: 13px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 10px;}
+
+.content .big-elem > .catalog > div .refurbished {
+  left: 10px;
+  color: #fff;}
+
+.content .big-elem > .catalog > div .price {
+  right: 10px;
+  color: #fe7847;}
 
 /*
  * Billing Page
@@ -615,6 +650,8 @@ div.billing {
 .blue .program .wrapper .img.two   {background-image: url(../../images/other/step-blue-2.png);}
 .blue .program .wrapper .img.three {background-image: url(../../images/other/step-blue-3.png);}
 
+.blue .content .big-elem > .catalog > div .price {color: #579eff;}
+
 .blue .billing form .group.result div span mark {color: #579eff;}
 .blue .billing form .group .validate-msg > div  {background-color: #579eff;}
 
@@ -633,9 +670,11 @@ div.billing {
 .orange .content .big-elem > .select-btn input       {background-color: #fe7847;}
 .orange .content .big-elem > .select-btn input:hover {background-color: #f98b60;}
 
-.orange .program .wrapper .img.one   {background-image: url(../../images/other/step-1.png);}
-.orange .program .wrapper .img.two   {background-image: url(../../images/other/step-2.png);}
-.orange .program .wrapper .img.three {background-image: url(../../images/other/step-3.png);}
+.orange .program .wrapper .img.one   {background-image: url(../../images/other/step-orange-1.png);}
+.orange .program .wrapper .img.two   {background-image: url(../../images/other/step-orange-2.png);}
+.orange .program .wrapper .img.three {background-image: url(../../images/other/step-orange-3.png);}
+
+.orange .content .big-elem > .catalog > div .price {color: #fe7847;}
 
 .orange .billing form .group.result div span mark {color: #fe7847;}
 .orange .billing form .group .validate-msg > div  {background-color: #fe7847;}
