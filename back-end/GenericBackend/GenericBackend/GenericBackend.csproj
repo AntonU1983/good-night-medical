@@ -63,6 +63,14 @@
       <HintPath>..\packages\Autofac.WebApi2.Owin.3.3.0\lib\net45\Autofac.Integration.WebApi.Owin.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="ImageResizer, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ImageResizer.4.0.5\lib\net45\ImageResizer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -154,8 +162,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\Startup.Autofac.cs" />
-    <Compile Include="App_Start\Startup.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Controllers\MachineController.cs" />
@@ -163,7 +172,9 @@
     <Compile Include="Models\Customer\CustomerInsert.cs" />
     <Compile Include="Models\Customer\CustomerRentInsert.cs" />
     <Compile Include="Models\ModelBase.cs" />
+    <Compile Include="Models\RegistrationModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helpers\AuthorizeUserAttribute.cs" />
     <Compile Include="Providers\SimpleAuthorizationServerProvider.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -188,6 +199,14 @@
     <ProjectReference Include="..\GenericBackend.DataModels\GenericBackend.DataModels.csproj">
       <Project>{0EC52F2A-2E47-4DC5-A1F4-F66C924AA7B7}</Project>
       <Name>GenericBackend.DataModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GenericBackend.Identity.Core\GenericBackend.Identity.Core.csproj">
+      <Project>{791B2214-76B4-4332-A150-30891EBF9030}</Project>
+      <Name>GenericBackend.Identity.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GenericBackend.Identity\GenericBackend.Identity.csproj">
+      <Project>{F587A9BD-75C7-4783-B21F-F5075C7E5E78}</Project>
+      <Name>GenericBackend.Identity</Name>
     </ProjectReference>
     <ProjectReference Include="..\GenericBackend.Repository\GenericBackend.Repository.csproj">
       <Project>{7FD7B97D-640C-4BF1-B6DA-61C68988E59F}</Project>

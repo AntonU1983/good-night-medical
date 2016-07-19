@@ -9,15 +9,13 @@ namespace GenericBackend
     {
         public static void Register(HttpConfiguration config)
         {
-
-
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver =
                 new CamelCasePropertyNamesContractResolver();
             config.Formatters.JsonFormatter.UseDataContractJsonSerializer = false;
 
             // Web API configuration and services
             config.SuppressDefaultHostAuthentication();
-
+            config.Filters.Add(new HostAuthenticationFilter("Bearer"));
             // Web API routes
             config.MapHttpAttributeRoutes();
 

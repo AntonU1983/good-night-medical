@@ -34,7 +34,7 @@ namespace GenericBackend.Core.Utils
         /// </summary>
         /// <param name="url">The url to use to get the database from.</param>
         /// <returns>Returns a MongoDatabase from the specified url.</returns>
-        private static IMongoDatabase GetDatabaseFromUrl(MongoUrl url)
+        public static IMongoDatabase GetDatabaseFromUrl(MongoUrl url)
         {
             var client = new MongoClient(url);
             return client.GetDatabase(url.DatabaseName); // WriteConcern defaulted to Acknowledged

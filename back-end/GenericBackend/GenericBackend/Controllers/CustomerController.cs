@@ -1,7 +1,10 @@
 ﻿using System.Threading.Tasks;
+using System.Web;
 using System.Web.Http;
 using GenericBackend.DataModels.GoodNightMedical;
+using GenericBackend.Helpers;
 using GenericBackend.Models.Customer;
+using GenericBackend.Providers;
 using GenericBackend.Repository;
 using GenericBackend.UnitOfWork.GoodNightMedical;
 using MongoDB.Bson;
@@ -24,8 +27,10 @@ namespace GenericBackend.Controllers
 
         [HttpGet]
         [Route("")]
+        [AuthorizeUser(AccessLevel = "qwerty")]
         public async Task<IHttpActionResult> Get()
         {
+            var s = HttpContext.Current.User.Identity;
             var customers = await _customersRepository.Collection.Find(new BsonDocument()).ToListAsync();
 
             return Ok(customers);

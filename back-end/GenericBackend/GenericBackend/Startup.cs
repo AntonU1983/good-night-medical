@@ -14,12 +14,9 @@ namespace GenericBackend
             app.UseCors(CorsOptions.AllowAll);
 
             WebApiConfig.Register(configuration);
+            ConfigureOAuth(app);
             app.UseWebApi(configuration);
             ConfigurateAutofac(configuration, app);
-
-            ConfigureOAuth(app);
-
-            
         }
 	}
 }
