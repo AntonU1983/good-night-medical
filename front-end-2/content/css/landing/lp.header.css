@@ -6,7 +6,7 @@ header {
   width: 100%;
   height: 340px;
   margin-bottom: 60px;
-  background: url(../../images/bg/bg-1.jpg) no-repeat center top;
+  background: url(../../img/bg/bg-1.jpg) no-repeat center top;
   -moz-background-size: cover;
     -o-background-size: cover;
        background-size: cover;}
@@ -102,7 +102,7 @@ header.all-info .header .back {
   cursor: pointer;
   text-transform: uppercase;
   color: #fff;
-  background: url(../../images/other/back.png) no-repeat left center;}
+  background: url(../../img/ctrl/arrow-back.png) no-repeat left center;}
 
 header.all-info .header .title {
   font-family: 'Roboto';
@@ -169,7 +169,7 @@ header.billing .header .back {
   cursor: pointer;
   text-transform: uppercase;
   color: #fff;
-  background: url(../../images/other/back.png) no-repeat left center;
+  background: url(../../img/ctrl/arrow-back.png) no-repeat left center;
   -webkit-transform: translate(0, -50%);
      -moz-transform: translate(0, -50%);
       -ms-transform: translate(0, -50%);
@@ -209,16 +209,18 @@ header.thanks .text {
   text-align: justify;
   text-transform: uppercase;
   color: #fff;
-  background: url(../../images/other/knight-lp-2-4.png) no-repeat left center;}
+  background: url(../../img/theme/orange/knight.png) no-repeat left center;}
 
 /*
  * Blue Style
  */
 
 .blue header .header > nav a:hover {color: #579eff;}
+.blue header.thanks .text {background-image: url(../../img/theme/blue/knight.png);}
 
 /*
  * Orange Style
  */
 
 .orange header .header > nav a:hover {color: #f98b60;}
+.orange header.thanks .text {background-image: url(../../img/theme/orange/knight.png);}

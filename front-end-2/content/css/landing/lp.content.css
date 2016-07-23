@@ -293,7 +293,7 @@
 
 .program {
   padding: 20px 0;
-  background: url(../../images/bg/bg-2.jpg) no-repeat center top;
+  background: url(../../img/bg/bg-2.jpg) no-repeat center top;
   -moz-background-size: cover;
     -o-background-size: cover;
        background-size: cover;}
@@ -325,9 +325,9 @@
   height: 66px;
   background: url() no-repeat center top;}
 
-.program .wrapper .img.one   {background-image: url(../../images/other/step-orange-1.png);}
-.program .wrapper .img.two   {background-image: url(../../images/other/step-orange-2.png);}
-.program .wrapper .img.three {background-image: url(../../images/other/step-orange-3.png);}
+.program .wrapper .img.one   {background-image: url(../../img/theme/orange/step-1.png);}
+.program .wrapper .img.two   {background-image: url(../../img/theme/orange/step-2.png);}
+.program .wrapper .img.three {background-image: url(../../img/theme/orange/step-3.png);}
 
 .program .wrapper .desc {
   font-family: 'Rubik';
@@ -469,9 +469,9 @@ div.billing {
 
 .billing form .group input.card {
   padding-right: 40px;
-  background: url(../../images/form-ctrl/card.png) no-repeat -webkit-calc(100% - 5px) center/30px;
-  background: url(../../images/form-ctrl/card.png) no-repeat -moz-calc(100% - 5px) center/30px;
-  background: url(../../images/form-ctrl/card.png) no-repeat calc(100% - 5px) center/30px;
+  background: url(../../img/other/card.png) no-repeat -webkit-calc(100% - 5px) center/30px;
+  background: url(../../img/other/card.png) no-repeat -moz-calc(100% - 5px) center/30px;
+  background: url(../../img/other/card.png) no-repeat calc(100% - 5px) center/30px;
   background-color: #fff;}
 
 .billing form .group > * {margin-bottom: 10px;}
@@ -646,9 +646,9 @@ div.billing {
 .blue .content .big-elem > .select-btn input       {background-color: #579eff;}
 .blue .content .big-elem > .select-btn input:hover {background-color: #84c7ff;}
 
-.blue .program .wrapper .img.one   {background-image: url(../../images/other/step-blue-1.png);}
-.blue .program .wrapper .img.two   {background-image: url(../../images/other/step-blue-2.png);}
-.blue .program .wrapper .img.three {background-image: url(../../images/other/step-blue-3.png);}
+.blue .program .wrapper .img.one   {background-image: url(../../img/theme/blue/step-1.png);}
+.blue .program .wrapper .img.two   {background-image: url(../../img/theme/blue/step-2.png);}
+.blue .program .wrapper .img.three {background-image: url(../../img/theme/blue/step-3.png);}
 
 .blue .content .big-elem > .catalog > div .price {color: #579eff;}
 
@@ -670,9 +670,9 @@ div.billing {
 .orange .content .big-elem > .select-btn input       {background-color: #fe7847;}
 .orange .content .big-elem > .select-btn input:hover {background-color: #f98b60;}
 
-.orange .program .wrapper .img.one   {background-image: url(../../images/other/step-orange-1.png);}
-.orange .program .wrapper .img.two   {background-image: url(../../images/other/step-orange-2.png);}
-.orange .program .wrapper .img.three {background-image: url(../../images/other/step-orange-3.png);}
+.orange .program .wrapper .img.one   {background-image: url(../../img/theme/orange/step-1.png);}
+.orange .program .wrapper .img.two   {background-image: url(../../img/theme/orange/step-2.png);}
+.orange .program .wrapper .img.three {background-image: url(../../img/theme/orange/step-3.png);}
 
 .orange .content .big-elem > .catalog > div .price {color: #fe7847;}
 

@@ -275,7 +275,7 @@ form .select {
   overflow: hidden;
   border: 2px solid #ddd;
   border-radius: 3px;
-  background: url(../images/form-ctrl/double-arrow.png) no-repeat right center/19px 34px;
+  background: url(../img/ctrl/arrow-select.png) no-repeat right center/19px 34px;
   background-color: #fff;}
 
 form .select select {
@@ -561,139 +561,6 @@ form .group .help {
   text-transform: lowercase;}
 
 /*
- * Double Slider (RZ Slider)
- */
-
-form .group.double-slider {width: 100%;}
-
-form .group.double-slider .title {
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  color: #222831;}
-
-form .group.double-slider .description {height: 20px;}
-
-form .group.double-slider .description div {
-  font-size: 14px;
-  font-weight: 500;
-  color: #222831;}
-
-form .group.double-slider .title,
-form .group.double-slider .description div {
-  cursor: default;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;}
-
-.rzslider,
-.rzslider span,
-.rzslider .rz-base,
-.rzslider .rz-bar-wrapper,
-.rzslider .rz-bar,
-.rzslider .rz-bar.rz-selection,
-.rzslider .rz-pointer,
-.rzslider .rz-pointer:after,
-.rzslider .rz-pointer:hover:after,
-.rzslider .rz-pointer.rz-active,
-.rzslider .rz-pointer.rz-active:after {
-  -webkit-transition: all .0s linear;
-     -moz-transition: all .0s linear;
-       -o-transition: all .0s linear;
-          transition: all .0s linear;}
-
-.rzslider {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  height: 4px;
-  margin-bottom: 10px;
-  vertical-align: middle;
-  border: 0 solid #ddd;
-  border-radius: 0;}
-
-.rzslider span {
-  position: absolute;
-  display: inline-block;
-  white-space: nowrap;}
-
-.rzslider .rz-base {
-  width: 100%;
-  height: 100%;
-  padding: 0;}
-
-.rzslider .rz-bar-wrapper {
-  z-index: 1;
-  left: 0;
-  width: 100%;
-  height: 16px;}
-
-.rzslider .rz-bar {
-  z-index: 1;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  border-radius: 0;
-  background: #ddd;}
-
-.rzslider .rz-bar.rz-selection {
-  z-index: 2;
-  border-radius: 0;
-  background: #fe7847;}
-
-.rzslider .rz-pointer {
-  z-index: 3;
-  top: -0.5em;
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-  border: 0 solid #ddd;
-  border-radius: 8px;
-  outline: none;
-  background-color: #fff;
-  box-shadow: 0 0 7px rgba(0,0,0,.2);}
-
-.rzslider .rz-pointer:after {
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 8px;
-  height: 8px;
-  content: '';
-  border-radius: 4px;
-  background: #fff;}
-
-.rzslider .rz-pointer:hover:after {background-color: #fff;}
-.rzslider .rz-pointer.rz-active {z-index: 4;}
-.rzslider .rz-pointer.rz-active:after {background-color: #fff;}
-
-.rzslider .rz-bar-wrapper.rz-draggable,
-.rzslider .rz-bubble,
-.rzslider .rz-bubble.rz-selection,
-.rzslider .rz-bubble.rz-limit,
-.rzslider.rz-vertical .rz-bubble,
-.rzslider.rz-vertical .rz-bubble.rz-selection,
-.rzslider .rz-ticks,
-.rzslider .rz-ticks .rz-tick,
-.rzslider .rz-ticks .rz-tick.rz-selected,
-.rzslider .rz-ticks .rz-tick .rz-tick-value,
-.rzslider .rz-ticks .rz-tick .rz-tick-legend,
-.rzslider .rz-ticks.rz-ticks-values-under .rz-tick-value,
-.rzslider.rz-vertical,
-.rzslider.rz-vertical .rz-base,
-.rzslider.rz-vertical .rz-bar-wrapper,
-.rzslider.rz-vertical .rz-bar,
-.rzslider.rz-vertical .rz-pointer,
-.rzslider.rz-vertical .rz-ticks,
-.rzslider.rz-vertical .rz-ticks .rz-tick,
-.rzslider.rz-vertical .rz-ticks .rz-tick .rz-tick-value,
-.rzslider.rz-vertical .rz-ticks .rz-tick .rz-tick-legend,
-.rzslider.rz-vertical .rz-ticks.rz-ticks-values-under .rz-tick-value {display: none;}
-
-
-/*
  * Blue Style
  */
 
@@ -766,8 +633,6 @@ form .group.double-slider .description div {
 .blue form .group .grp-file label span:hover {
   border: 0px solid #84c7ff;
   background-color: #84c7ff;}
-
-.blue form .group.double-slider .rzslider .rz-bar.rz-selection {background: #84c7ff;}
 
 /*
  * Orange Style
@@ -842,5 +707,3 @@ form .group.double-slider .description div {
 .orange form .group .grp-file label span:hover {
   border: 0px solid #fe7847;
   background-color: #fe7847;}
-
-.orange form .group.double-slider .rzslider .rz-bar.rz-selection {background: #fe7847;}
