@@ -2,17 +2,8 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 .vscode
-/front-end/.idea
+
 .idea/
+admin/.idea/
+/front-end/.idea
 prepros.cfg
-admin/.idea/workspace.xml
-
-admin/.idea/admin.iml
-
-admin/.idea/admin.iml
-
-admin/.idea/modules.xml
-
-admin/.idea/workspace.xml
-
-admin/.idea/admin.iml
