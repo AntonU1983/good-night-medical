@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-app="app" ng-cloak>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Good Night Medical Rent Program</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700&subset=latin,cyrillic' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Rubik:400,400italic,500,700&subset=latin,cyrillic' rel='stylesheet'>
+
+  <link rel="stylesheet" href="content/css/lib/normalize/normalize.min.css">
+  <link rel="stylesheet" href="content/css/lib/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="content/css/lib/jquery/jquery-ui.min.css">
+
+  <link rel="stylesheet" href="content/css/main.css">
+  <link rel="stylesheet" href="content/css/ui.css">
+  <link rel="stylesheet" href="content/css/modal.css">
+  <link rel="stylesheet" href="content/css/landing/lp.style.css">
+  <link rel="stylesheet" href="content/css/landing/lp.header.css">
+  <link rel="stylesheet" href="content/css/landing/lp.content.css">
+  <link rel="stylesheet" href="content/css/util.css">
+  <!--[if lt IE 9]>
+    <script src="scripts/lib/ie/html5shiv.min.js"></script>
+    <script src="scripts/lib/ie/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="blue" ng-controller="IndexCtrl">
+
+  <div class="darkness" ng-show="modalShowBoolean;">
+    <div class="window">
+      <div class="status ">Let Us Contact You</div>
+
+      <form class="rentForm" autocomplete="off" name="rentForm" novalidate ng-submit="vm.submitRental(rentForm)">
+
+        <div class="group"> <!-- FULL NAME -->
+          <input type="text" name="name" placeholder="Full Name" ng-model="vm.rent.fullName" required>
+        </div>
+
+        <div class="group"> <!-- EMAIL -->
+          <input type="email" name="email" placeholder="Email" ng-model="vm.rent.email" required
+                 ng-pattern="/^[_a-z0-9A-Z]+(\.[_a-z0-9A-Z]+)*@[a-z0-9A-Z-]+(\.[a-z0-9A-Z-]+)*(\.[a-zA-Z]{2,10})$/">
+        </div>
+
+        <div class="group"> <!-- PHONE -->
+          <input type="text" name="phone" placeholder="Phone Number" ng-model="vm.rent.phone" required>
+        </div>
+
+        <hr>
+
+        <div class="group"> <!-- DOCTORS PRESCRIPTION -->
+          <label>Do you have a doctors prescription</label>
+          <div class="modal-radio">
+            <div class="radio-one">
+              <div class="radio pull-left">
+                <label>
+                  <input type="radio" value="Yes" ng-model="vm.rent.prescription" name="docPrescription">
+                  <span><span></span></span>Yes
+                </label>
+              </div>
+              <div class="radio pull-left">
+                <label>
+                  <input type="radio" value="No" ng-model="vm.rent.prescription" name="docPrescription">
+                  <span><span></span></span>No
+                </label>
+              </div>
+              <div class="radio pull-left">
+                <label>
+                  <input type="radio" value="Unsure" ng-model="vm.rent.prescription" name="docPrescription">
+                  <span><span></span></span>Unsure
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="group"> <!-- METHOD OF CONTACT -->
+          <label>Preferred method of contact</label>
+          <div class="modal-radio">
+            <div class="radio-two">
+              <div class="radio pull-left">
+                <label>
+                  <input type="radio" value="Phone" ng-model="vm.rent.contact" name="methodOfContact">
+                  <span><span></span></span>Phone
+                </label>
+              </div>
+              <div class="radio pull-left">
+                <label>
+                  <input type="radio" value="Email" ng-model="vm.rent.contact" name="methodOfContact">
+                  <span><span></span></span>Email
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="group"> <!-- MESSAGE -->
+          <textarea placeholder="Comments" ng-model="vm.rent.comments"></textarea>
+        </div>
+
+        <div class="group grp-buttons"> <!-- BUTTONS -->
+          <input class="left" type="button" value="Close" ng-click="modalShow();">
+          <input class="right" type="submit" value="Send">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+  <div ui-view></div>
+
+  <script src="scripts/lib/jquery/jquery.min.js"></script>
+  <script src="scripts/lib/jquery/jquery-ui.min.js"></script>
+  <script src="scripts/lib/bootstrap/bootstrap.min.js"></script>
+  <script src="scripts/lib/angular/angular.min.js"></script>
+  <script src="scripts/lib/angular/angular-ui-router.min.js"></script>
+
+  <script src="app/app.js"></script>
+  <script src="app/route.js"></script>
+  <script src="app/controllers/index.js"></script>
+  <script src="app/controllers/catalog.js"></script>
+  <script src="app/controllers/machine.js"></script>
+  <script src="app/controllers/billing.js"></script>
+  <script src="app/controllers/thanks.js"></script>
+
+  <script src="scripts/script.js"></script>
+  <script src="scripts/select.js"></script>
+</html>
