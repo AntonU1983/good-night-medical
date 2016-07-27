@@ -1,4 +1,4 @@
-<div ng-controller="CatalogCtrl">
+<div ng-controller="catalog">
 
   <header class="catalog">
     <div class="header">
@@ -8,7 +8,7 @@
     <div class="mind">Rental Program</div>
 
     <div class="preview">
-      <img ng-repeat="data in content" ng-src="content/img/machines/{{data.imgUrl}}">
+      <img ng-repeat="data in content" ng-src="content/img/machines/{{data.imageUrl}}">
     </div>
   </header>
 
@@ -17,9 +17,9 @@
       <div class="title">{{data.title}}</div>
 
       <div class="info">
-        <span class="every">{{data.everyW1}}<br>{{data.everyW2}}</span>
+        <span class="every">monthly<br>price</span>
         <span class="price">&dollar;{{data.price}}</span>
-        <span class="ships">{{data.shipsW1}}<br>{{data.shipsW2}}</span>
+        <span class="ships">{{data.ships}}</span>
       </div>
 
       <div class="select-btn">
@@ -30,10 +30,10 @@
 
       <hr>
       <ul>
-        <li ng-repeat-start="list in data.list">{{list}}</li>
+        <li ng-repeat-start="list in data.features">{{list}}</li>
         <hr ng-repeat-end>
       </ul>
 
-      <a ui-sref="{{data.uiSref}}" class="more">Learn More</a>
+      <a ui-sref="machine.type({type:data.type})" class="more">Learn More</a>
     </div>
 </div>

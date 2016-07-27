@@ -169,8 +169,10 @@
     <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Controllers\MachineController.cs" />
     <Compile Include="Images\ImageMultipartFormDataStreamProvider.cs" />
+    <Compile Include="Models\CatalogModel.cs" />
     <Compile Include="Models\Customer\CustomerInsert.cs" />
     <Compile Include="Models\Customer\CustomerRentInsert.cs" />
+    <Compile Include="Models\MachineProgramModel.cs" />
     <Compile Include="Models\ModelBase.cs" />
     <Compile Include="Models\RegistrationModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

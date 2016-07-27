@@ -11,6 +11,7 @@ namespace GenericBackend.UnitOfWork.GoodNightMedical
         private IMongoRepository<MachineOrder> _machineOrders;
         private IMongoRepository<Customer> _customers; 
         private IMongoRepository<FullRentCustomer> _fullRentCustomers; 
+        private IMongoRepository<RentProgram> _rentPrograms; 
 
         public IMongoRepository<Machine> Machines => _machines ?? (_machines = new MachineRepository());
 
@@ -20,5 +21,6 @@ namespace GenericBackend.UnitOfWork.GoodNightMedical
 
         public IMongoRepository<Customer> Customers => _customers ?? (_customers = new CustomerRepository());
         public IMongoRepository<FullRentCustomer> FullRentCustomers => _fullRentCustomers ?? (_fullRentCustomers = new FullRentCustomerRepository());
+        public IMongoRepository<RentProgram> RentPrograms => _rentPrograms ?? (_rentPrograms = new RentProgramRepository());
     }
 }

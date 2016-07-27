@@ -14,6 +14,7 @@ namespace GenericBackend.DataModels.GoodNightMedical
         public string ImageUrl { get; set; }
         public decimal PricePerMonth { get; set; }
         public bool Refurbished { get; set; }
+        public ProgramType Type { get; set; }
         public Company Company { get; set; }
 
     }

@@ -66,6 +66,7 @@
     <Compile Include="GoodNightMedical\MachineOrderRepository.cs" />
     <Compile Include="GoodNightMedical\MachineRepository.cs" />
     <Compile Include="GoodNightMedical\RentOptionRepository.cs" />
+    <Compile Include="GoodNightMedical\RentProgramRepository.cs" />
     <Compile Include="IMongoRepository.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="MongoRepository.cs" />

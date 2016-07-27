@@ -2,12 +2,13 @@ var app = angular.module('app');
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
-  $urlRouterProvider.otherwise("/catalog")
+  $urlRouterProvider.otherwise("/catalog");
 
   $stateProvider
     .state('catalog', {
       url: '/catalog',
       templateUrl: 'app/views/catalog.html',
+      controller: 'catalog',
       onEnter: function() {window.scrollTo(0,0);}
     })
     .state('machine', {
@@ -15,26 +16,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: 'app/views/machine.html',
       onEnter: function() {window.scrollTo(0,0);}
     })
-      .state('machine.refCpap', {
-        url: '-refurbished-cpap',
-        templateUrl: 'app/views/machine-data.html',
-        controller: function($scope) {$scope.data = $scope.refCpap;}
-      })
-      .state('machine.newCpap', {
-        url: '-new-cpap',
-        templateUrl: 'app/views/machine-data.html',
-        controller: function($scope) {$scope.data = $scope.newCpap;}
-      })
-      // .state('machine.refBipap', {
-      //   url: '-refurbished-bipap',
-      //   templateUrl: 'app/views/machine-data.html',
-      //   controller: function($scope) {}
-      // })
-      .state('machine.newBipap', {
-        url: '-new-bipap',
-        templateUrl: 'app/views/machine-data.html',
-        controller: function($scope) {$scope.data = $scope.newBipap;}
-      })
+    .state("machine.type", {
+      url: '/:type',
+      templateUrl: 'app/views/machine-data.html',
+      controller: "machine",
+      onEnter: function() {window.scrollTo(0,0);}
+    })
     // .state('billing', {
     //   url: '/billing',
     //   templateUrl: 'app/views/billing.html',

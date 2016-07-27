@@ -54,7 +54,7 @@
   color: #bbb;}
 
 .content .elem > .info .every {left: 20px;}
-.content .elem > .info .ships {right: 20px;}
+.content .elem > .info .ships {right: 20px; width: 30px;}
 .content .elem > .info .price {
   font-size: 24px;
   line-height: 28px;
