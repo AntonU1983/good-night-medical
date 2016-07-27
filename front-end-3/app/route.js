@@ -16,7 +16,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         onEnter: function() {window.scrollTo(0,0);}
       })
       .state('main.form', {
-        url: 'form',
+        url: '-form',
         templateUrl: 'app/views/form.html',
         onEnter: function() {window.scrollTo(0,0);}
       })

@@ -32,7 +32,7 @@ form hr {
 form .group input[type='text'],
 form .group input[type='date'],
 form .group input[type='email'],
-form .group input[type='phone'],
+form .group input[type='number'],
 form .group input[type='search'],
 form .group input[type='password'] {
   display: block;
@@ -50,8 +50,8 @@ form .group input[type='date']:hover,
 form .group input[type='date']:focus,
 form .group input[type='email']:hover,
 form .group input[type='email']:focus,
-form .group input[type='phone']:hover,
-form .group input[type='phone']:focus,
+form .group input[type='number']:hover,
+form .group input[type='number']:focus,
 form .group input[type='search']:hover,
 form .group input[type='search']:focus,
 form .group input[type='password']:hover,
@@ -65,10 +65,10 @@ form .group input[type='email']:focus::-webkit-input-placeholder     {color: tra
 form .group input[type='email']:focus::-moz-placeholder              {color: transparent}
 form .group input[type='email']:focus:-moz-placeholder               {color: transparent}
 form .group input[type='email']:focus:-ms-input-placeholder          {color: transparent}
-form .group input[type='phone']:focus::-webkit-input-placeholder     {color: transparent}
-form .group input[type='phone']:focus::-moz-placeholder              {color: transparent}
-form .group input[type='phone']:focus:-moz-placeholder               {color: transparent}
-form .group input[type='phone']:focus:-ms-input-placeholder          {color: transparent}
+form .group input[type='number']:focus::-webkit-input-placeholder     {color: transparent}
+form .group input[type='number']:focus::-moz-placeholder              {color: transparent}
+form .group input[type='number']:focus:-moz-placeholder               {color: transparent}
+form .group input[type='number']:focus:-ms-input-placeholder          {color: transparent}
 form .group input[type='search']:focus::-webkit-input-placeholder   {color: transparent}
 form .group input[type='search']:focus::-moz-placeholder            {color: transparent}
 form .group input[type='search']:focus:-moz-placeholder             {color: transparent}
@@ -275,7 +275,7 @@ form .select {
   overflow: hidden;
   border: 2px solid #ddd;
   border-radius: 3px;
-  background: url(../img/ctrl/arrow-select.png) no-repeat right center/19px 34px;
+  background: url(../img/ui/arrow-select.png) no-repeat right center/19px 34px;
   background-color: #fff;}
 
 form .select select {

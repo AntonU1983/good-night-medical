@@ -2,20 +2,35 @@
 
   <div class="offer">
     <div class="wrapper">
-      <div class="title">
-        <span class="title1">{{title1}}</span>
-        <span> - </span>
-        <span class="title2">{{title2}}</span>
-      </div>
+      <div class="title">{{offerTitle}}</div>
       <div class="description">
-        <img class="pull-left" src="../../content/img/other/box.png" alt="">
-        <div class="text pull-right">
-          <span class="line1">{{text1}}<br>{{text2}}</span>
-          <span class="line2">{{text3}}</span>
-          <div class="btn">sign up</div>
+        <img src="../../content/img/other/box.png" alt="">
+        <div>
+          <span class="line1">{{offerLine1}}</span>
+          <span class="line2">{{offerLine2}}</span>
+          <span class="line3">{{offerLine3}}</span>
+          <a href="" ui-sref="main.form">sign up</a>
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="in-box">
+    <div class="wrapper">
+      <div class="title">{{inBoxTitle}}</div>
+      <span class="msg1">{{inBoxMsg1}}</span>
+      <span class="msg2">{{inBoxMsg2}}</span>
+      <span class="msg3">
+        {{inBoxListTitle1}}<br>{{inBoxListTitle2}}
+        <ul>
+          <li ng-repeat="data in inBoxListData">{{data}}</li>
+        </ul>
+      </span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="test-link">{{testText1}}<br><a href="">{{testLink}}</a>&nbsp;{{testText2}}</span>
   </div>
 
 </div>

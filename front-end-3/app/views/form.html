@@ -1,0 +1,99 @@
+<div class="content" ng-controller="FormCtrl">
+
+  <form name="form" novalidate ng-submit="submitData();">
+
+    <div class="group">
+      <input type="text" placeholder="Full Name"
+             name="fullName"
+             ng-model="fullName"
+             ng-class="returnClass(form.fullName.$touched, form.fullName.$invalid, 'error');" required>
+    </div>
+
+    <div class="group">
+      <input type="text" placeholder="Last Name"
+             name="lastName"
+             ng-model="lastMame"
+             ng-class="returnClass(form.lastName.$touched, form.lastName.$invalid, 'error');" required>
+    </div>
+
+    <div class="group">
+      <input type="email" placeholder="Email Address"
+             name="emailAddress"
+             ng-model="emailAddress"
+             ng-class="returnClass(form.emailAddress.$touched, form.emailAddress.$invalid, 'error');" required>
+    </div>
+
+    <div class="group">
+      <input type="text" placeholder="Phone Number"
+             name="phoneNumber"
+             ng-model="phoneNumber"
+             ng-class="returnClass(form.phoneNumber.$touched, form.phoneNumber.$invalid, 'error');" required>
+    </div>
+
+    <div class="group date-of-birth">
+      <div class="select" ng-class="returnClass(form.monthSelect.$touched, form.monthSelect.$invalid, 'error');">
+        <select name="monthSelect" ng-model="monthSelect" required>
+          <option value="">Month</option>
+          <option ng-repeat="month in months">{{month}}</option>
+        </select>
+      </div>
+      <div class="select" ng-class="returnClass(form.daySelect.$touched, form.daySelect.$invalid, 'error');">
+        <select name="daySelect" ng-model="daySelect" required>
+          <option value="">Day</option>
+          <option ng-repeat="day in days">{{day}}</option>
+        </select>
+      </div>
+      <div class="select" ng-class="returnClass(form.yearSelect.$touched, form.yearSelect.$invalid, 'error');">
+        <select name="yearSelect" ng-model="yearSelect" required>
+          <option value="">Year</option>
+          <option ng-repeat="year in years">{{year}}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="group current-patient">
+      <label>Are you a current patient?</label>
+      <div class="radio">
+        <label>
+          <input type="radio" checked
+                 name="currentPatient"
+                 ng-model="currentPatient1">
+          <span><span></span></span>Yes
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio"
+                 name="currentPatient"
+                 ng-model="currentPatient2">
+          <span><span></span></span>No
+        </label>
+      </div>
+    </div>
+
+    <div class="group">
+      <input type="text" placeholder="Offer Code (optional)"
+             name="offerCode"
+             ng-model="offerCode">
+    </div>
+
+    <div class="group">
+      <div class="validate-msg" ng-if="dataErrorMsg();">
+        <div ng-if="showErrorMsg(form.fullName.$touched, form.fullName.$invalid);">{{errorMsg.FullName}}</div>
+        <div ng-if="showErrorMsg(form.lastName.$touched, form.lastName.$invalid);">{{errorMsg.LastName}}</div>
+        <div ng-if="showErrorMsg(form.emailAddress.$touched, form.emailAddress.$invalid);">{{errorMsg.EmailAddress}}</div>
+        <div ng-if="showErrorMsg(form.PhoneNumber.$touched, form.PhoneNumber.$invalid);">{{errorMsg.PhoneNumber}}</div>
+        <div ng-if="showErrorMsg(form.monthSelect.$touched, form.monthSelect.$invalid);">{{errorMsg.Month}}</div>
+        <div ng-if="showErrorMsg(form.daySelect.$touched, form.daySelect.$invalid);">{{errorMsg.Day}}</div>
+        <div ng-if="showErrorMsg(form.yearSelect.$touched, form.yearSelect.$invalid);">{{errorMsg.Year}}</div>
+        <div ng-if="showErrorMsg(form.offerCode.$touched, form.offerCode.$invalid);">{{errorMsg.OfferCode}}</div>
+      </div>
+    </div>
+
+    <div class="group btn-submit">
+      <input type="submit" value="Submit">
+    </div>
+
+  </form>
+
+</div>

@@ -5,11 +5,11 @@
   angular.module('app').controller(controllerId, ['$scope', formsController]);
 
   function formsController($scope) {
-    $scope.phoneNumber = phoneNumber;
+    $scope.ourPhoneNumber = ourPhoneNumber;
     $scope.links = links;
   }
 
-  var phoneNumber = '877-753-3742';
+  var ourPhoneNumber = '877-753-3742';
   var links = [{
     text: 'home',
     uiSref: ''
