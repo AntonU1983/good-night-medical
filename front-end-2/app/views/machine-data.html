@@ -8,7 +8,7 @@
 
     <div class="mind">Rental Program</div>
 
-    <img ng-src="content/img/machines/{{data.program.imageUrl}}">
+    <img ng-src="{{data.program.imageUrl}}">
   </header>
 
   <div class="content">
@@ -64,8 +64,8 @@
       </div>
 
       <div class="catalog">
-        <div class="pull-left" ng-repeat="m in data.machines">
-          <div class="img"><img ng-src="content/img/machines/{{m.imageUrl}}"></div>
+        <div class="pull-left" ng-repeat="m in data.machines" ng-click="modalShow(m.name);">
+          <div class="img"><img ng-src="{{m.imageUrl}}"></div>
           <div class="model">{{m.name}}</div>
           <div class="refurbished">refurbished status</div>
           <div class="price">&dollar;{{m.pricePerMonth}} &#47; month</div>

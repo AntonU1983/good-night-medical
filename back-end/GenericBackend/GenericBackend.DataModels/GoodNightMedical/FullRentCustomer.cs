@@ -10,7 +10,7 @@ namespace GenericBackend.DataModels.GoodNightMedical
         public ContactMethod ContactMethod { get; set; }
         public DoctorPrescription DoctorPrescription { get; set; }
         public string Comments { get; set; }
-        public string MachineId { get; set; }
+        public string Program { get; set; }
         public bool New { get; set; } = true;
     }
 }

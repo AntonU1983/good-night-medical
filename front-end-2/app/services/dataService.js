@@ -16,7 +16,8 @@ function dataService($http) {
         postRent: postRent,
         setReadContact: setReadContact,
         getRents: getRents,
-        setReadRent: setReadRent
+        setReadRent: setReadRent,
+        submitRent: submitRent
     };
 
     return service;
@@ -43,19 +44,22 @@ function dataService($http) {
         var subUrl = 'api/Machines/rents';
         return $http.get(urlBase + subUrl);
     }
-
+    function submitRent(data){
+        var subUrl = 'api/customer/rent';
+        return $http.post(urlBase + subUrl, data);
+    }
     function setReadRent(id) {
-        var subUrl = 'api/customer/seen/'
+        var subUrl = 'api/customer/seen/';
         return $http.get(urlBase + subUrl + id);
     }
 
     function getContacts() {
-        var subUrl = 'api/customer/'
+        var subUrl = 'api/customer/';
         return $http.get(urlBase + subUrl);
     }
 
     function setReadContact(id) {
-        var subUrl = 'api/customer/seen/'
+        var subUrl = 'api/customer/seen/';
         return $http.get(urlBase + subUrl + id);
     }
 

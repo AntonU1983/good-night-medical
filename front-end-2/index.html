@@ -33,19 +33,19 @@
     <div class="window">
       <div class="status ">Let Us Contact You</div>
 
-      <form class="rentForm" autocomplete="off" name="rentForm" novalidate ng-submit="vm.submitRental(rentForm)">
+      <form class="rentForm" autocomplete="off" name="rentalForm" novalidate ng-submit="sendData(rentalForm)">
 
         <div class="group"> <!-- FULL NAME -->
-          <input type="text" name="name" placeholder="Full Name" ng-model="vm.rent.fullName" required>
+          <input type="text" name="name" placeholder="Full Name" ng-model="rent.fullName" required>
         </div>
 
         <div class="group"> <!-- EMAIL -->
-          <input type="email" name="email" placeholder="Email" ng-model="vm.rent.email" required
+          <input type="email" name="email" placeholder="Email" ng-model="rent.email" required
                  ng-pattern="/^[_a-z0-9A-Z]+(\.[_a-z0-9A-Z]+)*@[a-z0-9A-Z-]+(\.[a-z0-9A-Z-]+)*(\.[a-zA-Z]{2,10})$/">
         </div>
 
         <div class="group"> <!-- PHONE -->
-          <input type="text" name="phone" placeholder="Phone Number" ng-model="vm.rent.phone" required>
+          <input type="text" name="phone" placeholder="Phone Number" ng-model="rent.phone" required>
         </div>
 
         <hr>
@@ -56,19 +56,19 @@
             <div class="radio-one">
               <div class="radio pull-left">
                 <label>
-                  <input type="radio" value="Yes" ng-model="vm.rent.prescription" name="docPrescription">
+                  <input type="radio" value="Yes" ng-model="rent.prescription" name="docPrescription">
                   <span><span></span></span>Yes
                 </label>
               </div>
               <div class="radio pull-left">
                 <label>
-                  <input type="radio" value="No" ng-model="vm.rent.prescription" name="docPrescription">
+                  <input type="radio" value="No" ng-model="rent.prescription" name="docPrescription">
                   <span><span></span></span>No
                 </label>
               </div>
               <div class="radio pull-left">
                 <label>
-                  <input type="radio" value="Unsure" ng-model="vm.rent.prescription" name="docPrescription">
+                  <input type="radio" value="Unsure" ng-model="rent.prescription" name="docPrescription">
                   <span><span></span></span>Unsure
                 </label>
               </div>
@@ -84,13 +84,13 @@
             <div class="radio-two">
               <div class="radio pull-left">
                 <label>
-                  <input type="radio" value="Phone" ng-model="vm.rent.contact" name="methodOfContact">
+                  <input type="radio" value="Phone" ng-model="rent.contact" name="methodOfContact">
                   <span><span></span></span>Phone
                 </label>
               </div>
               <div class="radio pull-left">
                 <label>
-                  <input type="radio" value="Email" ng-model="vm.rent.contact" name="methodOfContact">
+                  <input type="radio" value="Email" ng-model="rent.contact" name="methodOfContact">
                   <span><span></span></span>Email
                 </label>
               </div>
@@ -101,7 +101,7 @@
         <hr>
 
         <div class="group"> <!-- MESSAGE -->
-          <textarea placeholder="Comments" ng-model="vm.rent.comments"></textarea>
+          <textarea placeholder="Comments" ng-model="rent.comments"></textarea>
         </div>
 
         <div class="group grp-buttons"> <!-- BUTTONS -->

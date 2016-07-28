@@ -1,10 +1,10 @@
-﻿using System.Threading.Tasks;
-using System.Web;
+﻿using System.Configuration;
+using System.Threading.Tasks;
 using System.Web.Http;
 using GenericBackend.DataModels.GoodNightMedical;
-using GenericBackend.Helpers;
 using GenericBackend.Models.Customer;
-using GenericBackend.Providers;
+using GenericBackend.Notifications;
+using GenericBackend.Notifications.Template;
 using GenericBackend.Repository;
 using GenericBackend.UnitOfWork.GoodNightMedical;
 using MongoDB.Bson;
@@ -27,10 +27,8 @@ namespace GenericBackend.Controllers
 
         [HttpGet]
         [Route("")]
-        [AuthorizeUser(AccessLevel = "qwerty")]
         public async Task<IHttpActionResult> Get()
         {
-            var s = HttpContext.Current.User.Identity;
             var customers = await _customersRepository.Collection.Find(new BsonDocument()).ToListAsync();
 
             return Ok(customers);
@@ -87,8 +85,23 @@ namespace GenericBackend.Controllers
                 Comments = customerRent.Comments,
                 ContactMethod = customerRent.Contact,
                 DoctorPrescription = customerRent.Prescription,
-                MachineId = customerRent.MachineId
+                Program = customerRent.Program
             });
+
+            var model = new EmailModel
+            {
+                Subject = string.Format(EmailTemplates.RentProgramSubject, customerRent.FullName, customerRent.Program),
+                Body =
+                    string.Format(EmailTemplates.RentProgramBody, customerRent.Program, customerRent.Email,
+                        customerRent.FullName, customerRent.Phone, customerRent.Prescription, customerRent.Contact,
+                        customerRent.Comments),
+                To = ConfigurationManager.AppSettings["RecipientEmail"]
+            };
+
+            var emailSender = new EmailSender();
+
+            emailSender.Initialize();
+            emailSender.SendMessage(model);
 
             return Ok();
         }

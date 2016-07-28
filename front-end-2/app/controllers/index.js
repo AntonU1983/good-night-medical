@@ -2,22 +2,54 @@
   'use strict';
 
   var controllerId = 'IndexCtrl';
-  angular.module('app').controller(controllerId, ['$scope', formsController]);
+  angular.module('app').controller(controllerId, ['$scope', 'dataService', formsController]);
 
-  function formsController($scope) {
+  function formsController($scope, dataService) {
     $scope.modalShowBoolean = false;
-
-    $scope.modalShow = function() {
-      if ($scope.modalShowBoolean) {$scope.modalShowBoolean = false;}
-      else                         {$scope.modalShowBoolean = true;}
+    $scope.rentalForm = {};
+    $scope.rent = {
+      fullName: '',
+      email: '',
+      phone: '',
+      prescription: 'Unsure',
+      contact: 'Email',
+      program: '',
+      comments: ''
+    };
+    
+    $scope.modalShow = function(programName) {
+      if ($scope.modalShowBoolean){
+        $scope.modalShowBoolean = false;
+        clearForm($scope.rentalForm);
+      } else {
+        $scope.modalShowBoolean = true;
+        $scope.rent.program = programName;
+      }
     };
 
     $scope.sendData = function(form) {
       if (form.$valid) {
-        // go thanks state
+        dataService.submitRent($scope.rent).success(function (){
+          $scope.modalShowBoolean = false;
+          clearForm(form);
+        })
       }
       else {
         // error, forn invalid
+      }
+    };
+
+    function clearForm(form){
+      form.$setPristine();
+
+      $scope.rent = {
+        fullName: '',
+        email: '',
+        phone: '',
+        prescription: "No",
+        contact: "Email",
+        comments: '',
+        program: ''
       }
     }
   }

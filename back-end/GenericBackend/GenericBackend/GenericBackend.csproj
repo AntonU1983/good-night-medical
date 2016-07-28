@@ -210,6 +210,10 @@
       <Project>{F587A9BD-75C7-4783-B21F-F5075C7E5E78}</Project>
       <Name>GenericBackend.Identity</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GenericBackend.Notifications\GenericBackend.Notifications.csproj">
+      <Project>{9a3bdb12-d2d6-4f75-8b47-54e1a83d46fe}</Project>
+      <Name>GenericBackend.Notifications</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GenericBackend.Repository\GenericBackend.Repository.csproj">
       <Project>{7FD7B97D-640C-4BF1-B6DA-61C68988E59F}</Project>
       <Name>GenericBackend.Repository</Name>
