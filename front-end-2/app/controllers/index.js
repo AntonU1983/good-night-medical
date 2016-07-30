@@ -16,7 +16,7 @@
       program: '',
       comments: ''
     };
-    
+
     $scope.modalShow = function(programName) {
       if ($scope.modalShowBoolean){
         $scope.modalShowBoolean = false;

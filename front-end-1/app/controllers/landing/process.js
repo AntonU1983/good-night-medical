@@ -11,7 +11,7 @@
   var content = {
     Title: "Three Simple Steps to a Better Sleeping You",
     Step1: {
-      Title: "Enter your email below",
+      Title: "Enter your email above",
       Description: "We will we send you a PDF-form to your email or ask for a Home Sleep Test Order form to be mailed to you"
     },
     Step2: {
