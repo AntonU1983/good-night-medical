@@ -7,3 +7,5 @@
 admin/.idea/
 /front-end/.idea
 prepros.cfg
+/TeamCitySolution/*
+!/TeamcitySolution/TeamCitySolution.sln
