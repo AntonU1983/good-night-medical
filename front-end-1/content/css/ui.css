@@ -645,7 +645,7 @@ form .group.double-slider .description div {
 
 .rzslider .rz-pointer {
   z-index: 3;
-  top: -0.5em;
+  top: -6px;
   width: 16px;
   height: 16px;
   cursor: pointer;

@@ -83,28 +83,6 @@
 
         <hr>
 
-        <div class="group"> <!-- METHOD OF CONTACT -->
-          <label>Preferred method of contact</label>
-          <div class="modal-radio">
-            <div class="radio-two">
-              <div class="radio pull-left">
-                <label>
-                  <input type="radio" value="Phone" ng-model="vm.rent.contact" name="methodOfContact">
-                  <span><span></span></span>Phone
-                </label>
-              </div>
-              <div class="radio pull-left">
-                <label>
-                  <input type="radio" value="Email" ng-model="vm.rent.contact" name="methodOfContact">
-                  <span><span></span></span>Email
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <hr>
-
         <div class="group"> <!-- MESSAGE -->
           <textarea placeholder="Comments" ng-model="vm.rent.comments"></textarea>
         </div>
@@ -121,20 +99,25 @@
 
   <div class="home" name="home" ng-style="vm.returnHeight();">
     <header>
-      <div class="logotype pull-left"><img src="content/images/logotype.png" alt=""></div>
-      <nav class="pull-right">
-        <a href="#home">home</a>
-        <span></span>
-        <a href="#reasons">reasons</a>
-        <span></span>
-        <a href="#process">process</a>
-        <span></span>
-        <a href="#benefits">benefits</a>
-        <span></span>
-        <a href="#rent">rent</a>
-        <span></span>
-        <a href="#accredition">accredition</a>
-      </nav>
+        <img class="logotype pull-left" src="content/images/logotype.png" alt="">
+        <span class="number pull-left">877-753-3742</span>
+        <nav class="pull-right">
+          <a href="" ui-sref="link.uiSref">home</a>
+          <div class="separate"></div>
+          <a href="" ui-sref="link.uiSref">about us</a>
+          <div class="separate"></div>
+          <a href="" ui-sref="link.uiSref">buy</a>
+          <div class="separate"></div>
+          <a href="" ui-sref="link.uiSref">rent</a>
+          <div class="separate"></div>
+          <a href="" ui-sref="link.uiSref">auto re-supply</a>
+          <div class="separate"></div>
+          <a href="" ui-sref="link.uiSref">home sleep</a>
+          <div class="separate"></div>
+          <a href="" ui-sref="link.uiSref">billing</a>
+          <div class="separate"></div>
+          <a href="" ui-sref="link.uiSref">faq</a>
+        </nav>
     </header>
     <div ng-include="'app/views/mind.html'"></div>
   </div>

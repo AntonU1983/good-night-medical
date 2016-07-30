@@ -1,10 +1,23 @@
 * {color: #5f6468;}
 
-body {background-color: #eee;}
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  margin-bottom: 268px !important;
+  background-color: #eee;}
 
 .mainbody {
+  font-size: 0;
   width: 920px;
   margin: 20px auto;}
+
+.mainbody > * {
+  vertical-align: top;
+  display: inline-block;
+}
 
 aside {
   width: 200px;
@@ -18,4 +31,6 @@ aside {
      -moz-box-shadow: 0 0 7px rgba(0, 0, 0, .03);
           box-shadow: 0 0 7px rgba(0, 0, 0, .03);}
 
-.content {width: 700px;}
+.content {
+  margin-left: 20px;
+  width: 700px;}

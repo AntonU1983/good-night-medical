@@ -10,36 +10,46 @@
        background-size: cover;}
 
 header {
-  display: block;
   width: 960px;
   height: 90px;
-  margin: 0 auto;
-  padding: 10px 0;}
+  margin: 0 auto;}
 
-header > .logotype {
+header .logotype {
   width: 123px;
   height: 70px;
+  margin: 10px 0;
   text-align: center;}
 
-header > nav a {
+header .number {
   font-size: 12px;
   font-weight: 500;
-  line-height: 70px;
+  line-height: 90px;
+  margin-left: 80px;
   text-transform: uppercase;
   color: #fff;}
 
-header > nav a:hover {color: #84c7ff;}
+header nav a {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 90px;
+  text-transform: uppercase;
+  color: #fff;}
 
-header > nav span {
+header nav a:hover {color: #579eff;}
+
+header nav .separate {
   display: inline-block;
   width: 4px;
   height: 4px;
   margin: 2px 10px;
+  cursor: default;
   opacity: .5;
   background-color: #fff;
   -webkit-border-radius: 2px;
      -moz-border-radius: 2px;
           border-radius: 2px;}
+
+header nav .separate:last-child {display: none;}
 
 .home .mind {
   position: absolute;
