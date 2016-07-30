@@ -53,6 +53,7 @@
     <Compile Include="GoodNightMedical\Customer.cs" />
     <Compile Include="GoodNightMedical\DoctorPrescription.cs" />
     <Compile Include="GoodNightMedical\FullRentCustomer.cs" />
+    <Compile Include="GoodNightMedical\InternalEmails.cs" />
     <Compile Include="GoodNightMedical\Machine.cs" />
     <Compile Include="GoodNightMedical\MachineOrder.cs" />
     <Compile Include="GoodNightMedical\RentOption.cs" />
