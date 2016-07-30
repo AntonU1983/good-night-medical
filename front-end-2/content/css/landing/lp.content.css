@@ -124,6 +124,7 @@
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 0;
+  height: 100px;
   text-align: center;
   color: #aaa;}
 
@@ -631,6 +632,24 @@ div.billing {
   height: 20px;
   margin: 5px auto;}
 
+.content.thanks input[type="button"] {
+  font-weight: 600;
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  background-color: #fe7847;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;}
+
+.content.thanks input[type="button"]:hover {background-color: #f98b60;}
+
 /*
  * Blue Style
  */
@@ -654,6 +673,9 @@ div.billing {
 
 .blue .billing form .group.result div span mark {color: #579eff;}
 .blue .billing form .group .validate-msg > div  {background-color: #579eff;}
+
+.blue .content.thanks input[type="button"]       {background-color: #579eff;}
+.blue .content.thanks input[type="button"]:hover {background-color: #84c7ff;}
 
 /*
  * Orange Style
@@ -679,3 +701,5 @@ div.billing {
 .orange .billing form .group.result div span mark {color: #fe7847;}
 .orange .billing form .group .validate-msg > div  {background-color: #fe7847;}
 
+.orange .content.thanks input[type="button"]       {background-color: #fe7847;}
+.orange .content.thanks input[type="button"]:hover {background-color: #f98b60;}
