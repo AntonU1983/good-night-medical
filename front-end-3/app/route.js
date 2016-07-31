@@ -25,5 +25,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
         templateUrl: 'app/views/sleep-test.html',
         onEnter: function() {window.scrollTo(0,0);}
       })
+      .state('main.travelCpap', {
+        url: '-travel-cpap',
+        templateUrl: 'app/views/travel-cpap.html',
+        onEnter: function() {window.scrollTo(0,0);}
+      })
 
 });
