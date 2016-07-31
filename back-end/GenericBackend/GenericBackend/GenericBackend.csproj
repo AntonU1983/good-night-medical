@@ -63,6 +63,10 @@
       <HintPath>..\packages\Autofac.WebApi2.Owin.3.3.0\lib\net45\Autofac.Integration.WebApi.Owin.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="AutoMapper, Version=4.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.1.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="ImageResizer, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ImageResizer.4.0.5\lib\net45\ImageResizer.dll</HintPath>
       <Private>True</Private>
@@ -164,10 +168,23 @@
     <Compile Include="App_Start\Startup.Autofac.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Admin\Controllers\HelpAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MachineAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\RentAdminController.cs" />
+    <Compile Include="Areas\Admin\Models\Machine\MachineAdminCreateModel.cs" />
+    <Compile Include="Areas\Admin\Models\Machine\MachineAdminDetailsModel.cs" />
+    <Compile Include="Areas\Admin\Models\Machine\MachineAdminPreviewModel.cs" />
+    <Compile Include="Areas\Admin\Models\Machine\MachineAdminUpdateModel.cs" />
+    <Compile Include="Areas\Admin\Models\Rent\RentAdminDetailsModel.cs" />
+    <Compile Include="Areas\Admin\Models\Rent\RentAdminPreviewModel.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Controllers\MachineController.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
+    <Compile Include="Helpers\Mappings\AutoMapperConfig.cs" />
+    <Compile Include="Helpers\Mappings\Interfaces\ICustomMapping.cs" />
+    <Compile Include="Helpers\Mappings\Interfaces\IMapFrom.cs" />
     <Compile Include="Images\ImageMultipartFormDataStreamProvider.cs" />
     <Compile Include="Models\CatalogModel.cs" />
     <Compile Include="Models\Customer\CustomerInsert.cs" />

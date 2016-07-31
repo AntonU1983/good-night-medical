@@ -1,10 +1,11 @@
-var app = angular.module('app', ['angular-ellipses', 'ui.router', 'LocalStorageModule', 'dataServiceModule']);
+var app = angular.module('app', ['angular-ellipses', 'ui.router', 'LocalStorageModule', 'dataServiceModule','angularFileUpload']);
 
 app.constant('globalConstants', {
   //apiUrl: "http://localhost:51925/",
   apiUrl: "http://goodnight-medical-demo.azurewebsites.net/",
   landingId: "admin",
-  doctorPrescription: [ "Unsure", "Yes", "No" ]
+  doctorPrescription: [ "Unsure", "Yes", "No" ],
+  availableTypes: ["New", "Refurbished", "Bipap"]
 });
 
 app.controller('Ctrl', function($scope, $http) {
@@ -32,7 +33,8 @@ app.controller('Ctrl', function($scope, $http) {
 
 });
 
-app.run(function($rootScope, $templateCache) {
+app.run(function($rootScope, $templateCache, $state) {
+  $rootScope.$state = $state;
   $rootScope.$on('$viewContentLoaded', function() {
     $templateCache.removeAll();
   });

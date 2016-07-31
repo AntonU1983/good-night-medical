@@ -1,4 +1,5 @@
 ﻿using System.Web.Http;
+using GenericBackend.Helpers.Mappings;
 using Microsoft.Owin;
 using Microsoft.Owin.Cors;
 using Owin;
@@ -12,6 +13,7 @@ namespace GenericBackend
 		{
 			var configuration = new HttpConfiguration();
             app.UseCors(CorsOptions.AllowAll);
+            AutoMapperConfig.Register();
 
             WebApiConfig.Register(configuration);
             ConfigureOAuth(app);

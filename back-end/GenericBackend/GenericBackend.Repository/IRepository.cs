@@ -55,7 +55,7 @@ namespace GenericBackend.Repository
         /// <returns>True when an entity matching the predicate exists, false otherwise.</returns>
         bool Exists(Expression<Func<T, bool>> predicate);
 
-        /// <summary>
+            /// <summary>
         /// Returns the T by its given id.
         /// </summary>
         /// <param name="id">The value representing the Id of the entity to retrieve.</param>

@@ -16,7 +16,7 @@ namespace GenericBackend.DataModels.GoodNightMedical
         public bool Refurbished { get; set; }
         public ProgramType Type { get; set; }
         public Company Company { get; set; }
-
+        public string Description { get; set; }
     }
 
     //public RentOption RentOption { get; set; }

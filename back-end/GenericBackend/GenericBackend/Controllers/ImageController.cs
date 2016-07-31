@@ -14,6 +14,7 @@ namespace GenericBackend.Controllers
 {
     
     [AllowAnonymous]
+    [RoutePrefix("api/image")]
     public class ImageController : ApiController
     {
         private const string ContainerName = "goodnightmedical";
@@ -54,7 +55,9 @@ namespace GenericBackend.Controllers
             
             return Ok(imageUrl.ToString());
         }
+
         [HttpPost]
+        [Route("upload")]
         public async Task<IHttpActionResult> UploadImage()
         {
             // Check if the request contains multipart/form-data.
@@ -65,8 +68,8 @@ namespace GenericBackend.Controllers
             try
             {
                 var path = HttpRuntime.AppDomainAppPath + @"\App_Data\Images";
-                var result = await Upload(Request, path, Guid.NewGuid().ToString("N"));
-                return result;
+
+                return await Upload(Request, path, Guid.NewGuid().ToString("N"));
             }
             catch (Exception ex)
             {

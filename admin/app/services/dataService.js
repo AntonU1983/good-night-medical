@@ -3,39 +3,57 @@ angular.module('dataServiceModule', []).factory(serviceId, ['$http', 'globalCons
 
 function dataService($http, globalConstants) {
 
-    // Change with appropriate url
     var urlBase = globalConstants.apiUrl;
 
     var service = {
         getMachines: getMachines,
+        getMachineId: getMachineId,
         getContacts: getContacts,
         postContact : postContact,
+        postMachine : postMachine,
+        putMachine: putMachine,
         postRent: postRent,
         setReadContact: setReadContact,
         getRents: getRents,
+        getRentId: getRentId,
         setReadRent: setReadRent
     };
 
     return service;
 
     function getMachines() {
-        var subUrl = 'api/Machines';
+        var subUrl = 'admin/machines';
         return $http.get(urlBase + subUrl);
     }
 
-    function getMachine(id) {
-        var subUrl = 'api/Machines/';
+    function getMachineId(id) {
+        var subUrl = 'admin/machines/';
         return $http.get(urlBase + subUrl + id);
+    }
+
+    function postMachine(model) {
+      var subUrl = 'admin/machines/';
+      return $http.post(urlBase + subUrl, model);
+    }
+
+    function putMachine(id, model) {
+      var subUrl = 'admin/machines/';
+      return $http.put(urlBase + subUrl + id, model);
     }
 
     function getRents() {
-        var subUrl = 'api/Machines/rents';
+        var subUrl = 'admin/rents';
         return $http.get(urlBase + subUrl);
     }
 
+    function getRentId(id) {
+      var subUrl = 'admin/rents/';
+      return $http.get(urlBase + subUrl + id);
+    }
+
     function setReadRent(id) {
-        var subUrl = 'api/customer/seen/'
-        return $http.get(urlBase + subUrl + id);
+        var subUrl = 'admin/rents/' + id;
+        return $http.put(urlBase + subUrl + '/read');
     }
 
     function getContacts() {

@@ -1,9 +1,10 @@
 var app = angular.module('app');
 
 'use strict';
-app.controller('Rent', ['$scope', '$state', 'dataService', 'globalConstants' , function ($scope, $state, dataService, globalConstants) {
+var controllerId = 'rent';
+app.controller(controllerId, ['$scope', '$state', 'dataService', 'globalConstants' , function ($scope, $state, dataService, globalConstants) {
 
-    $scope.rentMsg = [];
+    $scope.data = [];
 
     $scope.readRentInfo = false;
 
@@ -11,25 +12,28 @@ app.controller('Rent', ['$scope', '$state', 'dataService', 'globalConstants' , f
 
     $scope.doctorPrescription = function (id) {
         return globalConstants.doctorPrescription[id];
-    }
+    };
 
     dataService.getRents().success(function (data) {
-        $scope.rentMsg = data;
+        $scope.data = data;
     });
 
     $scope.read = function (id) {
-        $scope.currentRent = $scope.rentMsg.find(function(contact) {
-            return contact.id === id;
-        })
-
-        $scope.readRentInfo = true;
-
-    }
-
-    $scope.markAsRead = function () {
-        dataService.setReadRent($scope.currentRent.id).success(function () {
-            $scope.currentRent.new = false;
+        dataService.getRentId(id).success(function (data) {
+          $scope.currentRent = data;
+          $scope.readRentInfo = true;
         });
-    }
+    };
 
+    $scope.markAsRead = function(id) {
+      dataService.setReadRent(id).success(function () {
+        $scope.currentRent.isNew = false;
+
+        var current = $scope.data.find(function (msg){
+            return msg.id === id;
+        });
+        current.isNew = false;
+      });
+
+    }
 }]);
