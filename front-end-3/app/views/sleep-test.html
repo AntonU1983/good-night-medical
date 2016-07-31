@@ -1,0 +1,35 @@
+<div class="content" ng-controller="SleepTestCtrl">
+
+  <div class="top-title">
+    <span>{{content.headerTitle}}</span>
+  </div>
+
+
+  <div class="body">
+    <div class="desc">{{content.description1}}</div>
+    <hr>
+    <div class="title">{{content.title2}}</div>
+    <div class="desc">{{content.description2}}</div>
+    <hr>
+    <div class="title">{{content.title3}}</div>
+    <div class="desc">{{content.description3}}</div>
+
+    <div class="steps">
+      <div class="step" ng-repeat="step in content.steps">
+        <div class="img pull-left"><img ng-src="../../content/img/other/{{step.imgUrl}}" alt=""></div>
+        <div class="text">
+          <div class="step-title">{{step.title}}</div>
+          <div class="step-desc">{{step.description}}</div>
+        </div>
+      </div>
+    </div>
+
+    <a href="">get form now</a>
+  </div>
+
+  <div class="footer sleep-test">
+    <div class="title">{{content.footerTitle}}</div>
+    <div class="desc">{{content.footerDescription}}</div>
+    <a href="">take our test</a>
+  </div>
+</div>

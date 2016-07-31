@@ -238,6 +238,137 @@
           border-radius: 3px;}
 
 /*
+ * Home sleep test
+ */
+
+.content .top-title {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: url(../../img/bg/bg-2.png) no-repeat center bottom;
+  background-size: cover;}
+
+.content .top-title  span {
+  font: 500 42px 'Rubik';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 15px rgba(0, 0, 0, .15);}
+
+
+.content .body {
+  background-color: #f0f0f2;
+  width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+}
+
+.content .body > * {margin-bottom: 20px;}
+.content .body > :last-child {margin-bottom: 0;}
+
+.content .body hr {
+  width: 100%;
+  background-color: #ddd;
+  height: 1px;
+  display: block;
+  border: none;
+}
+
+.content .body .title {
+  font: 500 17px 'Roboto';
+  text-align: center;
+  color: #222831;
+  line-height: 20px;
+}
+
+.content .body .desc {
+  font: 400 14px 'Roboto';
+  text-align: justify;
+  color: #222831;
+  line-height: 16px;
+}
+
+.content .body a {
+  font: 500 14px 'Roboto';
+  line-height: 16px;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 3px;
+  background: #fe7847;}
+
+.content .body a:hover {
+  background-color: #f98b60;}
+
+.content .body .steps .step {
+  margin: 10px 0;
+  position: relative;
+  height: 98px;
+}
+
+.content .body .steps .step .text {
+  width: 667px;
+  left: 113px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);
+}
+
+.content .body .steps .step .text div {
+  font: 400 14px 'Roboto';
+  color: #222831;
+}
+
+.content .body .steps .step .text .step-title {
+  margin-bottom: 10px;
+}
+
+.content .footer.sleep-test {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 30px 0;
+  background-color: #222831;}
+
+.content .footer.sleep-test .title {
+  font: 500 20px 'Roboto';
+  line-height: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;}
+
+.content .footer.sleep-test .desc {
+  font: 400 14px 'Roboto';
+  line-height: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff;}
+
+.content .footer.sleep-test a {
+  font: 500 14px 'Roboto';
+  line-height: 16px;
+  display: block;
+  width: 132px;
+  margin: 0 auto;
+  padding: 10px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 3px;
+  background: #fe7847;}
+
+.content .footer.sleep-test a:hover {
+  background-color: #f98b60;}
+
+/*
  * Blue Style
  */
 

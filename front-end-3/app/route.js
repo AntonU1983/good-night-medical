@@ -20,5 +20,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
         templateUrl: 'app/views/form.html',
         onEnter: function() {window.scrollTo(0,0);}
       })
+      .state('main.sleepTest', {
+        url: '-sleep-test',
+        templateUrl: 'app/views/sleep-test.html',
+        onEnter: function() {window.scrollTo(0,0);}
+      })
 
 });
