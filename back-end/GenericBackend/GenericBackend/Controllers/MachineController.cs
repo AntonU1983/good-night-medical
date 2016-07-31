@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Http;
@@ -52,7 +54,8 @@ namespace GenericBackend.Controllers
                     Features = rentProgram.CatalogBriefInfo.CatalogFeatures,
                     Type = rentProgram.Type.ToString(),
                     ImageUrl = rentProgram.ImageUrl,
-                    Price = rentProgram.Price
+                    Price = rentProgram.Price,
+                    IsPayment = Convert.ToBoolean(ConfigurationManager.AppSettings["IsPayment"])
                 });
             }
 
@@ -73,7 +76,8 @@ namespace GenericBackend.Controllers
             return Ok(new MachineProgramModel
             {
               Program  = program,
-              Machines = machinesByType
+              Machines = machinesByType,
+              IsPayment = Convert.ToBoolean(ConfigurationManager.AppSettings["IsPayment"])
             });
         }
 

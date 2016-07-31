@@ -7,5 +7,6 @@ namespace GenericBackend.Models
     {
         public RentProgram Program { get; set; }
         public List<Machine> Machines { get; set; }
+        public bool IsPayment { get; set; }
     }
 }

@@ -2,16 +2,23 @@
   'use strict';
 
   var controllerId = 'BillingCtrl';
-  angular.module('app').controller(controllerId, ['$scope', formsController]);
+  angular.module('app').controller(controllerId, ['$scope','$state','dataService', formsController]);
 
-  function formsController($scope) {
+  function formsController($scope, $state,dataService) {
+    $scope.shipData = {};
+    
     $scope.states = states;
     $scope.months = months;
     $scope.years  = years;
+    
     $scope.sameBillShip = true;
     $scope.formInvalid = false;
     $scope.errorMsg = errorMsg;
-
+    
+    $scope.shipData.price = $state.params.price;
+    $scope.shipData.ships = $state.params.ships;
+    $scope.shipData.type = $state.params.type;
+    
     // Показывает или Скрывает меню с сообщениями ошибок (Shipping Information)
     $scope.shipErrorMsg = function(){
       if (($scope.billData.shipFullName.$touched && $scope.billData.shipFullName.$invalid) ||
@@ -72,6 +79,11 @@
         $scope.formInvalid = true;
       }
       else {
+        
+        dataService.sendPayment($scope.shipData).success(function (data) {
+          $scope.content = data;
+          $state.go('catalog');
+        });
         // Здесь должна быть функция отправки данных
         // Все ng-model данных в форме
         //

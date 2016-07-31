@@ -17,7 +17,9 @@ function dataService($http) {
         setReadContact: setReadContact,
         getRents: getRents,
         setReadRent: setReadRent,
-        submitRent: submitRent
+        submitRent: submitRent,
+        sendPayment: sendPayment
+
     };
 
     return service;
@@ -71,5 +73,10 @@ function dataService($http) {
     function postRent(data) {
         var subUrl = 'api/customer/rent';
         return post(urlBase + subUrl, data);
+    }
+  
+    function sendPayment(data) {
+      var subUrl = 'api/payment/';
+      return $http.post(urlBase + subUrl, data);
     }
 }

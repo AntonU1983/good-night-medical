@@ -17,30 +17,30 @@
         <div class="name">
           <input class="pull-left" type="text" placeholder="First Name"
                  name="shipFullName"
-                 ng-model="shipFullName"
+                 ng-model="shipData.shipment.firstName"
                  ng-class="returnClass(billData.shipFullName.$touched, billData.shipFullName.$invalid, 'error');" required>
           <input class="pull-left" type="text" placeholder="Last Name" name="shipLastName"
-                 ng-model="shipLastName"
+                 ng-model="shipData.shipment.lastName"
                  ng-class="returnClass(billData.shipLastName.$touched, billData.shipLastName.$invalid, 'error');" required>
         </div>
 
         <input type="text" placeholder="Address Line 1"
                name="shipAddress1"
-               ng-model="shipAddress1"
+               ng-model="shipData.shipment.primaryAddress"
                ng-class="returnClass(billData.shipAddress1.$touched, billData.shipAddress1.$invalid, 'error');" required>
 
         <input type="text" placeholder="Address Line 2 (optional)"
                name="shipAddress2"
-               ng-model="shipAddress2">
+               ng-model="shipData.shipment.secondaryAddress">
 
         <input type="text" placeholder="City"
               name="shipCity"
-               ng-model="shipCity"
+               ng-model="shipData.shipment.city"
                ng-class="returnClass(billData.shipCity.$touched, billData.shipCity.$invalid, 'error');" required>
 
         <div class="state">
           <div class="pull-left select" ng-class="returnClass(billData.shipState.$touched, billData.shipState.$invalid, 'error');">
-            <select name="shipState" ng-model="shipState" required>
+            <select name="shipState" ng-model="shipData.shipment.state" required>
               <option value="">State</option>
               <option ng-repeat="state in states">{{state.name}}</option>
             </select>
@@ -48,7 +48,7 @@
 
           <input class="pull-left" type="text" placeholder="Zip"
                  name="shipZip"
-                 ng-model="shipZip"
+                 ng-model="shipData.shipment.zip"
                  ng-class="returnClass(billData.shipZip.$touched, billData.shipZip.$invalid, 'error');" required>
         </div>
 
@@ -69,19 +69,19 @@
 
         <input class="card" type="text" placeholder="Credit Card Nubmer"
                name="cardNumber"
-               ng-model="cardNumber"
+               ng-model="shipData.creditCard.number"
                ng-class="returnClass(billData.cardNumber.$touched, billData.cardNumber.$invalid, 'error');" required>
 
         <div class="date">
           <div class="select pull-left" ng-class="returnClass(billData.cardMonth.$touched, billData.cardMonth.$invalid, 'error');">
-            <select name="cardMonth" ng-model="cardMonth" required>
+            <select name="cardMonth" ng-model="shipData.creditCard.month" required>
               <option value="">Month</option>
               <option ng-repeat="month in months">{{month}}</option>
             </select>
           </div>
 
           <div class="select pull-left" ng-class="returnClass(billData.cardYear.$touched, billData.cardYear.$invalid, 'error');">
-            <select name="cardYear" ng-model="cardYear" required>
+            <select name="cardYear" ng-model="shipData.creditCard.year" required>
               <option value="">Year</option>
               <option ng-repeat="year in years">{{year}}</option>
             </select>
@@ -89,7 +89,7 @@
 
           <input class="pull-left" type="text" placeholder="CVV"
                  name="cardCvv"
-                 ng-model="cardCvv"
+                 ng-model="shipData.creditCard.cvv"
                  ng-class="returnClass(billData.cardCvv.$touched, billData.cardCvv.$invalid, 'error');" required>
 
           <div class="cvv-help pull-left">
@@ -107,40 +107,40 @@
 
         <div class="checkbox">
           <label>
-            <input type="checkbox" ng-model="sameBillShip">
+            <input type="checkbox" ng-model="shipData.isSameBillShip">
             <span><span></span></span>Billing address same as shipping
           </label>
         </div>
 
-        <div class="group" ng-if="!sameBillShip">
+        <div class="group" ng-if="!shipData.isSameBillShip">
           <div class="name">
             <input class="pull-left" type="text" placeholder="First Name"
                    name="billFullName"
-                   ng-model="billFullName"
+                   ng-model="shipData.billing.firstName"
                    ng-class="returnClass(billData.billFullName.$touched, billData.billFullName.$invalid, 'error');" required>
             <input class="pull-left" type="text" placeholder="Last Name"
                    name="billLastName"
-                   ng-model="billLastName"
+                   ng-model="shipData.billing.lastName"
                    ng-class="returnClass(billData.billLastName.$touched, billData.billLastName.$invalid, 'error');" required>
           </div>
 
           <input type="text" placeholder="Address Line 1"
                  name="billAddress1"
-                 ng-model="billAddress1"
+                 ng-model="shipData.billing.primaryAddress"
                  ng-class="returnClass(billData.billAddress1.$touched, billData.billAddress1.$invalid, 'error');" required>
 
           <input type="text" placeholder="Address Line 2 (optional)"
                 name="billAddress2"
-                ng-model="billAddress2">
+                ng-model="shipData.billing.secondaryAddress">
 
           <input type="text" placeholder="City"
                  name="billCity"
-                 ng-model="billCity"
+                 ng-model="shipData.billing.city"
                  ng-class="returnClass(billData.billCity.$touched, billData.billCity.$invalid, 'error');" required>
 
           <div class="state">
             <div class="pull-left select" ng-class="returnClass(billData.billState.$touched, billData.billState.$invalid, 'error');">
-              <select name="billState" ng-model="billState" required>
+              <select name="billState" ng-model="shipData.billing.state" required>
                 <option value="">State</option>
                 <option ng-repeat="state in states">{{state.name}}</option>
               </select>
@@ -148,7 +148,7 @@
 
             <input class="pull-left" type="text" placeholder="Zip"
                    name="billZip"
-                   ng-model="billZip"
+                   ng-model="shipData.billing.zip"
                    ng-class="returnClass(billData.billZip.$touched, billData.billZip.$invalid, 'error');" required>
           </div>
 
@@ -179,7 +179,7 @@
       <div class="group result">
         <div>
           <span class="pull-left">Sub Total (<mark>1 item</mark>)</span>
-          <span class="pull-right">&#36;75.00</span>
+          <span class="pull-right">&#36;{{shipData.price}}</span>
         </div>
         <div>
           <span class="pull-left">Tax</span>
@@ -187,12 +187,12 @@
         </div>
         <div>
           <span class="pull-left">Shiping &amp; Handling</span>
-          <span class="pull-right">FREE</span>
+          <span class="pull-right">{{shipData.ships}}</span>
         </div>
         <hr>
         <div>
           <span class="pull-left">Total</span>
-          <span class="pull-right">&#36;76.22</span>
+          <span class="pull-right">&#36;{{(shipData.price * 1) + 1.22}}</span>
         </div>
       </div>
 

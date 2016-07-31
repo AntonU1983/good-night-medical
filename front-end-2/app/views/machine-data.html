@@ -20,9 +20,11 @@
         <span class="price">&#36;{{data.program.price}}</span>
         <span class="ships">per month</span>
       </div>
-
-      <div class="select-btn">
+      <div class="select-btn" ng-show="!data.isPayment">
         <input type="button" value="select" ng-click="modalShow();">
+      </div>
+      <div class="select-btn" ng-show="data.isPayment">
+        <input type="button" value="select" ui-sref="billing({price:data.program.price, ships:data.program.ships, type:data.program.title})">
       </div>
     </div>
   </div>
@@ -64,8 +66,9 @@
       </div>
 
       <div class="catalog">
-        <div class="pull-left" ng-repeat="m in data.machines" ng-click="modalShow(m.name);">
-          <div class="img"><img ng-src="{{m.imageUrl}}"></div>
+        <div class="pull-left" ng-repeat="m in data.machines">
+          <div class="img" ng-show="!data.isPayment" ng-click="modalShow(m.name);"><img ng-src="{{m.imageUrl}}"></div>
+          <div class="img" ui-sref="billing({price:data.program.price, ships:data.program.ships, type:m.name})"><img ng-src="{{m.imageUrl}}"></div>
           <div class="model">{{m.name}}</div>
           <div class="price">&dollar;{{m.pricePerMonth}} &#47; month</div>
         </div>

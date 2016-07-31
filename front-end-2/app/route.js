@@ -25,6 +25,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('billing', {
       url: '/billing',
       templateUrl: 'app/views/billing.html',
+      params : { price: null, ships: null, type: null },
       onEnter: function() {window.scrollTo(0,0);}
     })
     .state('thanks', {

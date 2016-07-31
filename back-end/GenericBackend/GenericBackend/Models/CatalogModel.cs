@@ -12,5 +12,6 @@ namespace GenericBackend.Models
         public string ImageUrl { get; set; }
         public List<string> Features { get; set; }
         public string Type { get; set; }
+        public bool IsPayment { get; set; }
     }
 }
