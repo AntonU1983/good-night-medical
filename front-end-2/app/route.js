@@ -22,11 +22,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
       controller: "machine",
       onEnter: function() {window.scrollTo(0,0);}
     })
-    // .state('billing', {
-    //   url: '/billing',
-    //   templateUrl: 'app/views/billing.html',
-    //   onEnter: function() {window.scrollTo(0,0);}
-    // })
+    .state('billing', {
+      url: '/billing',
+      templateUrl: 'app/views/billing.html',
+      onEnter: function() {window.scrollTo(0,0);}
+    })
     .state('thanks', {
       url: '/thanks',
       templateUrl: 'app/views/thanks.html',
