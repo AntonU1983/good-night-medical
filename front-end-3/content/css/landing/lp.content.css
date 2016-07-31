@@ -440,18 +440,18 @@
 
 .content .top-title.travel-cpap .wrapper .description a:hover {background-color: #f98b60;}
 
-.content .body > .title {
+.content .body.travel-cpap > .title {
   font: 500 36px 'Roboto';
   margin-bottom: 20px;
   text-align: center;
   color: #FE7847;}
 
-.content .body > .machines {
+.content .body.travel-cpap > .machines {
   font-size: 0;
   width: 720px;
   margin: 0 auto;}
 
-.content .body > .machines * {
+.content .body.travel-cpap > .machines * {
   display: inline-block;
   width: 150px;
   height: 150px;
@@ -485,7 +485,7 @@
 .blue .content .top-title.travel-cpap .wrapper .description a       {background-color: #579eff;}
 .blue .content .top-title.travel-cpap .wrapper .description a:hover {background-color: #84c7ff;}
 
-.blue .content .body > .title {color: #579eff;}
+.blue .content .body.travel-cpap > .title {color: #579eff;}
 
 /*
  * Orange Style
@@ -509,4 +509,4 @@
 .orange .content .top-title.travel-cpap .wrapper .description a       {background-color: #fe7847;}
 .orange .content .top-title.travel-cpap .wrapper .description a:hover {background-color: #f98b60;}
 
-.orange .content .body > .title {color: #fe7847;}
+.orange .content .body.travel-cpap > .title {color: #fe7847;}
