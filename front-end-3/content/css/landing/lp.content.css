@@ -246,51 +246,52 @@
   width: 100%;
   height: 300px;
   background: url(../../img/bg/bg-2.png) no-repeat center bottom;
-  background-size: cover;}
+  -moz-background-size: cover;
+    -o-background-size: cover;
+       background-size: cover;}
 
-.content .top-title  span {
+.content .top-title span {
   font: 500 42px 'Rubik';
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
-  text-shadow: 0 0 15px rgba(0, 0, 0, .15);}
-
+  text-shadow: 0 0 15px rgba(0, 0, 0, .15);
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+       -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);}
 
 .content .body {
-  background-color: #f0f0f2;
   width: 860px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   padding: 40px;
-}
+  background-color: #f0f0f2;}
 
 .content .body > * {margin-bottom: 20px;}
 .content .body > :last-child {margin-bottom: 0;}
 
 .content .body hr {
-  width: 100%;
-  background-color: #ddd;
-  height: 1px;
   display: block;
+  width: 100%;
+  height: 1px;
   border: none;
-}
+  background-color: #ddd;}
 
 .content .body .title {
   font: 500 17px 'Roboto';
-  text-align: center;
-  color: #222831;
   line-height: 20px;
-}
+  text-align: center;
+  color: #222831;}
 
 .content .body .desc {
   font: 400 14px 'Roboto';
-  text-align: justify;
-  color: #222831;
   line-height: 16px;
-}
+  text-align: justify;
+  color: #222831;}
 
 .content .body a {
   font: 500 14px 'Roboto';
@@ -301,34 +302,34 @@
   text-align: center;
   text-transform: uppercase;
   color: #fff;
-  border-radius: 3px;
-  background: #fe7847;}
+  background-color: #fe7847;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;}
 
-.content .body a:hover {
-  background-color: #f98b60;}
+.content .body a:hover {background-color: #f98b60;}
 
 .content .body .steps .step {
-  margin: 10px 0;
   position: relative;
   height: 98px;
-}
+  margin: 10px 0;}
 
 .content .body .steps .step .text {
-  width: 667px;
-  left: 113px;
   position: absolute;
   top: 50%;
-  transform: translate(0,-50%);
-}
+  left: 113px;
+  width: 667px;
+  -webkit-transform: translate(0, -50%);
+     -moz-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+       -o-transform: translate(0, -50%);
+          transform: translate(0, -50%);}
 
 .content .body .steps .step .text div {
   font: 400 14px 'Roboto';
-  color: #222831;
-}
+  color: #222831;}
 
-.content .body .steps .step .text .step-title {
-  margin-bottom: 10px;
-}
+.content .body .steps .step .text .step-title {margin-bottom: 10px;}
 
 .content .footer.sleep-test {
   position: relative;
@@ -362,11 +363,105 @@
   text-align: center;
   text-transform: uppercase;
   color: #fff;
-  border-radius: 3px;
-  background: #fe7847;}
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  background-color: #fe7847;}
 
-.content .footer.sleep-test a:hover {
-  background-color: #f98b60;}
+.content .footer.sleep-test a:hover {background-color: #f98b60;}
+
+/*
+ * Travel CPAP
+ */
+
+.content .top-title.travel-cpap {
+  width: 100%;
+  height: auto;
+  padding: 30px 0;
+  background: url(../../img/bg/bg-2.png) no-repeat center center;
+  -moz-background-size: cover;
+    -o-background-size: cover;
+       background-size: cover;}
+
+.content .top-title.travel-cpap .wrapper {
+  width: 960px;
+  margin: 0 auto;}
+
+.content .top-title.travel-cpap .wrapper .title {
+  font: 500 26px 'Roboto';
+  line-height: 30px;
+  height: 30px;
+  margin: 0 auto 30px auto;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+  text-shadow: 0 0 15px rgba(0, 0, 0, .15);}
+
+.content .top-title.travel-cpap .wrapper .description {
+  position: relative;
+  width: 340px;
+  margin: 0 auto;
+  padding: 20px;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, .05);
+     -moz-box-shadow: 0 0 15px rgba(0, 0, 0, .05);
+          box-shadow: 0 0 15px rgba(0, 0, 0, .05);}
+
+.content .top-title.travel-cpap .wrapper .description * {
+  display: block;
+  margin-bottom: 20px;}
+
+.content .top-title.travel-cpap .wrapper .description *:last-child {margin-bottom: 0;}
+
+.content .top-title.travel-cpap .wrapper .description div {
+  font: 500 22px Roboto;
+  text-align: center;
+  text-transform: uppercase;
+  color: #222831;}
+
+.content .top-title.travel-cpap .wrapper .description hr {
+  height: 1px;
+  border: none;
+  background-color: #ddd;}
+
+.content .top-title.travel-cpap .wrapper .description a {
+  font: 500 26px 'Roboto';
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #fe7847;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;}
+
+.content .top-title.travel-cpap .wrapper .description a:hover {background-color: #f98b60;}
+
+.content .body > .title {
+  font: 500 36px 'Roboto';
+  margin-bottom: 20px;
+  text-align: center;
+  color: #FE7847;}
+
+.content .body > .machines {
+  font-size: 0;
+  width: 720px;
+  margin: 0 auto;}
+
+.content .body > .machines * {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin: 0 15px;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, .05);
+     -moz-box-shadow: 0 0 15px rgba(0, 0, 0, .05);
+          box-shadow: 0 0 15px rgba(0, 0, 0, .05);}
 
 /*
  * Blue Style
@@ -381,6 +476,17 @@
 
 .blue .content form .group .validate-msg > div {background-color: #579eff;}
 
+.blue .content .body a       {background-color: #579eff;}
+.blue .content .body a:hover {background-color: #84c7ff;}
+
+.blue .content .footer.sleep-test a       {background-color: #579eff;}
+.blue .content .footer.sleep-test a:hover {background-color: #84c7ff;}
+
+.blue .content .top-title.travel-cpap .wrapper .description a       {background-color: #579eff;}
+.blue .content .top-title.travel-cpap .wrapper .description a:hover {background-color: #84c7ff;}
+
+.blue .content .body > .title {color: #579eff;}
+
 /*
  * Orange Style
  */
@@ -393,3 +499,14 @@
 .orange .footer span a:hover {color: #ffc057;}
 
 .orange .content form .group .validate-msg > div {background-color: #fe7847;}
+
+.orange .content .body a       {background-color: #fe7847;}
+.orange .content .body a:hover {background-color: #f98b60;}
+
+.orange .content .footer.sleep-test a       {background-color: #fe7847;}
+.orange .content .footer.sleep-test a:hover {background-color: #f98b60;}
+
+.orange .content .top-title.travel-cpap .wrapper .description a       {background-color: #fe7847;}
+.orange .content .top-title.travel-cpap .wrapper .description a:hover {background-color: #f98b60;}
+
+.orange .content .body > .title {color: #fe7847;}

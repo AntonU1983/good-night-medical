@@ -1,0 +1,22 @@
+<div class="content" ng-controller="TravelCpapCtrl">
+
+  <div class="top-title travel-cpap">
+    <div class="wrapper">
+      <div class="title">{{content.pageTitle}}</div>
+      <div class="description">
+        <img ng-src="content/img/other/{{content.blockImgUrl}}" alt="">
+        <div>{{content.blockDescription}}</div>
+        <hr>
+        <a href="">Rent</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="title">{{content.bodyTitle}}</div>
+    <div class="machines">
+      <img ng-repeat="imgUrl in content.imgUrl" ng-src="content/img/travel-cpap/{{imgUrl}}" alt="">
+    </div>
+  </div>
+
+</div>
