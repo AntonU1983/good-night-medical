@@ -58,6 +58,7 @@
     <Compile Include="GoodNightMedical\MachineOrder.cs" />
     <Compile Include="GoodNightMedical\RentOption.cs" />
     <Compile Include="GoodNightMedical\RentProgram.cs" />
+    <Compile Include="GoodNightMedical\Setting.cs" />
     <Compile Include="IdentityUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

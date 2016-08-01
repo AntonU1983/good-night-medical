@@ -1,5 +1,6 @@
 ﻿using GenericBackend.DataModels.GoodNightMedical;
 using GenericBackend.Repository;
+using GenericBackend.Repository.Admin;
 using GenericBackend.Repository.GoodNightMedical;
 
 namespace GenericBackend.UnitOfWork.GoodNightMedical
@@ -12,6 +13,7 @@ namespace GenericBackend.UnitOfWork.GoodNightMedical
         private IMongoRepository<Customer> _customers; 
         private IMongoRepository<FullRentCustomer> _fullRentCustomers; 
         private IMongoRepository<RentProgram> _rentPrograms; 
+        private IMongoRepository<Setting> _settings; 
 
         public IMongoRepository<Machine> Machines => _machines ?? (_machines = new MachineRepository());
 
@@ -22,5 +24,6 @@ namespace GenericBackend.UnitOfWork.GoodNightMedical
         public IMongoRepository<Customer> Customers => _customers ?? (_customers = new CustomerRepository());
         public IMongoRepository<FullRentCustomer> FullRentCustomers => _fullRentCustomers ?? (_fullRentCustomers = new FullRentCustomerRepository());
         public IMongoRepository<RentProgram> RentPrograms => _rentPrograms ?? (_rentPrograms = new RentProgramRepository());
+        public IMongoRepository<Setting> Settings => _settings ?? (_settings = new SettingsRepository());
     }
 }

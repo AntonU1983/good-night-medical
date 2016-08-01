@@ -171,12 +171,14 @@
     <Compile Include="Areas\Admin\Controllers\HelpAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\MachineAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\RentAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SettingsAdminController.cs" />
     <Compile Include="Areas\Admin\Models\Machine\MachineAdminCreateModel.cs" />
     <Compile Include="Areas\Admin\Models\Machine\MachineAdminDetailsModel.cs" />
     <Compile Include="Areas\Admin\Models\Machine\MachineAdminPreviewModel.cs" />
     <Compile Include="Areas\Admin\Models\Machine\MachineAdminUpdateModel.cs" />
     <Compile Include="Areas\Admin\Models\Rent\RentAdminDetailsModel.cs" />
     <Compile Include="Areas\Admin\Models\Rent\RentAdminPreviewModel.cs" />
+    <Compile Include="Areas\Admin\Models\Settings\SettingAdminModel.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\ImageController.cs" />
