@@ -184,6 +184,8 @@
     <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Controllers\MachineController.cs" />
     <Compile Include="Controllers\PaymentController.cs" />
+    <Compile Include="Handlers\GlobalExceptionHandler.cs" />
+    <Compile Include="Handlers\GlobalExceptionLogger.cs" />
     <Compile Include="Helpers\Mappings\AutoMapperConfig.cs" />
     <Compile Include="Helpers\Mappings\Interfaces\ICustomMapping.cs" />
     <Compile Include="Helpers\Mappings\Interfaces\IMapFrom.cs" />
@@ -214,6 +216,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\GenericBackend.Common\GenericBackend.Common.csproj">
+      <Project>{2EB14C46-74D8-401B-A1B5-EC0B22A3D3B3}</Project>
+      <Name>GenericBackend.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GenericBackend.Core\GenericBackend.Core.csproj">
       <Project>{65DC52F2-95B3-44C8-8FC3-18FE04D9345C}</Project>
       <Name>GenericBackend.Core</Name>
@@ -230,9 +236,21 @@
       <Project>{F587A9BD-75C7-4783-B21F-F5075C7E5E78}</Project>
       <Name>GenericBackend.Identity</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GenericBackend.Logging\GenericBackend.Logging.csproj">
+      <Project>{954ea514-0b79-4b34-abb8-70342630f62b}</Project>
+      <Name>GenericBackend.Logging</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GenericBackend.Notifications\GenericBackend.Notifications.csproj">
       <Project>{9a3bdb12-d2d6-4f75-8b47-54e1a83d46fe}</Project>
       <Name>GenericBackend.Notifications</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GenericBackend.PaymentProcessor.Models\GenericBackend.PaymentProcessor.Models.csproj">
+      <Project>{4a5ef042-990f-49a4-b5ef-42f453a958b1}</Project>
+      <Name>GenericBackend.PaymentProcessor.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GenericBackend.PaymentProcessor\GenericBackend.PaymentProcessor.csproj">
+      <Project>{315e7cea-9987-48ba-b9ce-b6085e294da0}</Project>
+      <Name>GenericBackend.PaymentProcessor</Name>
     </ProjectReference>
     <ProjectReference Include="..\GenericBackend.Repository\GenericBackend.Repository.csproj">
       <Project>{7FD7B97D-640C-4BF1-B6DA-61C68988E59F}</Project>

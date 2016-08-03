@@ -23,6 +23,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericBackend.Identity", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericBackend.Notifications", "GenericBackend.Notifications\GenericBackend.Notifications.csproj", "{9A3BDB12-D2D6-4F75-8B47-54E1A83D46FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericBackend.PaymentProcessor", "GenericBackend.PaymentProcessor\GenericBackend.PaymentProcessor.csproj", "{315E7CEA-9987-48BA-B9CE-B6085E294DA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericBackend.Logging", "GenericBackend.Logging\GenericBackend.Logging.csproj", "{954EA514-0B79-4B34-ABB8-70342630F62B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericBackend.PaymentProcessor.Models", "GenericBackend.PaymentProcessor.Models\GenericBackend.PaymentProcessor.Models.csproj", "{4A5EF042-990F-49A4-B5EF-42F453A958B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PaymentProcessor", "PaymentProcessor", "{3CC300D0-DD64-4B98-94E2-D6906CADD24E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericBackend.Common", "GenericBackend.Common\GenericBackend.Common.csproj", "{2EB14C46-74D8-401B-A1B5-EC0B22A3D3B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,8 +79,28 @@ Global
 		{9A3BDB12-D2D6-4F75-8B47-54E1A83D46FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A3BDB12-D2D6-4F75-8B47-54E1A83D46FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A3BDB12-D2D6-4F75-8B47-54E1A83D46FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{315E7CEA-9987-48BA-B9CE-B6085E294DA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{315E7CEA-9987-48BA-B9CE-B6085E294DA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{315E7CEA-9987-48BA-B9CE-B6085E294DA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{315E7CEA-9987-48BA-B9CE-B6085E294DA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{954EA514-0B79-4B34-ABB8-70342630F62B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{954EA514-0B79-4B34-ABB8-70342630F62B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{954EA514-0B79-4B34-ABB8-70342630F62B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{954EA514-0B79-4B34-ABB8-70342630F62B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A5EF042-990F-49A4-B5EF-42F453A958B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A5EF042-990F-49A4-B5EF-42F453A958B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A5EF042-990F-49A4-B5EF-42F453A958B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A5EF042-990F-49A4-B5EF-42F453A958B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EB14C46-74D8-401B-A1B5-EC0B22A3D3B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EB14C46-74D8-401B-A1B5-EC0B22A3D3B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EB14C46-74D8-401B-A1B5-EC0B22A3D3B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EB14C46-74D8-401B-A1B5-EC0B22A3D3B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{315E7CEA-9987-48BA-B9CE-B6085E294DA0} = {3CC300D0-DD64-4B98-94E2-D6906CADD24E}
+		{4A5EF042-990F-49A4-B5EF-42F453A958B1} = {3CC300D0-DD64-4B98-94E2-D6906CADD24E}
 	EndGlobalSection
 EndGlobal

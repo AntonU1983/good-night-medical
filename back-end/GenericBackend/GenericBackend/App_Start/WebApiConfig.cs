@@ -1,6 +1,8 @@
 ﻿using System.Linq;
 using System.Net.Http.Formatting;
 using System.Web.Http;
+using System.Web.Http.ExceptionHandling;
+using GenericBackend.Handlers;
 using Newtonsoft.Json.Serialization;
 
 namespace GenericBackend
@@ -25,8 +27,9 @@ namespace GenericBackend
                 defaults: new { id = RouteParameter.Optional }
             );
 
+            config.Services.Add(typeof(IExceptionLogger), new GlobalExceptionLogger());
+            config.Services.Replace(typeof(IExceptionHandler), new GlobalExceptionHandler());
 
-           
         }
     }
 }
