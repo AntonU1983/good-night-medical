@@ -1,47 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app" ng-cloak>
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Good Night Medical</title>
-
   <meta name="author" content="Steady Works.Pro">
+
+  <link rel="shortcut icon" type="image/x-icon" href="content/favicon/dark/favicon.ico">
+  <link rel="icon" type="image/png" href="content/favicon/dark/icon-16x16.png"   sizes="16x16">
+  <link rel="icon" type="image/png" href="content/favicon/dark/icon-32x32.png"   sizes="32x32">
+  <link rel="icon" type="image/png" href="content/favicon/dark/icon-64x64.png"   sizes="64x64">
+  <link rel="icon" type="image/png" href="content/favicon/dark/icon-96x96.png"   sizes="96x96">
+  <link rel="icon" type="image/png" href="content/favicon/dark/icon-128x128.png" sizes="128x128">
+  <link rel="icon" type="image/png" href="content/favicon/dark/icon-196x196.png" sizes="196x196">
+  <link rel="apple-touch-icon-precomposed" sizes="57x57"   href="content/favicon/dark/osx-57x57.png">
+  <link rel="apple-touch-icon-precomposed" sizes="60x60"   href="content/favicon/dark/osx-60x60.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72"   href="content/favicon/dark/osx-72x72.png">
+  <link rel="apple-touch-icon-precomposed" sizes="76x76"   href="content/favicon/dark/osx-76x76.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="content/favicon/dark/osx-114x114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="content/favicon/dark/osx-120x120.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="content/favicon/dark/osx-144x144.png">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="content/favicon/dark/osx-152x152.png">
+  <meta name="application-name"                content="Good Night Medical">
+  <meta name="msapplication-TileColor"         content="#222831">
+  <meta name="msapplication-TileImage"         content="content/favicon/dark/ms-144x144.png">
+  <meta name="msapplication-square70x70logo"   content="content/favicon/dark/ms-70x70.png">
+  <meta name="msapplication-square150x150logo" content="content/favicon/dark/ms-150x150.png">
+  <meta name="msapplication-wide310x150logo"   content="content/favicon/dark/ms-310x150.png">
+  <meta name="msapplication-square310x310logo" content="content/favicon/dark/ms-310x310.png">
 
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,400i,500&subset=cyrillic">
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Rubik:400,400i,500&subset=cyrillic">
 
   <link rel="stylesheet" href="content/css/lib/normalize/normalize.min.css">
   <link rel="stylesheet" href="content/css/lib/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="content/css/lib/jquery/jquery-ui.min.css">
-  <link rel="stylesheet" href="content/css/lib/">
+  <link rel="stylesheet" href="content/css/lib/angular/angular-loading-bar.min.css">
 
   <link rel="stylesheet" href="content/css/min/main.min.css">
   <link rel="stylesheet" href="content/css/min/typography.min.css">
   <link rel="stylesheet" href="content/css/min/controls.min.css">
-  <link rel="stylesheet" href="content/css/min/">
   <link rel="stylesheet" href="content/css/min/shame.min.css">
+
+  <link rel="stylesheet" href="content/css/min/">
   <!--[if lt IE 9]>
     <script src="scripts/lib/other/html5shiv.min.js"></script>
     <script src="scripts/lib/other/respond.min.js"></script>
   <![endif]-->
 </head>
 
-<body>
+<body ng-controller="main">
+
+  <ul>
+    <li ui-sref="testing.page1">{{content}}</li>
+    <li ui-sref="home">WS Home</li>
+    <li ui-sref="rentalProgram.catalog">WS Rental Program (Catalog)</li>
+    <li ui-sref="rentalProgram.machine">WS Rental Program (Machine)</li>
+    <li ui-sref="reSupply.info">WS Re Supply (Info)</li>
+    <li ui-sref="reSupply.form">WS Re Supply (Form)</li>
+    <li ui-sref="rent.cpap">WS Rent (CPAP)</li>
+    <li ui-sref="rent.help">WS Rent (Help)</li>
+    <li ui-sref="common.billing">WS Common (Billing)</li>
+    <li ui-sref="common.thanks">WS Common (Thanks)</li>
+  </ul>
 
   <div ui-view></div>
 
   <script src="scripts/lib/jquery/jquery.min.js"></script>
-  <script src="scripts/lib/jquery/jquery-ui.min.js"></script>
   <script src="scripts/lib/bootstrap/bootstrap.min.js"></script>
   <script src="scripts/script.js"></script>
 
   <script src="scripts/lib/angular/angular.min.js"></script>
+  <script src="scripts/lib/angular/angular-animate.min.js"></script>
   <script src="scripts/lib/angular/angular-ellipsis.min.js"></script>
   <script src="scripts/lib/angular/angular-ui-router.min.js"></script>
+  <script src="scripts/lib/angular/angular-loading-bar.min.js"></script>
   <script src="scripts/lib/angular/angular-local-storage.min.js"></script>
   <script src="app/app.js"></script>
   <script src="app/route.js"></script>
+
+  <script src="app/controllers/main.js"></script>
+  <script src="app/controllers/page1/block1.js"></script>
+  <script src="app/controllers/page1/block2.js"></script>
+  <script src="app/controllers/page1/block3.js"></script>
+  <script src="app/controllers/page1/block4.js"></script>
+  <script src="app/controllers/page1/block5.js"></script>
+  <script src="app/controllers/page1/block6.js"></script>
+  <script src="app/controllers/page2/catalog.js"></script>
+  <script src="app/controllers/page2/machine.js"></script>
+  <script src="app/controllers/page3/info.js"></script>
+  <script src="app/controllers/page3/form.js"></script>
+  <script src="app/controllers/page4/cpap.js"></script>
+  <script src="app/controllers/page4/help.js"></script>
+  <script src="app/controllers/common/billing.js"></script>
+  <script src="app/controllers/common/thanks.js"></script>
+  <script src="app/controllers/testing/page1.js"></script>
 </body>
 </html>

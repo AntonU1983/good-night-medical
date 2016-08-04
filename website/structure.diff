@@ -1,0 +1,37 @@
+Общие элементы на странице:
+header1.html - (include) шапка с черным бэком
+header2.html - (include) шапка с прозрачным бэком
+footer1.html - (include) подвал с информацией (основной для всех страниц)
+footer2.html - (include) подвал с информацией и формой (для landinPage1.html)
+
+- page1.html (home) - (основная целевая страница) информация о бо всем
+  1. block1.html (mind)          - (include) блок с текстом и формой
+  2. block2.html (reasons)       - (include) блок с причинами
+  3. block3.html (process)       - (include) блок с процессом оформления заказа
+  4. block4.html (benefits)      - (include) блок с плюсами
+  5. block5.html (featured)      - (include) блок с рекомендуемой машиной
+  6. block6.html (accreditation) - (include) блок с логотипами партнеров
+
+- page2.html (rental-program) - (rental program) каталог машин по программе аренды
+  1. catalog.html - (view) каталог с тремя видами машин
+  2. machine.html - (view) страница с данными машины
+
+- page3.html (re-supply) - (re supply) повторные поставки
+  1. info.html - (view) информация о повторной поставки
+  2. form.html - (view) форма для заполнения
+
+- page4.html (catalog) - (catalog) каталог всех машин с фильтрацией
+  1. cpap.html - (view) каталог со всеми машинами
+  2. help.html - (view) страница с формой заполнения, для помощи в выборе устройства
+
+- ??? - одиночные страницы
+  1. Home Sleep Test
+  2. Travel CPAP
+  3. About Us
+  4. Locations
+  5. Testimonials
+  6. Sleep Apnea Screening Tool
+
+- templatePageCommon.html - сборник страниц которые используются в других страницах
+  1. page1.html (billing) - (view) страница оплаты
+  2. page2.html (thanks)  - (view) страница с сообщением благодарности
