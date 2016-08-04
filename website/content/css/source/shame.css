@@ -1,15 +1,14 @@
 /*
- * Дополнительные классы, для быстрого использования
- * Не рекомендуется использовать в конечной верстке
+ * Additional classes for quick use
  */
 
-.pull-right {float      : right !important;}
-.pull-left  {float      : left !important;}
-.hide       {display    : none !important;}
-.show       {display    : block !important;}
+.pull-right {float   : right !important;}
+.pull-left  {float   : left !important;}
+.hide       {display : none !important;}
+.show       {display : block !important;}
 
 /*
- * Цвета Style Guide
+ * Colors Style Guide
  */
 
 .color-900   {color : #222831;}
@@ -28,16 +27,15 @@
 .color-sec-200 {color : #ffe084;}
 
 /*
- * Типография
- * Насыщенность, стиль, выравнивание, преоброзования
+ * Fast Typography
  */
 
 .text-light  {font-weight : 300;}
 .text-medium {font-weight : 500;}
 .text-bold   {font-weight : 700;}
 
-.text-italic {font-style  : italic;}
-.text-normal {font-style  : normal;}
+.text-italic {font-style : italic;}
+.text-normal {font-style : normal;}
 
 .text-left    {text-align : left;}
 .text-right   {text-align : right;}

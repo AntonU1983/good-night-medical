@@ -1,10 +1,10 @@
 (function () {
   'use strict';
 
-  var controllerId = 'info';
-  angular.module('app').controller(controllerId, ['$scope', infoCtrl]);
+  var controllerId = 'reSupplyInfo';
+  angular.module('app').controller(controllerId, ['$scope', reSupplyInfoCtrl]);
 
-  function infoCtrl($scope) {
+  function reSupplyInfoCtrl($scope) {
     $scope.content = content;
   }
 

@@ -54,12 +54,13 @@
   <ul>
     <li ui-sref="testing.page1">{{content}}</li>
     <li ui-sref="home">WS Home</li>
-    <li ui-sref="rentalProgram.catalog">WS Rental Program (Catalog)</li>
-    <li ui-sref="rentalProgram.machine">WS Rental Program (Machine)</li>
+    <li ui-sref="rent.catalog">WS Rental Program (Catalog)</li>
+    <li ui-sref="rent.machine">WS Rental Program (Machine)</li>
     <li ui-sref="reSupply.info">WS Re Supply (Info)</li>
     <li ui-sref="reSupply.form">WS Re Supply (Form)</li>
-    <li ui-sref="rent.cpap">WS Rent (CPAP)</li>
-    <li ui-sref="rent.help">WS Rent (Help)</li>
+    <li ui-sref="catalog.cpap">WS Catalog (CPAP)</li>
+    <li ui-sref="catalog.help">WS Catalog (Help Pick CPAP)</li>
+    <li ui-sref="sleepTest.info">WS Home Sleep Test (Info)</li>
     <li ui-sref="common.billing">WS Common (Billing)</li>
     <li ui-sref="common.thanks">WS Common (Thanks)</li>
   </ul>
@@ -80,6 +81,8 @@
   <script src="app/route.js"></script>
 
   <script src="app/controllers/main.js"></script>
+  <script src="app/controllers/modules/header.js"></script>
+  <script src="app/controllers/modules/footer.js"></script>
   <script src="app/controllers/page1/block1.js"></script>
   <script src="app/controllers/page1/block2.js"></script>
   <script src="app/controllers/page1/block3.js"></script>
@@ -92,6 +95,7 @@
   <script src="app/controllers/page3/form.js"></script>
   <script src="app/controllers/page4/cpap.js"></script>
   <script src="app/controllers/page4/help.js"></script>
+  <script src="app/controllers/page5/info.js"></script>
   <script src="app/controllers/common/billing.js"></script>
   <script src="app/controllers/common/thanks.js"></script>
   <script src="app/controllers/testing/page1.js"></script>

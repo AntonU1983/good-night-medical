@@ -1,10 +1,10 @@
 (function () {
   'use strict';
 
-  var controllerId = 'help';
-  angular.module('app').controller(controllerId, ['$scope', helpCtrl]);
+  var controllerId = 'catalogHelpPick';
+  angular.module('app').controller(controllerId, ['$scope', catalogHelpPickCtrl]);
 
-  function helpCtrl($scope) {
+  function catalogHelpPickCtrl($scope) {
     $scope.content = content;
   }
 

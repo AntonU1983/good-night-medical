@@ -1,10 +1,10 @@
 (function() {
   'use strict';
 
-  var controllerId = 'page1';
-  angular.module('app').controller(controllerId, ['$scope', page1Ctrl]);
+  var controllerId = 'testPage1';
+  angular.module('app').controller(controllerId, ['$scope', testPage1Ctrl]);
 
-  function page1Ctrl($scope) {
+  function testPage1Ctrl($scope) {
     $scope.content = content;
   }
 

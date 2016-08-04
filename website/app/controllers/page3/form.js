@@ -1,10 +1,10 @@
 (function () {
   'use strict';
 
-  var controllerId = 'form';
-  angular.module('app').controller(controllerId, ['$scope', formCtrl]);
+  var controllerId = 'reSupplyForm';
+  angular.module('app').controller(controllerId, ['$scope', reSupplyFormCtrl]);
 
-  function formCtrl($scope) {
+  function reSupplyFormCtrl($scope) {
     $scope.content = content;
   }
 

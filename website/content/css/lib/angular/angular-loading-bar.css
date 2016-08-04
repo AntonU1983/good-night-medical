@@ -5,9 +5,6 @@
  * License: MIT
  */
 
-
-/* Make clicks pass-through */
-
 #loading-bar,
 #loading-bar-spinner {
   pointer-events: none;
@@ -38,9 +35,6 @@
      -moz-transition: width .5s;
        -o-transition: width .5s;
           transition: width .5s;}
-
-
-/* Fancy blur effect */
 
 #loading-bar .peg {
   position: absolute;

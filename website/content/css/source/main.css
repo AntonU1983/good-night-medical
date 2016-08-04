@@ -25,26 +25,10 @@ input[type='button'] {
       -ms-user-select: none;
           user-select: none;}
 
-a,
-a:hover,
-a:focus,
-a:active,
-input,
-input:hover,
-input:focus,
-input:active,
-select,
-select:hover,
-select:focus,
-select:active,
-button,
-button:hover,
-button:focus,
-button:active,
-textarea,
-textarea:hover,
-textarea:focus,
-textarea:active {outline: none;}
+*,
+*:hover,
+*:focus,
+*:active {outline: none !important;}
 
 ul, ol {list-style: none;}
 

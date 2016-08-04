@@ -1,10 +1,10 @@
 (function () {
   'use strict';
 
-  var controllerId = 'machine';
-  angular.module('app').controller(controllerId, ['$scope', machineCtrl]);
+  var controllerId = 'rentMachine';
+  angular.module('app').controller(controllerId, ['$scope', rentMachineCtrl]);
 
-  function machineCtrl($scope) {
+  function rentMachineCtrl($scope) {
     $scope.content = content;
   }
 

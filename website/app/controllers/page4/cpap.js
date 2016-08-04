@@ -1,10 +1,10 @@
 (function () {
   'use strict';
 
-  var controllerId = 'cpap';
-  angular.module('app').controller(controllerId, ['$scope', cpapCtrl]);
+  var controllerId = 'catalogCpap';
+  angular.module('app').controller(controllerId, ['$scope', catalogCpapCtrl]);
 
-  function cpapCtrl($scope) {
+  function catalogCpapCtrl($scope) {
     $scope.content = content;
   }
 
