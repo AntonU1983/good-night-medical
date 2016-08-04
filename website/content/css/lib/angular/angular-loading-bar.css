@@ -64,6 +64,7 @@
   display: block;}
 
 #loading-bar-spinner .spinner-icon {
+  display: none;
   width: 14px;
   height: 14px;
   border: solid 2px transparent;
