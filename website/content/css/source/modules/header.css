@@ -43,7 +43,8 @@
 
 .header .nav1 .phone-icon {
   line-height: normal;
-  height: 19px;}
+  height: 19px;
+  cursor: pointer;}
 
 .header .nav1 .phone-icon svg,
 .header .nav1 .phone-icon svg path {fill: #fff;}
