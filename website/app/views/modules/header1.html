@@ -11,7 +11,9 @@
             <div class="phone-popup" ng-bind="'Phone Number: {{phoneNumber}}'"></div>
           </div>
           <div class="separate" ng-repeat-start="link in navbar"></div>
-          <a ng-repeat-end ui-sref="{{link.uiSref}}" ng-bind="'{{link.text}}'"></a>
+          <a ng-repeat-end
+             ng-bind="'{{link.text}}'"
+             ng-attr-ui-sref="{{link.uiSref ? link.uiSref : false}}"></a>
         </nav>
 
         <nav class="pull-right nav2 visible-md">
@@ -29,7 +31,9 @@
             <div>
               <ul>
                 <li ng-repeat="link in navbar">
-                  <a ui-sref="{{link.uiSref}}" ng-click="hideMenu();" ng-bind="'{{link.text}}'"></a>
+                  <a ng-click="hideMenu();"
+                     ng-bind="'{{link.text}}'"
+                     ng-attr-ui-sref="{{link.uiSref ? link.uiSref : false}}"></a>
                 </li>
                 <hr>
                 <li class="phone-nubmer" ng-bind="'{{phoneNumber}}'"></li>

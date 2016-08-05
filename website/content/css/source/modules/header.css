@@ -1,4 +1,4 @@
-/*
+/**
  * Common styles for all header
  */
 
@@ -32,7 +32,7 @@
 .header .logotype svg,
 .header .logotype svg path {fill: #fff;}
 
-/*
+/**
  * Header for large Screens
  */
 
@@ -86,7 +86,7 @@
      -moz-border-radius: 50%;
           border-radius: 50%;}
 
-/*
+/**
  * Header for small Screens
  */
 
@@ -115,8 +115,7 @@
 .header .nav2 div:hover span svg,
 .header .nav2 div:hover span svg path {fill: #579eff;}
 
-
-/*
+/**
  * Fixed nav menu for small Screens
  */
 
@@ -204,7 +203,7 @@
   display: block !important;
   opacity: 1;}
 
-/*
+/**
  * Header with back button and logo
  */
 
