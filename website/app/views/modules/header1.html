@@ -1,15 +1,44 @@
-<header>
-  <div class="wrapper">
+<div class="header1" ng-controller="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-48">
 
-    <img class="logotype pull-left" src="content/img/logotype.png" alt="">
+        <div class="logotype pull-left" ng-include="'content/svg/logotype.svg'"></div>
 
-    <nav class="pull-right">
-      <a class="phone" href=""></a>
+        <nav class="pull-right visible-lg">
+          <div class="phone">
+            <div class="phone-icon" ng-include="'content/svg/icons/phone.svg'"></div>
+            <div class="phone-popup">Phone Number: {{phoneNumber}}</div>
+          </div>
+          <div class="separate" ng-repeat-start="link in navbar"></div>
+          <a href="" ng-repeat-end ui-sref="link.uiSref">{{link.text}}</a>
+        </nav>
 
-      <div class="separate" ng-repeat-start="(key, value) in dataset"></div>
-      <a href="" ng-repeat-end>home</a>
+        <nav class="pull-right menu visible-md">
+          <div ng-click="showMobileNavBar();">
+            <span ng-include="'content/svg/icons/hamburger.svg'"></span>
+            <span>menu</span>
+          </div>
+        </nav>
 
-    </nav>
+        <div class="menu-fixed-dark animate-on fadein fadeout" ng-show="mobileNavBar">
+          <div class="menu-fixed-cross"
+               ng-click="hideMobileNavBar();"
+               ng-include="'content/svg/icons/cross.svg'"></div>
+          <div class="menu-fixed">
+            <div>
+              <ul>
+                <li ng-repeat="link in navbar">
+                  <a href="" ui-sref="{{link.uiSref}}" ng-click="hideMobileNavBar();">{{link.text}}</a>
+                </li>
+                <hr>
+                <li class="phone-nubmer">{{phoneNumber}}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
+      </div>
+    </div>
   </div>
-</header>
+</div>
