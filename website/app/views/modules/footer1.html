@@ -1,0 +1,57 @@
+<div class="copyright footer" ng-controller="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-48">
+
+        <div class="info">
+          <div class="title">ABOUT US</div>
+          <div class="desc">{{aboutUs}}</div>
+
+          <div class="dev">{{copyright}}</div>
+        </div>
+
+        <div class="info" ng-repeat="(key, value) in dataset">
+          <div class="title" ng-bind="'title'"></div>
+          <div class="links" ng-if="expression">
+            <a ng-repeat="(key, value) in dataset"
+               ng-bind="expression"
+               ng-attr-ui-sref="{{ true ? true : false }}"></a>
+          </div>
+          <div class="links" ng-if="expression">
+            <a target="_blank"
+               ng-repeat="l(key, value) in dataset"
+               ng-href="template"
+               ng-bind="expression"></a>
+          </div>
+        </div>
+
+        <div class="info">
+          <div class="title">LINKS</div>
+          <div class="links">
+            <a ng-repeat="link in statesLinks"
+               ng-bind="'{{link.text}}'"
+               ng-attr-ui-sref="{{link.uiSref ? link.uiSref : false}}"></a>
+          </div>
+        </div>
+
+        <div class="info">
+          <div class="title">SOCIAL</div>
+          <div class="links">
+            <a target="_blank"
+               ng-repeat="link in socialLinks"
+               ng-href="{{link.href}}"
+               ng-bind="'{{link.text}}'"></a>
+          </div>
+        </div>
+
+        <form class="copyright-form">
+          <input type="text"  placeholder="full name">
+          <input type="email" placeholder="email">
+          <input type="text"  placeholder="phone">
+          <input type="submit" value="Contact me!">
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

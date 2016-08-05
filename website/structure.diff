@@ -5,6 +5,7 @@ header3.html - (include) шапка с логотипом и кнопкой на
 header3.html - (include) шапка с логотипом и кнопкой назад и прозрачным бэком
 footer1.html - (include) подвал с информацией (основной для всех страниц)
 footer2.html - (include) подвал с информацией и формой (для landinPage1.html)
+!ДОБАВИТЬ window1.html - (include) модальное окно с формой
 
 - page1.html (home) - информация о бо всем
   1. block1.html (mind)          - (include) блок с текстом и формой
