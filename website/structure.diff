@@ -1,7 +1,8 @@
 Общие элементы на странице:
 header1.html - (include) шапка с черным бэком
 header2.html - (include) шапка с прозрачным бэком
-header3.html - (include) шапка с логотипом и кнопкой назад
+header3.html - (include) шапка с логотипом и кнопкой назад и черным бэком
+header3.html - (include) шапка с логотипом и кнопкой назад и прозрачным бэком
 footer1.html - (include) подвал с информацией (основной для всех страниц)
 footer2.html - (include) подвал с информацией и формой (для landinPage1.html)
 
