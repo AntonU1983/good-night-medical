@@ -49,13 +49,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuthorizeNetProcessor.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GenericBackend.PaymentProcessor.Core\GenericBackend.PaymentProcessor.Core.csproj">
+      <Project>{F39F6562-B816-4074-A6EE-8C2D88F92345}</Project>
+      <Name>GenericBackend.PaymentProcessor.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GenericBackend.PaymentProcessor.Models\GenericBackend.PaymentProcessor.Models.csproj">
       <Project>{4A5EF042-990F-49A4-B5EF-42F453A958B1}</Project>
       <Name>GenericBackend.PaymentProcessor.Models</Name>

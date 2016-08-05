@@ -2,8 +2,12 @@
 <autofac>
   <components>
     <component
-        type="GenericBackend.UnitOfWork.GoodNightMedical.UnitOfWork, GenericBackend.UnitOfWork"
-        service="GenericBackend.UnitOfWork.GoodNightMedical.IUnitOfWork, GenericBackend.UnitOfWork"
-        instance-scope="per-dependency"/>
+      type="GenericBackend.UnitOfWork.GoodNightMedical.UnitOfWork, GenericBackend.UnitOfWork"
+      service="GenericBackend.UnitOfWork.GoodNightMedical.IUnitOfWork, GenericBackend.UnitOfWork"
+      instance-scope="per-dependency"/>
+    <component
+      type="GenericBackend.PaymentProcessor.AuthorizeNetProcessor, GenericBackend.PaymentProcessor"
+      service="GenericBackend.PaymentProcessor.Core.Interfaces.IPaymentProcessor, GenericBackend.PaymentProcessor.Core"
+      instance-scope="per-dependency"/>
   </components>
 </autofac>

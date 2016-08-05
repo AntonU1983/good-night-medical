@@ -244,6 +244,10 @@
       <Project>{9a3bdb12-d2d6-4f75-8b47-54e1a83d46fe}</Project>
       <Name>GenericBackend.Notifications</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GenericBackend.PaymentProcessor.Core\GenericBackend.PaymentProcessor.Core.csproj">
+      <Project>{F39F6562-B816-4074-A6EE-8C2D88F92345}</Project>
+      <Name>GenericBackend.PaymentProcessor.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GenericBackend.PaymentProcessor.Models\GenericBackend.PaymentProcessor.Models.csproj">
       <Project>{4a5ef042-990f-49a4-b5ef-42f453a958b1}</Project>
       <Name>GenericBackend.PaymentProcessor.Models</Name>

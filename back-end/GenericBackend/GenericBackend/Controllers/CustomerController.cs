@@ -1,6 +1,7 @@
 ﻿using System.Configuration;
 using System.Threading.Tasks;
 using System.Web.Http;
+using AutoMapper;
 using GenericBackend.DataModels.GoodNightMedical;
 using GenericBackend.Models.Customer;
 using GenericBackend.Notifications;
@@ -59,15 +60,11 @@ namespace GenericBackend.Controllers
 
         [HttpPost]
         [Route("")]
-        public IHttpActionResult Post([FromBody] CustomerInsert customer)
+        public IHttpActionResult Post([FromBody] CustomerInsert model)
         {
-            _customersRepository.Add(new Customer
-            {
-                LandingId = customer.LandingId,
-                Email = customer.Email,
-                FullName = customer.FullName,
-                Phone = customer.Phone
-            });
+            var customer = Mapper.Map<Customer>(model);
+
+            _customersRepository.Add(customer);
 
             return Ok();
         }
@@ -76,17 +73,9 @@ namespace GenericBackend.Controllers
         [Route("rent")]
         public IHttpActionResult PostContact([FromBody] CustomerRentInsert customerRent)
         {
-            _fullCustomersRepository.Add(new FullRentCustomer
-            {
-                LandingId = customerRent.LandingId,
-                Email = customerRent.Email,
-                FullName = customerRent.FullName,
-                Phone = customerRent.Phone,
-                Comments = customerRent.Comments,
-                ContactMethod = customerRent.Contact,
-                DoctorPrescription = customerRent.Prescription,
-                Program = customerRent.Program
-            });
+            var customer = Mapper.Map<FullRentCustomer>(customerRent);
+
+            _fullCustomersRepository.Add(customer);
 
             var model = new EmailModel
             {

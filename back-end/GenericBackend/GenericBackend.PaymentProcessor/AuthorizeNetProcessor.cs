@@ -1,14 +1,14 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using AuthorizeNet.Api.Contracts.V1;
 using AuthorizeNet.Api.Controllers;
 using AuthorizeNet.Api.Controllers.Bases;
+using GenericBackend.PaymentProcessor.Core.Interfaces;
 using GenericBackend.PaymentProcessor.Models;
 using JetBrains.Annotations;
 
 namespace GenericBackend.PaymentProcessor
 {
-    public class AuthorizeNetProcessor
+    public class AuthorizeNetProcessor : IPaymentProcessor
     {
         private readonly string _apiLogin = "38Dg9jAw";
         private readonly string _transactionKey = "78v8VJzMw2t99B4W";

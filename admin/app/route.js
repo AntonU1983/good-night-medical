@@ -1,6 +1,7 @@
 var app = angular.module('app');
 
 app.config(function($stateProvider, $urlRouterProvider) {
+
     $stateProvider
     .state('main', {
         url: '/',
@@ -21,8 +22,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
         templateUrl: 'views/data-help-msg.html'
     }).state('main.machine', {
         url: 'machines',
-        templateUrl: 'views/machine/machine.html',
-        controller: 'machine'
+        templateUrl: 'views/machine/machine.html'
     }).state('main.machineAdd', {
         url: '/add',
         templateUrl: 'views/machine/addOrEdit.html',

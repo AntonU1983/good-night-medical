@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GenericBackend.PaymentProcessor
+namespace GenericBackend.CachingService
 {
     public class Class1
     {

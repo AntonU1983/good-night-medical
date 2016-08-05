@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericBackend", "GenericBackend\GenericBackend.csproj", "{6525A85F-DE44-4723-AE81-C0C3095154F1}"
 EndProject
@@ -32,6 +32,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PaymentProcessor", "PaymentProcessor", "{3CC300D0-DD64-4B98-94E2-D6906CADD24E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericBackend.Common", "GenericBackend.Common\GenericBackend.Common.csproj", "{2EB14C46-74D8-401B-A1B5-EC0B22A3D3B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericBackend.CachingService", "GenericBackend.CachingService\GenericBackend.CachingService.csproj", "{C9792DA3-C3FB-4AA4-B28B-906D7B16B1CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericBackend.PaymentProcessor.Core", "GenericBackend.PaymentProcessor.Core\GenericBackend.PaymentProcessor.Core.csproj", "{F39F6562-B816-4074-A6EE-8C2D88F92345}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,6 +99,14 @@ Global
 		{2EB14C46-74D8-401B-A1B5-EC0B22A3D3B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EB14C46-74D8-401B-A1B5-EC0B22A3D3B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EB14C46-74D8-401B-A1B5-EC0B22A3D3B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9792DA3-C3FB-4AA4-B28B-906D7B16B1CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9792DA3-C3FB-4AA4-B28B-906D7B16B1CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9792DA3-C3FB-4AA4-B28B-906D7B16B1CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9792DA3-C3FB-4AA4-B28B-906D7B16B1CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F39F6562-B816-4074-A6EE-8C2D88F92345}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F39F6562-B816-4074-A6EE-8C2D88F92345}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F39F6562-B816-4074-A6EE-8C2D88F92345}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F39F6562-B816-4074-A6EE-8C2D88F92345}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,5 +114,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{315E7CEA-9987-48BA-B9CE-B6085E294DA0} = {3CC300D0-DD64-4B98-94E2-D6906CADD24E}
 		{4A5EF042-990F-49A4-B5EF-42F453A958B1} = {3CC300D0-DD64-4B98-94E2-D6906CADD24E}
+		{F39F6562-B816-4074-A6EE-8C2D88F92345} = {3CC300D0-DD64-4B98-94E2-D6906CADD24E}
 	EndGlobalSection
 EndGlobal

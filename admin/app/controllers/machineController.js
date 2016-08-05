@@ -2,7 +2,7 @@ var app = angular.module('app');
 
 'use strict';
 var controllerId = 'machine';
-app.controller(controllerId, ['$scope', '$state', 'dataService', 'globalConstants', '$stateParams','FileUploader', function ($scope, $state, dataService, globalConstants, $stateParams, FileUploader) {
+app.controller(controllerId, ['$scope', '$state', 'dataService', 'globalConstants', '$stateParams','FileUploader', 'uiNotifications', function ($scope, $state, dataService, globalConstants, $stateParams, FileUploader, uiNotifications) {
 
   $scope.data = [];
   $scope.machineDetail = {type: 'New', refurbished: false};
@@ -12,6 +12,7 @@ app.controller(controllerId, ['$scope', '$state', 'dataService', 'globalConstant
   $scope.initData = initData;
   $scope.getDetails = getDetails;
   $scope.addOrUpdate = addOrUpdate;
+  $scope.close = close;
   
   var uploader = $scope.uploader = new FileUploader({
     url: globalConstants.apiUrl + 'api/image/upload',
@@ -45,15 +46,20 @@ app.controller(controllerId, ['$scope', '$state', 'dataService', 'globalConstant
     if($stateParams.id !== undefined){
       dataService.putMachine($stateParams.id, $scope.machineDetail).success(function (data) {
         $state.go('main.machine');
+        uiNotifications.success("Successfully updated machine.")
       });
     }else{
       dataService.postMachine($scope.machineDetail).success(function () {
         dataService.getMachines().success(function (data) {
           $scope.data = data;
         });
-        
         $state.go('main.machine');
+        uiNotifications.success("Successfully added new machine.")
       });
     }
+  }
+  
+  function close() {
+    $state.go('main.machine')
   }
 }]);

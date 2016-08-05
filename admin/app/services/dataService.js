@@ -57,12 +57,12 @@ function dataService($http, globalConstants) {
     }
 
     function getContacts() {
-        var subUrl = 'api/customer/'
+        var subUrl = 'api/customer/';
         return $http.get(urlBase + subUrl);
     }
 
     function setReadContact(id) {
-        var subUrl = 'api/customer/seen/'
+        var subUrl = 'api/customer/seen/';
         return $http.get(urlBase + subUrl + id);
     }
 

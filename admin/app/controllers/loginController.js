@@ -14,7 +14,8 @@ app.controller('loginController', ['$scope', '$state', 'authService', function (
 
     $scope.login = function () {
 
-        authService.login($scope.loginData).then(function (response) {
+        authService.login($scope.loginData)
+          .then(function (response) {
                 $scope.invalid = false;
                 $state.go('main.contactus');
 

@@ -2,7 +2,7 @@
 
 namespace GenericBackend.DataModels.GoodNightMedical
 {
-    public class FullRentCustomer : MongoEntityBase, IMongoEntity
+    public class FullRentCustomer : MongoEntityBase
     {
         public string FullName { get; set; }
         public string Email { get; set; }
