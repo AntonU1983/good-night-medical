@@ -7,10 +7,10 @@
   function headerCtrl($scope) {
     $scope.navbar = navbar;
     $scope.phoneNumber = phoneNumber;
-    $scope.mobileNavBar = false;
+    $scope.navMenu = false;
 
-    $scope.showMobileNavBar = function() {$scope.mobileNavBar = true;}
-    $scope.hideMobileNavBar = function() {$scope.mobileNavBar = false;}
+    $scope.showMenu = function() {$scope.navMenu = true;}
+    $scope.hideMenu = function() {$scope.navMenu = false;}
   }
 
   var phoneNumber = '877-753-3742';

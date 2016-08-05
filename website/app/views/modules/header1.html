@@ -5,34 +5,34 @@
 
         <div class="logotype pull-left" ng-include="'content/svg/logotype.svg'"></div>
 
-        <nav class="pull-right visible-lg">
+        <nav class="pull-right nav1 visible-lg">
           <div class="phone">
             <div class="phone-icon" ng-include="'content/svg/icons/phone.svg'"></div>
-            <div class="phone-popup">Phone Number: {{phoneNumber}}</div>
+            <div class="phone-popup" ng-bind="'Phone Number: {{phoneNumber}}'"></div>
           </div>
           <div class="separate" ng-repeat-start="link in navbar"></div>
-          <a href="" ng-repeat-end ui-sref="link.uiSref">{{link.text}}</a>
+          <a ng-repeat-end ui-sref="{{link.uiSref}}" ng-bind="'{{link.text}}'"></a>
         </nav>
 
-        <nav class="pull-right menu visible-md">
-          <div ng-click="showMobileNavBar();">
+        <nav class="pull-right nav2 visible-md">
+          <div ng-click="showMenu();">
             <span ng-include="'content/svg/icons/hamburger.svg'"></span>
             <span>menu</span>
           </div>
         </nav>
 
-        <div class="menu-fixed-dark animate-on fadein fadeout" ng-show="mobileNavBar">
+        <div class="menu-fixed-dark animate-on fadein fadeout" ng-show="navMenu">
           <div class="menu-fixed-cross"
-               ng-click="hideMobileNavBar();"
+               ng-click="hideMenu();"
                ng-include="'content/svg/icons/cross.svg'"></div>
           <div class="menu-fixed">
             <div>
               <ul>
                 <li ng-repeat="link in navbar">
-                  <a href="" ui-sref="{{link.uiSref}}" ng-click="hideMobileNavBar();">{{link.text}}</a>
+                  <a ui-sref="{{link.uiSref}}" ng-click="hideMenu();" ng-bind="'{{link.text}}'"></a>
                 </li>
                 <hr>
-                <li class="phone-nubmer">{{phoneNumber}}</li>
+                <li class="phone-nubmer" ng-bind="'{{phoneNumber}}'"></li>
               </ul>
             </div>
           </div>
