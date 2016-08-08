@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GenericBackend.Core;
 
 namespace GenericBackend.DataModels.GoodNightMedical
 {
-    public class AdvertisementInfo
+    public class AdvertisementInfo: MongoEntityBase
     {
         public string CampaignId { get; set; }
         public string AdgroupId { get; set; }

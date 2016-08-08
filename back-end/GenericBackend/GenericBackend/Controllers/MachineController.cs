@@ -20,12 +20,14 @@ namespace GenericBackend.Controllers
         private readonly IMongoRepository<Machine> _machinesRepository;
         private readonly IMongoRepository<FullRentCustomer> _rentsRepository;
         private readonly IMongoRepository<RentProgram> _rentProgramsRepository;
+        private readonly IMongoRepository<AdvertisementInfo> _advertisementInfoRepository;
 
         public MachineController(IUnitOfWork unitOfWork)
         {
             _machinesRepository = unitOfWork.Machines;
             _rentsRepository = unitOfWork.FullRentCustomers;
             _rentProgramsRepository = unitOfWork.RentPrograms;
+            _advertisementInfoRepository = unitOfWork.AdvertisementInfo;
         }
 
         [HttpGet]
@@ -111,6 +113,16 @@ namespace GenericBackend.Controllers
             var rents = await _rentsRepository.Collection.Find(new BsonDocument()).ToListAsync();
 
             return Ok(rents);
+        }
+
+        [HttpGet]
+        [Route("programs")]
+        public IHttpActionResult GetByAdvertisement()
+        {
+            AdvertisementInfo item = new AdvertisementInfo();
+                _advertisementInfoRepository.Add(item);
+
+            return Ok();
         }
     }
 }

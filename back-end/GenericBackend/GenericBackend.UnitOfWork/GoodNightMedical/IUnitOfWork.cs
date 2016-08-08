@@ -16,7 +16,7 @@ namespace GenericBackend.UnitOfWork.GoodNightMedical
         IMongoRepository<Customer> Customers { get; } 
         IMongoRepository<FullRentCustomer> FullRentCustomers { get; } 
         IMongoRepository<RentProgram> RentPrograms { get; } 
-        IMongoRepository<Setting> Settings { get; } 
-
+        IMongoRepository<Setting> Settings { get; }
+        IMongoRepository<AdvertisementInfo> AdvertisementInfo { get; }
     }
 }

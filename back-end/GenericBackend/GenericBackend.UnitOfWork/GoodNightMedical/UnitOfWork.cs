@@ -13,8 +13,8 @@ namespace GenericBackend.UnitOfWork.GoodNightMedical
         private IMongoRepository<Customer> _customers; 
         private IMongoRepository<FullRentCustomer> _fullRentCustomers; 
         private IMongoRepository<RentProgram> _rentPrograms; 
-        private IMongoRepository<Setting> _settings; 
-
+        private IMongoRepository<Setting> _settings;
+        private IMongoRepository<AdvertisementInfo> _advertisementInfo;
         public IMongoRepository<Machine> Machines => _machines ?? (_machines = new MachineRepository());
 
         public IMongoRepository<RentOption> RentOptions => _rentOptions ?? (_rentOptions = new RentOptionRepository());
@@ -25,5 +25,6 @@ namespace GenericBackend.UnitOfWork.GoodNightMedical
         public IMongoRepository<FullRentCustomer> FullRentCustomers => _fullRentCustomers ?? (_fullRentCustomers = new FullRentCustomerRepository());
         public IMongoRepository<RentProgram> RentPrograms => _rentPrograms ?? (_rentPrograms = new RentProgramRepository());
         public IMongoRepository<Setting> Settings => _settings ?? (_settings = new SettingsRepository());
+        public IMongoRepository<AdvertisementInfo> AdvertisementInfo => _advertisementInfo?? (_advertisementInfo = new AdvertisementInfoRepository());
     }
 }
