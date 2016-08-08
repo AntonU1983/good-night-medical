@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GoodNightMedical\AdvertisementInfo.cs" />
     <Compile Include="GoodNightMedical\Company.cs" />
     <Compile Include="GoodNightMedical\ContactMethod.cs" />
     <Compile Include="GoodNightMedical\Customer.cs" />
